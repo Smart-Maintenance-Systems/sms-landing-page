@@ -1,0 +1,144 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #08090D;
+}
+::-webkit-scrollbar-thumb {
+  background: #1E2230;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #2a3040;
+}
+
+/* Grid background pattern */
+.grid-bg {
+  background-image:
+    linear-gradient(to right, rgba(59, 130, 246, 0.03) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(59, 130, 246, 0.03) 1px, transparent 1px);
+  background-size: 60px 60px;
+}
+
+/* Circuit board pattern */
+.circuit-bg {
+  background-image:
+    radial-gradient(circle at 25% 25%, rgba(59, 130, 246, 0.05) 1px, transparent 1px),
+    radial-gradient(circle at 75% 75%, rgba(167, 139, 250, 0.04) 1px, transparent 1px);
+  background-size: 80px 80px;
+}
+
+/* Gradient text */
+.gradient-text {
+  background: linear-gradient(135deg, #3B82F6, #06B6D4, #A78BFA);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.gradient-text-blue {
+  background: linear-gradient(135deg, #3B82F6, #06B6D4);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.gradient-text-violet {
+  background: linear-gradient(135deg, #A78BFA, #7C3AED);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Card glow effects */
+.card-glow {
+  transition: all 0.3s ease;
+}
+.card-glow:hover {
+  box-shadow: 0 0 30px rgba(59, 130, 246, 0.1);
+  border-color: rgba(59, 130, 246, 0.3);
+}
+
+.card-glow-violet:hover {
+  box-shadow: 0 0 30px rgba(167, 139, 250, 0.1);
+  border-color: rgba(167, 139, 250, 0.3);
+}
+
+/* Animated gradient border */
+.gradient-border {
+  position: relative;
+}
+.gradient-border::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  padding: 1px;
+  background: linear-gradient(135deg, #3B82F6, #A78BFA, #06B6D4);
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  opacity: 0.5;
+  transition: opacity 0.3s;
+}
+.gradient-border:hover::before {
+  opacity: 1;
+}
+
+/* Data flow animation */
+@keyframes dataFlow {
+  0% { transform: translateX(-100%); opacity: 0; }
+  50% { opacity: 1; }
+  100% { transform: translateX(100%); opacity: 0; }
+}
+
+.data-line {
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(59, 130, 246, 0.3), transparent);
+  animation: dataFlow 8s linear infinite;
+}
+
+/* Wave decoration */
+.wave-bottom {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 120px;
+  background: linear-gradient(to top, rgba(8, 9, 13, 1), transparent);
+  pointer-events: none;
+}
+
+/* Tabular figures for numbers */
+.tabular-nums {
+  font-feature-settings: "tnum" 1;
+}
+
+/* Smooth section transitions */
+section {
+  position: relative;
+}
+
+/* Logo glow */
+.logo-glow {
+  filter: drop-shadow(0 0 20px rgba(6, 182, 212, 0.4)) drop-shadow(0 0 40px rgba(59, 130, 246, 0.2));
+}
+
+/* Button styles */
+.btn-primary {
+  @apply inline-flex items-center gap-2 px-6 py-3 bg-brand-primary text-white font-semibold rounded-lg
+    hover:bg-brand-hover transition-all duration-200 min-h-[48px];
+}
+.btn-secondary {
+  @apply inline-flex items-center gap-2 px-6 py-3 border border-brand-primary/50 text-brand-primary font-semibold rounded-lg
+    hover:bg-brand-primary/10 transition-all duration-200 min-h-[48px];
+}
+.btn-light {
+  @apply inline-flex items-center gap-2 px-6 py-3 bg-status-success text-white font-semibold rounded-lg
+    hover:bg-green-600 transition-all duration-200 min-h-[48px];
+}
