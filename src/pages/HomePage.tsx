@@ -479,7 +479,7 @@ function DifferentiatorsSection() {
       icon: Anchor,
       title: 'Built by Operators, Not Consultants',
       description:
-        'The founder spent 20 years working offshore rotations — on crane barges, vessels, rigs. SMS wasn\'t designed in a WeWork. It was designed in engine rooms, on night shifts, during crew changeovers. Every workflow exists because someone actually needed it.',
+        'The founders spent over 40 years combined working offshore rotations — on crane barges, vessels, rigs. SMS wasn\'t designed in an office. It was designed in engine rooms, on night shifts, during crew changeovers. Every workflow exists because someone actually needed it.',
     },
     {
       icon: Brain,

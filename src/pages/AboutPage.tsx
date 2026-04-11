@@ -32,10 +32,10 @@ export default function AboutPage() {
           <div className="space-y-6 text-lg text-text-secondary leading-relaxed">
             <ScrollReveal delay={0.2}>
               <p>
-                For 20 years, the founder of SMS worked offshore — on vessels, crane barges, rigs,
-                and marine construction projects. Running electrical departments. Managing equipment
-                across crew rotations. Watching knowledge walk off the vessel every time the crew
-                changed.
+                SMS was founded by two maritime professionals with over 40 years of combined
+                offshore experience — on vessels, crane barges, rigs, and marine construction
+                projects. Running electrical departments. Managing complex marine operations.
+                Watching knowledge walk off the vessel every time the crew changed.
               </p>
             </ScrollReveal>
 
@@ -50,9 +50,11 @@ export default function AboutPage() {
 
             <ScrollReveal delay={0.4}>
               <p className="text-text-primary font-medium italic">
-                SMS was designed in the spaces between — on night shifts, during crew changeovers, on a
-                1952 crane barge in Falmouth harbour while simultaneously running an electrical
-                contracting company and raising a family.
+                SMS was designed in the spaces between — on night shifts, during crew changeovers,
+                between offshore rotations. One founder brings 20 years of hands-on electrical
+                engineering and the technical vision behind every workflow. The other brings
+                operational leadership at the highest level — Barge Master, Marine Superintendent,
+                and current Operations Director delivering complex marine projects.
               </p>
             </ScrollReveal>
 
@@ -184,14 +186,14 @@ export default function AboutPage() {
               {
                 icon: Clock,
                 label: 'Offshore Experience',
-                value: '20+ years',
-                desc: 'Vessels, rigs, crane barges, marine construction',
+                value: '40+ years',
+                desc: 'Combined — electrical engineering, marine ops, barge mastering',
               },
               {
                 icon: Wrench,
-                label: 'Active Business',
-                value: 'Smart Marine Electrical',
-                desc: 'Marine electrical contracting company',
+                label: 'Active Industry Roles',
+                value: 'Founders',
+                desc: 'Marine electrical, operations directorship, IJUBOA committee',
               },
               {
                 icon: Database,
