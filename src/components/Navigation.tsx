@@ -2,13 +2,14 @@ import { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Menu, X, ChevronRight } from 'lucide-react';
+import { TRIAL_HREF } from '../config';
 
 const NAV_ITEMS = [
-  { label: 'Platform', href: '/platform' },
-  { label: 'How It Works', href: '/how-it-works' },
+  { label: 'How it works', href: '/how-it-works' },
   { label: 'Pricing', href: '/pricing' },
-  { label: 'SMS Light', href: '/light' },
-  { label: 'About', href: '/about' },
+  { label: 'The Code', href: '/code' },
+  { label: 'Why us', href: '/about' },
+  { label: 'FAQ', href: '/faq' },
 ];
 
 export default function Navigation() {
@@ -30,35 +31,19 @@ export default function Navigation() {
     <>
       <nav
         className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-          scrolled
-            ? 'bg-surface-0/90 backdrop-blur-xl border-b border-white/5'
-            : 'bg-transparent'
+          scrolled ? 'bg-surface-0/90 backdrop-blur-xl border-b border-white/5' : 'bg-transparent'
         }`}
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between h-16 md:h-20">
-            {/* Logo */}
-            <div className="flex items-center gap-4 shrink-0">
-              <Link to="/" className="flex items-center gap-3">
-                <img
-                  src="/sms-logo-small.png"
-                  alt="SMS"
-                  className="h-10 w-auto logo-glow"
-                />
-                <div className="hidden sm:block">
-                  <span className="text-lg font-bold text-text-primary tracking-wide">
-                    SMS
-                  </span>
-                  <span className="hidden md:inline text-xs text-text-muted ml-2">
-                    Smart Maintenance Systems
-                  </span>
-                </div>
-              </Link>
-              <div className="hidden sm:flex items-center gap-3">
-                <div className="w-px h-8 bg-white/10" />
-                <img src="/innovate-uk-logo.png" alt="UKRI Innovate UK" className="h-8 w-auto opacity-80" />
-              </div>
-            </div>
+            {/* Brand */}
+            <Link to="/" className="flex items-center gap-3 shrink-0">
+              <img src="/sms-logo-small.png" alt="SMS Workboat" className="h-10 w-auto logo-glow" />
+              <span className="flex flex-col leading-tight">
+                <span className="text-lg font-bold text-text-primary tracking-wide">SMS Workboat</span>
+                <span className="hidden sm:inline text-[11px] text-text-muted">Workboat Code 3 SMS</span>
+              </span>
+            </Link>
 
             {/* Desktop nav */}
             <div className="hidden lg:flex items-center gap-1">
@@ -77,20 +62,18 @@ export default function Navigation() {
               ))}
             </div>
 
-            {/* CTA buttons */}
+            {/* CTA */}
             <div className="hidden lg:flex items-center gap-3">
-              <Link to="/light" className="btn-light text-sm py-2">
-                SMS Light
-              </Link>
-              <a href="mailto:info@smsystems.uk?subject=SMS%20Demo%20Request" className="btn-primary text-sm py-2">
-                Book a Demo
+              <Link to={TRIAL_HREF} className="btn-primary text-sm py-2">
+                Start free trial
                 <ChevronRight className="w-4 h-4" />
-              </a>
+              </Link>
             </div>
 
             {/* Mobile menu button */}
             <button
               onClick={() => setMobileOpen(!mobileOpen)}
+              aria-label="Menu"
               className="lg:hidden p-2 text-text-secondary hover:text-text-primary min-h-[44px] min-w-[44px] flex items-center justify-center"
             >
               {mobileOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
@@ -108,16 +91,13 @@ export default function Navigation() {
             exit={{ opacity: 0, y: -10 }}
             className="fixed inset-0 z-40 lg:hidden"
           >
-            <div
-              className="absolute inset-0 bg-black/60 backdrop-blur-sm"
-              onClick={() => setMobileOpen(false)}
-            />
+            <div className="absolute inset-0 bg-black/60 backdrop-blur-sm" onClick={() => setMobileOpen(false)} />
             <div className="absolute top-16 left-0 right-0 bg-surface-1 border-b border-white/5 p-4 space-y-1">
               {NAV_ITEMS.map((item) => (
                 <Link
                   key={item.href}
                   to={item.href}
-                  className={`block px-4 py-3 rounded-lg text-base font-medium min-h-[48px] flex items-center ${
+                  className={`px-4 py-3 rounded-lg text-base font-medium min-h-[48px] flex items-center ${
                     location.pathname === item.href
                       ? 'text-brand-primary bg-brand-primary/10'
                       : 'text-text-secondary hover:text-text-primary hover:bg-surface-2'
@@ -126,13 +106,10 @@ export default function Navigation() {
                   {item.label}
                 </Link>
               ))}
-              <div className="pt-3 border-t border-white/5 space-y-2">
-                <Link to="/light" className="btn-light w-full justify-center text-sm">
-                  SMS Light
+              <div className="pt-3 border-t border-white/5">
+                <Link to={TRIAL_HREF} className="btn-primary w-full justify-center text-sm">
+                  Start free trial
                 </Link>
-                <a href="mailto:info@smsystems.uk?subject=SMS%20Demo%20Request" className="btn-primary w-full justify-center text-sm">
-                  Book a Demo
-                </a>
               </div>
             </div>
           </motion.div>

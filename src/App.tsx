@@ -3,11 +3,11 @@ import ScrollToTop from './components/ScrollToTop';
 import Navigation from './components/Navigation';
 import Footer from './components/Footer';
 import HomePage from './pages/HomePage';
-import PlatformPage from './pages/PlatformPage';
-import HowItWorksPage from './pages/HowItWorksPage';
 import PricingPage from './pages/PricingPage';
-import LightPage from './pages/LightPage';
+import CodePage from './pages/CodePage';
 import AboutPage from './pages/AboutPage';
+import HowItWorksPage from './pages/HowItWorksPage';
+import StubPage from './pages/StubPage';
 
 export default function App() {
   return (
@@ -17,11 +17,24 @@ export default function App() {
       <main className="flex-1">
         <Routes>
           <Route path="/" element={<HomePage />} />
-          <Route path="/platform" element={<PlatformPage />} />
           <Route path="/how-it-works" element={<HowItWorksPage />} />
           <Route path="/pricing" element={<PricingPage />} />
-          <Route path="/light" element={<LightPage />} />
+          <Route path="/code" element={<CodePage />} />
           <Route path="/about" element={<AboutPage />} />
+          <Route
+            path="/faq"
+            element={<StubPage title="Frequently asked questions" blurb="Honest answers about the Workboat Code, the product, and getting set up." />}
+          />
+          <Route
+            path="/privacy"
+            element={<StubPage title="Privacy policy" blurb="How we handle your data." />}
+          />
+          <Route
+            path="/terms"
+            element={<StubPage title="Terms of service" blurb="The terms of using SMS Workboat." />}
+          />
+          {/* Any unknown path falls back to Home rather than a dead 404 in this SPA skeleton. */}
+          <Route path="*" element={<HomePage />} />
         </Routes>
       </main>
       <Footer />

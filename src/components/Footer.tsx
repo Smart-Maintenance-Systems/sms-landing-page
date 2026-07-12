@@ -1,118 +1,85 @@
 import { Link } from 'react-router-dom';
-import { Anchor, Mail, MapPin, ExternalLink } from 'lucide-react';
+import { Anchor, Mail, ChevronRight } from 'lucide-react';
+import { MAIN_CONTACT, CONTACT_EMAIL, TRIAL_HREF } from '../config';
+
+const PRODUCT_LINKS = [
+  { label: 'How it works', href: '/how-it-works' },
+  { label: 'Pricing', href: '/pricing' },
+  { label: 'The Code, explained', href: '/code' },
+  { label: 'FAQ', href: '/faq' },
+];
+const COMPANY_LINKS = [
+  { label: 'Why us', href: '/about' },
+  { label: 'Privacy', href: '/privacy' },
+  { label: 'Terms', href: '/terms' },
+];
 
 export default function Footer() {
   return (
     <footer className="bg-surface-1 border-t border-white/5">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
-          {/* Brand */}
-          <div className="lg:col-span-1">
-            <div className="flex items-center gap-3 mb-4">
-              <img src="/sms-logo-small.png" alt="SMS" className="h-10 w-auto logo-glow" />
-              <div>
-                <div className="text-lg font-bold text-text-primary">SMS</div>
-                <div className="text-xs text-text-muted">Smart Maintenance Systems</div>
-              </div>
-            </div>
-            <p className="text-sm text-text-secondary leading-relaxed mb-4">
-              The AI-powered operating system for maritime vessel operations. Built by offshore
-              operators with 20+ years of experience.
+      {/* The quiet SMS-Main cross-sell (design §3) — structural, never a competitor mention. */}
+      <div className="border-b border-white/5">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3">
+          <p className="text-sm text-text-secondary">
+            Running more than workboats?{' '}
+            <span className="text-text-primary font-medium">SMS for fleets and shore operations.</span>
+          </p>
+          <a href={MAIN_CONTACT} className="inline-flex items-center gap-1.5 text-sm font-medium text-brand-primary hover:text-brand-hover">
+            Talk to us <ChevronRight className="w-4 h-4" />
+          </a>
+        </div>
+      </div>
+
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-14">
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-10">
+          <div className="md:col-span-2">
+            <Link to="/" className="flex items-center gap-3 mb-4">
+              <img src="/sms-logo-small.png" alt="SMS Workboat" className="h-10 w-auto logo-glow" />
+              <span className="flex flex-col leading-tight">
+                <span className="text-lg font-bold text-text-primary">SMS Workboat</span>
+                <span className="text-xs text-text-muted">Workboat Code 3 SMS</span>
+              </span>
+            </Link>
+            <p className="text-sm text-text-secondary leading-relaxed max-w-md">
+              The simplest way to have the safety management system UK law now requires on every small
+              commercial workboat. Built with serving industry reviewers.
             </p>
-            <div className="flex items-center gap-2 text-xs text-text-muted">
-              <Anchor className="w-3 h-3" />
-              <span>Built Offshore. Built Different.</span>
-            </div>
+            <p className="mt-4 flex items-center gap-2 text-xs text-text-muted">
+              <Anchor className="w-3.5 h-3.5" /> Nova handles the compliance, you handle the boat.
+            </p>
           </div>
 
-          {/* Platform */}
           <div>
-            <h4 className="text-sm font-semibold text-text-primary mb-4 uppercase tracking-wider">
-              Platform
-            </h4>
+            <h4 className="text-sm font-semibold text-text-primary mb-4 uppercase tracking-wider">Product</h4>
             <ul className="space-y-3">
-              {[
-                { label: 'Maintenance & Equipment', href: '/platform' },
-                { label: 'HSE & Safety', href: '/platform' },
-                { label: 'Purchasing & Supply', href: '/platform' },
-                { label: 'Operations & DPR', href: '/platform' },
-                { label: 'AI Intelligence', href: '/platform' },
-                { label: 'Portal Command Centre', href: '/platform' },
-              ].map((item) => (
-                <li key={item.label}>
-                  <Link
-                    to={item.href}
-                    className="text-sm text-text-secondary hover:text-brand-primary transition-colors"
-                  >
-                    {item.label}
-                  </Link>
+              {PRODUCT_LINKS.map((l) => (
+                <li key={l.label}>
+                  <Link to={l.href} className="text-sm text-text-secondary hover:text-brand-primary transition-colors">{l.label}</Link>
                 </li>
               ))}
             </ul>
           </div>
 
-          {/* Company */}
           <div>
-            <h4 className="text-sm font-semibold text-text-primary mb-4 uppercase tracking-wider">
-              Company
-            </h4>
+            <h4 className="text-sm font-semibold text-text-primary mb-4 uppercase tracking-wider">Company</h4>
             <ul className="space-y-3">
-              {[
-                { label: 'About', href: '/about' },
-                { label: 'How It Works', href: '/how-it-works' },
-                { label: 'Pricing', href: '/pricing' },
-                { label: 'SMS Light', href: '/light' },
-                { label: 'Book a Demo', href: 'mailto:info@smsystems.uk?subject=SMS%20Demo%20Request' },
-              ].map((item) => (
-                <li key={item.label}>
-                  <Link
-                    to={item.href}
-                    className="text-sm text-text-secondary hover:text-brand-primary transition-colors"
-                  >
-                    {item.label}
-                  </Link>
+              {COMPANY_LINKS.map((l) => (
+                <li key={l.label}>
+                  <Link to={l.href} className="text-sm text-text-secondary hover:text-brand-primary transition-colors">{l.label}</Link>
                 </li>
               ))}
-            </ul>
-          </div>
-
-          {/* Contact */}
-          <div>
-            <h4 className="text-sm font-semibold text-text-primary mb-4 uppercase tracking-wider">
-              Contact
-            </h4>
-            <ul className="space-y-3">
-              <li className="flex items-center gap-2 text-sm text-text-secondary">
-                <Mail className="w-4 h-4 text-text-muted shrink-0" />
-                <a href="mailto:info@smsystems.uk" className="hover:text-brand-primary transition-colors">
-                  info@smsystems.uk
+              <li>
+                <a href={`mailto:${CONTACT_EMAIL}`} className="inline-flex items-center gap-1.5 text-sm text-text-secondary hover:text-brand-primary transition-colors">
+                  <Mail className="w-3.5 h-3.5" /> {CONTACT_EMAIL}
                 </a>
               </li>
-              <li className="flex items-start gap-2 text-sm text-text-secondary">
-                <MapPin className="w-4 h-4 text-text-muted shrink-0 mt-0.5" />
-                <span>Cornwall, United Kingdom</span>
-              </li>
             </ul>
-
-            {/* Badges */}
-            <div className="mt-6 pt-6 border-t border-white/5">
-              <p className="text-xs text-text-muted mb-3">Backed by</p>
-              <div className="flex items-center gap-3">
-                <img src="/innovate-uk-logo.png" alt="UKRI Innovate UK" className="h-8 w-auto" />
-              </div>
-            </div>
           </div>
         </div>
 
-        {/* Bottom bar */}
-        <div className="mt-12 pt-8 border-t border-white/5 flex flex-col sm:flex-row items-center justify-between gap-4">
-          <p className="text-xs text-text-muted">
-            &copy; {new Date().getFullYear()} Smart Maintenance Systems Ltd. All rights reserved.
-          </p>
-          <div className="flex items-center gap-6 text-xs text-text-muted">
-            <span>Privacy Policy</span>
-            <span>Terms of Service</span>
-          </div>
+        <div className="mt-12 pt-6 border-t border-white/5 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3">
+          <p className="text-xs text-text-muted">© {new Date().getFullYear()} SMS Workboat. All rights reserved.</p>
+          <Link to={TRIAL_HREF} className="text-xs text-text-secondary hover:text-brand-primary">Start your 14-day free trial →</Link>
         </div>
       </div>
     </footer>
