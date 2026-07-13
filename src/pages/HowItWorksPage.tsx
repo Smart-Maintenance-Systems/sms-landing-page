@@ -42,7 +42,9 @@ export default function HowItWorksPage() {
     <div className="pt-24 md:pt-32 pb-24">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center">
-          <h1 className="text-3xl md:text-4xl font-bold text-text-primary">From nothing to a working SMS in an afternoon</h1>
+          {/* W2 — the founder-loved original line leads the day-one story (TAGLINE-BANK.md). */}
+          <p className="text-sm font-semibold uppercase tracking-wider text-brand-primary">Your boat deserves better than a notebook.</p>
+          <h1 className="mt-3 text-3xl md:text-4xl font-bold text-text-primary">From nothing to a working SMS in an afternoon</h1>
           <p className="mt-4 text-text-secondary max-w-xl mx-auto">On your phone, on your boat. Three steps: capture what you have, let it author your documents, then sign your self-assessment.</p>
         </div>
 

@@ -9,6 +9,23 @@ Stack kept: Vite + React 18 + Tailwind + react-router + framer-motion + lucide.
 
 ---
 
+## W2 update (2026-07-13) — theme blend + taglines
+- **Theme:** the site now wears the PRODUCT's `.workboat-light` glossy identity (light off-white surfaces,
+  ocean-blue brand, cyan Nova accent, `wb-gloss-bg` warmth) — zero theme shock crossing to
+  `/workboat-login`. Same brand mark as the product (`sms-workboat-mark.jpg`, white-ring framed). No dark mode.
+- **Taglines:** every keeper line from master's originals is catalogued in **`TAGLINE-BANK.md`** (root),
+  marked USED / BANK / KILLED. Wired now: *"Your boat deserves better than a notebook."* (leads
+  How-it-works) and *"Less than £1 a day."* (Pricing — arithmetic-honest: £29 ÷ 30 ≈ £0.97). Killed on
+  sight: £10/£20/£39, "coffee a week", "Register Interest", Twelve-modules/Innovate-UK/2,660-tests, "dark
+  mode default", "fleet of fifty". The 🟥 audited Code quotes + £29 pricing facts were left untouched.
+- **🟥 HERO — founder's pick.** The signed law-changed hero STAYS in place. Alternatives, side by side:
+  1. *(IN PLACE, signed)* "UK law now requires a safety management system on every small commercial workboat. SMS Workboat is the simplest way to have one."
+  2. "Your boat deserves better than a notebook." *(warm, owner-first — currently leads How-it-works)*
+  3. "Built for the operators everyone else ignores." *(positioning)*
+  Pick one for the Home hero, or keep #1 — your call, not a silent swap.
+
+---
+
 ## Pages built
 | Route | Page | State |
 |---|---|---|

@@ -46,6 +46,8 @@ export default function PricingPage() {
           <div className="flex flex-col sm:flex-row sm:items-end sm:justify-between gap-4">
             <div>
               <p className="text-4xl font-bold text-text-primary">£29<span className="text-lg font-medium text-text-muted"> / boat / month</span></p>
+              {/* W2 — arithmetic-honest anchor: £29/mo ÷ 30 ≈ £0.97 (TAGLINE-BANK.md). */}
+              <p className="mt-1 text-sm font-medium text-brand-primary">Less than £1 a day.</p>
               <p className="mt-1 text-sm text-text-secondary">14-day free trial · no card required.</p>
             </div>
             <div className="flex flex-col sm:flex-row gap-3">
