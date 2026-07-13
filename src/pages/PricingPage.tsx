@@ -1,6 +1,24 @@
 import { Link } from 'react-router-dom';
 import { Check, ChevronRight, ShieldCheck, FileText, ClipboardCheck } from 'lucide-react';
 import { TRIAL_HREF, DEMO_ENABLED, DEMO_URL } from '../config';
+import { useSeo, CANONICAL_HOST } from '../lib/seo';
+
+// 🟥 Only the signed £29 fact — no ratings/reviews (invented). Mirrors the visible page copy exactly.
+const PRODUCT_JSONLD = {
+  '@context': 'https://schema.org',
+  '@type': 'Product',
+  name: 'SMS Workboat',
+  description: 'Safety management system software for the UK Workboat Code Edition 3, for small commercial workboats.',
+  brand: { '@type': 'Brand', name: 'SMS Workboat' },
+  offers: {
+    '@type': 'Offer',
+    price: '29.00',
+    priceCurrency: 'GBP',
+    url: `${CANONICAL_HOST}/pricing`,
+    availability: 'https://schema.org/InStock',
+    priceSpecification: { '@type': 'UnitPriceSpecification', price: '29.00', priceCurrency: 'GBP', unitText: 'boat per month' },
+  },
+};
 
 /**
  * Pricing (design W-P, FOUNDER-SIGNED 2026-07-12). 🟥 £29 flat per boat, everything included — no tiers,
@@ -29,6 +47,13 @@ const OUTPUTS = [
 ];
 
 export default function PricingPage() {
+  useSeo({
+    title: 'Pricing — £29 a month per boat, everything included | SMS Workboat',
+    description:
+      '£29 flat per boat per month. No tiers, no fleet discount, no per-user charges, nothing gated. 14-day free trial, no card. Produces your annual self-assessment, downloads your whole SMS as PDFs, and keeps the inspection pack ready.',
+    path: '/pricing',
+    jsonLd: PRODUCT_JSONLD,
+  });
   return (
     <div className="pt-24 md:pt-32 pb-24">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">

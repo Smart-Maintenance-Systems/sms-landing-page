@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom';
 import { Anchor, ShieldCheck, Sparkles, ChevronRight } from 'lucide-react';
 import { TRIAL_HREF } from '../config';
+import { useSeo } from '../lib/seo';
 
 /**
  * Why us (design §3). The insider story — built from inside the industry, not a software shop. 🟥
@@ -8,6 +9,12 @@ import { TRIAL_HREF } from '../config';
  * wording is the placeholder "built with serving industry reviewers" until written permission (#193).
  */
 export default function AboutPage() {
+  useSeo({
+    title: 'Why SMS Workboat — built from inside the industry',
+    description:
+      'Built by a marine engineer with 20 years offshore, with serving industry reviewers. Its AI cites the Workboat Code and never rules a verdict. We show you everything — the product, the price, the sources, even your own gaps.',
+    path: '/about',
+  });
   return (
     <div className="pt-24 md:pt-32 pb-24">
       <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
