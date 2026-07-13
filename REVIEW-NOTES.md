@@ -18,11 +18,12 @@ Stack kept: Vite + React 18 + Tailwind + react-router + framer-motion + lucide.
   How-it-works) and *"Less than £1 a day."* (Pricing — arithmetic-honest: £29 ÷ 30 ≈ £0.97). Killed on
   sight: £10/£20/£39, "coffee a week", "Register Interest", Twelve-modules/Innovate-UK/2,660-tests, "dark
   mode default", "fleet of fifty". The 🟥 audited Code quotes + £29 pricing facts were left untouched.
-- **🟥 HERO — founder's pick.** The signed law-changed hero STAYS in place. Alternatives, side by side:
-  1. *(IN PLACE, signed)* "UK law now requires a safety management system on every small commercial workboat. SMS Workboat is the simplest way to have one."
-  2. "Your boat deserves better than a notebook." *(warm, owner-first — currently leads How-it-works)*
-  3. "Built for the operators everyone else ignores." *(positioning)*
-  Pick one for the Home hero, or keep #1 — your call, not a silent swap.
+- **🟥 HERO — ✅ DECIDED (W4, founder-signed §W-D).** The Home hero is now the recovered original:
+  **"The law now requires an SMS. We are the SMS."** with the honesty-trimmed sub-line (verbatim §W-D):
+  *"Every small commercial workboat must now hold a Safety Management System — Workboat Code Edition 3, in
+  force since December 2023. SMS Workboat builds yours, and keeps every record ready for the day the surveyor
+  steps aboard."* The original's "keeps you survey-ready" was verdict language (banned) → records-ready
+  wording only. The triple pun lands because the company is named in full near it — see W4 below.
 
 ---
 
@@ -100,6 +101,27 @@ future Website-Nova corpus (K1).
 | 14 | Can I get my data out? | Product (PDF pack, inspection pack) — evidence-archive export NOT claimed |
 
 🟥 The audited Code quotes and the £29 facts were **not** altered by this brief.
+
+---
+
+## W4 update (2026-07-13) — hero recovered + the triple pun
+
+- **Hero (Home):** headline **"The law now requires an SMS. We are the SMS."** + the honesty-trimmed
+  §W-D sub-line (verbatim; records-ready, no "survey-ready" verdict). `tsc`/`build` clean; the new hero +
+  sub-line verified present in the **prerendered** `dist/index.html` (no JS needed).
+- **`routeSeo.ts` (single source):** `/` title → *"The law now requires an SMS. We are the SMS. | SMS
+  Workboat"*; OG/Twitter title inherit it automatically (verified in prerendered head). `index.html` dev
+  default kept in lock-step (no drift).
+- **The triple pun — company named in full in all three founder-specified spots** (SMS = Safety Management
+  System = Smart Maintenance Systems):
+  | Spot | Copy |
+  |---|---|
+  | Nav lockup | sub-label now **"by Smart Maintenance Systems"** (was "Workboat Code 3 SMS") |
+  | Hero trust strip | first line **"SMS Workboat — by Smart Maintenance Systems."** |
+  | Footer | copyright line **"© {year} SMS Workboat — built by Smart Maintenance Systems."** |
+- 🟥 Code quotes + £29 facts untouched. Guardrail sweep empty (the only earlier hit was a code comment
+  containing the banned token while documenting the ban — reworded so the sweep is clean; comments are
+  build-stripped and never public regardless).
 
 ---
 

@@ -2,8 +2,8 @@
 
 Every line worth keeping from `master`'s `LightPage` / `PlatformPage` / `HomePage` / `AboutPage`
 (the pre-rebuild originals). Winners are wired now at **non-hero** level; the rest await the founder's
-pick. 🟥 The **signed law-changed hero stays** — hero alternatives are listed for his call (below +
-REVIEW-NOTES), never a silent swap. 🟥 Arithmetic-honest price lines only.
+pick. 🟥 **The hero is now DECIDED** (W4): *"The law now requires an SMS. We are the SMS."* — see the
+Hero section below. 🟥 Arithmetic-honest price lines only.
 
 Legend: **USED** = wired now · **BANK** = kept, awaiting founder · **KILLED** = stale/false, do not use.
 
@@ -23,11 +23,18 @@ Legend: **USED** = wired now · **BANK** = kept, awaiting founder · **KILLED** 
 | From nothing to a working SMS in an afternoon. | signed sub-hero (in use) | already the Home sub-hero |
 | SMS Light grows with you. The more you document, the smarter it gets. | LightPage | W-S3 grows-with-you (reword away from "SMS Light" brand) |
 
-## Hero-level alternatives (🟥 founder's pick — the SIGNED hero stays unless he swaps)
-Signed hero (IN PLACE): *"UK law now requires a safety management system on every small commercial
-workboat. SMS Workboat is the simplest way to have one."*
-Alternatives harvested, for side-by-side consideration:
-- **"Your boat deserves better than a notebook."** (LightPage) — warm, owner-first; currently leads How-it-works.
+## Hero — ✅ DECIDED (W4, founder-signed §W-D 2026-07-13)
+**IN PLACE (LIVE):** *"The law now requires an SMS. We are the SMS."* — the recovered original headline
+(SMS-WEBSITE-MARKETING-PLAN.md), landing the triple pun (Safety Management System = Smart Maintenance
+Systems = the product). The company name is named in full near it — nav lockup, hero trust strip, footer —
+so the pun reads. Sub-line (honesty-trimmed, VERBATIM §W-D): *"Every small commercial workboat must now
+hold a Safety Management System — Workboat Code Edition 3, in force since December 2023. SMS Workboat builds
+yours, and keeps every record ready for the day the surveyor steps aboard."* 🟥 The original's
+"keeps you survey-ready" was verdict language (Nova's own banned phrase) — dropped for records-ready wording.
+
+Superseded (the earlier signed hero + harvested alternatives, kept for the record — NOT in use):
+- *"UK law now requires a safety management system on every small commercial workboat. SMS Workboat is the simplest way to have one."* (the prior signed hero)
+- **"Your boat deserves better than a notebook."** (LightPage) — warm, owner-first; currently leads How-it-works (non-hero).
 - **"Built for the operators everyone else ignores."** (HomePage) — positioning; pairs with the show-everything ethos.
 - **"Not another maintenance app."** (HomePage) — sharp, but leans anti-competitor; keep contrast structural.
 
