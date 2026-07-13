@@ -29,7 +29,7 @@ export default function Screenshot({
     <>
       <div className={className}>
         <div
-          className={`relative ${aspectClass} rounded-xl overflow-hidden border border-white/10 cursor-pointer group`}
+          className={`relative ${aspectClass} rounded-xl overflow-hidden border border-border-default cursor-pointer group`}
           onClick={() => setLightboxOpen(true)}
         >
           <img

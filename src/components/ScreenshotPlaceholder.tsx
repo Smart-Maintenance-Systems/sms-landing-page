@@ -32,7 +32,7 @@ export default function ScreenshotPlaceholder({
 
   return (
     <div className={className}>
-      <div className={`relative ${aspectClass} rounded-xl overflow-hidden border border-dashed border-white/15 bg-gradient-to-br from-surface-2 to-surface-1`}>
+      <div className={`relative ${aspectClass} rounded-xl overflow-hidden border border-dashed border-border-default bg-gradient-to-br from-surface-2 to-surface-1`}>
         <div className="absolute inset-0 grid-bg opacity-50" />
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-32 h-32 bg-brand-primary/10 rounded-full blur-3xl" />
         <div className="absolute inset-0 flex flex-col items-center justify-center p-6 text-center">

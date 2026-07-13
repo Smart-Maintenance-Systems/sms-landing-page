@@ -18,7 +18,7 @@ function CtaRow({ className = '' }: { className?: string }) {
         <a href={DEMO_URL} className="btn-secondary justify-center">Try SMS Workboat — no sign-up</a>
       ) : (
         <span
-          className="inline-flex items-center justify-center gap-2 px-6 py-3 rounded-lg border border-white/10 text-text-muted text-sm font-medium cursor-default"
+          className="inline-flex items-center justify-center gap-2 px-6 py-3 rounded-lg border border-border-default text-text-muted text-sm font-medium cursor-default"
           title="A no-sign-up live demo arrives with launch"
         >
           Try SMS Workboat — live demo coming with launch
@@ -38,7 +38,7 @@ export default function HomePage() {
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 md:py-24">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div>
-              <span className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-surface-1 px-3 py-1 text-xs font-medium text-text-secondary">
+              <span className="inline-flex items-center gap-2 rounded-full border border-border-default bg-surface-1 px-3 py-1 text-xs font-medium text-text-secondary">
                 <Scale className="w-3.5 h-3.5 text-brand-primary" /> Workboat Code Edition 3 · in force 13 December 2023
               </span>
               <h1 className="mt-5 text-3xl sm:text-4xl md:text-5xl font-bold leading-tight text-text-primary">
@@ -55,7 +55,7 @@ export default function HomePage() {
               <div className="mt-8 flex flex-col gap-2 text-sm text-text-secondary">
                 <span className="flex items-center gap-2"><Anchor className="w-4 h-4 text-text-muted shrink-0" /> Built by a marine engineer with 20 years offshore (Geoquip, Fugro).</span>
                 <span className="flex items-center gap-2"><ShieldCheck className="w-4 h-4 text-text-muted shrink-0" /> Built with serving industry reviewers.</span>
-                <span className="flex items-center gap-2"><Sparkles className="w-4 h-4 text-accent-violet shrink-0" /> Nova handles the compliance, you handle the boat.</span>
+                <span className="flex items-center gap-2"><Sparkles className="w-4 h-4 text-accent-cyan shrink-0" /> Nova handles the compliance, you handle the boat.</span>
               </div>
             </div>
 
@@ -71,7 +71,7 @@ export default function HomePage() {
       </section>
 
       {/* ── §2b — SHOW EVERYTHING: real screens · the price · Nova's honest refusal ── */}
-      <section className="relative border-t border-white/5 py-16 md:py-24">
+      <section className="relative border-t border-border-subtle py-16 md:py-24">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-2xl">
             <h2 className="text-2xl md:text-3xl font-bold text-text-primary">See the actual product</h2>
@@ -89,11 +89,11 @@ export default function HomePage() {
 
           {/* Nova's honest refusal — the trust feature (real product wording). */}
           <div className="mt-14 grid lg:grid-cols-2 gap-8 items-center">
-            <div className="rounded-2xl border border-accent-violet/25 bg-surface-1 p-6">
-              <div className="flex items-center gap-2 text-sm font-semibold text-accent-violet mb-3">
+            <div className="rounded-2xl border border-accent-cyan/25 bg-surface-1 p-6">
+              <div className="flex items-center gap-2 text-sm font-semibold text-accent-cyan mb-3">
                 <Sparkles className="w-4 h-4" /> Ask Nova: &ldquo;Will I pass survey?&rdquo;
               </div>
-              <blockquote className="border-l-2 border-accent-violet/40 pl-4 text-text-secondary leading-relaxed">
+              <blockquote className="border-l-2 border-accent-cyan/40 pl-4 text-text-secondary leading-relaxed">
                 &ldquo;This isn&rsquo;t a pass/fail — your surveyor or Designated Person decides that.
                 What I can do is show you exactly where you stand.&rdquo;
               </blockquote>
@@ -114,12 +114,12 @@ export default function HomePage() {
       </section>
 
       {/* ── W-S1 — THE MOMENTS YOUR SMS MEETS THE WORLD ───────────────────────── */}
-      <section className="relative border-t border-white/5 py-16 md:py-24">
+      <section className="relative border-t border-border-subtle py-16 md:py-24">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-2xl md:text-3xl font-bold text-text-primary max-w-2xl">The moments your SMS meets the world</h2>
           <div className="mt-10 grid lg:grid-cols-2 gap-10">
             {/* Crew (QR) */}
-            <div className="rounded-2xl border border-white/10 bg-surface-1 p-6">
+            <div className="rounded-2xl border border-border-default bg-surface-1 p-6">
               <div className="flex items-center gap-2 text-brand-primary font-semibold"><QrCode className="w-5 h-5" /> A deckhand joins for the day</div>
               <p className="mt-3 text-text-secondary leading-relaxed">
                 They scan the wheelhouse sticker with their own phone — no app, no account — sign onto the
@@ -128,7 +128,7 @@ export default function HomePage() {
               <ScreenshotPlaceholder kind="clip" aspect="phone" label="Scanning the QR → sign-on → RA signature" caption="Clip: the QR sign-on on a crew phone — to be filmed." className="mt-6 justify-self-center" />
             </div>
             {/* Inspector (the link) */}
-            <div className="rounded-2xl border border-white/10 bg-surface-1 p-6">
+            <div className="rounded-2xl border border-border-default bg-surface-1 p-6">
               <div className="flex items-center gap-2 text-brand-primary font-semibold"><ShieldCheck className="w-5 h-5" /> Survey day</div>
               <p className="mt-3 text-text-secondary leading-relaxed">
                 Hand the inspector a link — 4 hours, one boat, read-only, no app. You&rsquo;re notified the
@@ -142,7 +142,7 @@ export default function HomePage() {
       </section>
 
       {/* ── W-S2 — WORKS WHERE YOU WORK (offline) ─────────────────────────────── */}
-      <section className="relative border-t border-white/5 py-16 md:py-24">
+      <section className="relative border-t border-border-subtle py-16 md:py-24">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid lg:grid-cols-2 gap-10 items-center">
           <div>
             <div className="flex items-center gap-2 text-status-warning font-semibold"><WifiOff className="w-5 h-5" /> Works where you work</div>
@@ -165,7 +165,7 @@ export default function HomePage() {
       </section>
 
       {/* ── W-S3 — STARTS WITH ONE BOAT. GROWS INTO A FLEET. ──────────────────── */}
-      <section className="relative border-t border-white/5 py-16 md:py-24">
+      <section className="relative border-t border-border-subtle py-16 md:py-24">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid lg:grid-cols-2 gap-10 items-center">
           <ScreenshotPlaceholder kind="clip" label="Tap “Add another boat” → the Fleet office appears" caption="Clip: the fleet office materialising on boat #2 — to be filmed." />
           <div>
@@ -187,7 +187,7 @@ export default function HomePage() {
       </section>
 
       {/* ── W-S4 — THE CAMERA MOMENT ──────────────────────────────────────────── */}
-      <section className="relative border-t border-white/5 py-16 md:py-24">
+      <section className="relative border-t border-border-subtle py-16 md:py-24">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid lg:grid-cols-2 gap-10 items-center">
           <div>
             <div className="flex items-center gap-2 text-brand-primary font-semibold"><Camera className="w-5 h-5" /> Fix first, document after</div>
@@ -202,7 +202,7 @@ export default function HomePage() {
       </section>
 
       {/* ── PRICING TEASER (W-P) ──────────────────────────────────────────────── */}
-      <section className="relative border-t border-white/5 py-16 md:py-24">
+      <section className="relative border-t border-border-subtle py-16 md:py-24">
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-2xl md:text-3xl font-bold text-text-primary">£29 a month per boat. Everything included.</h2>
           <p className="mt-3 text-text-secondary">No tiers, no fleet discount, no per-user charges, nothing gated behind a &ldquo;Pro&rdquo; plan.</p>
@@ -212,7 +212,7 @@ export default function HomePage() {
               { icon: FileText, t: 'Your whole SMS as PDFs', d: 'Download the document pack any time.' },
               { icon: ShieldCheck, t: 'The inspection pack', d: 'Ready any day of the year.' },
             ].map((o) => (
-              <div key={o.t} className="rounded-xl border border-white/10 bg-surface-1 p-4">
+              <div key={o.t} className="rounded-xl border border-border-default bg-surface-1 p-4">
                 <o.icon className="w-5 h-5 text-brand-primary" />
                 <p className="mt-2 text-sm font-semibold text-text-primary">{o.t}</p>
                 <p className="text-xs text-text-muted mt-0.5">{o.d}</p>

@@ -11,7 +11,7 @@ import StubPage from './pages/StubPage';
 
 export default function App() {
   return (
-    <div className="min-h-screen bg-surface-0 flex flex-col">
+    <div className="min-h-screen wb-gloss-bg flex flex-col">
       <ScrollToTop />
       <Navigation />
       <main className="flex-1">

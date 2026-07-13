@@ -1,33 +1,45 @@
 /** @type {import('tailwindcss').Config} */
+// W2 — the site's ONE theme is the PRODUCT's `.workboat-light` glossy identity (apps/web globals.css),
+// so a visitor crossing from the site to /workboat-login feels zero theme shock. No dark mode.
 export default {
   content: ['./index.html', './src/**/*.{ts,tsx}'],
   theme: {
     extend: {
       colors: {
+        // Airy off-white surfaces, glossy white cards (workboat-light).
         surface: {
-          0: '#08090D',
-          1: '#0F1117',
-          2: '#161923',
-          3: '#1E2230',
+          0: '#F4F8FC',
+          1: '#FFFFFF',
+          2: '#EAF2F9',
+          3: '#DCE8F3',
         },
+        // Friendly sky / ocean blue — the product brand.
         brand: {
-          primary: '#3B82F6',
-          hover: '#2563EB',
+          primary: '#0EA5E9',
+          hover: '#0284C7',
+          muted: '#E0F2FE',
         },
+        // Nova = the logo's cyan core (was violet). `cyan` is AA-on-white for text; `glow` is decorative.
         accent: {
-          violet: '#A78BFA',
-          cyan: '#06B6D4',
+          cyan: '#0891B2',
+          glow: '#22D3EE',
         },
         text: {
-          primary: '#F0F1F4',
-          secondary: '#9BA1B2',
-          muted: '#5F6780',
+          primary: '#0C2233', // deep navy-slate, warm — not pure black
+          secondary: '#51647A',
+          muted: '#8A9CAE',
+          inverse: '#FFFFFF',
+        },
+        border: {
+          subtle: '#E6EFF7',
+          default: '#D5E3EF',
+          strong: '#BFD3E3',
         },
         status: {
-          success: '#22C55E',
-          warning: '#F59E0B',
-          error: '#EF4444',
-          info: '#3B82F6',
+          success: '#16A34A',
+          warning: '#D97706',
+          error: '#DC2626',
+          info: '#0EA5E9',
         },
       },
       fontFamily: {
@@ -35,21 +47,14 @@ export default {
         mono: ['JetBrains Mono', 'monospace'],
       },
       animation: {
-        'float': 'float 6s ease-in-out infinite',
-        'pulse-slow': 'pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite',
-        'glow': 'glow 2s ease-in-out infinite alternate',
+        float: 'float 6s ease-in-out infinite',
         'slide-up': 'slideUp 0.6s ease-out',
         'fade-in': 'fadeIn 0.8s ease-out',
-        'count-up': 'fadeIn 0.3s ease-out',
       },
       keyframes: {
         float: {
           '0%, 100%': { transform: 'translateY(0)' },
           '50%': { transform: 'translateY(-10px)' },
-        },
-        glow: {
-          '0%': { boxShadow: '0 0 20px rgba(59, 130, 246, 0.1)' },
-          '100%': { boxShadow: '0 0 40px rgba(59, 130, 246, 0.3)' },
         },
         slideUp: {
           '0%': { transform: 'translateY(30px)', opacity: '0' },

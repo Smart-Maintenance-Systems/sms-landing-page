@@ -39,7 +39,7 @@ export default function AboutPage() {
             { icon: ShieldCheck, t: 'Reviewed by industry', d: 'Built with serving industry reviewers' },
             { icon: Sparkles, t: 'AI you can trust', d: 'Cited answers, never a verdict' },
           ].map((c) => (
-            <div key={c.t} className="rounded-xl border border-white/10 bg-surface-1 p-5">
+            <div key={c.t} className="rounded-xl border border-border-default bg-surface-1 p-5">
               <c.icon className="w-6 h-6 text-brand-primary" />
               <p className="mt-3 text-sm font-semibold text-text-primary">{c.t}</p>
               <p className="mt-1 text-xs text-text-muted">{c.d}</p>
@@ -47,7 +47,7 @@ export default function AboutPage() {
           ))}
         </div>
 
-        <blockquote className="mt-10 border-l-2 border-accent-violet/40 pl-4 text-lg text-text-primary italic">
+        <blockquote className="mt-10 border-l-2 border-accent-cyan/40 pl-4 text-lg text-text-primary italic">
           &ldquo;Nova handles the compliance, you handle the boat.&rdquo;
         </blockquote>
 

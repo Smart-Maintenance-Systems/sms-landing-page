@@ -31,14 +31,16 @@ export default function Navigation() {
     <>
       <nav
         className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-          scrolled ? 'bg-surface-0/90 backdrop-blur-xl border-b border-white/5' : 'bg-transparent'
+          scrolled ? 'bg-surface-0/90 backdrop-blur-xl border-b border-border-subtle' : 'bg-transparent'
         }`}
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between h-16 md:h-20">
             {/* Brand */}
             <Link to="/" className="flex items-center gap-3 shrink-0">
-              <img src="/sms-logo-small.png" alt="SMS Workboat" className="h-10 w-auto logo-glow" />
+              <span className="flex h-10 w-10 items-center justify-center overflow-hidden rounded-xl bg-white shadow-sm ring-1 ring-border-subtle">
+                <img src="/sms-workboat-mark.jpg" alt="SMS Workboat" className="h-8 w-8 object-contain" />
+              </span>
               <span className="flex flex-col leading-tight">
                 <span className="text-lg font-bold text-text-primary tracking-wide">SMS Workboat</span>
                 <span className="hidden sm:inline text-[11px] text-text-muted">Workboat Code 3 SMS</span>
@@ -92,7 +94,7 @@ export default function Navigation() {
             className="fixed inset-0 z-40 lg:hidden"
           >
             <div className="absolute inset-0 bg-black/60 backdrop-blur-sm" onClick={() => setMobileOpen(false)} />
-            <div className="absolute top-16 left-0 right-0 bg-surface-1 border-b border-white/5 p-4 space-y-1">
+            <div className="absolute top-16 left-0 right-0 bg-surface-1 border-b border-border-subtle p-4 space-y-1">
               {NAV_ITEMS.map((item) => (
                 <Link
                   key={item.href}
@@ -106,7 +108,7 @@ export default function Navigation() {
                   {item.label}
                 </Link>
               ))}
-              <div className="pt-3 border-t border-white/5">
+              <div className="pt-3 border-t border-border-subtle">
                 <Link to={TRIAL_HREF} className="btn-primary w-full justify-center text-sm">
                   Start free trial
                 </Link>

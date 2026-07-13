@@ -51,7 +51,7 @@ export default function CodePage() {
   return (
     <div className="pt-24 md:pt-32 pb-24">
       <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
-        <span className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-surface-1 px-3 py-1 text-xs font-medium text-text-secondary">
+        <span className="inline-flex items-center gap-2 rounded-full border border-border-default bg-surface-1 px-3 py-1 text-xs font-medium text-text-secondary">
           <Scale className="w-3.5 h-3.5 text-brand-primary" /> Workboat Code Edition 3 · MGN 710 (M)
         </span>
         <h1 className="mt-5 text-3xl md:text-4xl font-bold text-text-primary">What Edition 3 actually requires of you</h1>
@@ -62,7 +62,7 @@ export default function CodePage() {
         </p>
 
         {/* The ten required elements — verbatim §1.1 */}
-        <div className="mt-10 rounded-2xl border border-white/10 bg-surface-1 p-6">
+        <div className="mt-10 rounded-2xl border border-border-default bg-surface-1 p-6">
           <p className="flex items-center gap-1.5 text-sm font-semibold text-text-primary">
             <Scale className="w-4 h-4 text-text-muted" /> Workboat Code Edition 3, Appendix 8, section 1.1
           </p>
@@ -82,11 +82,11 @@ export default function CodePage() {
 
         <div className="mt-6 space-y-5">
           {CLAUSES.map((c) => (
-            <div key={c.citation} className="rounded-xl border border-white/10 bg-surface-1 p-5">
+            <div key={c.citation} className="rounded-xl border border-border-default bg-surface-1 p-5">
               <p className="flex items-center gap-1.5 text-xs font-semibold text-text-primary">
                 <Scale className="w-3.5 h-3.5 shrink-0 text-text-muted" /> {c.citation}
               </p>
-              <blockquote className="mt-2 border-l-2 border-white/15 pl-4 text-sm leading-relaxed text-text-secondary">{c.text}</blockquote>
+              <blockquote className="mt-2 border-l-2 border-border-default pl-4 text-sm leading-relaxed text-text-secondary">{c.text}</blockquote>
             </div>
           ))}
         </div>

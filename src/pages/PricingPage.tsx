@@ -70,7 +70,7 @@ export default function PricingPage() {
           <h2 className="text-xl md:text-2xl font-bold text-text-primary text-center">What your £29 produces</h2>
           <div className="mt-6 grid sm:grid-cols-3 gap-4">
             {OUTPUTS.map((o) => (
-              <div key={o.t} className="rounded-xl border border-white/10 bg-surface-1 p-5">
+              <div key={o.t} className="rounded-xl border border-border-default bg-surface-1 p-5">
                 <o.icon className="w-6 h-6 text-brand-primary" />
                 <p className="mt-3 text-sm font-semibold text-text-primary">{o.t}</p>
                 <p className="mt-1 text-xs text-text-muted leading-relaxed">{o.d}</p>
@@ -80,7 +80,7 @@ export default function PricingPage() {
         </div>
 
         {/* Start block (the trial funnel front-ends the existing register path — lands with the S1 deploy). */}
-        <div id="start" className="mt-14 rounded-2xl border border-white/10 bg-surface-2 p-6 md:p-8 text-center">
+        <div id="start" className="mt-14 rounded-2xl border border-border-default bg-surface-2 p-6 md:p-8 text-center">
           <h2 className="text-xl md:text-2xl font-bold text-text-primary">Start your 14-day free trial</h2>
           <p className="mt-2 text-text-secondary">Your name, your email, your boat — that&rsquo;s all it takes to begin.</p>
           <p className="mt-4 text-sm text-text-muted">

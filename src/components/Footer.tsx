@@ -16,9 +16,9 @@ const COMPANY_LINKS = [
 
 export default function Footer() {
   return (
-    <footer className="bg-surface-1 border-t border-white/5">
+    <footer className="bg-surface-1 border-t border-border-subtle">
       {/* The quiet SMS-Main cross-sell (design §3) — structural, never a competitor mention. */}
-      <div className="border-b border-white/5">
+      <div className="border-b border-border-subtle">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3">
           <p className="text-sm text-text-secondary">
             Running more than workboats?{' '}
@@ -34,7 +34,9 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-10">
           <div className="md:col-span-2">
             <Link to="/" className="flex items-center gap-3 mb-4">
-              <img src="/sms-logo-small.png" alt="SMS Workboat" className="h-10 w-auto logo-glow" />
+              <span className="flex h-10 w-10 items-center justify-center overflow-hidden rounded-xl bg-white shadow-sm ring-1 ring-border-subtle">
+                <img src="/sms-workboat-mark.jpg" alt="SMS Workboat" className="h-8 w-8 object-contain" />
+              </span>
               <span className="flex flex-col leading-tight">
                 <span className="text-lg font-bold text-text-primary">SMS Workboat</span>
                 <span className="text-xs text-text-muted">Workboat Code 3 SMS</span>
@@ -77,7 +79,7 @@ export default function Footer() {
           </div>
         </div>
 
-        <div className="mt-12 pt-6 border-t border-white/5 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3">
+        <div className="mt-12 pt-6 border-t border-border-subtle flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3">
           <p className="text-xs text-text-muted">© {new Date().getFullYear()} SMS Workboat. All rights reserved.</p>
           <Link to={TRIAL_HREF} className="text-xs text-text-secondary hover:text-brand-primary">Start your 14-day free trial →</Link>
         </div>
