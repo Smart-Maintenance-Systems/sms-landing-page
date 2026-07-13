@@ -16,7 +16,7 @@ export default function FaqPage() {
     <div className="pt-24 md:pt-32 pb-24">
       <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
         <h1 className="text-3xl md:text-4xl font-bold text-text-primary">Frequently asked questions</h1>
-        <p className="mt-4 text-text-secondary">Honest answers about the Workboat Code, the product, and getting set up. Where we state what the Code requires, we cite the section — and we never tell you whether you&rsquo;ll pass. That&rsquo;s your surveyor&rsquo;s call.</p>
+        <p className="mt-4 text-text-secondary">Honest answers about the Workboat Code, the product, and getting set up. Where we state what the Code requires, we cite the section - and we never tell you whether you&rsquo;ll pass. That&rsquo;s your surveyor&rsquo;s call.</p>
 
         <div className="mt-10 space-y-4">
           {FAQS.map((f) => (

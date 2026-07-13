@@ -5,7 +5,7 @@ import { useSeo } from '../lib/seo';
 import { ROUTE_SEO } from '../lib/routeSeo';
 
 /**
- * Pricing (design W-P, FOUNDER-SIGNED 2026-07-12). 🟥 £29 flat per boat, everything included — no tiers,
+ * Pricing (design W-P, FOUNDER-SIGNED 2026-07-12). 🟥 £29 flat per boat, everything included - no tiers,
  * no fleet discount, no per-user charges, nothing gated. 14-day no-card trial. The tangible outputs are
  * named honestly: self-assessment · download your SMS as PDFs · inspection pack. The parked
  * evidence-archive export is NOT claimed.
@@ -15,17 +15,17 @@ const INCLUDED = [
   'Vessel setup + certificates, with expiry reminders',
   'Risk assessments from templates you confirm',
   'A maintenance log that derives its own due dates',
-  'Drills, incidents and near-misses — recorded, photo-first',
+  'Drills, incidents and near-misses - recorded, photo-first',
   'Person Ashore + crew familiarisation',
-  'QR sign-on for crew — no app, no account',
+  'QR sign-on for crew - no app, no account',
   'Time-limited, read-only inspector links',
-  'Nova — the Code assistant, cited answers, no verdicts',
+  'Nova - the Code assistant, cited answers, no verdicts',
   'The fleet office the moment you add a second boat',
   'Works offline on board, syncs when you’re back in range',
 ];
 
 const OUTPUTS = [
-  { icon: ClipboardCheck, t: 'Your annual self-assessment', d: 'Produced from the records you keep — ready to sign.' },
+  { icon: ClipboardCheck, t: 'Your annual self-assessment', d: 'Produced from the records you keep - ready to sign.' },
   { icon: FileText, t: 'Download your whole SMS as PDFs', d: 'The document pack, yours to keep, any time.' },
   { icon: ShieldCheck, t: 'The inspection pack', d: 'Assembled and ready any day of the year.' },
 ];
@@ -49,14 +49,14 @@ export default function PricingPage() {
           <div className="flex flex-col sm:flex-row sm:items-end sm:justify-between gap-4">
             <div>
               <p className="text-4xl font-bold text-text-primary">£29<span className="text-lg font-medium text-text-muted"> / boat / month</span></p>
-              {/* W2 — arithmetic-honest anchor: £29/mo ÷ 30 ≈ £0.97 (TAGLINE-BANK.md). */}
+              {/* W2 - arithmetic-honest anchor: £29/mo ÷ 30 ≈ £0.97 (TAGLINE-BANK.md). */}
               <p className="mt-1 text-sm font-medium text-brand-primary">Less than £1 a day.</p>
               <p className="mt-1 text-sm text-text-secondary">14-day free trial · no card required.</p>
             </div>
             <div className="flex flex-col sm:flex-row gap-3">
               <Link to={TRIAL_HREF === '/pricing' ? '#start' : TRIAL_HREF} className="btn-primary justify-center">Start free trial <ChevronRight className="w-4 h-4" /></Link>
               {DEMO_ENABLED ? (
-                <a href={DEMO_URL} className="btn-secondary justify-center">Try the demo — no sign-up</a>
+                <a href={DEMO_URL} className="btn-secondary justify-center">Try the demo - no sign-up</a>
               ) : null}
             </div>
           </div>
@@ -84,10 +84,10 @@ export default function PricingPage() {
           </div>
         </div>
 
-        {/* Start block (the trial funnel front-ends the existing register path — lands with the S1 deploy). */}
+        {/* Start block (the trial funnel front-ends the existing register path - lands with the S1 deploy). */}
         <div id="start" className="mt-14 rounded-2xl border border-border-default bg-surface-2 p-6 md:p-8 text-center">
           <h2 className="text-xl md:text-2xl font-bold text-text-primary">Start your 14-day free trial</h2>
-          <p className="mt-2 text-text-secondary">Your name, your email, your boat — that&rsquo;s all it takes to begin.</p>
+          <p className="mt-2 text-text-secondary">Your name, your email, your boat - that&rsquo;s all it takes to begin.</p>
           <p className="mt-4 text-sm text-text-muted">
             The trial sign-up form connects to your account setup when the site goes live. For early access,
             <a href="mailto:info@smsystems.uk?subject=SMS%20Workboat%20trial" className="text-brand-primary hover:text-brand-hover"> email us</a>.

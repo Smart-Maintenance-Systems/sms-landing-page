@@ -5,13 +5,13 @@ interface ScreenshotPlaceholderProps {
   aspect?: 'video' | 'phone' | 'square';
   /** A clip shows a film icon + "clip to be filmed"; a screenshot shows a screen icon. */
   kind?: 'screenshot' | 'clip';
-  /** An honest caption below the frame (e.g. "Clip: the inspector link opening — to be filmed"). */
+  /** An honest caption below the frame (e.g. "Clip: the inspector link opening - to be filmed"). */
   caption?: string;
   className?: string;
 }
 
 /**
- * W1 — an HONEST placeholder frame. 🟥 Never a mockup, never stock, never animation-instead-of-product:
+ * W1 - an HONEST placeholder frame. 🟥 Never a mockup, never stock, never animation-instead-of-product:
  * it says plainly "screenshot placeholder" / "clip to be filmed" so a founder-review reader (and later a
  * visitor, if any slip through) is never shown a fabricated product image. Real shots use <Screenshot/>.
  */

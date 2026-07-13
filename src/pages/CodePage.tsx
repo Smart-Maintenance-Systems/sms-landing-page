@@ -7,11 +7,11 @@ import { ROUTE_SEO } from '../lib/routeSeo';
 /**
  * "The Code, explained" (design §2 + rule 2). 🟥 Every Code statement carries its SECTION REF and is
  * quoted VERBATIM from the on-file Workboat Code Edition 3 (BUILD_STAGES/WB3-CODE-PDFS), taken from the
- * product's own PDF-verified clause registry (code-clauses.ts) — no paraphrase, no invented claim, no
+ * product's own PDF-verified clause registry (code-clauses.ts) - no paraphrase, no invented claim, no
  * verdict. A claim we cannot cite is not on this page.
  */
 
-// The ten SMS elements — verbatim, Appendix 8 §1.1.
+// The ten SMS elements - verbatim, Appendix 8 §1.1.
 const ELEMENTS = [
   'Safety and Environmental Protection Policy',
   'Risk Assessment for Safe Working',
@@ -60,11 +60,11 @@ export default function CodePage() {
         <h1 className="mt-5 text-3xl md:text-4xl font-bold text-text-primary">What Edition 3 actually requires of you</h1>
         <p className="mt-4 text-text-secondary leading-relaxed">
           The Workboat Code Edition 3 came into force on 13 December 2023. Under it, every small commercial
-          workboat needs a Safety Management System. Everything below is quoted from the Code itself — with
-          its section reference — never paraphrased, never a verdict.
+          workboat needs a Safety Management System. Everything below is quoted from the Code itself - with
+          its section reference - never paraphrased, never a verdict.
         </p>
 
-        {/* The ten required elements — verbatim §1.1 */}
+        {/* The ten required elements - verbatim §1.1 */}
         <div className="mt-10 rounded-2xl border border-border-default bg-surface-1 p-6">
           <p className="flex items-center gap-1.5 text-sm font-semibold text-text-primary">
             <Scale className="w-4 h-4 text-text-muted" /> Workboat Code Edition 3, Appendix 8, section 1.1
@@ -81,7 +81,7 @@ export default function CodePage() {
           <p className="mt-4 text-xs text-text-muted">Quoted verbatim from the Workboat Code.</p>
         </div>
 
-        <p className="mt-10 text-text-secondary">SMS Workboat gives you a home for each of these — and the record to prove it. A closer look at four:</p>
+        <p className="mt-10 text-text-secondary">SMS Workboat gives you a home for each of these - and the record to prove it. A closer look at four:</p>
 
         <div className="mt-6 space-y-5">
           {CLAUSES.map((c) => (
@@ -96,7 +96,7 @@ export default function CodePage() {
 
         <p className="mt-8 text-xs text-text-muted">
           Source: the on-file Workboat Code Edition 3 and MGN 710 (M). Nova quotes these same clauses when
-          you ask it — it cites the section and never rules whether you comply. That&rsquo;s your surveyor&rsquo;s
+          you ask it - it cites the section and never rules whether you comply. That&rsquo;s your surveyor&rsquo;s
           call.
         </p>
 

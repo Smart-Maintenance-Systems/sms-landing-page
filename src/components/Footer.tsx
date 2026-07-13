@@ -17,7 +17,7 @@ const COMPANY_LINKS = [
 export default function Footer() {
   return (
     <footer className="bg-surface-1 border-t border-border-subtle">
-      {/* The quiet SMS-Main cross-sell (design §3) — structural, never a competitor mention. */}
+      {/* The quiet SMS-Main cross-sell (design §3) - structural, never a competitor mention. */}
       <div className="border-b border-border-subtle">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3">
           <p className="text-sm text-text-secondary">
@@ -80,7 +80,7 @@ export default function Footer() {
         </div>
 
         <div className="mt-12 pt-6 border-t border-border-subtle flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3">
-          <p className="text-xs text-text-muted">© {new Date().getFullYear()} SMS Workboat — built by Smart Maintenance Systems. All rights reserved.</p>
+          <p className="text-xs text-text-muted">© {new Date().getFullYear()} SMS Workboat - built by Smart Maintenance Systems. All rights reserved.</p>
           <Link to={TRIAL_HREF} className="text-xs text-text-secondary hover:text-brand-primary">Start your 14-day free trial →</Link>
         </div>
       </div>

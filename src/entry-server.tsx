@@ -3,9 +3,9 @@ import { StaticRouter } from 'react-router-dom/server';
 import App from './App';
 
 /**
- * W3b — SSR entry for build-time prerendering ONLY (never shipped to the browser; the client still boots
+ * W3b - SSR entry for build-time prerendering ONLY (never shipped to the browser; the client still boots
  * from `main.tsx`). `scripts/prerender.mjs` imports the vite-built version of this module and, for each
- * route, gets the rendered body HTML plus the head tags — both from the same `routeSeo` source the client
+ * route, gets the rendered body HTML plus the head tags - both from the same `routeSeo` source the client
  * `useSeo` hook uses, so static HTML and hydrated client agree.
  */
 export function render(url: string): string {

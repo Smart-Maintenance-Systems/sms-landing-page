@@ -5,7 +5,7 @@ import { useSeo } from '../lib/seo';
 import { ROUTE_SEO } from '../lib/routeSeo';
 
 /**
- * Why us (design §3). The founders' voice — built from inside the industry, not a software shop. 🟥
+ * Why us (design §3). The founders' voice - built from inside the industry, not a software shop. 🟥
  * W5 Task 1: PLURAL throughout ("the founders" / "we"), co-founder UNNAMED, no company names, no year
  * counts, no individual credit lines (founder-signed). Publishable-now facts only (guardrail 7): no invented
  * numbers, no testimonials, no logos. "built with serving industry reviewers" is the #193 placeholder.
@@ -16,21 +16,21 @@ export default function AboutPage() {
     <div className="pt-24 md:pt-32 pb-24">
       <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
         <p className="text-sm font-semibold text-brand-primary uppercase tracking-wider">Why us</p>
-        <h1 className="mt-3 text-3xl md:text-4xl font-bold text-text-primary">Built from inside the industry — not a software shop.</h1>
+        <h1 className="mt-3 text-3xl md:text-4xl font-bold text-text-primary">Built from inside the industry - not a software shop.</h1>
 
         <div className="mt-6 space-y-5 text-text-secondary leading-relaxed">
           <p>
             SMS Workboat was built by its founders between jobs at sea. The compliance headaches it fixes are
-            ones we live with — not ones a product manager guessed at.
+            ones we live with - not ones a product manager guessed at.
           </p>
           <p>
             The law changed: the Workboat Code Edition 3 now requires a Safety Management System on every
-            small commercial workboat. Most owners are one or two boats, run from a phone at a berth — not a
+            small commercial workboat. Most owners are one or two boats, run from a phone at a berth - not a
             compliance department. So the whole thing is built for that person: from nothing to a working
             SMS in an afternoon, the depth kept under the hood.
           </p>
           <p>
-            And it&rsquo;s built to be trusted. Its AI, Nova, retrieves and cites the Code — it never rules
+            And it&rsquo;s built to be trusted. Its AI, Nova, retrieves and cites the Code - it never rules
             a verdict, because that&rsquo;s the surveyor&rsquo;s call. We show you everything: the product,
             the price, Nova&rsquo;s sources, even your own gaps.
           </p>
@@ -38,7 +38,7 @@ export default function AboutPage() {
 
         <div className="mt-10 grid sm:grid-cols-3 gap-4">
           {[
-            { icon: Anchor, t: 'Built at sea', d: 'By people who work on the water — not from an office' },
+            { icon: Anchor, t: 'Built at sea', d: 'By people who work on the water - not from an office' },
             { icon: ShieldCheck, t: 'Reviewed by industry', d: 'Built with serving industry reviewers' },
             { icon: Sparkles, t: 'AI you can trust', d: 'Cited answers, never a verdict' },
           ].map((c) => (

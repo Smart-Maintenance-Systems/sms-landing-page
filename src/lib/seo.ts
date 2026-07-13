@@ -1,14 +1,14 @@
 import { useEffect } from 'react';
 
 /**
- * W3 Task 1 — per-route head management, dependency-free (proportionate for a small SPA; react-helmet-async
+ * W3 Task 1 - per-route head management, dependency-free (proportionate for a small SPA; react-helmet-async
  * would be heavier and this needs no server rendering). `useSeo` upserts the title, description, canonical,
  * OpenGraph/Twitter tags, and an optional JSON-LD block on mount/route-change.
  *
- * W3b — the site is now PRERENDERED at build time (`scripts/prerender.mjs` via `entry-server.tsx`), so every
+ * W3b - the site is now PRERENDERED at build time (`scripts/prerender.mjs` via `entry-server.tsx`), so every
  * route ships as real static HTML with its own head; `renderHeadTags` in `routeSeo.ts` builds that static
  * head from the SAME `ROUTE_SEO` this hook consumes at runtime. `useSeo` therefore just keeps the head in
- * sync across client-side (SPA) navigations — upserting is idempotent over the prerendered tags.
+ * sync across client-side (SPA) navigations - upserting is idempotent over the prerendered tags.
  */
 export const CANONICAL_HOST = 'https://smsworkboat.co.uk';
 export const OG_IMAGE = `${CANONICAL_HOST}/sms-workboat-mark.jpg`; // the real brand mark (v1; no invented imagery)
@@ -18,7 +18,7 @@ export interface SeoOptions {
   description: string;
   /** Absolute path on the canonical host, e.g. "/pricing". */
   path: string;
-  /** Optional JSON-LD object(s) — 🟥 only claims that are also visible on the page. */
+  /** Optional JSON-LD object(s) - 🟥 only claims that are also visible on the page. */
   jsonLd?: object | object[];
 }
 

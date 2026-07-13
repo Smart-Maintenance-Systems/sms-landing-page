@@ -7,7 +7,7 @@ import { ROUTE_SEO } from '../lib/routeSeo';
 import { SHOTS, type ShotKey } from '../lib/screenshots';
 
 /**
- * How it works — the product's real phases in owner language (design §3): CAPTURE → AUTHOR → ASSESS.
+ * How it works - the product's real phases in owner language (design §3): CAPTURE → AUTHOR → ASSESS.
  * Real screens only.
  */
 const STEPS: { n: number; icon: typeof Camera; title: string; plain: string; body: string; shot: ShotKey }[] = [
@@ -16,7 +16,7 @@ const STEPS: { n: number; icon: typeof Camera; title: string; plain: string; bod
     icon: Camera,
     title: 'Capture',
     plain: 'Photograph what you already have.',
-    body: 'Snap your certificates and your boat — Nova reads the details off the picture so you just confirm them. Photograph a fix and the evidence writes itself around it.',
+    body: 'Snap your certificates and your boat - Nova reads the details off the picture so you just confirm them. Photograph a fix and the evidence writes itself around it.',
     shot: 'howCapture',
   },
   {
@@ -24,7 +24,7 @@ const STEPS: { n: number; icon: typeof Camera; title: string; plain: string; bod
     icon: FileText,
     title: 'Author',
     plain: 'Your documents write themselves from templates.',
-    body: 'Risk assessments, policies and the maintenance programme start from Workboat-Code templates. You edit and confirm — you don’t start from a blank page.',
+    body: 'Risk assessments, policies and the maintenance programme start from Workboat-Code templates. You edit and confirm - you don’t start from a blank page.',
     shot: 'howAuthor',
   },
   {
@@ -32,7 +32,7 @@ const STEPS: { n: number; icon: typeof Camera; title: string; plain: string; bod
     icon: ClipboardCheck,
     title: 'Assess',
     plain: 'Sign your self-assessment.',
-    body: 'The records you keep produce your annual self-assessment — ready to sign, with the inspection pack assembled any day you need it.',
+    body: 'The records you keep produce your annual self-assessment - ready to sign, with the inspection pack assembled any day you need it.',
     shot: 'howAssess',
   },
 ];
@@ -43,7 +43,7 @@ export default function HowItWorksPage() {
     <div className="pt-24 md:pt-32 pb-24">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center">
-          {/* W2 — the founder-loved original line leads the day-one story (TAGLINE-BANK.md). */}
+          {/* W2 - the founder-loved original line leads the day-one story (TAGLINE-BANK.md). */}
           <p className="text-sm font-semibold uppercase tracking-wider text-brand-primary">Your boat deserves better than a notebook.</p>
           <h1 className="mt-3 text-3xl md:text-4xl font-bold text-text-primary">From nothing to a working SMS in an afternoon</h1>
           <p className="mt-4 text-text-secondary max-w-xl mx-auto">On your phone, on your boat. Three steps: capture what you have, let it author your documents, then sign your self-assessment.</p>

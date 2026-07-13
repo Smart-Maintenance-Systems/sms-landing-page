@@ -23,7 +23,7 @@ export default function AnimatedCounter({
   useEffect(() => {
     if (!isInView) return;
 
-    // Small numbers (< 50) — just set immediately, animation looks jittery
+    // Small numbers (< 50) - just set immediately, animation looks jittery
     if (end < 50) {
       setCount(end);
       return;
