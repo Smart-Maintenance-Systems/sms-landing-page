@@ -4,20 +4,20 @@ import Screenshot from '../components/Screenshot';
 import { TRIAL_HREF } from '../config';
 import { useSeo } from '../lib/seo';
 import { ROUTE_SEO } from '../lib/routeSeo';
+import { SHOTS, type ShotKey } from '../lib/screenshots';
 
 /**
  * How it works — the product's real phases in owner language (design §3): CAPTURE → AUTHOR → ASSESS.
  * Real screens only.
  */
-const STEPS = [
+const STEPS: { n: number; icon: typeof Camera; title: string; plain: string; body: string; shot: ShotKey }[] = [
   {
     n: 1,
     icon: Camera,
     title: 'Capture',
     plain: 'Photograph what you already have.',
     body: 'Snap your certificates and your boat — Nova reads the details off the picture so you just confirm them. Photograph a fix and the evidence writes itself around it.',
-    shot: '/screens/cert-1.png',
-    alt: 'Capturing a certificate',
+    shot: 'howCapture',
   },
   {
     n: 2,
@@ -25,8 +25,7 @@ const STEPS = [
     title: 'Author',
     plain: 'Your documents write themselves from templates.',
     body: 'Risk assessments, policies and the maintenance programme start from Workboat-Code templates. You edit and confirm — you don’t start from a blank page.',
-    shot: '/screens/ra-2.png',
-    alt: 'Authoring a risk assessment',
+    shot: 'howAuthor',
   },
   {
     n: 3,
@@ -34,8 +33,7 @@ const STEPS = [
     title: 'Assess',
     plain: 'Sign your self-assessment.',
     body: 'The records you keep produce your annual self-assessment — ready to sign, with the inspection pack assembled any day you need it.',
-    shot: '/screens/person-ashore-2.png',
-    alt: 'The self-assessment',
+    shot: 'howAssess',
   },
 ];
 
@@ -63,7 +61,7 @@ export default function HowItWorksPage() {
                 <p className="mt-1 text-lg text-brand-primary">{s.plain}</p>
                 <p className="mt-3 text-text-secondary leading-relaxed">{s.body}</p>
               </div>
-              <Screenshot src={s.shot} alt={s.alt} aspect="phone" className="justify-self-center" />
+              <Screenshot {...SHOTS[s.shot]} aspect="phone" className="justify-self-center" />
             </div>
           ))}
         </div>
