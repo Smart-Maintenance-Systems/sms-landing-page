@@ -26,6 +26,77 @@ Stack kept: Vite + React 18 + Tailwind + react-router + framer-motion + lucide.
 
 ---
 
+## W3 update (2026-07-13) — SEO layer + real FAQ
+
+Canonical host: **`https://smsworkboat.co.uk`** (`CANONICAL_HOST` in `src/lib/seo.ts`). `npm run build`
+clean · `tsc --noEmit` clean · all 6 routes + `/robots.txt` + `/sitemap.xml` return 200 under `node server.js`.
+**Validators:** JSON-LD parsed with `JSON.parse` (Organization) + generated from typed objects (Product,
+FAQPage); `sitemap.xml` checked well-formed (6 `<url>`, valid `<?xml>`/`urlset`); guardrail grep empty
+(no `you will pass`/`guaranteed`/`mca-approved`/`compliant`-verdict/competitor tokens). Run Google's Rich
+Results Test on the live URL post-deploy for the final schema tick.
+
+### Per-route head (Task 1 — `useSeo` hook, dependency-free)
+| Route | Title | JSON-LD |
+|---|---|---|
+| `/` | SMS Workboat — the simplest way to meet the Workboat Code | — (Organization is site-wide, in `index.html`) |
+| `/how-it-works` | How SMS Workboat works — from nothing to an SMS in an afternoon | — |
+| `/pricing` | Pricing — £29 a month per boat, everything included \| SMS Workboat | **Product + Offer** (£29 GBP, per boat/month) |
+| `/code` | Workboat Code Edition 3 explained — what your SMS must include \| SMS Workboat | — |
+| `/faq` | SMS Workboat FAQ — the Workboat Code, setup, crew, pricing | **FAQPage** (all 14 Q&As) |
+| `/about` | Why SMS Workboat — built from inside the industry | — |
+
+`index.html` carries the site-wide **Organization** JSON-LD + the root canonical + default OG (the static
+first-paint baseline). Each page then upserts its own title/description/canonical/OG/Twitter + optional
+JSON-LD client-side. 🟥 **Schema claims = visible signed claims only:** the Product Offer states just the
+£29 fact (no invented ratings/reviews); FAQPage schema is generated from the same visible Q&A text.
+
+### 🟥 Task 3 (prerendering) — STOPPED, as the brief requires
+The brief said: *server.js must serve the new dist UNCHANGED — if it would need edits, STOP and report.*
+It would. **Verified empirically:** `server.js` rewrites every extensionless route to the ROOT `index.html`
+(`if (!extname(filePath)) filePath = join(DIST, 'index.html')`), so `/` and `/pricing` return **byte-identical
+HTML** (same md5). Per-route prerendered `.html` files (e.g. `dist/pricing/index.html`) would never be served
+without changing that rewrite. So no prerenderer was added and the per-route head is client-side (fine for
+Googlebot, which executes JS; the static baseline is the `index.html` defaults). **This is why titles/OG are
+in a JS hook, not baked HTML.**
+
+**Recommended minimal server.js change (founder call, one small diff — NOT made this session):**
+1. Serve a real per-route file when it exists *before* the SPA fallback: try `join(DIST, req.url, 'index.html')`
+   and use it if present — then `vite-plugin-prerender`/`vite-react-ssg` output would be served as static HTML.
+2. Add `.txt` → `text/plain` and `.xml` → `application/xml` to `MIME_TYPES` (see next note).
+
+### robots.txt / sitemap.xml Content-Type (same frozen-server class)
+`public/robots.txt` and `public/sitemap.xml` build into `dist/` and serve 200, **but** `server.js`'s
+`MIME_TYPES` map has no `.txt`/`.xml`, so they go out as `application/octet-stream`. Google/Bing still parse
+valid octet-stream robots + sitemaps, so this is **not launch-blocking** — but it's untidy and is fixed by the
+same one-line `MIME_TYPES` addition above. Flagged, not worked around (server.js is frozen this session).
+
+### FAQ (Task 4) — claims + citations for founder sign-off
+14 buyer questions in `src/pages/FaqPage.tsx`. **Code-fact answers cite the section** (same Appendix-8 set the
+Code page uses); **product answers are checked against `WB3-CAPABILITY-MAP.md`**; **zero verdict language** —
+the FAQ inherits Nova's leash ("your surveyor's or Designated Person's call"). These entries also seed the
+future Website-Nova corpus (K1).
+
+| # | Question | Basis |
+|---|---|---|
+| 1 | Do I legally need an SMS? | Code — **Appendix 8, §1.1** + in force 13 Dec 2023 |
+| 2 | What must my SMS include? (the ten elements) | Code — **Appendix 8, §1.1** (verbatim list) |
+| 3 | What is a Designated Person Ashore? | Code — **Appendix 8, §6** |
+| 4 | Do crew need familiarisation/training? | Code — **Appendix 8, §7** |
+| 5 | Do I have to record drills? | Code — **Appendix 8, §10** |
+| 6 | What about maintenance records? | Code — **Appendix 8, §12** |
+| 7 | What happens at an inspection/survey? | Product (inspector link) — no verdict, "surveyor's decision" |
+| 8 | How long to set up? | Product (capture + Nova cert-read) — capability-map true |
+| 9 | What does it cost? | £29 signed fact (mirrors Pricing) |
+| 10 | Does it work offline? | Product — the honest "within a loaded session… 'On board' not 'Saved'… not a fully offline app" |
+| 11 | How does crew sign on? | Product (QR, read + self-sign only) |
+| 12 | One boat — overkill? | Product (fleet office hidden at one boat) |
+| 13 | What if I run a fleet? | Product (£29 flat, "the features are the fleet discount") |
+| 14 | Can I get my data out? | Product (PDF pack, inspection pack) — evidence-archive export NOT claimed |
+
+🟥 The audited Code quotes and the £29 facts were **not** altered by this brief.
+
+---
+
 ## Pages built
 | Route | Page | State |
 |---|---|---|
@@ -34,7 +105,8 @@ Stack kept: Vite + React 18 + Tailwind + react-router + framer-motion + lucide.
 | `/code` | **The Code, explained** | Full — only the CITABLE set (verbatim + section refs) |
 | `/how-it-works` | **How it works** | Full — CAPTURE → AUTHOR → ASSESS, real screens |
 | `/about` | **Why us** | Full — the insider story, publishable-now facts only |
-| `/faq`, `/privacy`, `/terms` | Stubs | Honest "being written" placeholders, never dead ends |
+| `/faq` | **FAQ** | Full (W3) — 14 buyer questions, Code answers cited, zero verdicts |
+| `/privacy`, `/terms` | Stubs | Honest "being written" placeholders, never dead ends |
 
 Removed the Main-platform-era pages (`PlatformPage`, `LightPage`) and Main copy from Nav/Footer/meta.
 

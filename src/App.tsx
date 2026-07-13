@@ -7,6 +7,7 @@ import PricingPage from './pages/PricingPage';
 import CodePage from './pages/CodePage';
 import AboutPage from './pages/AboutPage';
 import HowItWorksPage from './pages/HowItWorksPage';
+import FaqPage from './pages/FaqPage';
 import StubPage from './pages/StubPage';
 
 export default function App() {
@@ -21,10 +22,7 @@ export default function App() {
           <Route path="/pricing" element={<PricingPage />} />
           <Route path="/code" element={<CodePage />} />
           <Route path="/about" element={<AboutPage />} />
-          <Route
-            path="/faq"
-            element={<StubPage title="Frequently asked questions" blurb="Honest answers about the Workboat Code, the product, and getting set up." />}
-          />
+          <Route path="/faq" element={<FaqPage />} />
           <Route
             path="/privacy"
             element={<StubPage title="Privacy policy" blurb="How we handle your data." />}
