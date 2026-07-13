@@ -50,25 +50,31 @@ first-paint baseline). Each page then upserts its own title/description/canonica
 JSON-LD client-side. 🟥 **Schema claims = visible signed claims only:** the Product Offer states just the
 £29 fact (no invented ratings/reviews); FAQPage schema is generated from the same visible Q&A text.
 
-### 🟥 Task 3 (prerendering) — STOPPED, as the brief requires
-The brief said: *server.js must serve the new dist UNCHANGED — if it would need edits, STOP and report.*
-It would. **Verified empirically:** `server.js` rewrites every extensionless route to the ROOT `index.html`
-(`if (!extname(filePath)) filePath = join(DIST, 'index.html')`), so `/` and `/pricing` return **byte-identical
-HTML** (same md5). Per-route prerendered `.html` files (e.g. `dist/pricing/index.html`) would never be served
-without changing that rewrite. So no prerenderer was added and the per-route head is client-side (fine for
-Googlebot, which executes JS; the static baseline is the `index.html` defaults). **This is why titles/OG are
-in a JS hook, not baked HTML.**
+### ✅ Task 3 (prerendering) — DONE in W3b (founder-approved server.js one-diff, ON THIS BRANCH ONLY)
+The W3 STOP was because the deployed `server.js` rewrote every extensionless route to the ROOT `index.html`,
+so per-route static HTML couldn't be served. **W3b (founder-approved) applied the recommended one-diff to
+`server.js` on `w1-website-skeleton`** and completed the prerender.
 
-**Recommended minimal server.js change (founder call, one small diff — NOT made this session):**
-1. Serve a real per-route file when it exists *before* the SPA fallback: try `join(DIST, req.url, 'index.html')`
-   and use it if present — then `vite-plugin-prerender`/`vite-react-ssg` output would be served as static HTML.
-2. Add `.txt` → `text/plain` and `.xml` → `application/xml` to `MIME_TYPES` (see next note).
+**Tool (stated):** Vite's built-in **SSR build** (`vite build --ssr src/entry-server.tsx`) + `react-dom/server`
+(already a dependency) + a ~40-line post-build script (`scripts/prerender.mjs`). **Zero new dependencies.**
+Rejected: `react-snap`/`vite-plugin-prerender` (bundle Chromium — heavy for 6 routes); `vite-react-ssg`
+(would replace the just-shipped `useSeo` head system with its own + a router refactor = two head systems = debt).
 
-### robots.txt / sitemap.xml Content-Type (same frozen-server class)
-`public/robots.txt` and `public/sitemap.xml` build into `dist/` and serve 200, **but** `server.js`'s
-`MIME_TYPES` map has no `.txt`/`.xml`, so they go out as `application/octet-stream`. Google/Bing still parse
-valid octet-stream robots + sitemaps, so this is **not launch-blocking** — but it's untidy and is fixed by the
-same one-line `MIME_TYPES` addition above. Flagged, not worked around (server.js is frozen this session).
+**How it works (no drift by construction):** `src/lib/routeSeo.ts` is the SINGLE source of truth (title,
+description, canonical, OG/Twitter, JSON-LD, FAQ corpus). The client `useSeo` hook reads it at runtime; the
+build reads the *same* module (`renderHeadTags` for the head, `render()` for the body) — so static HTML and
+the hydrated client can't disagree. `npm run build` now = client build → SSR build → `prerender.mjs`, which
+writes `dist/<route>/index.html` for all 6 routes (Home → `dist/index.html`). Client boot stays CSR
+(`main.tsx` `createRoot`, no hydration) — bots/no-JS get the prerendered HTML, users get the SPA; chosen over
+`hydrateRoot` to avoid framer-motion animation mismatches.
+
+**server.js one-diff (applied, branch only — deploy/main untouched):** (1) before the SPA fallback, serve
+`dist/<url>/index.html` when it exists; (2) add `.txt` → `text/plain` and `.xml` → `application/xml` to
+`MIME_TYPES`; (3) strip the query string for file resolution. Unknown routes still fall back to Home.
+
+**Verified under `node server.js`:** every route returns its own `<title>` + prerendered body + canonical +
+JSON-LD (Product on `/pricing`, FAQPage on `/faq`, Organization site-wide); **`/robots.txt` → `text/plain`,
+`/sitemap.xml` → `application/xml`** (the earlier octet-stream issue is fixed); unknown route → 200 (Home).
 
 ### FAQ (Task 4) — claims + citations for founder sign-off
 14 buyer questions in `src/pages/FaqPage.tsx`. **Code-fact answers cite the section** (same Appendix-8 set the
