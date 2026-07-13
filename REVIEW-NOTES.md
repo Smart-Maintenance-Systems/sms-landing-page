@@ -125,6 +125,40 @@ future Website-Nova corpus (K1).
 
 ---
 
+## W5 update (2026-07-13) — identity polish: the founders' voice · Nova's section · the mark
+
+- **Task 1 — the founders' voice (SIGNED, plural).** Swept `Geoquip|Fugro|20 years|marine engineer` to
+  **zero** across the served HTML (grep-proven, all 6 routes). Trust strip → *"Built by people who work at
+  sea — not people guessing from an office."*; About long → *"…built by its founders between jobs at sea…
+  ones we live with…"*; About credential card retitled *"Built at sea"*; `routeSeo` `/about` description
+  updated (single source). Co-founder **unnamed**; no company names, no year counts, no individual credit.
+- **Task 2 — Nova's own Home section** (new block after show-everything), heading **"Nova handles the
+  compliance, you handle the boat."** The honest-refusal card **moved here** (it's Nova's story) with the
+  refusal clip; plus three guardrail-6 points — *comes to you first · cites the actual Code (Appendix 8 §12)
+  · never rules a verdict.* 🟥 **Honesty substitution to flag:** the brief's example phrase was "…want to
+  book it?"; SMS Workboat has **no booking integration**, so it ships as *"…want it on the calendar?"* (the
+  real add-to-calendar behaviour) — same "comes to you first" intent, no invented UI. No "AI does your
+  compliance" overclaim anywhere.
+- **Task 3 — the mark everywhere.** Favicon now the **WB3 workboat mark**, not the old dark Main logo:
+  `public/favicon.svg` (scalable, embeds `sms-workboat-mark.jpg` on a square white tile) + jpeg fallback +
+  apple-touch-icon; `sms-logo-small.png` reference removed from `index.html` (tab icon reads WB3).
+  🟥 **Tooling note:** no raster tool was available (magick/convert/sharp all absent) and the mark is a
+  179×152 non-square JPG — so I shipped the brief's **svg-or-png option** (the scalable SVG) rather than
+  pixel-cut 32/180 PNGs. A pixel-optimised PNG set can drop in later from a square source (the founder is
+  redoing brand assets anyway). **Hero mark LARGE on arrival** — an 80/96px glossy tile with a spring
+  scale-in, mirroring master's big animated logo (`git show master:…HomePage.tsx`) in the light theme; nav
+  lockup grown a size. 🟥 **Founder's eyes are the gate** on the exact hero-mark size (bold, not clownish).
+- **Task 4 — screenshot slots swap-ready.** One manifest, `src/lib/screenshots.ts`, keyed by slot (keys
+  mirror `WEBSITE-SHOT-LIST.md` numbering). Every `<Screenshot>` still reads src/alt/caption from it; layout
+  props stay on the page. The founder's reshoot lands as a **drop-in of files + one manifest edit — zero
+  per-page code**. Current (dated) shots stay in place meanwhile. The 5 clip placeholders are unchanged
+  (still "to be filmed").
+- **🟥 Untouched:** `server.js` FROZEN (no edits); the W4 hero ("We are the SMS."), the audited Code quotes,
+  and every £29 fact are unchanged (grep-verified). tsc 0 · build clean (6 routes prerendered) · raw-HTML
+  greps pass · guardrail sweep empty. All on `w1-website-skeleton`, reviewable commits, nothing pushed.
+
+---
+
 ## Pages built
 | Route | Page | State |
 |---|---|---|
