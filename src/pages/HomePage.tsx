@@ -43,16 +43,20 @@ export default function HomePage() {
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 md:py-24">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div>
-              {/* W5 — the mark LARGE on arrival (mirrors master's big animated logo, in the light theme). */}
+              {/* W5b (founder) — the FULL recovered logo on arrival: the wave + SMS WORKBOAT + the
+                  "Simple • Compliant • Connected" strapline (the original lockup, found in the product's
+                  files). The small mark stays in the nav/favicon — the lockup gets room to breathe here. */}
               <motion.div
                 initial={{ scale: 0.85, opacity: 0 }}
                 animate={{ scale: 1, opacity: 1 }}
                 transition={{ duration: 0.6, type: 'spring', bounce: 0.35 }}
                 className="mb-6 inline-flex"
               >
-                <span className="flex h-20 w-20 md:h-24 md:w-24 items-center justify-center overflow-hidden rounded-2xl bg-white shadow-lg ring-1 ring-border-subtle">
-                  <img src="/sms-workboat-mark.jpg" alt="SMS Workboat" className="h-16 w-16 md:h-20 md:w-20 object-contain" />
-                </span>
+                <img
+                  src="/sms-workboat-logo.jpg"
+                  alt="SMS Workboat — Simple, Compliant, Connected"
+                  className="h-36 md:h-44 w-auto object-contain rounded-2xl"
+                />
               </motion.div>
               <span className="flex w-fit items-center gap-2 rounded-full border border-border-default bg-surface-1 px-3 py-1 text-xs font-medium text-text-secondary">
                 <Scale className="w-3.5 h-3.5 text-brand-primary" /> Workboat Code Edition 3 · in force 13 December 2023
