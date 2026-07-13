@@ -54,6 +54,25 @@ export default function AboutPage() {
           &ldquo;Nova handles the compliance, you handle the boat.&rdquo;
         </blockquote>
 
+        {/* W5d (founder-signed 2026-07-13) - the credibility strip. 🟥 COMPANY-level claims only (both
+            awards are to Smart Maintenance Systems - true outright); kept on the About page, away from
+            Code content (no false-authority bleed near compliance claims). The NVIDIA slot upgrades to
+            the official Inception member badge when the founder downloads it from the program portal
+            (drop the file in /public and swap the chip for an <img>). */}
+        <div className="mt-12 rounded-xl border border-border-default bg-surface-1 p-6">
+          <p className="text-xs font-semibold uppercase tracking-wider text-text-muted">The company behind SMS Workboat</p>
+          <div className="mt-4 flex flex-wrap items-center gap-x-8 gap-y-4">
+            <div className="flex items-center gap-3">
+              <img src="/innovate-uk-logo.png" alt="Innovate UK" className="h-9 w-auto object-contain" />
+              <span className="text-sm text-text-secondary">Supported by Innovate UK</span>
+            </div>
+            <div className="flex items-center gap-3">
+              <span className="inline-flex items-center rounded-md border border-border-default bg-surface-0 px-2.5 py-1 text-xs font-bold tracking-wide text-text-primary">NVIDIA</span>
+              <span className="text-sm text-text-secondary">NVIDIA Inception member</span>
+            </div>
+          </div>
+        </div>
+
         <div className="mt-10 flex flex-col sm:flex-row gap-3">
           <Link to={TRIAL_HREF} className="btn-primary justify-center">Start free trial <ChevronRight className="w-4 h-4" /></Link>
           <Link to="/how-it-works" className="btn-secondary justify-center">See how it works</Link>
