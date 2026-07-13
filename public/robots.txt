@@ -1,0 +1,5 @@
+# SMS Workboat — allow all; the crawl surface is the marketing site.
+User-agent: *
+Allow: /
+
+Sitemap: https://smsworkboat.co.uk/sitemap.xml
