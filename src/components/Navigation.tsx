@@ -38,11 +38,11 @@ export default function Navigation() {
           <div className="flex items-center justify-between h-16 md:h-20">
             {/* Brand */}
             <Link to="/" className="flex items-center gap-3 shrink-0">
-              <span className="flex h-10 w-10 items-center justify-center overflow-hidden rounded-xl bg-white shadow-sm ring-1 ring-border-subtle">
-                <img src="/sms-workboat-mark.jpg" alt="SMS Workboat" className="h-8 w-8 object-contain" />
+              <span className="flex h-11 w-11 items-center justify-center overflow-hidden rounded-xl bg-white shadow-sm ring-1 ring-border-subtle">
+                <img src="/sms-workboat-mark.jpg" alt="SMS Workboat" className="h-9 w-9 object-contain" />
               </span>
               <span className="flex flex-col leading-tight">
-                <span className="text-lg font-bold text-text-primary tracking-wide">SMS Workboat</span>
+                <span className="text-xl font-bold text-text-primary tracking-wide">SMS Workboat</span>
                 {/* Company name in full — lands the triple pun (SMS = Smart Maintenance Systems). */}
                 <span className="hidden sm:inline text-[11px] text-text-muted">by Smart Maintenance Systems</span>
               </span>
