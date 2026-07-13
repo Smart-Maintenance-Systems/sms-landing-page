@@ -20,14 +20,19 @@ const MIME_TYPES = {
   '.webp': 'image/webp',
   '.woff': 'font/woff',
   '.woff2': 'font/woff2',
+  '.txt': 'text/plain; charset=utf-8',
+  '.xml': 'application/xml; charset=utf-8',
 };
 
 const server = createServer((req, res) => {
-  let filePath = join(DIST, req.url === '/' ? 'index.html' : req.url);
+  const urlPath = req.url.split('?')[0]; // ignore query string for file resolution
+  let filePath = join(DIST, urlPath === '/' ? 'index.html' : urlPath);
 
-  // If no extension, serve index.html (SPA client-side routing)
+  // If no extension, prefer a prerendered per-route file (e.g. /pricing -> dist/pricing/index.html),
+  // otherwise fall back to the root index.html for SPA client-side routing.
   if (!extname(filePath)) {
-    filePath = join(DIST, 'index.html');
+    const routeFile = join(DIST, urlPath, 'index.html');
+    filePath = existsSync(routeFile) ? routeFile : join(DIST, 'index.html');
   }
 
   if (!existsSync(filePath)) {
