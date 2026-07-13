@@ -45,17 +45,23 @@ export default function HomePage() {
                 <Scale className="w-3.5 h-3.5 text-brand-primary" /> Workboat Code Edition 3 · in force 13 December 2023
               </span>
               <h1 className="mt-5 text-3xl sm:text-4xl md:text-5xl font-bold leading-tight text-text-primary">
-                UK law now requires a safety management system on every small commercial workboat.{' '}
-                <span className="gradient-text">SMS Workboat is the simplest way to have one.</span>
+                The law now requires an SMS.{' '}
+                <span className="gradient-text">We are the SMS.</span>
               </h1>
+              {/* §W-D honesty-trimmed sub-line, VERBATIM. 🟥 The original's verdict phrasing was dropped —
+                  records-ready wording only ("keeps every record ready"), never a pass/fail promise. */}
               <p className="mt-5 text-lg text-text-secondary">
-                From nothing to a working SMS in an afternoon — on your phone, on your boat.
+                Every small commercial workboat must now hold a Safety Management System — Workboat Code
+                Edition 3, in force since December 2023. SMS Workboat builds yours, and keeps every record
+                ready for the day the surveyor steps aboard.
               </p>
               <CtaRow className="mt-8" />
               <p className="mt-4 text-sm text-text-muted">14-day free trial · no card · £29 a month per boat, everything included.</p>
 
-              {/* Trust stack — publishable-now facts only. */}
+              {/* Trust stack — publishable-now facts only. First line names the company in FULL so the
+                  triple pun lands (SMS = Safety Management System = Smart Maintenance Systems). */}
               <div className="mt-8 flex flex-col gap-2 text-sm text-text-secondary">
+                <span className="flex items-center gap-2"><Ship className="w-4 h-4 text-brand-primary shrink-0" /> SMS Workboat — by <span className="font-medium text-text-primary">Smart Maintenance Systems</span>.</span>
                 <span className="flex items-center gap-2"><Anchor className="w-4 h-4 text-text-muted shrink-0" /> Built by a marine engineer with 20 years offshore (Geoquip, Fugro).</span>
                 <span className="flex items-center gap-2"><ShieldCheck className="w-4 h-4 text-text-muted shrink-0" /> Built with serving industry reviewers.</span>
                 <span className="flex items-center gap-2"><Sparkles className="w-4 h-4 text-accent-cyan shrink-0" /> Nova handles the compliance, you handle the boat.</span>

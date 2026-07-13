@@ -116,7 +116,7 @@ export const FAQ_JSONLD = {
  */
 export const ROUTE_SEO: Record<string, SeoOptions> = {
   '/': {
-    title: 'SMS Workboat — the simplest way to meet the Workboat Code',
+    title: 'The law now requires an SMS. We are the SMS. | SMS Workboat',
     description:
       'UK law now requires a safety management system on every small commercial workboat (Workboat Code Edition 3). SMS Workboat is the simplest way to have one — on your phone, in an afternoon. £29 a month per boat, everything included. 14-day free trial, no card.',
     path: '/',

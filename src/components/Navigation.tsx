@@ -43,7 +43,8 @@ export default function Navigation() {
               </span>
               <span className="flex flex-col leading-tight">
                 <span className="text-lg font-bold text-text-primary tracking-wide">SMS Workboat</span>
-                <span className="hidden sm:inline text-[11px] text-text-muted">Workboat Code 3 SMS</span>
+                {/* Company name in full — lands the triple pun (SMS = Smart Maintenance Systems). */}
+                <span className="hidden sm:inline text-[11px] text-text-muted">by Smart Maintenance Systems</span>
               </span>
             </Link>
 

@@ -80,7 +80,7 @@ export default function Footer() {
         </div>
 
         <div className="mt-12 pt-6 border-t border-border-subtle flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3">
-          <p className="text-xs text-text-muted">© {new Date().getFullYear()} SMS Workboat. All rights reserved.</p>
+          <p className="text-xs text-text-muted">© {new Date().getFullYear()} SMS Workboat — built by Smart Maintenance Systems. All rights reserved.</p>
           <Link to={TRIAL_HREF} className="text-xs text-text-secondary hover:text-brand-primary">Start your 14-day free trial →</Link>
         </div>
       </div>
