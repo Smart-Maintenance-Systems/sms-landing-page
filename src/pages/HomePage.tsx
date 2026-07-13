@@ -1,13 +1,15 @@
 import { Link } from 'react-router-dom';
+import { motion } from 'framer-motion';
 import {
   ChevronRight, ShieldCheck, Wifi, WifiOff, Camera, Anchor, QrCode, Scale,
-  Ship, CheckCircle2, FileText, ClipboardCheck, Sparkles,
+  Ship, CheckCircle2, FileText, ClipboardCheck, Sparkles, BellRing,
 } from 'lucide-react';
 import Screenshot from '../components/Screenshot';
 import ScreenshotPlaceholder from '../components/ScreenshotPlaceholder';
 import { TRIAL_HREF, DEMO_ENABLED, DEMO_URL } from '../config';
 import { useSeo } from '../lib/seo';
 import { ROUTE_SEO } from '../lib/routeSeo';
+import { SHOTS } from '../lib/screenshots';
 
 /** The two primary CTAs — trial is primary; the live demo (design §2c) ships DEFAULT-OFF. */
 function CtaRow({ className = '' }: { className?: string }) {
@@ -41,7 +43,18 @@ export default function HomePage() {
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 md:py-24">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div>
-              <span className="inline-flex items-center gap-2 rounded-full border border-border-default bg-surface-1 px-3 py-1 text-xs font-medium text-text-secondary">
+              {/* W5 — the mark LARGE on arrival (mirrors master's big animated logo, in the light theme). */}
+              <motion.div
+                initial={{ scale: 0.85, opacity: 0 }}
+                animate={{ scale: 1, opacity: 1 }}
+                transition={{ duration: 0.6, type: 'spring', bounce: 0.35 }}
+                className="mb-6 inline-flex"
+              >
+                <span className="flex h-20 w-20 md:h-24 md:w-24 items-center justify-center overflow-hidden rounded-2xl bg-white shadow-lg ring-1 ring-border-subtle">
+                  <img src="/sms-workboat-mark.jpg" alt="SMS Workboat" className="h-16 w-16 md:h-20 md:w-20 object-contain" />
+                </span>
+              </motion.div>
+              <span className="flex w-fit items-center gap-2 rounded-full border border-border-default bg-surface-1 px-3 py-1 text-xs font-medium text-text-secondary">
                 <Scale className="w-3.5 h-3.5 text-brand-primary" /> Workboat Code Edition 3 · in force 13 December 2023
               </span>
               <h1 className="mt-5 text-3xl sm:text-4xl md:text-5xl font-bold leading-tight text-text-primary">
@@ -62,14 +75,14 @@ export default function HomePage() {
                   triple pun lands (SMS = Safety Management System = Smart Maintenance Systems). */}
               <div className="mt-8 flex flex-col gap-2 text-sm text-text-secondary">
                 <span className="flex items-center gap-2"><Ship className="w-4 h-4 text-brand-primary shrink-0" /> SMS Workboat — by <span className="font-medium text-text-primary">Smart Maintenance Systems</span>.</span>
-                <span className="flex items-center gap-2"><Anchor className="w-4 h-4 text-text-muted shrink-0" /> Built by a marine engineer with 20 years offshore (Geoquip, Fugro).</span>
+                <span className="flex items-center gap-2"><Anchor className="w-4 h-4 text-text-muted shrink-0" /> Built by people who work at sea — not people guessing from an office.</span>
                 <span className="flex items-center gap-2"><ShieldCheck className="w-4 h-4 text-text-muted shrink-0" /> Built with serving industry reviewers.</span>
                 <span className="flex items-center gap-2"><Sparkles className="w-4 h-4 text-accent-cyan shrink-0" /> Nova handles the compliance, you handle the boat.</span>
               </div>
             </div>
 
             <div className="flex justify-center lg:justify-end">
-              <Screenshot src="/screens/boat-setup.png" alt="Setting up a boat in SMS Workboat" aspect="phone" caption="Your boat, set up on a phone." />
+              <Screenshot {...SHOTS.homeHero} aspect="phone" />
             </div>
           </div>
 
@@ -88,16 +101,30 @@ export default function HomePage() {
           </div>
 
           <div className="mt-10 grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
-            <Screenshot src="/screens/certificates.png" alt="Vessel certificates in SMS Workboat" caption="Certificates, with expiry reminders." />
-            <Screenshot src="/screens/maintenance.png" alt="Maintenance log" caption="A maintenance log that derives its own due dates." />
-            <Screenshot src="/screens/ra-1.png" alt="Risk assessment" caption="Risk assessments from templates you confirm." />
-            <Screenshot src="/screens/person-ashore-1.png" alt="Person Ashore" caption="Your designated person ashore." />
-            <Screenshot src="/screens/cert-1.png" alt="Capturing a certificate" caption="Snap a certificate — Nova reads the details." />
-            <Screenshot src="/screens/ra-3.png" alt="Risk assessment detail" caption="Every record signed and dated." />
+            <Screenshot {...SHOTS.certificates} />
+            <Screenshot {...SHOTS.maintenance} />
+            <Screenshot {...SHOTS.riskAssessments} />
+            <Screenshot {...SHOTS.personAshore} />
+            <Screenshot {...SHOTS.certCapture} />
+            <Screenshot {...SHOTS.recordSigned} />
           </div>
+        </div>
+      </section>
 
-          {/* Nova's honest refusal — the trust feature (real product wording). */}
-          <div className="mt-14 grid lg:grid-cols-2 gap-8 items-center">
+      {/* ── NOVA — her own section (W5 Task 2). 🟥 Guardrail 6: retrieves + cites, never a verdict; no
+             "AI does your compliance" overclaim. Examples are real product behaviour, no invented UI. ── */}
+      <section className="relative border-t border-border-subtle py-16 md:py-24">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex items-center gap-2 text-sm font-semibold text-accent-cyan"><Sparkles className="w-4 h-4" /> Meet Nova</div>
+          <h2 className="mt-3 text-2xl md:text-3xl font-bold text-text-primary max-w-2xl">Nova handles the compliance, you handle the boat.</h2>
+          <p className="mt-3 text-text-secondary max-w-2xl">
+            She retrieves and cites the Workboat Code, flags what&rsquo;s coming due before it slips, and tells
+            you honestly when a call isn&rsquo;t hers to make. She never rules a verdict — that stays with your
+            surveyor.
+          </p>
+
+          <div className="mt-10 grid lg:grid-cols-2 gap-8 items-center">
+            {/* the honest-refusal card — moved here; it's Nova's story */}
             <div className="rounded-2xl border border-accent-cyan/25 bg-surface-1 p-6">
               <div className="flex items-center gap-2 text-sm font-semibold text-accent-cyan mb-3">
                 <Sparkles className="w-4 h-4" /> Ask Nova: &ldquo;Will I pass survey?&rdquo;
@@ -118,6 +145,33 @@ export default function HomePage() {
               caption="Clip: Nova’s honest refusal, live — to be filmed."
               className="justify-self-center"
             />
+          </div>
+
+          <div className="mt-10 grid sm:grid-cols-3 gap-4">
+            <div className="rounded-xl border border-border-default bg-surface-1 p-5">
+              <BellRing className="w-6 h-6 text-brand-primary" />
+              <p className="mt-3 text-sm font-semibold text-text-primary">She comes to you first</p>
+              <p className="mt-1 text-xs text-text-muted leading-relaxed">
+                Expiry and next-due dates surface before they slip — &ldquo;your liferaft service is due
+                next month — want it on the calendar?&rdquo; One tap and it&rsquo;s logged.
+              </p>
+            </div>
+            <div className="rounded-xl border border-border-default bg-surface-1 p-5">
+              <Scale className="w-6 h-6 text-brand-primary" />
+              <p className="mt-3 text-sm font-semibold text-text-primary">She cites the actual Code</p>
+              <p className="mt-1 text-xs text-text-muted leading-relaxed">
+                Answers come back with their section reference — Appendix 8, section 12 for maintenance —
+                the same citation the product shows, so you can check her working.
+              </p>
+            </div>
+            <div className="rounded-xl border border-border-default bg-surface-1 p-5">
+              <ShieldCheck className="w-6 h-6 text-accent-cyan" />
+              <p className="mt-3 text-sm font-semibold text-text-primary">She never rules a verdict</p>
+              <p className="mt-1 text-xs text-text-muted leading-relaxed">
+                Whether you pass isn&rsquo;t hers to answer — that&rsquo;s your surveyor or Designated Person.
+                She shows you where you stand; the decision stays human.
+              </p>
+            </div>
           </div>
         </div>
       </section>
@@ -206,7 +260,7 @@ export default function HomePage() {
               certificate lands, Nova reads the details from the picture so you just confirm them.
             </p>
           </div>
-          <Screenshot src="/screens/cert-2.png" alt="Reviewing a captured certificate" aspect="phone" caption="Snap a certificate — check what Nova read — save." className="justify-self-center" />
+          <Screenshot {...SHOTS.cameraReview} aspect="phone" className="justify-self-center" />
         </div>
       </section>
 
