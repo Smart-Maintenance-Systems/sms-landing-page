@@ -5,9 +5,10 @@ import { useSeo } from '../lib/seo';
 import { ROUTE_SEO } from '../lib/routeSeo';
 
 /**
- * Why us (design §3). The insider story — built from inside the industry, not a software shop. 🟥
- * Publishable-now facts only (guardrail 7): no invented numbers, no testimonials, no logos. The ex-MCA
- * wording is the placeholder "built with serving industry reviewers" until written permission (#193).
+ * Why us (design §3). The founders' voice — built from inside the industry, not a software shop. 🟥
+ * W5 Task 1: PLURAL throughout ("the founders" / "we"), co-founder UNNAMED, no company names, no year
+ * counts, no individual credit lines (founder-signed). Publishable-now facts only (guardrail 7): no invented
+ * numbers, no testimonials, no logos. "built with serving industry reviewers" is the #193 placeholder.
  */
 export default function AboutPage() {
   useSeo(ROUTE_SEO['/about']);
@@ -19,9 +20,8 @@ export default function AboutPage() {
 
         <div className="mt-6 space-y-5 text-text-secondary leading-relaxed">
           <p>
-            SMS Workboat was built by a marine engineer with 20 years offshore — on vessels and marine
-            construction work with the likes of Geoquip and Fugro. The compliance headaches this fixes are
-            ones he lived, not ones a product manager guessed at.
+            SMS Workboat was built by its founders between jobs at sea. The compliance headaches it fixes are
+            ones we live with — not ones a product manager guessed at.
           </p>
           <p>
             The law changed: the Workboat Code Edition 3 now requires a Safety Management System on every
@@ -38,7 +38,7 @@ export default function AboutPage() {
 
         <div className="mt-10 grid sm:grid-cols-3 gap-4">
           {[
-            { icon: Anchor, t: '20 years offshore', d: 'Geoquip · Fugro · marine construction' },
+            { icon: Anchor, t: 'Built at sea', d: 'By people who work on the water — not from an office' },
             { icon: ShieldCheck, t: 'Reviewed by industry', d: 'Built with serving industry reviewers' },
             { icon: Sparkles, t: 'AI you can trust', d: 'Cited answers, never a verdict' },
           ].map((c) => (

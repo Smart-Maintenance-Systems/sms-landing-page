@@ -150,7 +150,7 @@ export const ROUTE_SEO: Record<string, SeoOptions> = {
   '/about': {
     title: 'Why SMS Workboat — built from inside the industry',
     description:
-      'Built by a marine engineer with 20 years offshore, with serving industry reviewers. Its AI cites the Workboat Code and never rules a verdict. We show you everything — the product, the price, the sources, even your own gaps.',
+      'Built by its founders between jobs at sea, with serving industry reviewers. Its AI cites the Workboat Code and never rules a verdict. We show you everything — the product, the price, the sources, even your own gaps.',
     path: '/about',
   },
 };
