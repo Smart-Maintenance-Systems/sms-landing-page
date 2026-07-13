@@ -3,6 +3,7 @@ import { Camera, FileText, ClipboardCheck, ChevronRight } from 'lucide-react';
 import Screenshot from '../components/Screenshot';
 import { TRIAL_HREF } from '../config';
 import { useSeo } from '../lib/seo';
+import { ROUTE_SEO } from '../lib/routeSeo';
 
 /**
  * How it works — the product's real phases in owner language (design §3): CAPTURE → AUTHOR → ASSESS.
@@ -39,12 +40,7 @@ const STEPS = [
 ];
 
 export default function HowItWorksPage() {
-  useSeo({
-    title: 'How SMS Workboat works — from nothing to an SMS in an afternoon',
-    description:
-      'Three steps in owner language: capture what you have, let it author your documents from Workboat-Code templates, then sign your annual self-assessment. On your phone, on your boat.',
-    path: '/how-it-works',
-  });
+  useSeo(ROUTE_SEO['/how-it-works']);
   return (
     <div className="pt-24 md:pt-32 pb-24">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">

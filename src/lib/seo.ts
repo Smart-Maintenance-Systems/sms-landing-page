@@ -5,15 +5,15 @@ import { useEffect } from 'react';
  * would be heavier and this needs no server rendering). `useSeo` upserts the title, description, canonical,
  * OpenGraph/Twitter tags, and an optional JSON-LD block on mount/route-change.
  *
- * ⚠️ Because the Railway `server.js` serves the ROOT index.html for every extensionless route (verified —
- * see REVIEW-NOTES "Task 3 blocked"), this head runs CLIENT-SIDE: JS-executing crawlers (Googlebot) see it;
- * the static first paint carries the site-wide defaults from index.html. Per-route STATIC html needs
- * prerendering, which needs a server.js change (frozen this session).
+ * W3b — the site is now PRERENDERED at build time (`scripts/prerender.mjs` via `entry-server.tsx`), so every
+ * route ships as real static HTML with its own head; `renderHeadTags` in `routeSeo.ts` builds that static
+ * head from the SAME `ROUTE_SEO` this hook consumes at runtime. `useSeo` therefore just keeps the head in
+ * sync across client-side (SPA) navigations — upserting is idempotent over the prerendered tags.
  */
 export const CANONICAL_HOST = 'https://smsworkboat.co.uk';
 export const OG_IMAGE = `${CANONICAL_HOST}/sms-workboat-mark.jpg`; // the real brand mark (v1; no invented imagery)
 
-interface SeoOptions {
+export interface SeoOptions {
   title: string;
   description: string;
   /** Absolute path on the canonical host, e.g. "/pricing". */

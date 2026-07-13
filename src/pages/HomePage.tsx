@@ -7,6 +7,7 @@ import Screenshot from '../components/Screenshot';
 import ScreenshotPlaceholder from '../components/ScreenshotPlaceholder';
 import { TRIAL_HREF, DEMO_ENABLED, DEMO_URL } from '../config';
 import { useSeo } from '../lib/seo';
+import { ROUTE_SEO } from '../lib/routeSeo';
 
 /** The two primary CTAs — trial is primary; the live demo (design §2c) ships DEFAULT-OFF. */
 function CtaRow({ className = '' }: { className?: string }) {
@@ -30,12 +31,7 @@ function CtaRow({ className = '' }: { className?: string }) {
 }
 
 export default function HomePage() {
-  useSeo({
-    title: 'SMS Workboat — the simplest way to meet the Workboat Code',
-    description:
-      'UK law now requires a safety management system on every small commercial workboat (Workboat Code Edition 3). SMS Workboat is the simplest way to have one — on your phone, in an afternoon. £29 a month per boat, everything included. 14-day free trial, no card.',
-    path: '/',
-  });
+  useSeo(ROUTE_SEO['/']);
   return (
     <div className="pt-16 md:pt-20">
       {/* ── §2 — LAW-CHANGED HERO ─────────────────────────────────────────────── */}

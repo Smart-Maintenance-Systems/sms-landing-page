@@ -2,6 +2,7 @@ import { Link } from 'react-router-dom';
 import { Scale, ChevronRight } from 'lucide-react';
 import { TRIAL_HREF } from '../config';
 import { useSeo } from '../lib/seo';
+import { ROUTE_SEO } from '../lib/routeSeo';
 
 /**
  * "The Code, explained" (design §2 + rule 2). 🟥 Every Code statement carries its SECTION REF and is
@@ -49,12 +50,7 @@ const CLAUSES: { citation: string; text: string }[] = [
 ];
 
 export default function CodePage() {
-  useSeo({
-    title: 'Workboat Code Edition 3 explained — what your SMS must include | SMS Workboat',
-    description:
-      'What the Workboat Code Edition 3 (in force 13 December 2023) actually requires of a small commercial workboat: the safety management system elements, quoted verbatim with their Appendix 8 section references. Plain, factual, cited — never a verdict.',
-    path: '/code',
-  });
+  useSeo(ROUTE_SEO['/code']);
   return (
     <div className="pt-24 md:pt-32 pb-24">
       <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
