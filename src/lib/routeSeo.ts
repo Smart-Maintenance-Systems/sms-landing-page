@@ -1,4 +1,5 @@
 import { CANONICAL_HOST, OG_IMAGE, type SeoOptions } from './seo';
+import { FOUNDING_MODE } from '../config';
 
 /**
  * W3b - SINGLE SOURCE OF TRUTH for per-route SEO. Consumed by BOTH the client `useSeo` hook (runtime, SPA
@@ -76,7 +77,9 @@ export const FAQS: Faq[] = [
   },
   {
     q: 'What does it cost?',
-    a: '£29 a month per boat, everything included - no tiers, no fleet discount, no per-user charges, nothing gated behind a “Pro” plan. There is a 14-day free trial and no card is required to start.',
+    a: FOUNDING_MODE
+      ? '£29 a month per boat at launch, everything included - no tiers, no fleet discount, no per-user charges, nothing gated behind a “Pro” plan. Right now we run a Founding Skippers programme: 10 boats use SMS Workboat free while we finish it together, then £15 a month forever, instead of £29.'
+      : '£29 a month per boat, everything included - no tiers, no fleet discount, no per-user charges, nothing gated behind a “Pro” plan. There is a 14-day free trial and no card is required to start.',
   },
   {
     q: 'Does it work offline, out on the water?',
@@ -117,8 +120,9 @@ export const FAQ_JSONLD = {
 export const ROUTE_SEO: Record<string, SeoOptions> = {
   '/': {
     title: 'The law now requires an SMS. We are the SMS. | SMS Workboat',
-    description:
-      'UK law now requires a safety management system on every small commercial workboat (Workboat Code Edition 3). SMS Workboat is the simplest way to have one - on your phone, in an afternoon. £29 a month per boat, everything included. 14-day free trial, no card.',
+    description: FOUNDING_MODE
+      ? 'UK law now requires a safety management system on every small commercial workboat (Workboat Code Edition 3). SMS Workboat is the simplest way to have one - on your phone, in an afternoon. £29 a month per boat at launch, everything included. Founding Skippers: free while we finish it, then £15 a month forever - 10 boats.'
+      : 'UK law now requires a safety management system on every small commercial workboat (Workboat Code Edition 3). SMS Workboat is the simplest way to have one - on your phone, in an afternoon. £29 a month per boat, everything included. 14-day free trial, no card.',
     path: '/',
   },
   '/how-it-works': {
@@ -129,8 +133,9 @@ export const ROUTE_SEO: Record<string, SeoOptions> = {
   },
   '/pricing': {
     title: 'Pricing - £29 a month per boat, everything included | SMS Workboat',
-    description:
-      '£29 flat per boat per month. No tiers, no fleet discount, no per-user charges, nothing gated. 14-day free trial, no card. Produces your annual self-assessment, downloads your whole SMS as PDFs, and keeps the inspection pack ready.',
+    description: FOUNDING_MODE
+      ? '£29 flat per boat per month at launch. No tiers, no fleet discount, no per-user charges, nothing gated. Founding Skippers: free while we finish it, then £15 a month forever - 10 boats. Produces your annual self-assessment, downloads your whole SMS as PDFs, and keeps the inspection pack ready.'
+      : '£29 flat per boat per month. No tiers, no fleet discount, no per-user charges, nothing gated. 14-day free trial, no card. Produces your annual self-assessment, downloads your whole SMS as PDFs, and keeps the inspection pack ready.',
     path: '/pricing',
     jsonLd: PRODUCT_JSONLD,
   },

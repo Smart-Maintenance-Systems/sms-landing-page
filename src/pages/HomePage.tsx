@@ -78,7 +78,7 @@ export default function HomePage() {
                 ready for the day the surveyor steps aboard.
               </p>
               <CtaRow className="mt-8" />
-              <p className="mt-4 text-sm text-text-muted">14-day free trial · no card · £29 a month per boat, everything included.</p>
+              <p className="mt-4 text-sm text-text-muted">{FOUNDING_MODE ? 'Founding Skippers: free while we finish it, then £15 a month forever · 10 boats.' : '14-day free trial · no card · £29 a month per boat, everything included.'}</p>
 
               {/* Trust stack - publishable-now facts only. First line names the company in FULL so the
                   triple pun lands (SMS = Safety Management System = Smart Maintenance Systems). */}
@@ -330,7 +330,7 @@ export default function HomePage() {
             ))}
           </div>
           <CtaRow className="mt-10 justify-center" />
-          <p className="mt-4 text-sm text-text-muted">14-day free trial · no card required.</p>
+          <p className="mt-4 text-sm text-text-muted">{FOUNDING_MODE ? 'Founding Skippers: free while we finish it, then £15 a month forever · 10 boats.' : '14-day free trial · no card required.'}</p>
           <Link to="/pricing" className="mt-4 inline-block text-sm text-brand-primary hover:text-brand-hover">See what&rsquo;s included &rarr;</Link>
         </div>
       </section>
