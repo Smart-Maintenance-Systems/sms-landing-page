@@ -39,14 +39,14 @@ export default function AboutPage() {
         {/* W5d/W5e (founder-signed) - the credibility CARDS, promoted up the page ("it's our
             credibility"). 🟥 COMPANY-level claims only; honesty-checked wording; away from Code content. */}
         <div className="mt-12 grid sm:grid-cols-2 gap-4">
-          <div className="rounded-xl border border-border-default bg-surface-1 p-6">
-            <img src="/innovate-uk-ukri.png" alt="UKRI - Innovate UK" className="h-14 w-auto object-contain" />
-            <p className="mt-4 text-base font-bold text-text-primary">Government backed</p>
+          <div className="flex flex-col items-center text-center rounded-xl border border-border-default bg-surface-1 p-8">
+            <img src="/innovate-uk-ukri.png" alt="UKRI - Innovate UK" className="h-24 md:h-28 w-full max-w-[320px] object-contain" />
+            <p className="mt-5 text-base font-bold text-text-primary">Government backed</p>
             <p className="mt-1 text-sm text-text-secondary">Smart Maintenance Systems is supported by Innovate UK - the UK government&rsquo;s innovation agency.</p>
           </div>
-          <div className="rounded-xl border border-border-default bg-surface-1 p-6">
-            <img src="/nvidia-inception-badge.jpg" alt="NVIDIA Inception Program" className="h-14 w-auto object-contain rounded" />
-            <p className="mt-4 text-base font-bold text-text-primary">AI recognised</p>
+          <div className="flex flex-col items-center text-center rounded-xl border border-border-default bg-surface-1 p-8">
+            <img src="/nvidia-inception-badge.jpg" alt="NVIDIA Inception Program" className="h-24 md:h-28 w-full max-w-[320px] object-contain rounded" />
+            <p className="mt-5 text-base font-bold text-text-primary">AI recognised</p>
             <p className="mt-1 text-sm text-text-secondary">Our AI vision is part of NVIDIA&rsquo;s Inception program for AI startups.</p>
           </div>
         </div>
