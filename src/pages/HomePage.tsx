@@ -109,7 +109,7 @@ export default function HomePage() {
             </div>
           </div>
           <div className="flex items-center gap-4">
-            <img src="/nvidia-inception-badge.jpg" alt="NVIDIA Inception Program" className="h-12 w-auto object-contain shrink-0 rounded" />
+            <img src="/nvidia-inception-badge.jpg" alt="NVIDIA Inception Program" className="h-16 md:h-20 w-auto object-contain shrink-0 rounded" />
             <div>
               <p className="text-sm font-bold text-text-primary">AI recognised</p>
               <p className="text-sm text-text-secondary">Our AI vision is part of NVIDIA&rsquo;s Inception program for AI startups.</p>
