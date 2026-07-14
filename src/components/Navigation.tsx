@@ -2,7 +2,8 @@ import { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Menu, X, ChevronRight } from 'lucide-react';
-import { TRIAL_HREF } from '../config';
+import { TRIAL_HREF, FOUNDING_MODE } from '../config';
+import ApplyCta from './ApplyCta';
 
 const NAV_ITEMS = [
   { label: 'How it works', href: '/how-it-works' },
@@ -67,10 +68,14 @@ export default function Navigation() {
 
             {/* CTA */}
             <div className="hidden lg:flex items-center gap-3">
-              <Link to={TRIAL_HREF} className="btn-primary text-sm py-2">
-                Start free trial
-                <ChevronRight className="w-4 h-4" />
-              </Link>
+              {FOUNDING_MODE ? (
+                <ApplyCta className="btn-primary text-sm py-2" />
+              ) : (
+                <Link to={TRIAL_HREF} className="btn-primary text-sm py-2">
+                  Start free trial
+                  <ChevronRight className="w-4 h-4" />
+                </Link>
+              )}
             </div>
 
             {/* Mobile menu button */}
@@ -110,9 +115,13 @@ export default function Navigation() {
                 </Link>
               ))}
               <div className="pt-3 border-t border-border-subtle">
-                <Link to={TRIAL_HREF} className="btn-primary w-full justify-center text-sm">
-                  Start free trial
-                </Link>
+                {FOUNDING_MODE ? (
+                  <ApplyCta className="btn-primary w-full justify-center text-sm" chevron={false} />
+                ) : (
+                  <Link to={TRIAL_HREF} className="btn-primary w-full justify-center text-sm">
+                    Start free trial
+                  </Link>
+                )}
               </div>
             </div>
           </motion.div>

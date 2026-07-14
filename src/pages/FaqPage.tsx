@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom';
 import { Scale, ChevronRight } from 'lucide-react';
-import { TRIAL_HREF } from '../config';
+import { TRIAL_HREF, FOUNDING_MODE } from '../config';
+import ApplyCta from '../components/ApplyCta';
 import { useSeo } from '../lib/seo';
 import { ROUTE_SEO, FAQS } from '../lib/routeSeo';
 
@@ -33,7 +34,7 @@ export default function FaqPage() {
         </div>
 
         <div className="mt-12 flex flex-col sm:flex-row gap-3">
-          <Link to={TRIAL_HREF} className="btn-primary justify-center">Start free trial <ChevronRight className="w-4 h-4" /></Link>
+          {FOUNDING_MODE ? <ApplyCta className="btn-primary justify-center" /> : <Link to={TRIAL_HREF} className="btn-primary justify-center">Start free trial <ChevronRight className="w-4 h-4" /></Link>}
           <Link to="/code" className="btn-secondary justify-center">Read the Code, explained</Link>
         </div>
       </div>

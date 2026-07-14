@@ -1,7 +1,8 @@
 import { Link } from 'react-router-dom';
 import { Camera, FileText, ClipboardCheck, ChevronRight } from 'lucide-react';
 import Screenshot from '../components/Screenshot';
-import { TRIAL_HREF } from '../config';
+import { TRIAL_HREF, FOUNDING_MODE } from '../config';
+import ApplyCta from '../components/ApplyCta';
 import { useSeo } from '../lib/seo';
 import { ROUTE_SEO } from '../lib/routeSeo';
 import { SHOTS, type ShotKey } from '../lib/screenshots';
@@ -67,7 +68,7 @@ export default function HowItWorksPage() {
         </div>
 
         <div className="mt-16 flex flex-col sm:flex-row gap-3 justify-center">
-          <Link to={TRIAL_HREF} className="btn-primary justify-center">Start free trial <ChevronRight className="w-4 h-4" /></Link>
+          {FOUNDING_MODE ? <ApplyCta className="btn-primary justify-center" /> : <Link to={TRIAL_HREF} className="btn-primary justify-center">Start free trial <ChevronRight className="w-4 h-4" /></Link>}
           <Link to="/code" className="btn-secondary justify-center">What the Code requires</Link>
         </div>
       </div>

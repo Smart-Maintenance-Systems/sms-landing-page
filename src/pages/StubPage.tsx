@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom';
 import { ChevronLeft } from 'lucide-react';
-import { TRIAL_HREF } from '../config';
+import { TRIAL_HREF, FOUNDING_MODE } from '../config';
+import ApplyCta from '../components/ApplyCta';
 
 /**
  * W1 - an HONEST stub for a page whose content isn't signed yet (design §3 remainder). It says plainly
@@ -14,7 +15,7 @@ export default function StubPage({ title, blurb }: { title: string; blurb: strin
         <p className="mt-4 text-text-secondary">{blurb}</p>
         <p className="mt-2 text-sm text-text-muted">This page is being written - the content lands with the site&rsquo;s next slice.</p>
         <div className="mt-8 flex flex-col sm:flex-row gap-3 justify-center">
-          <Link to={TRIAL_HREF} className="btn-primary justify-center">Start free trial</Link>
+          {FOUNDING_MODE ? <ApplyCta className="btn-primary justify-center" chevron={false} /> : <Link to={TRIAL_HREF} className="btn-primary justify-center">Start free trial</Link>}
           <Link to="/" className="btn-secondary justify-center"><ChevronLeft className="w-4 h-4" /> Back to home</Link>
         </div>
       </div>

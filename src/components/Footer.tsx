@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom';
 import { Anchor, Mail, ChevronRight } from 'lucide-react';
-import { MAIN_CONTACT, CONTACT_EMAIL, TRIAL_HREF } from '../config';
+import { MAIN_CONTACT, CONTACT_EMAIL, TRIAL_HREF, FOUNDING_MODE } from '../config';
+import ApplyCta from './ApplyCta';
 
 const PRODUCT_LINKS = [
   { label: 'How it works', href: '/how-it-works' },
@@ -81,7 +82,7 @@ export default function Footer() {
 
         <div className="mt-12 pt-6 border-t border-border-subtle flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3">
           <p className="text-xs text-text-muted">© {new Date().getFullYear()} SMS Workboat - built by Smart Maintenance Systems. All rights reserved.</p>
-          <Link to={TRIAL_HREF} className="text-xs text-text-secondary hover:text-brand-primary">Start your 14-day free trial →</Link>
+          {FOUNDING_MODE ? <ApplyCta className="text-xs text-text-secondary hover:text-brand-primary" chevron={false} /> : <Link to={TRIAL_HREF} className="text-xs text-text-secondary hover:text-brand-primary">Start your 14-day free trial →</Link>}
         </div>
       </div>
     </footer>
