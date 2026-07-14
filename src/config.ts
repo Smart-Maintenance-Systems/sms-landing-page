@@ -15,3 +15,24 @@ export const TRIAL_HREF = '/pricing';
 // The quiet SMS-Main cross-sell (design §3) - a mailto until the Main site/route exists (no invented page).
 export const MAIN_CONTACT = 'mailto:info@smsystems.uk?subject=SMS%20for%20fleets%20%26%20shore%20operations';
 export const CONTACT_EMAIL = 'info@smsystems.uk';
+
+// W6 - Founding Skippers pre-launch programme (founder-signed 2026-07-14, spec:
+// GROWTH/FOUNDING-SKIPPERS-PROGRAMME.md). While ON: every trial CTA becomes "Apply to be a Founding
+// Skipper" (a pre-filled mailto), the pricing page reframes to launch pricing with the founding offer as
+// the star, and a quiet founding strip shows on Home. 🟥 Flag OFF restores today's site byte-identically
+// (launch day = one flip). The £29 launch price + the Product/Offer JSON-LD NEVER change with this flag -
+// the founding deal is an application, not a SKU.
+export const FOUNDING_MODE = true;
+
+// Pre-filled application email (founder picks 10 by hand; a form is over-engineering per the spec).
+const FOUNDING_APPLY_BODY = [
+  'Name:',
+  'Boat(s) and what they do:',
+  'Where you operate:',
+  'Why (one line):',
+  '',
+].join('\n');
+export const FOUNDING_APPLY_HREF =
+  `mailto:${CONTACT_EMAIL}?subject=${encodeURIComponent('Founding Skipper application')}` +
+  `&body=${encodeURIComponent(FOUNDING_APPLY_BODY)}`;
+export const FOUNDING_CTA_LABEL = 'Apply to be a Founding Skipper';
