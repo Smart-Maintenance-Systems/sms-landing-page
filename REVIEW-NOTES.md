@@ -159,6 +159,34 @@ future Website-Nova corpus (K1).
 
 ---
 
+## W6 update (2026-07-14) — Founding Skippers (pre-launch, behind a flag)
+
+- **Task 1 — `FOUNDING_MODE` flag (default ON)** in `src/config.ts` (mirrors the `DEMO_ENABLED` pattern).
+  While ON, every trial CTA becomes **"Apply to be a Founding Skipper"** — a pre-filled `mailto:` (subject
+  *Founding Skipper application*; body asks name · boat(s) + what they do · where they operate · one line on
+  why), via a shared `ApplyCta` component. Each CTA site is wrapped
+  `{FOUNDING_MODE ? <ApplyCta/> : <today's CTA untouched/>}`, so the off-branch is the current element
+  verbatim. **Sites covered:** HomePage `CtaRow` (hero + pricing teaser), Navigation (desktop + mobile),
+  Footer, Pricing (card + start block), Code, About, FAQ, How-it-works, Stub.
+- **🟥 Flag OFF = byte-identical, PROVEN.** Built at pre-W6 HEAD → snapshot; flipped `FOUNDING_MODE=false`
+  → rebuilt → diffed the prerendered HTML of all 6 routes (asset-hash-normalized): **zero diff**. Launch day
+  = flip the one constant to `false` and today's trial site returns exactly. (All founding content — CTAs,
+  pricing reframe, Home strip — gates on the flag.)
+- **Task 2 — Pricing reframes to launch pricing, founding offer as the star** (FOUNDING_MODE only): a
+  founding banner (*"Free while we finish it together, then £15 a month — forever."* · *"Free to test. £15
+  forever. Instead of £29."* · the what-we-ask line · apply CTA) above the **"£29 a month per boat at
+  launch. Everything included."** anchor. 🟥 **£29 never disappears** (7× on the page) and the **Product/Offer
+  JSON-LD stays £29** — the founding deal is an application, not a SKU (no £15 schema'd; grep-verified).
+- **Task 3 — a quiet founding strip on Home** near the pricing teaser: the offer in two lines + a **static
+  "10 boats"** + apply. 🟥 **No urgency theatre** — no live counter, no countdown, no "N left" (grep clean;
+  the founder edits the "10 boats" copy by hand as slots fill).
+- **🟥 Untouched:** `server.js` FROZEN; the hero ("We are the SMS."), the audited Code quotes, and the
+  Workboat-Code badges are unchanged (grep-verified). tsc 0 · build clean (6 routes prerendered) · founding
+  copy present in raw HTML with the flag on · guardrail sweep empty. All on `w1-website-skeleton`, reviewable
+  commits, nothing pushed.
+
+---
+
 ## Pages built
 | Route | Page | State |
 |---|---|---|
