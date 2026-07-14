@@ -184,6 +184,16 @@ future Website-Nova corpus (K1).
   Workboat-Code badges are unchanged (grep-verified). tsc 0 · build clean (6 routes prerendered) · founding
   copy present in raw HTML with the flag on · guardrail sweep empty. All on `w1-website-skeleton`, reviewable
   commits, nothing pushed.
+- **W6 send-back fix (keeper audit) — the trial-promise CLASS gated.** With the flag on, the served HTML
+  still *promised the trial* (open-trial claim while applications-only is true — guardrail 7): the two Home
+  small-prints, the `/` + `/pricing` meta/OG descriptions, and the FAQ cost answer (+ its JSON-LD). Every one
+  now gates on `FOUNDING_MODE` with a founding variant from the signed programme wording (small-prints →
+  *"Founding Skippers: free while we finish it, then £15 a month forever · 10 boats"*; FAQ answer states the
+  founding state honestly; `routeSeo` now imports the flag so its descriptions are flag-aware).
+  **Sweep:** `14-day|free trial|no card` in the served route HTML (flag ON) = **0** (esbuild even DCE's the
+  off-branch strings from the JS bundle, since the flag is a build-time const — launch = flip + rebuild +
+  deploy). **£29 stays** (7× on Pricing) and the Product/Offer JSON-LD stays £29. Flag-off byte-diff
+  re-run: **still identical across all 6 routes.**
 
 ---
 
