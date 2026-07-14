@@ -6,7 +6,8 @@ import {
 } from 'lucide-react';
 import Screenshot from '../components/Screenshot';
 import ScreenshotPlaceholder from '../components/ScreenshotPlaceholder';
-import { TRIAL_HREF, DEMO_ENABLED, DEMO_URL } from '../config';
+import { TRIAL_HREF, DEMO_ENABLED, DEMO_URL, FOUNDING_MODE } from '../config';
+import ApplyCta from '../components/ApplyCta';
 import { useSeo } from '../lib/seo';
 import { ROUTE_SEO } from '../lib/routeSeo';
 import { SHOTS } from '../lib/screenshots';
@@ -15,9 +16,13 @@ import { SHOTS } from '../lib/screenshots';
 function CtaRow({ className = '' }: { className?: string }) {
   return (
     <div className={`flex flex-col sm:flex-row gap-3 ${className}`}>
-      <Link to={TRIAL_HREF} className="btn-primary justify-center">
-        Start free trial <ChevronRight className="w-4 h-4" />
-      </Link>
+      {FOUNDING_MODE ? (
+        <ApplyCta className="btn-primary justify-center" />
+      ) : (
+        <Link to={TRIAL_HREF} className="btn-primary justify-center">
+          Start free trial <ChevronRight className="w-4 h-4" />
+        </Link>
+      )}
       {DEMO_ENABLED ? (
         <a href={DEMO_URL} className="btn-secondary justify-center">Try SMS Workboat - no sign-up</a>
       ) : (
@@ -289,6 +294,22 @@ export default function HomePage() {
           <Screenshot {...SHOTS.cameraReview} aspect="phone" className="justify-self-center" />
         </div>
       </section>
+
+      {/* ── FOUNDING SKIPPERS strip (W6 Task 3) — FOUNDING_MODE only. Quiet: the offer + the static
+             "10 boats" (no live counter, no countdown) + apply. 🟥 The £29 stays visible (teaser below). ── */}
+      {FOUNDING_MODE && (
+        <section className="relative border-t border-border-subtle py-16 md:py-24">
+          <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="rounded-2xl border border-accent-cyan/25 bg-surface-1 p-6 md:p-8">
+              <div className="flex items-center gap-2 text-sm font-semibold text-accent-cyan"><Anchor className="w-4 h-4" /> Founding Skippers · 10 boats</div>
+              <h2 className="mt-3 text-2xl md:text-3xl font-bold text-text-primary">Free while we finish it together, then £15 a month — forever.</h2>
+              <p className="mt-3 text-text-secondary">Free to test. £15 forever. Instead of £29. Ten boats join as founding skippers, use it for real, and shape what it becomes.</p>
+              <p className="mt-4 text-sm text-text-muted">What we ask: real use on a real boat · honest findings · a conversation when we need one.</p>
+              <div className="mt-6"><ApplyCta className="btn-primary" /></div>
+            </div>
+          </div>
+        </section>
+      )}
 
       {/* ── PRICING TEASER (W-P) ──────────────────────────────────────────────── */}
       <section className="relative border-t border-border-subtle py-16 md:py-24">
