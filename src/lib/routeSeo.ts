@@ -78,8 +78,8 @@ export const FAQS: Faq[] = [
   {
     q: 'What does it cost?',
     a: FOUNDING_MODE
-      ? '£29 a month per boat at launch, everything included - no tiers, no fleet discount, no per-user charges, nothing gated behind a “Pro” plan. Right now we run a Founding Skippers programme: 10 boats use SMS Workboat free while we finish it together, then £15 a month forever, instead of £29.'
-      : '£29 a month per boat, everything included - no tiers, no fleet discount, no per-user charges, nothing gated behind a “Pro” plan. There is a 14-day free trial and no card is required to start.',
+      ? '£29 a month per boat at launch, everything included - no tiers, no per-user charges, nothing gated behind a “Pro” plan. Right now we run a Founding Skippers programme: 10 boats use SMS Workboat free while we finish it together, then £15 a month forever, instead of £29.'
+      : '£29 a month per boat, everything included - no tiers, no per-user charges, nothing gated behind a “Pro” plan. There is a 14-day free trial and no card is required to start.',
   },
   {
     q: 'Does it work offline, out on the water?',
@@ -134,8 +134,8 @@ export const ROUTE_SEO: Record<string, SeoOptions> = {
   '/pricing': {
     title: 'Pricing - £29 a month per boat, everything included | SMS Workboat',
     description: FOUNDING_MODE
-      ? '£29 flat per boat per month at launch. No tiers, no fleet discount, no per-user charges, nothing gated. Founding Skippers: free while we finish it, then £15 a month forever - 10 boats. Produces your annual self-assessment, downloads your whole SMS as PDFs, and keeps the inspection pack ready.'
-      : '£29 flat per boat per month. No tiers, no fleet discount, no per-user charges, nothing gated. 14-day free trial, no card. Produces your annual self-assessment, downloads your whole SMS as PDFs, and keeps the inspection pack ready.',
+      ? '£29 flat per boat per month at launch. No tiers, no per-user charges, nothing gated. Founding Skippers: free while we finish it, then £15 a month forever - 10 boats. Produces your annual self-assessment, downloads your whole SMS as PDFs, and keeps the inspection pack ready.'
+      : '£29 flat per boat per month. No tiers, no per-user charges, nothing gated. 14-day free trial, no card. Produces your annual self-assessment, downloads your whole SMS as PDFs, and keeps the inspection pack ready.',
     path: '/pricing',
     jsonLd: PRODUCT_JSONLD,
   },
@@ -155,7 +155,7 @@ export const ROUTE_SEO: Record<string, SeoOptions> = {
   '/about': {
     title: 'Why SMS Workboat - built from inside the industry',
     description:
-      'Built by its founders between jobs at sea, with serving industry reviewers. Its AI cites the Workboat Code and never rules a verdict. We show you everything - the product, the price, the sources, even your own gaps.',
+      'Built by its founders between jobs at sea, with serving industry reviewers. Its AI cites the Workboat Code and never rules a verdict. No demo to book, no hidden pricing - the whole product is on the site to see.',
     path: '/about',
   },
 };

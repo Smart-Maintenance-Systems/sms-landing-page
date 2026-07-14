@@ -96,7 +96,7 @@ export default function HomePage() {
           </div>
 
           <p className="mt-14 text-center text-xl md:text-2xl font-medium text-text-primary max-w-3xl mx-auto">
-            We show you everything - the product, the price, Nova&rsquo;s sources, even your own gaps.
+            No demo to book, no hidden pricing, no sales call. The whole product&rsquo;s right here - have a look.
           </p>
         </div>
       </section>
@@ -226,8 +226,8 @@ export default function HomePage() {
               <div className="flex items-center gap-2 text-brand-primary font-semibold"><ShieldCheck className="w-5 h-5" /> Survey day</div>
               <p className="mt-3 text-text-secondary leading-relaxed">
                 Hand the inspector a link - 4 hours, one boat, read-only, no app. You&rsquo;re notified the
-                moment it opens; kill it when they leave. The gaps show honestly - the honesty spine
-                playing for you.
+                moment it opens; kill it when they leave. If something&rsquo;s missing, it shows as missing.
+                Surveyors trust records that don&rsquo;t pretend.
               </p>
               <ScreenshotPlaceholder kind="clip" label="The inspector link opening the pack" caption="Clip: the inspector link opening - to be filmed." className="mt-6" />
             </div>
@@ -315,7 +315,7 @@ export default function HomePage() {
       <section className="relative border-t border-border-subtle py-16 md:py-24">
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-2xl md:text-3xl font-bold text-text-primary">£29 a month per boat. Everything included.</h2>
-          <p className="mt-3 text-text-secondary">No tiers, no fleet discount, no per-user charges, nothing gated behind a &ldquo;Pro&rdquo; plan.</p>
+          <p className="mt-3 text-text-secondary">No tiers, no per-user charges, nothing gated behind a &ldquo;Pro&rdquo; plan.</p>
           <div className="mt-8 grid sm:grid-cols-3 gap-4 text-left">
             {[
               { icon: ClipboardCheck, t: 'Your annual self-assessment', d: 'Produced from your records.' },

@@ -7,7 +7,7 @@ import ApplyCta from '../components/ApplyCta';
 
 /**
  * Pricing (design W-P, FOUNDER-SIGNED 2026-07-12). 🟥 £29 flat per boat, everything included - no tiers,
- * no fleet discount, no per-user charges, nothing gated. 14-day no-card trial. The tangible outputs are
+ * no per-user charges, nothing gated. 14-day no-card trial. The tangible outputs are
  * named honestly: self-assessment · download your SMS as PDFs · inspection pack. The parked
  * evidence-archive export is NOT claimed.
  */
@@ -53,7 +53,7 @@ export default function PricingPage() {
               <p className="mt-8 text-2xl md:text-3xl font-bold text-text-primary">£29 a month per boat at launch.</p>
               <p className="mt-1 text-xl md:text-2xl font-semibold gradient-text">Everything included.</p>
               <p className="mt-4 text-text-secondary max-w-xl mx-auto">
-                One price, the full package. No tiers, no fleet discount, no per-user charges, nothing gated
+                One price, the full package. No tiers, no per-user charges, nothing gated
                 behind a &ldquo;Pro&rdquo; plan. The features that arrive as you grow are already yours.
               </p>
             </>
@@ -62,7 +62,7 @@ export default function PricingPage() {
               <h1 className="text-3xl md:text-5xl font-bold text-text-primary">£29 a month per boat.</h1>
               <p className="mt-2 text-2xl md:text-3xl font-semibold gradient-text">Everything included.</p>
               <p className="mt-5 text-text-secondary max-w-xl mx-auto">
-                One price, the full package. No tiers, no fleet discount, no per-user charges, nothing gated
+                One price, the full package. No tiers, no per-user charges, nothing gated
                 behind a &ldquo;Pro&rdquo; plan. The features that arrive as you grow are already yours.
               </p>
             </>

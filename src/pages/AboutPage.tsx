@@ -32,8 +32,8 @@ export default function AboutPage() {
           </p>
           <p>
             And it&rsquo;s built to be trusted. Its AI, Nova, retrieves and cites the Code - it never rules
-            a verdict, because that&rsquo;s the surveyor&rsquo;s call. We show you everything: the product,
-            the price, Nova&rsquo;s sources, even your own gaps.
+            a verdict, because that&rsquo;s the surveyor&rsquo;s call. There&rsquo;s no demo to book and no
+            hidden pricing - the whole product is here to see.
           </p>
         </div>
 
