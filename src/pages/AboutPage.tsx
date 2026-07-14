@@ -67,7 +67,7 @@ export default function AboutPage() {
               <span className="text-sm text-text-secondary">Supported by Innovate UK</span>
             </div>
             <div className="flex items-center gap-3">
-              <span className="inline-flex items-center rounded-md border border-border-default bg-surface-0 px-2.5 py-1 text-xs font-bold tracking-wide text-text-primary">NVIDIA</span>
+              <img src="/nvidia-inception-badge.jpg" alt="NVIDIA Inception Program" className="h-12 w-auto object-contain" />
               <span className="text-sm text-text-secondary">NVIDIA Inception member</span>
             </div>
           </div>
