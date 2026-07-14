@@ -36,6 +36,21 @@ export default function AboutPage() {
           </p>
         </div>
 
+        {/* W5d/W5e (founder-signed) - the credibility CARDS, promoted up the page ("it's our
+            credibility"). 🟥 COMPANY-level claims only; honesty-checked wording; away from Code content. */}
+        <div className="mt-12 grid sm:grid-cols-2 gap-4">
+          <div className="rounded-xl border border-border-default bg-surface-1 p-6">
+            <img src="/innovate-uk-ukri.png" alt="UKRI - Innovate UK" className="h-14 w-auto object-contain" />
+            <p className="mt-4 text-base font-bold text-text-primary">Government backed</p>
+            <p className="mt-1 text-sm text-text-secondary">Smart Maintenance Systems is supported by Innovate UK - the UK government&rsquo;s innovation agency.</p>
+          </div>
+          <div className="rounded-xl border border-border-default bg-surface-1 p-6">
+            <img src="/nvidia-inception-badge.jpg" alt="NVIDIA Inception Program" className="h-14 w-auto object-contain rounded" />
+            <p className="mt-4 text-base font-bold text-text-primary">AI recognised</p>
+            <p className="mt-1 text-sm text-text-secondary">Our AI vision is part of NVIDIA&rsquo;s Inception program for AI startups.</p>
+          </div>
+        </div>
+
         <div className="mt-10 grid sm:grid-cols-3 gap-4">
           {[
             { icon: Anchor, t: 'Built at sea', d: 'By people who work on the water - not from an office' },
@@ -53,25 +68,6 @@ export default function AboutPage() {
         <blockquote className="mt-10 border-l-2 border-accent-cyan/40 pl-4 text-lg text-text-primary italic">
           &ldquo;Nova handles the compliance, you handle the boat.&rdquo;
         </blockquote>
-
-        {/* W5d (founder-signed 2026-07-13) - the credibility strip. 🟥 COMPANY-level claims only (both
-            awards are to Smart Maintenance Systems - true outright); kept on the About page, away from
-            Code content (no false-authority bleed near compliance claims). The NVIDIA slot upgrades to
-            the official Inception member badge when the founder downloads it from the program portal
-            (drop the file in /public and swap the chip for an <img>). */}
-        <div className="mt-12 rounded-xl border border-border-default bg-surface-1 p-6">
-          <p className="text-xs font-semibold uppercase tracking-wider text-text-muted">The company behind SMS Workboat</p>
-          <div className="mt-4 flex flex-wrap items-center gap-x-8 gap-y-4">
-            <div className="flex items-center gap-3">
-              <img src="/innovate-uk-logo.png" alt="Innovate UK" className="h-9 w-auto object-contain" />
-              <span className="text-sm text-text-secondary">Supported by Innovate UK</span>
-            </div>
-            <div className="flex items-center gap-3">
-              <img src="/nvidia-inception-badge.jpg" alt="NVIDIA Inception Program" className="h-12 w-auto object-contain" />
-              <span className="text-sm text-text-secondary">NVIDIA Inception member</span>
-            </div>
-          </div>
-        </div>
 
         <div className="mt-10 flex flex-col sm:flex-row gap-3">
           <Link to={TRIAL_HREF} className="btn-primary justify-center">Start free trial <ChevronRight className="w-4 h-4" /></Link>

@@ -96,6 +96,28 @@ export default function HomePage() {
         </div>
       </section>
 
+      {/* ── W5e (founder) - THE CREDIBILITY BAND, directly under the hero ("it's our credibility").
+             🟥 Company-level claims only; wording honesty-checked (the PROGRAM recognises, IUK explained).
+             Kept off the hero itself and off the Code page (no false-authority near compliance). ── */}
+      <section className="border-t border-border-subtle bg-surface-1/60 py-8">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid sm:grid-cols-2 gap-8">
+          <div className="flex items-center gap-4">
+            <img src="/innovate-uk-ukri.png" alt="UKRI - Innovate UK" className="h-12 w-auto object-contain shrink-0" />
+            <div>
+              <p className="text-sm font-bold text-text-primary">Government backed</p>
+              <p className="text-sm text-text-secondary">Supported by Innovate UK - the UK government&rsquo;s innovation agency.</p>
+            </div>
+          </div>
+          <div className="flex items-center gap-4">
+            <img src="/nvidia-inception-badge.jpg" alt="NVIDIA Inception Program" className="h-12 w-auto object-contain shrink-0 rounded" />
+            <div>
+              <p className="text-sm font-bold text-text-primary">AI recognised</p>
+              <p className="text-sm text-text-secondary">Our AI vision is part of NVIDIA&rsquo;s Inception program for AI startups.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* ── §2b - SHOW EVERYTHING: real screens · the price · Nova's honest refusal ── */}
       <section className="relative border-t border-border-subtle py-16 md:py-24">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
