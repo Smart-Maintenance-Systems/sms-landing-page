@@ -16,10 +16,10 @@ export interface Shot {
 export const SHOTS = {
   // Home
   homeHero: {
-    src: '/screens/boat-setup.png',
-    alt: 'Setting up a boat in SMS Workboat',
-    caption: 'Your boat, set up on a phone.',
-  }, // shot 1 - Home hero / boat-setup
+    src: '/screens/kestrel-dashboard.jpg',
+    alt: "A workboat's dashboard in SMS Workboat",
+    caption: 'Your dashboard, built from the records you keep.',
+  }, // shot 1 - Home hero / boat-setup (real capture 2026-07-16)
   certificates: {
     src: '/screens/certificates.png',
     alt: 'Vessel certificates in SMS Workboat',
