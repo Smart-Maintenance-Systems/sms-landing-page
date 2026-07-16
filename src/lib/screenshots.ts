@@ -31,10 +31,10 @@ export const SHOTS = {
     caption: 'A maintenance log that derives its own due dates.',
   }, // shot 5 - Maintenance (real capture 2026-07-16)
   riskAssessments: {
-    src: '/screens/ra-1.png',
-    alt: 'Risk assessment in SMS Workboat',
+    src: '/screens/risk-assessments.jpg',
+    alt: 'Risk assessments in SMS Workboat',
     caption: 'Risk assessments from templates you confirm.',
-  }, // shot 6 - Risk assessments
+  }, // shot 6 - Risk assessments (real capture 2026-07-16)
   personAshore: {
     src: '/screens/person-ashore-1.png',
     alt: 'Person Ashore in SMS Workboat',
