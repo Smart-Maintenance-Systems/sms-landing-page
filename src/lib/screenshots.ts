@@ -36,10 +36,10 @@ export const SHOTS = {
     caption: 'Risk assessments from templates you confirm.',
   }, // shot 6 - Risk assessments (real capture 2026-07-16)
   personAshore: {
-    src: '/screens/person-ashore-1.png',
+    src: '/screens/person-ashore.jpg',
     alt: 'Person Ashore in SMS Workboat',
     caption: 'Your designated person ashore.',
-  }, // shot 7 - Person Ashore
+  }, // shot 7 - Person Ashore (real capture 2026-07-16)
   certCapture: {
     src: '/screens/cert-1.png',
     alt: 'Capturing a certificate in SMS Workboat',
