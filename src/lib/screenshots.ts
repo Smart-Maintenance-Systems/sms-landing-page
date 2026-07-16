@@ -62,9 +62,9 @@ export const SHOTS = {
     alt: 'Capturing a certificate',
   }, // shot 4 - Capture
   howAuthor: {
-    src: '/screens/ra-2.png',
+    src: '/screens/ra-authoring.jpg',
     alt: 'Authoring a risk assessment',
-  }, // shot 6 - Author
+  }, // shot 6 - Author (real capture 2026-07-16)
   howAssess: {
     src: '/screens/self-assessment.jpg',
     alt: 'The signed annual self-assessment',
