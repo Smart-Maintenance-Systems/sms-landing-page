@@ -68,7 +68,7 @@ export const SHOTS = {
   howAssess: {
     src: '/screens/self-assessment.jpg',
     alt: 'The signed annual self-assessment',
-  }, // shot 17 - Assess (real capture 2026-07-16) — ⚠️ recapture after the WB3 attestation typo fix
+  }, // shot 17 - Assess (real capture 2026-07-16). NB the "accurately and accurately" is verbatim MCA MGN 710 Annex A — correct, not a typo.
 } satisfies Record<string, Shot>;
 
 export type ShotKey = keyof typeof SHOTS;
