@@ -41,10 +41,10 @@ export const SHOTS = {
     caption: 'Your designated person ashore.',
   }, // shot 7 - Person Ashore (real capture 2026-07-16)
   certCapture: {
-    src: '/screens/cert-1.png',
+    src: '/screens/cert-capture.jpg',
     alt: 'Capturing a certificate in SMS Workboat',
     caption: 'Snap a certificate - Nova reads the details.',
-  }, // shot 4 - Cert capture (OCR)
+  }, // shot 4 - Cert capture (OCR) (real capture 2026-07-16)
   recordSigned: {
     src: '/screens/ra-3.png',
     alt: 'A signed, dated record in SMS Workboat',
@@ -58,9 +58,9 @@ export const SHOTS = {
 
   // How it works (CAPTURE → AUTHOR → ASSESS) - no captions (the step copy carries the story)
   howCapture: {
-    src: '/screens/cert-1.png',
+    src: '/screens/cert-capture.jpg',
     alt: 'Capturing a certificate',
-  }, // shot 4 - Capture
+  }, // shot 4 - Capture (real capture 2026-07-16)
   howAuthor: {
     src: '/screens/ra-authoring.jpg',
     alt: 'Authoring a risk assessment',
