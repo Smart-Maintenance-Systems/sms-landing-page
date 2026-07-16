@@ -21,25 +21,30 @@ export const SHOTS = {
     caption: 'Your dashboard, built from the records you keep.',
   }, // shot 1 - Home hero / boat-setup (real capture 2026-07-16)
   certificates: {
-    src: '/screens/dave-certificates.jpg',
+    src: '/screens/certificates-dt.png',
     alt: 'Vessel and crew certificates in SMS Workboat',
     caption: 'Certificates, with expiry reminders.',
-  }, // shot 3 - Certificates (real capture 2026-07-16)
+  }, // shot 3 - Certificates (real desktop capture 2026-07-16)
   maintenance: {
-    src: '/screens/maintenance-log.jpg',
+    src: '/screens/maintenance-dt.png',
     alt: 'Maintenance log in SMS Workboat',
     caption: 'A maintenance log that derives its own due dates.',
-  }, // shot 5 - Maintenance (real capture 2026-07-16)
+  }, // shot 5 - Maintenance (real desktop capture 2026-07-16)
   riskAssessments: {
-    src: '/screens/risk-assessments.jpg',
-    alt: 'Risk assessments in SMS Workboat',
+    src: '/screens/ra-dt.png',
+    alt: 'A risk assessment in SMS Workboat',
     caption: 'Risk assessments from templates you confirm.',
-  }, // shot 6 - Risk assessments (real capture 2026-07-16)
+  }, // shot 6 - Risk assessments (real desktop capture 2026-07-16)
   personAshore: {
-    src: '/screens/person-ashore.jpg',
+    src: '/screens/person-ashore-dt.png',
     alt: 'Person Ashore in SMS Workboat',
     caption: 'Your designated person ashore.',
-  }, // shot 7 - Person Ashore (real capture 2026-07-16)
+  }, // shot 7 - Person Ashore (real desktop capture 2026-07-16)
+  fleetOverview: {
+    src: '/screens/fleet-overview.png',
+    alt: 'Fleet overview across several boats in SMS Workboat',
+    caption: "Every boat's readiness at a glance - and what's needed where.",
+  }, // shot 11 - Fleet overview (real desktop capture 2026-07-16)
   certCapture: {
     src: '/screens/cert-capture.jpg',
     alt: 'Capturing a certificate in SMS Workboat',

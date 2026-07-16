@@ -261,7 +261,7 @@ export default function HomePage() {
       {/* ── W-S3 - STARTS WITH ONE BOAT. GROWS INTO A FLEET. ──────────────────── */}
       <section className="relative border-t border-border-subtle py-16 md:py-24">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid lg:grid-cols-2 gap-10 items-center">
-          <ScreenshotPlaceholder kind="clip" label="Tap “Add another boat” → the Fleet office appears" caption="Clip: the fleet office materialising on boat #2 - to be filmed." />
+          <Screenshot {...SHOTS.fleetOverview} />
           <div>
             <div className="flex items-center gap-2 text-brand-primary font-semibold"><Ship className="w-5 h-5" /> Grows with you</div>
             <h2 className="mt-3 text-2xl md:text-3xl font-bold text-text-primary">Starts with one boat. Grows into a fleet.</h2>
