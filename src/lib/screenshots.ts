@@ -51,10 +51,10 @@ export const SHOTS = {
     caption: 'Every record signed and dated.',
   }, // shot 6 (detail) - signed record
   cameraReview: {
-    src: '/screens/cert-2.png',
-    alt: 'Reviewing a captured certificate in SMS Workboat',
-    caption: 'Snap a certificate - check what Nova read - save.',
-  }, // shot 9 - Camera evidence review
+    src: '/screens/camera-review.jpg',
+    alt: 'Reviewing a captured evidence photo of a repair in SMS Workboat',
+    caption: 'Photograph the fix - review - save.',
+  }, // shot 9 - Camera evidence review (real capture 2026-07-16)
 
   // How it works (CAPTURE → AUTHOR → ASSESS) - no captions (the step copy carries the story)
   howCapture: {
