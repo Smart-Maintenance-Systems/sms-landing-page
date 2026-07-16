@@ -26,10 +26,10 @@ export const SHOTS = {
     caption: 'Certificates, with expiry reminders.',
   }, // shot 3 - Certificates (real capture 2026-07-16)
   maintenance: {
-    src: '/screens/maintenance.png',
+    src: '/screens/maintenance-log.jpg',
     alt: 'Maintenance log in SMS Workboat',
     caption: 'A maintenance log that derives its own due dates.',
-  }, // shot 5 - Maintenance
+  }, // shot 5 - Maintenance (real capture 2026-07-16)
   riskAssessments: {
     src: '/screens/ra-1.png',
     alt: 'Risk assessment in SMS Workboat',
