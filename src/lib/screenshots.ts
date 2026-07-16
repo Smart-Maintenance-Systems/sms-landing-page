@@ -21,10 +21,10 @@ export const SHOTS = {
     caption: 'Your dashboard, built from the records you keep.',
   }, // shot 1 - Home hero / boat-setup (real capture 2026-07-16)
   certificates: {
-    src: '/screens/certificates.png',
-    alt: 'Vessel certificates in SMS Workboat',
+    src: '/screens/dave-certificates.jpg',
+    alt: 'Vessel and crew certificates in SMS Workboat',
     caption: 'Certificates, with expiry reminders.',
-  }, // shot 3 - Certificates
+  }, // shot 3 - Certificates (real capture 2026-07-16)
   maintenance: {
     src: '/screens/maintenance.png',
     alt: 'Maintenance log in SMS Workboat',
