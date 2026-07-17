@@ -51,10 +51,10 @@ export const SHOTS = {
     caption: 'Snap a certificate - Nova reads the details.',
   }, // shot 4 - Cert capture (OCR) (real capture 2026-07-16)
   recordSigned: {
-    src: '/screens/ra-3.png',
-    alt: 'A signed, dated record in SMS Workboat',
-    caption: 'Every record signed and dated.',
-  }, // shot 6 (detail) - signed record
+    src: '/screens/signed-records-dt.png',
+    alt: 'The signed-records register in SMS Workboat',
+    caption: 'Every signed record, in one register.',
+  }, // shot 6 (detail) - signed-records register (real desktop capture 2026-07-17)
   cameraReview: {
     src: '/screens/camera-review.jpg',
     alt: 'Reviewing a captured evidence photo of a repair in SMS Workboat',
