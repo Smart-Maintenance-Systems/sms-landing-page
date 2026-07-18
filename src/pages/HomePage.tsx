@@ -142,6 +142,43 @@ export default function HomePage() {
         </div>
       </section>
 
+      {/* ── §2c LIVE DEMO - the anti-gatekeeping CTA. Real seeded product; DEMO_ENABLED gates the link so
+             there is no dead public link pre-launch. Honesty: every claim is true - it IS the real product
+             on dummy data you can drive, so "book a call" vs "drive it yourself" is what is on offer, not a boast. ── */}
+      <section className="relative border-t border-border-subtle bg-surface-1/60 py-16 md:py-24">
+        <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <p className="text-sm font-semibold text-brand-primary uppercase tracking-wider mb-3">
+            No sales call. No &ldquo;book a demo.&rdquo; No catch.
+          </p>
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-text-primary mb-5 leading-tight">
+            Drive it right now.
+          </h2>
+          <p className="text-lg text-text-secondary mb-4">
+            Everyone else makes you book a call and take their word for it. Ours you can drive right now - a demo boat, fully set up, click anything.
+          </p>
+          <p className="text-text-secondary mb-8">
+            It is not a video and it is not a guided tour on rails. It is the actual product with a real boat&apos;s SMS already built - the certificates, the risk assessments, the drill records, the self-assessment, and Nova answering Code questions in plain English. Poke at all of it. There is nothing you can break.
+          </p>
+          <div className="flex justify-center">
+            {DEMO_ENABLED ? (
+              <a href={DEMO_URL} className="btn-primary justify-center">
+                Open the live demo <ChevronRight className="w-4 h-4" />
+              </a>
+            ) : (
+              <span
+                className="inline-flex items-center justify-center gap-2 px-6 py-3 rounded-lg border border-border-default text-text-muted text-sm font-medium cursor-default"
+                title="A no-sign-up live demo arrives with launch"
+              >
+                Live demo coming with launch
+              </span>
+            )}
+          </div>
+          <p className="mt-4 text-sm text-text-muted">
+            Dummy data · no sign-up · nothing to install · two minutes.
+          </p>
+        </div>
+      </section>
+
       {/* ── NOVA - her own section (W5 Task 2). 🟥 Guardrail 6: retrieves + cites, never a verdict; no
              "AI does your compliance" overclaim. Examples are real product behaviour, no invented UI. ── */}
       <section className="relative border-t border-border-subtle py-16 md:py-24">

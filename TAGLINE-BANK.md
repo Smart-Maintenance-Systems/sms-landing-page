@@ -12,6 +12,7 @@ Legend: **USED** = wired now · **BANK** = kept, awaiting founder · **KILLED** 
 |---|---|---|---|
 | **Your boat deserves better than a notebook.** | LightPage | Leads the How-it-works day-one story (eyebrow) | **USED** |
 | **Less than £1 a day.** (£29/mo ÷ 30 = £0.97 — honest) | rewrite of LightPage price anchor | Beside the £29 on Pricing | **USED** |
+| **Drive it right now.** + *"Everyone else makes you book a call and take their word for it. Ours you can drive right now…"* | founder (2026-07-18) | §2c live-demo section (Home) — the anti-gatekeeping CTA (DEMO_ENABLED-gated link) | **USED** |
 
 ## Bank — strong, awaiting founder placement
 | Line | Source | Recommended placement |
@@ -22,6 +23,7 @@ Legend: **USED** = wired now · **BANK** = kept, awaiting founder · **KILLED** 
 | Built for the operators everyone else ignores. | HomePage | Why-us / hero alternative candidate |
 | From nothing to a working SMS in an afternoon. | signed sub-hero (in use) | already the Home sub-hero |
 | SMS Light grows with you. The more you document, the smarter it gets. | LightPage | W-S3 grows-with-you (reword away from "SMS Light" brand) |
+| Don't book a demo. Drive one. | founder (2026-07-18) | The short punch of the §2c demo section — a nav strip / a hero-adjacent hook |
 
 ## Hero — ✅ DECIDED (W4, founder-signed §W-D 2026-07-13)
 **IN PLACE (LIVE):** *"The law now requires an SMS. We are the SMS."* — the recovered original headline
