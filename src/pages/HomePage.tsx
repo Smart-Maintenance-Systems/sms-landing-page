@@ -194,6 +194,71 @@ export default function HomePage() {
         </div>
       </section>
 
+      {/* ── BUILT THE SAME WAY - the pay-off to the honest-positioning section above: the pitch promises
+             calm + honest + proportionate; this shows the PRODUCT is built that way. 🟥 PRODUCT claims (not
+             Code quotes) - plain bold-claim + explanation cards, NO <blockquote>/<cite> (that stays reserved
+             for the verbatim Code quotes above). No "compliant"/"guaranteed"/"MCA-approved"; the close lands
+             on honest + started. Reads as a PAIR with the section above (same shell + 2×2 grid). ── */}
+      <section className="relative border-t border-border-subtle py-16 md:py-24">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="max-w-3xl">
+            <p className="text-sm font-semibold text-brand-primary uppercase tracking-wider">No panic, by design</p>
+            <h2 className="mt-3 text-3xl md:text-4xl font-bold text-text-primary leading-tight">
+              Built the same way.
+            </h2>
+            <p className="mt-5 text-lg text-text-secondary leading-relaxed">
+              We didn&rsquo;t just tell you not to panic &mdash; we built the whole product around it. SMS
+              Workboat is designed to be honest and proportionate: the same calm, plain-spoken approach the
+              Code actually asks for.
+            </p>
+          </div>
+
+          {/* four design truths - a 2×2 grid; product claims, plain bold claim + explanation (no blockquotes) */}
+          <div className="mt-10 grid sm:grid-cols-2 gap-6">
+            <div className="rounded-2xl border border-border-default bg-surface-1 p-6">
+              <p className="text-base font-semibold text-text-primary">It shows what you&rsquo;ve done &mdash; it never grades you.</p>
+              <p className="mt-2 text-sm text-text-secondary leading-relaxed">
+                No pass, no fail, no &ldquo;compliance score.&rdquo; Just a clear view of what you&rsquo;ve
+                recorded and what&rsquo;s still open. Nova, the assistant built in, will never tell you
+                you&rsquo;re compliant &mdash; that&rsquo;s the surveyor&rsquo;s call, not an app&rsquo;s.
+              </p>
+            </div>
+            <div className="rounded-2xl border border-border-default bg-surface-1 p-6">
+              <p className="text-base font-semibold text-text-primary">Every &ldquo;done&rdquo; is one a surveyor could trust.</p>
+              <p className="mt-2 text-sm text-text-secondary leading-relaxed">
+                When something needs a look, it says so &mdash; plainly. It would rather show you an honest
+                amber than a comforting green that isn&rsquo;t earned. Nothing here is dressed up to look
+                finished when it isn&rsquo;t.
+              </p>
+            </div>
+            <div className="rounded-2xl border border-border-default bg-surface-1 p-6">
+              <p className="text-base font-semibold text-text-primary">Start small. Build it up.</p>
+              <p className="mt-2 text-sm text-text-secondary leading-relaxed">
+                A one-boat operation&rsquo;s SMS is meant to be small &mdash; so setup is four plain areas, not
+                a wall of forms. Do what you can today, and come back and add the rest. It&rsquo;s built to be
+                <em> started</em>, not finished in one sitting.
+              </p>
+            </div>
+            <div className="rounded-2xl border border-border-default bg-surface-1 p-6">
+              <p className="text-base font-semibold text-text-primary">Your surveyor gets exactly what they sample.</p>
+              <p className="mt-2 text-sm text-text-secondary leading-relaxed">
+                When the examination comes, you hand over your self-assessment and the evidence behind it
+                &mdash; in their language, the way they actually check it. No last-minute scramble, no separate
+                folder to build.
+              </p>
+            </div>
+          </div>
+
+          {/* the close - a pull-quote landing on honest, mirroring the section above + the shared CtaRow */}
+          <div className="mt-10 max-w-3xl">
+            <p className="text-2xl md:text-3xl font-bold text-text-primary leading-snug">
+              An honest message deserves an honest tool. This is one.
+            </p>
+            <CtaRow className="mt-8" />
+          </div>
+        </div>
+      </section>
+
       {/* ── §2b - SHOW EVERYTHING: real screens · the price · Nova's honest refusal ── */}
       <section className="relative border-t border-border-subtle py-16 md:py-24">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
