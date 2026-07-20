@@ -123,6 +123,77 @@ export default function HomePage() {
         </div>
       </section>
 
+      {/* ── HONEST POSITIONING - the calm counter to the deadline-fear sellers. Headline FOUNDER-LOCKED.
+             🟥 Every Code quote is a <blockquote> with its source visibly cited, VERBATIM from the on-file
+             MGN 710 PDF - the honest pitch depends on them being checkable. MGN 710 = guidance (the 3-year
+             figure is Code App 8 §13, cited via §6.1). No new claims, no compliance verdict, no "MCA-approved". ── */}
+      <section className="relative border-t border-border-subtle py-16 md:py-24">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="max-w-3xl">
+            <p className="text-sm font-semibold text-brand-primary uppercase tracking-wider">The honest version</p>
+            <h2 className="mt-3 text-3xl md:text-4xl font-bold text-text-primary leading-tight">
+              The deadline is real. The panic isn&rsquo;t.
+            </h2>
+            <p className="mt-5 text-lg text-text-secondary leading-relaxed">
+              Yes &mdash; UK law now requires a safety management system on every small commercial workboat, by
+              13 December 2026. That part&rsquo;s real. But the panic around it &mdash; the countdown clocks, the
+              scare emails &mdash; isn&rsquo;t coming from the law. It&rsquo;s coming from people trying to sell
+              you something. Here&rsquo;s the calm truth, straight from the guidance you&rsquo;ll actually be
+              measured against:
+            </p>
+          </div>
+
+          {/* the four reassurances - a 2×2 grid; claim bold, verbatim quote in a cited blockquote */}
+          <div className="mt-10 grid sm:grid-cols-2 gap-6">
+            <div className="rounded-2xl border border-border-default bg-surface-1 p-6">
+              <p className="text-base font-semibold text-text-primary">Yours is meant to be small.</p>
+              <blockquote className="mt-3 border-l-2 border-brand-primary/40 pl-4 italic text-text-secondary leading-relaxed">
+                &ldquo;&hellip;proportionate to the size, complexity and risk profile of their operations.&rdquo;
+              </blockquote>
+              <cite className="mt-3 block not-italic font-mono text-xs text-text-muted">&mdash; MGN 710, &sect;1.2</cite>
+            </div>
+            <div className="rounded-2xl border border-border-default bg-surface-1 p-6">
+              <p className="text-base font-semibold text-text-primary">It&rsquo;s not meant to be a burden.</p>
+              <blockquote className="mt-3 border-l-2 border-brand-primary/40 pl-4 italic text-text-secondary leading-relaxed">
+                &ldquo;&hellip;practical and effective without being unnecessarily burdensome.&rdquo;
+              </blockquote>
+              <cite className="mt-3 block not-italic font-mono text-xs text-text-muted">&mdash; MGN 710, &sect;1</cite>
+            </div>
+            <div className="rounded-2xl border border-border-default bg-surface-1 p-6">
+              <p className="text-base font-semibold text-text-primary">You can start it before it&rsquo;s finished.</p>
+              <blockquote className="mt-3 border-l-2 border-brand-primary/40 pl-4 italic text-text-secondary leading-relaxed">
+                &ldquo;&hellip;specific items in the assessment may reflect ongoing development, as full
+                implementation of all the necessary systems is underway.&rdquo;
+              </blockquote>
+              <cite className="mt-3 block not-italic font-mono text-xs text-text-muted">&mdash; MGN 710, &sect;3.8 <span className="text-text-muted/80">(about the self-assessment)</span></cite>
+            </div>
+            <div className="rounded-2xl border border-border-default bg-surface-1 p-6">
+              <p className="text-base font-semibold text-text-primary">The surveyor samples &mdash; they don&rsquo;t grade you.</p>
+              <blockquote className="mt-3 border-l-2 border-brand-primary/40 pl-4 italic text-text-secondary leading-relaxed">
+                &ldquo;Sampling is intended to be brief and focused; it does not assess the effectiveness of
+                the SMS.&rdquo;
+              </blockquote>
+              <cite className="mt-3 block not-italic font-mono text-xs text-text-muted">&mdash; MGN 710, &sect;4.3</cite>
+            </div>
+          </div>
+
+          {/* the close - the differentiator (names no one) + the founder-signed line as a pull-quote + CTA */}
+          <div className="mt-10 max-w-3xl">
+            <p className="text-text-secondary leading-relaxed">
+              So ignore the three-minute &ldquo;compliance scorecards&rdquo; and the countdown timers. No quiz
+              can tell you your SMS is compliant &mdash; a real survey doesn&rsquo;t even assess that. What
+              counts is that you&rsquo;ve <strong className="font-semibold text-text-primary">started</strong>,
+              and that you&rsquo;re <strong className="font-semibold text-text-primary">honest</strong> about
+              where you are.
+            </p>
+            <p className="mt-6 text-2xl md:text-3xl font-bold text-text-primary leading-snug">
+              Being started and honest is enough. So start today.
+            </p>
+            <CtaRow className="mt-8" />
+          </div>
+        </div>
+      </section>
+
       {/* ── §2b - SHOW EVERYTHING: real screens · the price · Nova's honest refusal ── */}
       <section className="relative border-t border-border-subtle py-16 md:py-24">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
