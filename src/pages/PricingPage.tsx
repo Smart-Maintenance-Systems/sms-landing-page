@@ -42,7 +42,7 @@ export default function PricingPage() {
               {/* W6 — the founding offer is the star; the £29 stays as the launch anchor below it. */}
               <div className="mx-auto max-w-2xl rounded-2xl border border-accent-cyan/30 bg-surface-1 p-6 md:p-8">
                 <div className="flex items-center justify-center gap-2 text-sm font-semibold text-accent-cyan"><Anchor className="w-4 h-4" /> Founding Skippers · 10 boats</div>
-                <h1 className="mt-3 text-3xl md:text-4xl font-bold text-text-primary">Free while we finish it together, then £15 a month — forever.</h1>
+                <h1 className="mt-3 text-3xl md:text-4xl font-bold text-text-primary">Free while we finish it together, then £15 a month, forever.</h1>
                 <p className="mt-3 text-lg md:text-xl font-semibold gradient-text">Free to test. £15 forever. Instead of £29.</p>
                 <p className="mt-3 text-text-secondary max-w-xl mx-auto">
                   Ten boats join as founding skippers, use SMS Workboat for real, and shape what it becomes.
@@ -119,7 +119,7 @@ export default function PricingPage() {
         {FOUNDING_MODE ? (
           <div className="mt-14 rounded-2xl border border-accent-cyan/25 bg-surface-1 p-6 md:p-8 text-center">
             <h2 className="text-xl md:text-2xl font-bold text-text-primary">Apply to be a Founding Skipper</h2>
-            <p className="mt-2 text-text-secondary">Ten boats. Free while we finish it together, then £15 a month — forever, instead of £29.</p>
+            <p className="mt-2 text-text-secondary">Ten boats. Free while we finish it together, then £15 a month forever, instead of £29.</p>
             <p className="mt-4 text-sm text-text-muted">What we ask: real use on a real boat · honest findings · a conversation when we need one.</p>
             <div className="mt-6 flex justify-center"><ApplyCta className="btn-primary justify-center" /></div>
           </div>

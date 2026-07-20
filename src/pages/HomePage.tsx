@@ -135,9 +135,9 @@ export default function HomePage() {
               The deadline is real. The panic isn&rsquo;t.
             </h2>
             <p className="mt-5 text-lg text-text-secondary leading-relaxed">
-              Yes &mdash; UK law now requires a safety management system on every small commercial workboat, by
-              13 December 2026. That part&rsquo;s real. But the panic around it &mdash; the countdown clocks, the
-              scare emails &mdash; isn&rsquo;t coming from the law. It&rsquo;s coming from people trying to sell
+              Yes, UK law now requires a safety management system on every small commercial workboat, by
+              13 December 2026. That part&rsquo;s real. But the panic around it (the countdown clocks, the
+              scare emails) isn&rsquo;t coming from the law. It&rsquo;s coming from people trying to sell
               you something. Here&rsquo;s the calm truth, straight from the guidance you&rsquo;ll actually be
               measured against:
             </p>
@@ -150,14 +150,14 @@ export default function HomePage() {
               <blockquote className="mt-3 border-l-2 border-brand-primary/40 pl-4 italic text-text-secondary leading-relaxed">
                 &ldquo;&hellip;proportionate to the size, complexity and risk profile of their operations.&rdquo;
               </blockquote>
-              <cite className="mt-3 block not-italic font-mono text-xs text-text-muted">&mdash; MGN 710, &sect;1.2</cite>
+              <cite className="mt-3 block not-italic font-mono text-xs text-text-muted">MGN 710, &sect;1.2</cite>
             </div>
             <div className="rounded-2xl border border-border-default bg-surface-1 p-6">
               <p className="text-base font-semibold text-text-primary">It&rsquo;s not meant to be a burden.</p>
               <blockquote className="mt-3 border-l-2 border-brand-primary/40 pl-4 italic text-text-secondary leading-relaxed">
                 &ldquo;&hellip;practical and effective without being unnecessarily burdensome.&rdquo;
               </blockquote>
-              <cite className="mt-3 block not-italic font-mono text-xs text-text-muted">&mdash; MGN 710, &sect;1</cite>
+              <cite className="mt-3 block not-italic font-mono text-xs text-text-muted">MGN 710, &sect;1</cite>
             </div>
             <div className="rounded-2xl border border-border-default bg-surface-1 p-6">
               <p className="text-base font-semibold text-text-primary">You can start it before it&rsquo;s finished.</p>
@@ -165,15 +165,15 @@ export default function HomePage() {
                 &ldquo;&hellip;specific items in the assessment may reflect ongoing development, as full
                 implementation of all the necessary systems is underway.&rdquo;
               </blockquote>
-              <cite className="mt-3 block not-italic font-mono text-xs text-text-muted">&mdash; MGN 710, &sect;3.8 <span className="text-text-muted/80">(about the self-assessment)</span></cite>
+              <cite className="mt-3 block not-italic font-mono text-xs text-text-muted">MGN 710, &sect;3.8 <span className="text-text-muted/80">(about the self-assessment)</span></cite>
             </div>
             <div className="rounded-2xl border border-border-default bg-surface-1 p-6">
-              <p className="text-base font-semibold text-text-primary">The surveyor samples &mdash; they don&rsquo;t grade you.</p>
+              <p className="text-base font-semibold text-text-primary">The surveyor samples. They don&rsquo;t grade you.</p>
               <blockquote className="mt-3 border-l-2 border-brand-primary/40 pl-4 italic text-text-secondary leading-relaxed">
                 &ldquo;Sampling is intended to be brief and focused; it does not assess the effectiveness of
                 the SMS.&rdquo;
               </blockquote>
-              <cite className="mt-3 block not-italic font-mono text-xs text-text-muted">&mdash; MGN 710, &sect;4.3</cite>
+              <cite className="mt-3 block not-italic font-mono text-xs text-text-muted">MGN 710, &sect;4.3</cite>
             </div>
           </div>
 
@@ -181,7 +181,7 @@ export default function HomePage() {
           <div className="mt-10 max-w-3xl">
             <p className="text-text-secondary leading-relaxed">
               So ignore the three-minute &ldquo;compliance scorecards&rdquo; and the countdown timers. No quiz
-              can tell you your SMS is compliant &mdash; a real survey doesn&rsquo;t even assess that. What
+              can tell you your SMS is compliant. A real survey doesn&rsquo;t even assess that. What
               counts is that you&rsquo;ve <strong className="font-semibold text-text-primary">started</strong>,
               and that you&rsquo;re <strong className="font-semibold text-text-primary">honest</strong> about
               where you are.
@@ -207,7 +207,7 @@ export default function HomePage() {
               Built the same way.
             </h2>
             <p className="mt-5 text-lg text-text-secondary leading-relaxed">
-              We didn&rsquo;t just tell you not to panic &mdash; we built the whole product around it. SMS
+              We didn&rsquo;t just tell you not to panic. We built the whole product around it. SMS
               Workboat is designed to be honest and proportionate: the same calm, plain-spoken approach the
               Code actually asks for.
             </p>
@@ -216,17 +216,17 @@ export default function HomePage() {
           {/* four design truths - a 2×2 grid; product claims, plain bold claim + explanation (no blockquotes) */}
           <div className="mt-10 grid sm:grid-cols-2 gap-6">
             <div className="rounded-2xl border border-border-default bg-surface-1 p-6">
-              <p className="text-base font-semibold text-text-primary">It shows what you&rsquo;ve done &mdash; it never grades you.</p>
+              <p className="text-base font-semibold text-text-primary">It shows what you&rsquo;ve done, never grades you.</p>
               <p className="mt-2 text-sm text-text-secondary leading-relaxed">
                 No pass, no fail, no &ldquo;compliance score.&rdquo; Just a clear view of what you&rsquo;ve
-                recorded and what&rsquo;s still open. Nova, the assistant built in, will never tell you
-                you&rsquo;re compliant &mdash; that&rsquo;s the surveyor&rsquo;s call, not an app&rsquo;s.
+                recorded and what&rsquo;s still open. Nova, the built-in assistant, will never tell you
+                you&rsquo;re compliant. That&rsquo;s the surveyor&rsquo;s call, not an app&rsquo;s.
               </p>
             </div>
             <div className="rounded-2xl border border-border-default bg-surface-1 p-6">
               <p className="text-base font-semibold text-text-primary">Every &ldquo;done&rdquo; is one a surveyor could trust.</p>
               <p className="mt-2 text-sm text-text-secondary leading-relaxed">
-                When something needs a look, it says so &mdash; plainly. It would rather show you an honest
+                When something needs a look, it says so, plainly. It would rather show you an honest
                 amber than a comforting green that isn&rsquo;t earned. Nothing here is dressed up to look
                 finished when it isn&rsquo;t.
               </p>
@@ -234,7 +234,7 @@ export default function HomePage() {
             <div className="rounded-2xl border border-border-default bg-surface-1 p-6">
               <p className="text-base font-semibold text-text-primary">Start small. Build it up.</p>
               <p className="mt-2 text-sm text-text-secondary leading-relaxed">
-                A one-boat operation&rsquo;s SMS is meant to be small &mdash; so setup is four plain areas, not
+                A one-boat operation&rsquo;s SMS is meant to be small, so setup is four plain areas, not
                 a wall of forms. Do what you can today, and come back and add the rest. It&rsquo;s built to be
                 <em> started</em>, not finished in one sitting.
               </p>
@@ -242,8 +242,8 @@ export default function HomePage() {
             <div className="rounded-2xl border border-border-default bg-surface-1 p-6">
               <p className="text-base font-semibold text-text-primary">Your surveyor gets exactly what they sample.</p>
               <p className="mt-2 text-sm text-text-secondary leading-relaxed">
-                When the examination comes, you hand over your self-assessment and the evidence behind it
-                &mdash; in their language, the way they actually check it. No last-minute scramble, no separate
+                When the examination comes, you hand over your self-assessment and the evidence behind it,
+                in their language, the way they actually check it. No last-minute scramble, no separate
                 folder to build.
               </p>
             </div>
@@ -475,7 +475,7 @@ export default function HomePage() {
           <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="rounded-2xl border border-accent-cyan/25 bg-surface-1 p-6 md:p-8">
               <div className="flex items-center gap-2 text-sm font-semibold text-accent-cyan"><Anchor className="w-4 h-4" /> Founding Skippers · 10 boats</div>
-              <h2 className="mt-3 text-2xl md:text-3xl font-bold text-text-primary">Free while we finish it together, then £15 a month — forever.</h2>
+              <h2 className="mt-3 text-2xl md:text-3xl font-bold text-text-primary">Free while we finish it together, then £15 a month, forever.</h2>
               <p className="mt-3 text-text-secondary">Free to test. £15 forever. Instead of £29. Ten boats join as founding skippers, use it for real, and shape what it becomes.</p>
               <p className="mt-4 text-sm text-text-muted">What we ask: real use on a real boat · honest findings · a conversation when we need one.</p>
               <div className="mt-6"><ApplyCta className="btn-primary" /></div>
