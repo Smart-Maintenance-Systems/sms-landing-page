@@ -20,6 +20,21 @@ export const SHOTS = {
     alt: "A workboat's dashboard in SMS Workboat",
     caption: 'Your dashboard, built from the records you keep.',
   }, // shot 1 - Home hero / boat-setup (real capture 2026-07-16)
+  // Nova's honest refusal - a REAL capture (2026-07-21): asked "Will I pass my MCA inspection?", Nova
+  // declines the verdict ("This isn't a pass/fail - your surveyor decides that") and shows where you stand.
+  // The strongest proof of the honesty leash; replaced the "to be filmed" clip placeholder.
+  novaRefusal: {
+    src: '/screens/nova-refusal.jpeg',
+    alt: 'Nova declining to give a pass/fail verdict and showing where the boat stands instead',
+    caption: 'Ask Nova “will I pass?” - she refuses to rule a verdict, and shows where you stand.',
+  },
+  // The inspector read-only link - a REAL capture (2026-07-21): QR or copy-link, one boat, 4-hour expiry,
+  // revoke any time, download the pack. Replaced the "to be filmed" inspector clip placeholder.
+  inspectorPack: {
+    src: '/screens/inspector-pack.png',
+    alt: 'Creating a read-only inspector link for the evidence pack in SMS Workboat',
+    caption: 'A read-only link for the inspector - one boat, 4-hour expiry, revoke any time.',
+  },
   certificates: {
     src: '/screens/certificates-dt.png',
     alt: 'Vessel and crew certificates in SMS Workboat',

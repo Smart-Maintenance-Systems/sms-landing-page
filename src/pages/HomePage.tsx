@@ -5,7 +5,6 @@ import {
   Ship, CheckCircle2, FileText, ClipboardCheck, Sparkles, BellRing,
 } from 'lucide-react';
 import Screenshot from '../components/Screenshot';
-import ScreenshotPlaceholder from '../components/ScreenshotPlaceholder';
 import { TRIAL_HREF, DEMO_ENABLED, DEMO_URL, FOUNDING_MODE } from '../config';
 import ApplyCta from '../components/ApplyCta';
 import { useSeo } from '../lib/seo';
@@ -342,13 +341,7 @@ export default function HomePage() {
                 you can trust what it <em>does</em> say.
               </p>
             </div>
-            <ScreenshotPlaceholder
-              kind="clip"
-              aspect="phone"
-              label="Nova declining “will I pass survey?”"
-              caption="Clip: Nova’s honest refusal, live - to be filmed."
-              className="justify-self-center"
-            />
+            <Screenshot {...SHOTS.novaRefusal} aspect="phone" className="justify-self-center" />
           </div>
 
           <div className="mt-10 grid sm:grid-cols-3 gap-4">
@@ -384,7 +377,8 @@ export default function HomePage() {
       <section className="relative border-t border-border-subtle py-16 md:py-24">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-2xl md:text-3xl font-bold text-text-primary max-w-2xl">The moments your SMS meets the world</h2>
-          <div className="mt-10 grid lg:grid-cols-2 gap-10">
+          {/* Two moments as balanced text cards; the inspector screen shows one of them full-width below. */}
+          <div className="mt-10 grid lg:grid-cols-2 gap-6">
             {/* Crew (QR) */}
             <div className="rounded-2xl border border-border-default bg-surface-1 p-6">
               <div className="flex items-center gap-2 text-brand-primary font-semibold"><QrCode className="w-5 h-5" /> A deckhand joins for the day</div>
@@ -392,7 +386,6 @@ export default function HomePage() {
                 They scan the wheelhouse sticker with their own phone - no app, no account - sign onto the
                 boat, and put their signature on the risk assessment before you leave the berth.
               </p>
-              <ScreenshotPlaceholder kind="clip" aspect="phone" label="Scanning the QR → sign-on → RA signature" caption="Clip: the QR sign-on on a crew phone - to be filmed." className="mt-6 justify-self-center" />
             </div>
             {/* Inspector (the link) */}
             <div className="rounded-2xl border border-border-default bg-surface-1 p-6">
@@ -402,32 +395,33 @@ export default function HomePage() {
                 moment it opens; kill it when they leave. If something&rsquo;s missing, it shows as missing.
                 Surveyors trust records that don&rsquo;t pretend.
               </p>
-              <ScreenshotPlaceholder kind="clip" label="The inspector link opening the pack" caption="Clip: the inspector link opening - to be filmed." className="mt-6" />
             </div>
+          </div>
+          {/* the inspector link, shown - the real screen, full-width so the wide capture reads clearly */}
+          <div className="mt-8 max-w-4xl mx-auto">
+            <Screenshot {...SHOTS.inspectorPack} />
           </div>
         </div>
       </section>
 
-      {/* ── W-S2 - WORKS WHERE YOU WORK (offline) ─────────────────────────────── */}
+      {/* ── W-S2 - WORKS WHERE YOU WORK (offline) — centered single column (the On board→Saved pills are
+             the visual; no image needed, and the live demo carries the motion). ─────────────────────── */}
       <section className="relative border-t border-border-subtle py-16 md:py-24">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid lg:grid-cols-2 gap-10 items-center">
-          <div>
-            <div className="flex items-center gap-2 text-status-warning font-semibold"><WifiOff className="w-5 h-5" /> Works where you work</div>
-            <h2 className="mt-3 text-2xl md:text-3xl font-bold text-text-primary">
-              Keep working when the signal drops - record drills, snap evidence, sign crew on.
-            </h2>
-            <p className="mt-4 text-text-secondary leading-relaxed">
-              It saves on board and syncs itself when you&rsquo;re back in range. A photo you snap offline
-              reads <span className="text-text-primary font-medium">&ldquo;On board&rdquo;</span> - not
-              &ldquo;Saved&rdquo; - until the server confirms it. Honesty you can see.
-            </p>
-            <div className="mt-5 flex items-center gap-4 text-sm">
-              <span className="inline-flex items-center gap-1.5 rounded-full bg-surface-2 px-3 py-1 text-text-secondary"><WifiOff className="w-3.5 h-3.5" /> On board</span>
-              <ChevronRight className="w-4 h-4 text-text-muted" />
-              <span className="inline-flex items-center gap-1.5 rounded-full bg-surface-2 px-3 py-1 text-status-success"><Wifi className="w-3.5 h-3.5" /> Saved</span>
-            </div>
+        <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <div className="flex items-center justify-center gap-2 text-status-warning font-semibold"><WifiOff className="w-5 h-5" /> Works where you work</div>
+          <h2 className="mt-3 text-2xl md:text-3xl font-bold text-text-primary">
+            Keep working when the signal drops - record drills, snap evidence, sign crew on.
+          </h2>
+          <p className="mt-4 text-text-secondary leading-relaxed">
+            It saves on board and syncs itself when you&rsquo;re back in range. A photo you snap offline
+            reads <span className="text-text-primary font-medium">&ldquo;On board&rdquo;</span> - not
+            &ldquo;Saved&rdquo; - until the server confirms it. Honesty you can see.
+          </p>
+          <div className="mt-6 flex items-center justify-center gap-4 text-sm">
+            <span className="inline-flex items-center gap-1.5 rounded-full bg-surface-2 px-3 py-1 text-text-secondary"><WifiOff className="w-3.5 h-3.5" /> On board</span>
+            <ChevronRight className="w-4 h-4 text-text-muted" />
+            <span className="inline-flex items-center gap-1.5 rounded-full bg-surface-2 px-3 py-1 text-status-success"><Wifi className="w-3.5 h-3.5" /> Saved</span>
           </div>
-          <ScreenshotPlaceholder kind="clip" aspect="phone" label="Airplane mode → snap → “On board” → signal → “Saved”" caption="Clip: offline capture syncing on reconnect - to be filmed." className="justify-self-center" />
         </div>
       </section>
 
