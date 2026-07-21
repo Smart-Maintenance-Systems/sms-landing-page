@@ -84,7 +84,6 @@ export default function HomePage() {
               <div className="mt-8 flex flex-col gap-2 text-sm text-text-secondary">
                 <span className="flex items-center gap-2"><Ship className="w-4 h-4 text-brand-primary shrink-0" /> SMS Workboat - by <span className="font-medium text-text-primary">Smart Maintenance Systems</span>.</span>
                 <span className="flex items-center gap-2"><Anchor className="w-4 h-4 text-text-muted shrink-0" /> Built by people who work at sea - not people guessing from an office.</span>
-                <span className="flex items-center gap-2"><ShieldCheck className="w-4 h-4 text-text-muted shrink-0" /> Built with serving industry reviewers.</span>
                 <span className="flex items-center gap-2"><Sparkles className="w-4 h-4 text-accent-cyan shrink-0" /> Nova handles the compliance, you handle the boat.</span>
               </div>
             </div>

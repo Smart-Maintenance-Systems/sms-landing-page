@@ -9,7 +9,8 @@ import { ROUTE_SEO } from '../lib/routeSeo';
  * Why us (design §3). The founders' voice - built from inside the industry, not a software shop. 🟥
  * W5 Task 1: PLURAL throughout ("the founders" / "we"), co-founder UNNAMED, no company names, no year
  * counts, no individual credit lines (founder-signed). Publishable-now facts only (guardrail 7): no invented
- * numbers, no testimonials, no logos. "built with serving industry reviewers" is the #193 placeholder.
+ * numbers, no testimonials, no logos. (The #193 "serving industry reviewers" placeholder was REMOVED
+ * 2026-07-21 — we don't claim an industry endorsement we haven't secured; add a real quote only once given.)
  */
 export default function AboutPage() {
   useSeo(ROUTE_SEO['/about']);
@@ -55,7 +56,7 @@ export default function AboutPage() {
         <div className="mt-10 grid sm:grid-cols-3 gap-4">
           {[
             { icon: Anchor, t: 'Built at sea', d: 'By people who work on the water - not from an office' },
-            { icon: ShieldCheck, t: 'Reviewed by industry', d: 'Built with serving industry reviewers' },
+            { icon: ShieldCheck, t: 'Honest by design', d: 'Shows what you’ve recorded, never a fake compliance score' },
             { icon: Sparkles, t: 'AI you can trust', d: 'Cited answers, never a verdict' },
           ].map((c) => (
             <div key={c.t} className="rounded-xl border border-border-default bg-surface-1 p-5">

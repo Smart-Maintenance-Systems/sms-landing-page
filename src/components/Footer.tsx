@@ -45,7 +45,7 @@ export default function Footer() {
             </Link>
             <p className="text-sm text-text-secondary leading-relaxed max-w-md">
               The simplest way to have the safety management system UK law now requires on every small
-              commercial workboat. Built with serving industry reviewers.
+              commercial workboat.
             </p>
             <p className="mt-4 flex items-center gap-2 text-xs text-text-muted">
               <Anchor className="w-3.5 h-3.5" /> Nova handles the compliance, you handle the boat.
