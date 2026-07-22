@@ -87,7 +87,7 @@ export default function PricingPage() {
                 <Link to={TRIAL_HREF === '/pricing' ? '#start' : TRIAL_HREF} className="btn-primary justify-center">Start free trial <ChevronRight className="w-4 h-4" /></Link>
               )}
               {DEMO_ENABLED ? (
-                <a href={DEMO_URL} className="btn-secondary justify-center">Try the demo - no sign-up</a>
+                <a href={DEMO_URL} target="_blank" rel="noopener noreferrer" className="btn-secondary justify-center">Try the demo - no sign-up</a>
               ) : null}
             </div>
           </div>

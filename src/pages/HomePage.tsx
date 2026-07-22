@@ -28,7 +28,7 @@ function CtaRow({ className = '', showDemoPlaceholder = true }: { className?: st
         </Link>
       )}
       {DEMO_ENABLED ? (
-        <a href={DEMO_URL} className="btn-secondary justify-center">Try SMS Workboat - no sign-up</a>
+        <a href={DEMO_URL} target="_blank" rel="noopener noreferrer" className="btn-secondary justify-center">Try SMS Workboat - no sign-up</a>
       ) : showDemoPlaceholder ? (
         <span
           className="inline-flex items-center justify-center gap-2 px-6 py-3 rounded-lg border border-border-default text-text-muted text-sm font-medium cursor-default"
@@ -300,7 +300,7 @@ export default function HomePage() {
           </p>
           <div className="flex justify-center">
             {DEMO_ENABLED ? (
-              <a href={DEMO_URL} className="btn-primary justify-center">
+              <a href={DEMO_URL} target="_blank" rel="noopener noreferrer" className="btn-primary justify-center">
                 Open the live demo <ChevronRight className="w-4 h-4" />
               </a>
             ) : (
