@@ -11,8 +11,13 @@ import { useSeo } from '../lib/seo';
 import { ROUTE_SEO } from '../lib/routeSeo';
 import { SHOTS } from '../lib/screenshots';
 
-/** The two primary CTAs - trial is primary; the live demo (design §2c) ships DEFAULT-OFF. */
-function CtaRow({ className = '' }: { className?: string }) {
+/**
+ * The two primary CTAs - trial is primary; the live demo (design §2c) ships DEFAULT-OFF.
+ * `showDemoPlaceholder` gates ONLY the pre-launch "coming with launch" placeholder, so it isn't repeated on
+ * every CtaRow down the page - kept on the hero + final CTA, off in the mid-page rows. Once DEMO_ENABLED
+ * flips true the real "no sign-up" button always shows, regardless of this flag.
+ */
+function CtaRow({ className = '', showDemoPlaceholder = true }: { className?: string; showDemoPlaceholder?: boolean }) {
   return (
     <div className={`flex flex-col sm:flex-row gap-3 ${className}`}>
       {FOUNDING_MODE ? (
@@ -24,14 +29,14 @@ function CtaRow({ className = '' }: { className?: string }) {
       )}
       {DEMO_ENABLED ? (
         <a href={DEMO_URL} className="btn-secondary justify-center">Try SMS Workboat - no sign-up</a>
-      ) : (
+      ) : showDemoPlaceholder ? (
         <span
           className="inline-flex items-center justify-center gap-2 px-6 py-3 rounded-lg border border-border-default text-text-muted text-sm font-medium cursor-default"
           title="A no-sign-up live demo arrives with launch"
         >
           Try SMS Workboat - live demo coming with launch
         </span>
-      )}
+      ) : null}
     </div>
   );
 }
@@ -63,7 +68,7 @@ export default function HomePage() {
                 />
               </motion.div>
               <span className="flex w-fit items-center gap-2 rounded-full border border-border-default bg-surface-1 px-3 py-1 text-xs font-medium text-text-secondary">
-                <Scale className="w-3.5 h-3.5 text-brand-primary" /> Workboat Code Edition 3 · in force 13 December 2023
+                <Scale className="w-3.5 h-3.5 text-brand-primary" /> Workboat Code Edition 3 · SMS required by 13 December 2026
               </span>
               <h1 className="mt-5 text-3xl sm:text-4xl md:text-5xl font-bold leading-tight text-text-primary">
                 The law now requires an SMS.{' '}
@@ -72,8 +77,8 @@ export default function HomePage() {
               {/* §W-D honesty-trimmed sub-line, VERBATIM. 🟥 The original's verdict phrasing was dropped - 
                   records-ready wording only ("keeps every record ready"), never a pass/fail promise. */}
               <p className="mt-5 text-lg text-text-secondary">
-                Every small commercial workboat must now hold a Safety Management System - Workboat Code
-                Edition 3, in force since December 2023. SMS Workboat builds yours, and keeps every record
+                Every small commercial workboat must hold a Safety Management System by 13 December 2026 -
+                Workboat Code Edition 3, law since 2023. SMS Workboat builds yours, and keeps every record
                 ready for the day the surveyor steps aboard.
               </p>
               <CtaRow className="mt-8" />
@@ -187,7 +192,7 @@ export default function HomePage() {
             <p className="mt-6 text-2xl md:text-3xl font-bold text-text-primary leading-snug">
               Being started and honest is enough. So start today.
             </p>
-            <CtaRow className="mt-8" />
+            <CtaRow className="mt-8" showDemoPlaceholder={false} />
           </div>
         </div>
       </section>
@@ -252,7 +257,7 @@ export default function HomePage() {
             <p className="text-2xl md:text-3xl font-bold text-text-primary leading-snug">
               An honest message deserves an honest tool. This is one.
             </p>
-            <CtaRow className="mt-8" />
+            <CtaRow className="mt-8" showDemoPlaceholder={false} />
           </div>
         </div>
       </section>
@@ -313,16 +318,16 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* ── NOVA - her own section (W5 Task 2). 🟥 Guardrail 6: retrieves + cites, never a verdict; no
+      {/* ── NOVA - its own section (W5 Task 2). 🟥 Guardrail 6: retrieves + cites, never a verdict; no
              "AI does your compliance" overclaim. Examples are real product behaviour, no invented UI. ── */}
       <section className="relative border-t border-border-subtle py-16 md:py-24">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center gap-2 text-sm font-semibold text-accent-cyan"><Sparkles className="w-4 h-4" /> Meet Nova</div>
           <h2 className="mt-3 text-2xl md:text-3xl font-bold text-text-primary max-w-2xl">Nova handles the compliance, you handle the boat.</h2>
           <p className="mt-3 text-text-secondary max-w-2xl">
-            She retrieves and cites the Workboat Code, flags what&rsquo;s coming due before it slips, and tells
-            you honestly when a call isn&rsquo;t hers to make. She never rules a verdict - that stays with your
-            surveyor.
+            It retrieves and cites the Workboat Code, flags what&rsquo;s coming due before it slips, and tells
+            you honestly when a call isn&rsquo;t the software&rsquo;s to make. It never rules a verdict - that
+            stays with your surveyor.
           </p>
 
           <div className="mt-10 grid lg:grid-cols-2 gap-8 items-center">
@@ -346,7 +351,7 @@ export default function HomePage() {
           <div className="mt-10 grid sm:grid-cols-3 gap-4">
             <div className="rounded-xl border border-border-default bg-surface-1 p-5">
               <BellRing className="w-6 h-6 text-brand-primary" />
-              <p className="mt-3 text-sm font-semibold text-text-primary">She comes to you first</p>
+              <p className="mt-3 text-sm font-semibold text-text-primary">It comes to you first</p>
               <p className="mt-1 text-xs text-text-muted leading-relaxed">
                 Expiry and next-due dates surface before they slip - &ldquo;your liferaft service is due
                 next month - want it on the calendar?&rdquo; One tap and it&rsquo;s logged.
@@ -354,18 +359,18 @@ export default function HomePage() {
             </div>
             <div className="rounded-xl border border-border-default bg-surface-1 p-5">
               <Scale className="w-6 h-6 text-brand-primary" />
-              <p className="mt-3 text-sm font-semibold text-text-primary">She cites the actual Code</p>
+              <p className="mt-3 text-sm font-semibold text-text-primary">It cites the actual Code</p>
               <p className="mt-1 text-xs text-text-muted leading-relaxed">
-                Answers come back with their section reference - Appendix 8, section 12 for maintenance - 
-                the same citation the product shows, so you can check her working.
+                Answers come back with their section reference - Appendix 8, section 12 for maintenance -
+                the same citation the product shows, so you can check its working.
               </p>
             </div>
             <div className="rounded-xl border border-border-default bg-surface-1 p-5">
               <ShieldCheck className="w-6 h-6 text-accent-cyan" />
-              <p className="mt-3 text-sm font-semibold text-text-primary">She never rules a verdict</p>
+              <p className="mt-3 text-sm font-semibold text-text-primary">It never rules a verdict</p>
               <p className="mt-1 text-xs text-text-muted leading-relaxed">
-                Whether you pass isn&rsquo;t hers to answer - that&rsquo;s your surveyor or Designated Person.
-                She shows you where you stand; the decision stays human.
+                Whether you pass isn&rsquo;t for it to answer - that&rsquo;s your surveyor or Designated Person.
+                It shows you where you stand; the decision stays human.
               </p>
             </div>
           </div>
