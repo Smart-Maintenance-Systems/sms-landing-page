@@ -75,7 +75,7 @@ export default function Navigation() {
                   href={DEMO_URL}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-sm font-semibold text-brand-primary hover:bg-brand-primary/10 px-4 py-2 rounded-lg transition-colors"
+                  className="btn-secondary text-sm py-2"
                 >
                   Try demo
                 </a>
