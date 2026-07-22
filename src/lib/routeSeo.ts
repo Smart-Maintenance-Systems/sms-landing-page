@@ -158,6 +158,18 @@ export const ROUTE_SEO: Record<string, SeoOptions> = {
       'Built by its founders between jobs at sea. Its AI cites the Workboat Code and never rules a verdict. No demo to book, no hidden pricing - the whole product is on the site to see.',
     path: '/about',
   },
+  '/privacy': {
+    title: 'Privacy policy - SMS Workboat',
+    description:
+      'What personal data SMS Workboat holds, why, and your rights over it - in plain English, written for UK data protection law (UK GDPR / Data Protection Act 2018).',
+    path: '/privacy',
+  },
+  '/terms': {
+    title: 'Terms of service - SMS Workboat',
+    description:
+      'The plain-English terms for using SMS Workboat: what it is (a tool to build and maintain your SMS) and isn\'t (a guarantee of passing survey), billing, your content, and liability.',
+    path: '/terms',
+  },
 };
 
 /** Routes that get their own prerendered HTML file + a sitemap entry (the crawlable set). */
