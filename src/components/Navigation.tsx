@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Menu, X, ChevronRight } from 'lucide-react';
-import { TRIAL_HREF, FOUNDING_MODE } from '../config';
+import { TRIAL_HREF, FOUNDING_MODE, DEMO_ENABLED, DEMO_URL } from '../config';
 import ApplyCta from './ApplyCta';
 
 const NAV_ITEMS = [
@@ -67,7 +67,19 @@ export default function Navigation() {
             </div>
 
             {/* CTA */}
-            <div className="hidden lg:flex items-center gap-3">
+            <div className="hidden lg:flex items-center gap-2">
+              {/* Persistent demo entry (§2c) — always one click away, reinforcing "no demo to book". Opens in
+                  a new tab so the site stays put. Gated on DEMO_ENABLED so it vanishes if the demo is retired. */}
+              {DEMO_ENABLED && (
+                <a
+                  href={DEMO_URL}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-sm font-semibold text-brand-primary hover:bg-brand-primary/10 px-4 py-2 rounded-lg transition-colors"
+                >
+                  Try demo
+                </a>
+              )}
               {FOUNDING_MODE ? (
                 <ApplyCta className="btn-primary text-sm py-2" />
               ) : (
@@ -114,7 +126,17 @@ export default function Navigation() {
                   {item.label}
                 </Link>
               ))}
-              <div className="pt-3 border-t border-border-subtle">
+              <div className="pt-3 border-t border-border-subtle space-y-2">
+                {DEMO_ENABLED && (
+                  <a
+                    href={DEMO_URL}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="btn-secondary w-full justify-center text-sm"
+                  >
+                    Try the demo - no sign-up
+                  </a>
+                )}
                 {FOUNDING_MODE ? (
                   <ApplyCta className="btn-primary w-full justify-center text-sm" chevron={false} />
                 ) : (
