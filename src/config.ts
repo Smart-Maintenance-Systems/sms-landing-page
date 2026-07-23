@@ -5,7 +5,7 @@
 // switched on and points at the demo entry. Flip DEMO_ENABLED back to false to instantly retire the link
 // (the site falls back to the "coming with launch" placeholder — no dead links either way).
 export const DEMO_ENABLED = true;
-export const DEMO_URL = 'https://glorious-fulfillment-production-4993.up.railway.app/workboat-demo';
+export const DEMO_URL = 'https://demo.smsworkboat.co.uk/workboat-demo';
 
 // The trial funnel front-ends the EXISTING product register/activation path (design §5). Until the S1
 // deploy wires that path, "Start free trial" routes to the Pricing page (a real page carrying the price
