@@ -296,7 +296,7 @@ export default function HomePage() {
             Everyone else makes you book a call and take their word for it. Ours you can drive right now - a demo boat, fully set up, click anything.
           </p>
           <p className="text-text-secondary mb-8">
-            It is not a video and it is not a guided tour on rails. It is the actual product with a real boat&apos;s SMS already built - the certificates, the risk assessments, the drill records, the self-assessment, and Nova answering Code questions in plain English. Poke at all of it. There is nothing you can break.
+            It is not a video and it is not a guided tour on rails. It is the actual product with a real boat&apos;s SMS already built - the certificates, the risk assessments, the drill records, the self-assessment, and Nova answering Code questions in plain English. Poke at all of it - there is nothing you can break. What you see on this page is the shape of it; there is more underneath once you&rsquo;re aboard.
           </p>
           <div className="flex justify-center">
             {DEMO_ENABLED ? (
@@ -348,7 +348,7 @@ export default function HomePage() {
             <Screenshot {...SHOTS.novaRefusal} aspect="phone" className="justify-self-center" />
           </div>
 
-          <div className="mt-10 grid sm:grid-cols-3 gap-4">
+          <div className="mt-10 grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
             <div className="rounded-xl border border-border-default bg-surface-1 p-5">
               <BellRing className="w-6 h-6 text-brand-primary" />
               <p className="mt-3 text-sm font-semibold text-text-primary">It comes to you first</p>
@@ -371,6 +371,14 @@ export default function HomePage() {
               <p className="mt-1 text-xs text-text-muted leading-relaxed">
                 Whether you pass isn&rsquo;t for it to answer - that&rsquo;s your surveyor or Designated Person.
                 It shows you where you stand; the decision stays human.
+              </p>
+            </div>
+            <div className="rounded-xl border border-border-default bg-surface-1 p-5">
+              <ClipboardCheck className="w-6 h-6 text-brand-primary" />
+              <p className="mt-3 text-sm font-semibold text-text-primary">It walks you through your pack</p>
+              <p className="mt-1 text-xs text-text-muted leading-relaxed">
+                &ldquo;Show me the fire-fighting records&rdquo; - Nova goes straight to them and cites what
+                you&rsquo;ve got, so a survey visit is a walk-through, not a scramble.
               </p>
             </div>
           </div>
