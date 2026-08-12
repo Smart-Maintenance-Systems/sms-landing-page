@@ -25,11 +25,20 @@ export const CONTACT_EMAIL = 'info@smsystems.uk';
 export const FOUNDING_MODE = true;
 
 // Pre-filled application email (founder picks 10 by hand; a form is over-engineering per the spec).
+// 🟦 mailto is fragile (needs a configured mail client — founder hit this on Outlook); a lightweight
+// web form is the flagged longer-term fix (pre-outreach gate item 5). Body kept richer so one reply
+// gives the founder enough to qualify a Founding Fleet place without a back-and-forth.
 const FOUNDING_APPLY_BODY = [
-  'Name:',
-  'Boat(s) and what they do:',
-  'Where you operate:',
-  'Why (one line):',
+  'Thanks for your interest in a Founding Fleet place — a few quick things so we can see how we can help. No wrong answers.',
+  '',
+  'Your name:',
+  'Company / operation:',
+  'Boat(s) — name, type, and what they do:',
+  'Where you operate (ports / area):',
+  'How do you manage your SMS today? (nothing yet / paper / spreadsheet / another system):',
+  'Biggest compliance or paperwork headache right now:',
+  'Best phone number to reach you:',
+  'Anything else you want us to know:',
   '',
 ].join('\n');
 export const FOUNDING_APPLY_HREF =
