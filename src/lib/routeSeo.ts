@@ -78,7 +78,7 @@ export const FAQS: Faq[] = [
   {
     q: 'What does it cost?',
     a: FOUNDING_MODE
-      ? '£29 a month per boat at launch, everything included - no tiers, no per-user charges, nothing gated behind a “Pro” plan. Right now we run a Founding Skippers programme: 10 boats use SMS Workboat free while we finish it together, then £15 a month forever, instead of £29.'
+      ? '£29 a month per boat at launch, everything included - no tiers, no per-user charges, nothing gated behind a “Pro” plan. Right now we run a Founding Skippers programme: 10 boats use SMS Workboat free while we finish it together, then keep a permanent founder’s discount that stays below our public price.'
       : '£29 a month per boat, everything included - no tiers, no per-user charges, nothing gated behind a “Pro” plan. There is a 14-day free trial and no card is required to start.',
   },
   {
@@ -87,7 +87,7 @@ export const FAQS: Faq[] = [
   },
   {
     q: 'How does crew sign onto a boat?',
-    a: 'A crew member scans the wheelhouse QR sticker with their own phone - no app, no account - signs onto the boat, and can put their signature on the risk assessment or documents they need to acknowledge. Crew can read and self-sign; they don’t change your records.',
+    a: 'You invite a crew member once; they sign in on their own phone - no app to download - then scan the wheelhouse QR sticker to sign onto the boat, and can put their signature on the risk assessment or documents they need to acknowledge. Crew read and self-sign; they don’t change your records. (The no-login links are for inspectors, not crew signatures.)',
   },
   {
     q: 'I only have one boat - is this overkill?',
@@ -121,7 +121,7 @@ export const ROUTE_SEO: Record<string, SeoOptions> = {
   '/': {
     title: 'The law now requires an SMS. We are the SMS. | SMS Workboat',
     description: FOUNDING_MODE
-      ? 'UK law now requires a safety management system on every small commercial workboat (Workboat Code Edition 3). SMS Workboat is the simplest way to have one - on your phone, in an afternoon. £29 a month per boat at launch, everything included. Founding Skippers: free while we finish it, then £15 a month forever - 10 boats.'
+      ? 'UK law now requires a safety management system on every small commercial workboat (Workboat Code Edition 3). SMS Workboat is the simplest way to have one - on your phone, in an afternoon. £29 a month per boat at launch, everything included. Founding Skippers: free while we finish it, then a permanent founder’s discount below our public price - 10 boats.'
       : 'UK law now requires a safety management system on every small commercial workboat (Workboat Code Edition 3). SMS Workboat is the simplest way to have one - on your phone, in an afternoon. £29 a month per boat, everything included. 14-day free trial, no card.',
     path: '/',
   },
@@ -134,7 +134,7 @@ export const ROUTE_SEO: Record<string, SeoOptions> = {
   '/pricing': {
     title: 'Pricing - £29 a month per boat, everything included | SMS Workboat',
     description: FOUNDING_MODE
-      ? '£29 flat per boat per month at launch. No tiers, no per-user charges, nothing gated. Founding Skippers: free while we finish it, then £15 a month forever - 10 boats. Produces your annual self-assessment, downloads your whole SMS as PDFs, and keeps the inspection pack ready.'
+      ? '£29 flat per boat per month at launch. No tiers, no per-user charges, nothing gated. Founding Skippers: free while we finish it, then a permanent founder’s discount below our public price - 10 boats. Produces your annual self-assessment, downloads your whole SMS as PDFs, and keeps the inspection pack ready.'
       : '£29 flat per boat per month. No tiers, no per-user charges, nothing gated. 14-day free trial, no card. Produces your annual self-assessment, downloads your whole SMS as PDFs, and keeps the inspection pack ready.',
     path: '/pricing',
     jsonLd: PRODUCT_JSONLD,
