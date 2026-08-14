@@ -119,7 +119,7 @@ export default function PrivacyPage() {
             <h2 className="text-xl font-semibold text-text-primary">Contact us</h2>
             <p className="mt-3">
               Questions about your data, or want to exercise a right? Email
-              {' '}<span className="text-text-primary">privacy@smsworkboat.co.uk</span>.
+              {' '}<span className="text-text-primary">info@smsystems.uk</span>.
               SMS Workboat is operated by Smart Maintenance Systems, [registered address], company number
               [company number].
             </p>

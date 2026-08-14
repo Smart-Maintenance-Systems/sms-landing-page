@@ -354,7 +354,7 @@ export default function HomePage() {
               <p className="mt-3 text-sm font-semibold text-text-primary">It comes to you first</p>
               <p className="mt-1 text-xs text-text-muted leading-relaxed">
                 Expiry and next-due dates surface before they slip - &ldquo;your liferaft service is due
-                next month - want it on the calendar?&rdquo; One tap and it&rsquo;s logged.
+                next month - want it on the calendar?&rdquo; One tap to add it.
               </p>
             </div>
             <div className="rounded-xl border border-border-default bg-surface-1 p-5">

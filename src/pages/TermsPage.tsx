@@ -120,7 +120,7 @@ export default function TermsPage() {
           <section>
             <h2 className="text-xl font-semibold text-text-primary">Contact</h2>
             <p className="mt-3">
-              Questions? Email <span className="text-text-primary">hello@smsworkboat.co.uk</span>. SMS Workboat
+              Questions? Email <span className="text-text-primary">info@smsystems.uk</span>. SMS Workboat
               is operated by Smart Maintenance Systems, [registered address], company number [company number].
             </p>
           </section>

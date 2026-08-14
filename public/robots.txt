@@ -2,4 +2,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://smsworkboat.co.uk/sitemap.xml
+Sitemap: https://www.smsworkboat.co.uk/sitemap.xml

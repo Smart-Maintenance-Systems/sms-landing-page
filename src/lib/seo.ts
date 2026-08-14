@@ -10,7 +10,7 @@ import { useEffect } from 'react';
  * head from the SAME `ROUTE_SEO` this hook consumes at runtime. `useSeo` therefore just keeps the head in
  * sync across client-side (SPA) navigations - upserting is idempotent over the prerendered tags.
  */
-export const CANONICAL_HOST = 'https://smsworkboat.co.uk';
+export const CANONICAL_HOST = 'https://www.smsworkboat.co.uk';
 export const OG_IMAGE = `${CANONICAL_HOST}/sms-workboat-mark.jpg`; // the real brand mark (v1; no invented imagery)
 
 export interface SeoOptions {
