@@ -10,6 +10,7 @@ import HowItWorksPage from './pages/HowItWorksPage';
 import FaqPage from './pages/FaqPage';
 import PrivacyPage from './pages/PrivacyPage';
 import TermsPage from './pages/TermsPage';
+import ApplyPage from './pages/ApplyPage';
 
 export default function App() {
   return (
@@ -26,6 +27,7 @@ export default function App() {
           <Route path="/faq" element={<FaqPage />} />
           <Route path="/privacy" element={<PrivacyPage />} />
           <Route path="/terms" element={<TermsPage />} />
+          <Route path="/apply" element={<ApplyPage />} />
           {/* Any unknown path falls back to Home rather than a dead 404 in this SPA skeleton. */}
           <Route path="*" element={<HomePage />} />
         </Routes>

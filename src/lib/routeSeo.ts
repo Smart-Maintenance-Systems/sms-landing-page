@@ -170,6 +170,12 @@ export const ROUTE_SEO: Record<string, SeoOptions> = {
       'The plain-English terms for using SMS Workboat: what it is (a tool to build and maintain your SMS) and isn\'t (a guarantee of passing survey), billing, your content, and liability.',
     path: '/terms',
   },
+  '/apply': {
+    title: 'Apply to be a Founding Skipper | SMS Workboat',
+    description:
+      'Apply for one of ten Founding Skipper places. Tell us about your boat and your biggest compliance headache - we read every application by hand.',
+    path: '/apply',
+  },
 };
 
 /** Routes that get their own prerendered HTML file + a sitemap entry (the crawlable set). */

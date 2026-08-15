@@ -45,3 +45,13 @@ export const FOUNDING_APPLY_HREF =
   `mailto:${CONTACT_EMAIL}?subject=${encodeURIComponent('Founding Skipper application')}` +
   `&body=${encodeURIComponent(FOUNDING_APPLY_BODY)}`;
 export const FOUNDING_CTA_LABEL = 'Apply to be a Founding Skipper';
+
+// Audit #12 — the reliable replacement for the fragile mailto: a real /apply form that POSTs to the
+// in-house endpoint (works on a phone with no mail client). ApplyCta now routes here; the /apply page
+// keeps FOUNDING_APPLY_HREF as an explicit "prefer email?" fallback.
+export const APPLY_HREF = '/apply';
+
+// The trial API base the /apply form POSTs to (POST {API_BASE}/api/public/founding-apply). The endpoint
+// is public + rate-limited + honeypot-gated; its CORS union already allows this marketing origin. Literal
+// (this config is all literals) — change here + rebuild if the API host moves.
+export const API_BASE = 'https://claudesmsapi-production.up.railway.app';
