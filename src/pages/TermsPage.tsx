@@ -121,7 +121,8 @@ export default function TermsPage() {
             <h2 className="text-xl font-semibold text-text-primary">Contact</h2>
             <p className="mt-3">
               Questions? Email <span className="text-text-primary">info@smsystems.uk</span>. SMS Workboat
-              is operated by Smart Maintenance Systems, [registered address], company number [company number].
+              is operated by Smart Maintenance Systems Ltd, Unit 2b Nancegollan Industrial Estate,
+              Nancegollan, Helston, England, TR13 0BN, company number 16459454.
             </p>
           </section>
         </div>

@@ -120,8 +120,8 @@ export default function PrivacyPage() {
             <p className="mt-3">
               Questions about your data, or want to exercise a right? Email
               {' '}<span className="text-text-primary">info@smsystems.uk</span>.
-              SMS Workboat is operated by Smart Maintenance Systems, [registered address], company number
-              [company number].
+              SMS Workboat is operated by Smart Maintenance Systems Ltd, Unit 2b Nancegollan Industrial
+              Estate, Nancegollan, Helston, England, TR13 0BN, company number 16459454.
             </p>
           </section>
         </div>
