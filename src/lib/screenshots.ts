@@ -17,9 +17,9 @@ export const SHOTS = {
   // Home
   homeHero: {
     src: '/screens/kestrel-dashboard.jpg',
-    alt: "A workboat's dashboard in SMS Workboat",
-    caption: 'Your dashboard, built from the records you keep.',
-  }, // shot 1 - Home hero / boat-setup (real capture 2026-07-16)
+    alt: "MV Guardian's dashboard in SMS Workboat",
+    caption: 'MV Guardian — your dashboard, built from the records you keep.',
+  }, // shot 1 - Home hero / boat-setup (demo now MV Guardian / Carrick Marine — reshoot pending)
   // Nova's honest refusal - a REAL capture (2026-07-21): asked "Will I pass my MCA inspection?", Nova
   // declines the verdict ("This isn't a pass/fail - your surveyor decides that") and shows where you stand.
   // The strongest proof of the honesty leash; replaced the "to be filmed" clip placeholder.
@@ -75,6 +75,25 @@ export const SHOTS = {
     alt: 'Reviewing a captured evidence photo of a repair in SMS Workboat',
     caption: 'Photograph the fix - review - save.',
   }, // shot 9 - Camera evidence review (real capture 2026-07-16)
+
+  // ── DEPTH section (WB-WEBSITE-COPY-REFRESH §2/§5) — RESHOOT PENDING. Defined here so the swap is a
+  //    drop-in: shoot the shot from the MV Guardian demo, drop the file at the src path, wire the key into
+  //    the depth card. Not rendered on the page yet (the depth section ships as text cards first). ──
+  smsReview: {
+    src: '/screens/sms-review.png',
+    alt: 'The signed 3-yearly periodic SMS review, drafted from the boat’s own records with citations',
+    caption: 'Your 3-yearly review, drafted from your own records — each point citing the record behind it. You sign it.',
+  }, // shot smsReview - periodic §13 review (TO SHOOT from MV Guardian)
+  recordsTimeline: {
+    src: '/screens/records-timeline.png',
+    alt: 'The whole SMS as a scrollable running timeline in SMS Workboat',
+    caption: 'Your whole SMS as a timeline — and an evidence pack for any window.',
+  }, // shot recordsTimeline - records timeline (TO SHOOT from MV Guardian)
+  multiItemCert: {
+    src: '/screens/multi-item-cert.png',
+    alt: 'One service certificate covering five extinguishers, each with its own serial and next-due date',
+    caption: 'One certificate, five extinguishers — each unit tracked on its own date.',
+  }, // shot multiItemCert - F14 multi-item cert (TO SHOOT from MV Guardian)
 
   // How it works (CAPTURE → AUTHOR → ASSESS) - no captions (the step copy carries the story)
   howCapture: {

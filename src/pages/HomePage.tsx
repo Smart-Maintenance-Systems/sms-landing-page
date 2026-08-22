@@ -385,6 +385,67 @@ export default function HomePage() {
         </div>
       </section>
 
+      {/* ── DEPTH IS THE MOAT (WB-WEBSITE-COPY-REFRESH §2 · claim-bank product-depth P1–P4). Same 2×2 text
+             shell as "Built the same way". 🟥 PRODUCT-DEPTH claims — every card is a shipped, demonstrable
+             behaviour in the live demo, worded VERBATIM from the ✅ claim bank with its leash: no verdict,
+             no "immutable"/"secure" absolute, the review DRAFTS (framing A, the human signs), no push claim.
+             P5 (toolbox) is deliberately NOT here — features/how-it-works only. ── */}
+      <section className="relative border-t border-border-subtle py-16 md:py-24">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="max-w-3xl">
+            <p className="text-sm font-semibold text-brand-primary uppercase tracking-wider">The depth is the difference</p>
+            <h2 className="mt-3 text-3xl md:text-4xl font-bold text-text-primary leading-tight">
+              Because it&rsquo;s captured properly, your SMS can read itself back to you.
+            </h2>
+            <p className="mt-5 text-lg text-text-secondary leading-relaxed">
+              Every record goes in as structured data from the first day &mdash; not a scan of a form, not a
+              note in a folder. That&rsquo;s what lets the product do things a filing cabinet never could:
+            </p>
+          </div>
+
+          {/* the four depth capabilities - a 2×2 grid; plain bold claim + the ✅ claim-bank wording (no blockquotes) */}
+          <div className="mt-10 grid sm:grid-cols-2 gap-6">
+            <div className="rounded-2xl border border-border-default bg-surface-1 p-6">
+              <p className="text-base font-semibold text-text-primary">Records that can&rsquo;t be quietly changed.</p>
+              <p className="mt-2 text-sm text-text-secondary leading-relaxed">
+                Every signed record carries a cryptographic signature. Change a signed record after it&rsquo;s
+                signed and it shows as <strong className="font-semibold text-text-primary">altered</strong> &mdash;
+                so a &ldquo;done&rdquo; is one your surveyor can trust.
+              </p>
+            </div>
+            <div className="rounded-2xl border border-border-default bg-surface-1 p-6">
+              <p className="text-base font-semibold text-text-primary">Your whole SMS as a timeline.</p>
+              <p className="mt-2 text-sm text-text-secondary leading-relaxed">
+                Your SMS is a running timeline, not a pile of PDFs &mdash; scroll the history, and pull an
+                evidence pack for any window: a survey, an incident review, a new insurer.
+              </p>
+            </div>
+            <div className="rounded-2xl border border-border-default bg-surface-1 p-6">
+              <p className="text-base font-semibold text-text-primary">A periodic review that reads your own record back.</p>
+              <p className="mt-2 text-sm text-text-secondary leading-relaxed">
+                When your 3-yearly review comes round, it pulls the review together from what you&rsquo;ve
+                actually logged &mdash; what&rsquo;s recurring, what&rsquo;s due, what&rsquo;s changed &mdash;
+                each point citing the record behind it. You edit it and sign it. It never says whether you pass.
+              </p>
+            </div>
+            <div className="rounded-2xl border border-border-default bg-surface-1 p-6">
+              <p className="text-base font-semibold text-text-primary">One certificate, many items.</p>
+              <p className="mt-2 text-sm text-text-secondary leading-relaxed">
+                Snap a service certificate covering five extinguishers and it tracks each unit&rsquo;s own
+                serial and next-due date &mdash; the certificate renews on the earliest one.
+              </p>
+            </div>
+          </div>
+
+          {/* the close - the moat, stated plainly (a pull-quote, like the sections above) */}
+          <div className="mt-10 max-w-3xl">
+            <p className="text-2xl md:text-3xl font-bold text-text-primary leading-snug">
+              Anyone can store your paperwork. This understands it.
+            </p>
+          </div>
+        </div>
+      </section>
+
       {/* ── W-S1 - THE MOMENTS YOUR SMS MEETS THE WORLD ───────────────────────── */}
       <section className="relative border-t border-border-subtle py-16 md:py-24">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -405,7 +466,9 @@ export default function HomePage() {
               <div className="flex items-center gap-2 text-brand-primary font-semibold"><ShieldCheck className="w-5 h-5" /> Survey day</div>
               <p className="mt-3 text-text-secondary leading-relaxed">
                 Hand the inspector a link - 4 hours, one boat, read-only, no app. You&rsquo;re notified the
-                moment it opens; kill it when they leave. If something&rsquo;s missing, it shows as missing.
+                moment it opens; kill it when they leave. They get the same tabbed view you do &mdash;
+                certificates, maintenance, risk assessments, drills, each computed live from your records, not a
+                PDF you assembled the night before. If something&rsquo;s missing, it shows as missing.
                 Surveyors trust records that don&rsquo;t pretend.
               </p>
             </div>

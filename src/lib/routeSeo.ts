@@ -83,7 +83,7 @@ export const FAQS: Faq[] = [
   },
   {
     q: 'Does it work offline, out on the water?',
-    a: 'Within a loaded session, yes: record drills, snap evidence and sign crew on with no signal. It saves on board and syncs itself when you are back in range - a photo you take offline reads “On board”, not “Saved”, until the server confirms it. (It is reliable within a session you have already opened; it is not a fully offline app.)',
+    a: 'Yes. Open it once with a signal so it loads onto the phone, and after that it keeps working out at sea with no signal: record drills, snap evidence and sign crew on. It saves on board and syncs itself when you are back in range - and it stays honest about which is which: a photo you take offline reads “On board”, not “Saved”, until the server confirms it, so you can always see what has actually landed. The only limits are the very first load (that needs a signal, to load the app onto the phone) and a very long stretch fully offline, after which it will ask you to sign in again when you are next in range.',
   },
   {
     q: 'How does crew sign onto a boat?',
