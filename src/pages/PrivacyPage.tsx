@@ -17,7 +17,7 @@ export default function PrivacyPage() {
       <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
         <p className="text-sm font-semibold text-brand-primary uppercase tracking-wider">Privacy</p>
         <h1 className="mt-3 text-3xl md:text-4xl font-bold text-text-primary">Privacy policy</h1>
-        <p className="mt-3 text-sm text-text-muted">Last updated: 22 July 2026</p>
+        <p className="mt-3 text-sm text-text-muted">Last updated: 23 August 2026</p>
 
         <div className="mt-8 space-y-8 text-text-secondary leading-relaxed">
           <p>
@@ -108,10 +108,24 @@ export default function PrivacyPage() {
           </section>
 
           <section>
-            <h2 className="text-xl font-semibold text-text-primary">Cookies</h2>
+            <h2 className="text-xl font-semibold text-text-primary">Cookies and analytics</h2>
             <p className="mt-3">
-              We keep cookies to a minimum &mdash; the ones we use are essential to sign you in and keep the
-              service working. We don&rsquo;t use advertising or cross-site tracking cookies.
+              In the app itself we keep cookies to a minimum &mdash; the ones we use are essential to sign you
+              in and keep the service working.
+            </p>
+            <p className="mt-3">
+              On this <strong className="text-text-primary">website</strong> we also use two analytics tools to
+              understand how the site is used and improve it: <strong className="text-text-primary">Google
+              Analytics&nbsp;4</strong> (anonymised usage &mdash; pages viewed, where visitors came from, broad
+              device type) and <strong className="text-text-primary">Microsoft Clarity</strong> (anonymised
+              session recordings and heatmaps; Clarity masks text and form inputs by default). Neither is used
+              for advertising, and we don&rsquo;t sell this data.
+            </p>
+            <p className="mt-3">
+              These run <strong className="text-text-primary">only if you accept</strong> the cookie banner
+              &mdash; nothing analytics-related loads until you choose, and the site works exactly the same if
+              you decline. To change your mind later, clear this site&rsquo;s cookies in your browser and
+              you&rsquo;ll be asked again. We don&rsquo;t use advertising or cross-site tracking cookies.
             </p>
           </section>
 
