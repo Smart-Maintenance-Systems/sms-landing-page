@@ -56,7 +56,7 @@ export const APPLY_HREF = '/apply';
 // Clarity is OFF until a project id is set. Both load ONLY after the visitor accepts the cookie banner
 // (components/CookieConsent.tsx) — no analytics cookie is set before consent (UK GDPR / PECR).
 export const GA4_MEASUREMENT_ID = 'G-ZZVZR0HQ1P';
-export const CLARITY_PROJECT_ID = ''; // paste the Microsoft Clarity project id here to switch Clarity on
+export const CLARITY_PROJECT_ID = 'y6uifvw0n8'; // Microsoft Clarity — consent-gated via CookieConsent.tsx
 
 // The trial API base the /apply form POSTs to (POST {API_BASE}/api/public/founding-apply). The endpoint
 // is public + rate-limited + honeypot-gated; its CORS union already allows this marketing origin. Literal
