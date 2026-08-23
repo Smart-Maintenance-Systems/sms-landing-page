@@ -5,7 +5,8 @@
  * edits. Slot keys mirror the shot-list numbering (noted per entry). Layout props (aspect/className) stay
  * on the page; only content lives here.
  *
- * 🟥 Current images predate this week's product (dated shots) - kept in place until the reshoot lands.
+ * ✅ Reshot 2026-08-23 from the MV Guardian demo (keeper wired the file swap + depth section). Prior
+ *    07-16/07-21 captures replaced in place; slot paths unchanged.
  */
 export interface Shot {
   src: string;
@@ -19,7 +20,7 @@ export const SHOTS = {
     src: '/screens/kestrel-dashboard.jpg',
     alt: "MV Guardian's dashboard in SMS Workboat",
     caption: 'MV Guardian — your dashboard, built from the records you keep.',
-  }, // shot 1 - Home hero / boat-setup (demo now MV Guardian / Carrick Marine — reshoot pending)
+  }, // shot 1 - Home hero (MV Guardian phone dashboard, reshot 2026-08-23; file kept at kestrel-dashboard.jpg path)
   // Nova's honest refusal - a REAL capture (2026-07-21): asked "Will I pass my MCA inspection?", Nova
   // declines the verdict ("This isn't a pass/fail - your surveyor decides that") and shows where you stand.
   // The strongest proof of the honesty leash; replaced the "to be filmed" clip placeholder.
@@ -76,24 +77,24 @@ export const SHOTS = {
     caption: 'Photograph the fix - review - save.',
   }, // shot 9 - Camera evidence review (real capture 2026-07-16)
 
-  // ── DEPTH section (WB-WEBSITE-COPY-REFRESH §2/§5) — RESHOOT PENDING. Defined here so the swap is a
-  //    drop-in: shoot the shot from the MV Guardian demo, drop the file at the src path, wire the key into
-  //    the depth card. Not rendered on the page yet (the depth section ships as text cards first). ──
+  // ── DEPTH section (WB-WEBSITE-COPY-REFRESH §2/§5) — SHOT 2026-08-23 from the MV Guardian demo and wired
+  //    into the depth "moat" section on HomePage (smsReview + recordsTimeline side by side, multiItemCert
+  //    centred below the four capability cards). ──
   smsReview: {
     src: '/screens/sms-review.png',
     alt: 'The signed 3-yearly periodic SMS review, drafted from the boat’s own records with citations',
     caption: 'Your 3-yearly review, drafted from your own records — each point citing the record behind it. You sign it.',
-  }, // shot smsReview - periodic §13 review (TO SHOOT from MV Guardian)
+  }, // shot smsReview - periodic §13 review (shot 2026-08-23, wired into depth section)
   recordsTimeline: {
     src: '/screens/records-timeline.png',
     alt: 'The whole SMS as a scrollable running timeline in SMS Workboat',
     caption: 'Your whole SMS as a timeline — and an evidence pack for any window.',
-  }, // shot recordsTimeline - records timeline (TO SHOOT from MV Guardian)
+  }, // shot recordsTimeline - Toolbox Talks timeline (shot 2026-08-23, wired into depth section)
   multiItemCert: {
     src: '/screens/multi-item-cert.png',
     alt: 'One service certificate covering five extinguishers, each with its own serial and next-due date',
     caption: 'One certificate, five extinguishers — each unit tracked on its own date.',
-  }, // shot multiItemCert - F14 multi-item cert (TO SHOOT from MV Guardian)
+  }, // shot multiItemCert - F14 5-item extinguisher panel FES-CMS-25-0771 (shot 2026-08-23, wired)
 
   // How it works (CAPTURE → AUTHOR → ASSESS) - no captions (the step copy carries the story)
   howCapture: {

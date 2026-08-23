@@ -437,6 +437,15 @@ export default function HomePage() {
             </div>
           </div>
 
+          {/* the depth, shown - three shipped behaviours captured from the MV Guardian demo */}
+          <div className="mt-12 grid gap-6 md:grid-cols-2">
+            <Screenshot {...SHOTS.smsReview} />
+            <Screenshot {...SHOTS.recordsTimeline} />
+            <div className="md:col-span-2 md:max-w-2xl md:mx-auto">
+              <Screenshot {...SHOTS.multiItemCert} />
+            </div>
+          </div>
+
           {/* the close - the moat, stated plainly (a pull-quote, like the sections above) */}
           <div className="mt-10 max-w-3xl">
             <p className="text-2xl md:text-3xl font-bold text-text-primary leading-snug">
