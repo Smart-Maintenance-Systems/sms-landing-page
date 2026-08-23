@@ -160,7 +160,7 @@ export default function HomePage() {
               <blockquote className="mt-3 border-l-2 border-brand-primary/40 pl-4 italic text-text-secondary leading-relaxed">
                 &ldquo;&hellip;practical and effective without being unnecessarily burdensome.&rdquo;
               </blockquote>
-              <cite className="mt-3 block not-italic font-mono text-xs text-text-muted">MGN 710, &sect;1</cite>
+              <cite className="mt-3 block not-italic font-mono text-xs text-text-muted">MGN 710, &sect;1.2</cite>
             </div>
             <div className="rounded-2xl border border-border-default bg-surface-1 p-6">
               <p className="text-base font-semibold text-text-primary">You can start it before it&rsquo;s finished.</p>
@@ -351,7 +351,7 @@ export default function HomePage() {
           <div className="mt-10 grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
             <div className="rounded-xl border border-border-default bg-surface-1 p-5">
               <BellRing className="w-6 h-6 text-brand-primary" />
-              <p className="mt-3 text-sm font-semibold text-text-primary">It comes to you first</p>
+              <p className="mt-3 text-sm font-semibold text-text-primary">It surfaces what&rsquo;s coming due</p>
               <p className="mt-1 text-xs text-text-muted leading-relaxed">
                 Expiry and next-due dates surface before they slip - &ldquo;your liferaft service is due
                 next month - want it on the calendar?&rdquo; One tap to add it.
@@ -474,8 +474,8 @@ export default function HomePage() {
             <div className="rounded-2xl border border-border-default bg-surface-1 p-6">
               <div className="flex items-center gap-2 text-brand-primary font-semibold"><ShieldCheck className="w-5 h-5" /> Survey day</div>
               <p className="mt-3 text-text-secondary leading-relaxed">
-                Hand the inspector a link - 4 hours, one boat, read-only, no app. You&rsquo;re notified the
-                moment it opens; kill it when they leave. They get the same tabbed view you do &mdash;
+                Hand the inspector a link - 4 hours, one boat, read-only, no app. You can see when
+                it&rsquo;s been opened, and kill it any time. They get the same tabbed view you do &mdash;
                 certificates, maintenance, risk assessments, drills, each computed live from your records, not a
                 PDF you assembled the night before. If something&rsquo;s missing, it shows as missing.
                 Surveyors trust records that don&rsquo;t pretend.

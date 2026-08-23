@@ -69,7 +69,7 @@ export const FAQS: Faq[] = [
   },
   {
     q: 'What happens at an inspection or survey?',
-    a: 'A surveyor reviews your SMS and its records. SMS Workboat gives you an inspection pack that is ready any day, and a read-only inspector link - four hours, one boat, no app - that notifies you the moment it opens and can be revoked when they leave. Whether you comply is your surveyor’s or Designated Person’s decision, not ours.',
+    a: 'A surveyor reviews your SMS and its records. SMS Workboat gives you an inspection pack that is ready any day, and a read-only inspector link - four hours, one boat, no app - that shows you when it has been opened and can be revoked any time. Whether you comply is your surveyor’s or Designated Person’s decision, not ours.',
   },
   {
     q: 'How long does it take to set up?',
