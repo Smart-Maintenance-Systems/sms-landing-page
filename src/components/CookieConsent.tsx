@@ -88,7 +88,7 @@ export default function CookieConsent() {
     <div
       role="dialog"
       aria-label="Cookie consent"
-      className="fixed inset-x-0 bottom-0 z-50 border-t border-border-default bg-surface-1/95 px-4 py-4 backdrop-blur sm:px-6"
+      className="fixed inset-x-0 bottom-0 z-50 border-t-2 border-brand-primary bg-surface-1 px-4 py-4 shadow-[0_-4px_24px_rgba(0,0,0,0.18)] sm:px-6"
     >
       <div className="mx-auto flex max-w-4xl flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
         <p className="text-sm leading-relaxed text-text-secondary">
@@ -103,14 +103,14 @@ export default function CookieConsent() {
           <button
             type="button"
             onClick={() => choose('denied')}
-            className="rounded-lg border border-border-default px-4 py-2 text-sm font-medium text-text-secondary transition hover:opacity-80"
+            className="rounded-lg border border-border-default px-5 py-2.5 text-sm font-medium text-text-secondary transition hover:opacity-80"
           >
             Decline
           </button>
           <button
             type="button"
             onClick={() => choose('granted')}
-            className="rounded-lg bg-brand-primary px-4 py-2 text-sm font-semibold text-white transition hover:opacity-90"
+            className="rounded-lg bg-brand-primary px-5 py-2.5 text-sm font-semibold text-white transition hover:opacity-90"
           >
             Accept
           </button>
