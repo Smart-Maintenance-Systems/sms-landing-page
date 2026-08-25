@@ -4,10 +4,10 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { Menu, X, ChevronRight } from 'lucide-react';
 
 const NAV_ITEMS = [
+  { label: 'SMS Workboat', href: '/light' },
   { label: 'Platform', href: '/platform' },
   { label: 'How It Works', href: '/how-it-works' },
   { label: 'Pricing', href: '/pricing' },
-  { label: 'SMS Light', href: '/light' },
   { label: 'About', href: '/about' },
 ];
 
@@ -79,11 +79,8 @@ export default function Navigation() {
 
             {/* CTA buttons */}
             <div className="hidden lg:flex items-center gap-3">
-              <Link to="/light" className="btn-light text-sm py-2">
-                SMS Light
-              </Link>
-              <a href="mailto:info@smsystems.uk?subject=SMS%20Demo%20Request" className="btn-primary text-sm py-2">
-                Book a Demo
+              <a href="https://smsworkboat.co.uk" target="_blank" rel="noopener noreferrer" className="btn-primary text-sm py-2">
+                Try SMS Workboat
                 <ChevronRight className="w-4 h-4" />
               </a>
             </div>
@@ -127,11 +124,8 @@ export default function Navigation() {
                 </Link>
               ))}
               <div className="pt-3 border-t border-white/5 space-y-2">
-                <Link to="/light" className="btn-light w-full justify-center text-sm">
-                  SMS Light
-                </Link>
-                <a href="mailto:info@smsystems.uk?subject=SMS%20Demo%20Request" className="btn-primary w-full justify-center text-sm">
-                  Book a Demo
+                <a href="https://smsworkboat.co.uk" target="_blank" rel="noopener noreferrer" className="btn-primary w-full justify-center text-sm">
+                  Try SMS Workboat
                 </a>
               </div>
             </div>

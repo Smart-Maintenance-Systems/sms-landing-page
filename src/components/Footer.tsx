@@ -58,10 +58,10 @@ export default function Footer() {
             </h4>
             <ul className="space-y-3">
               {[
+                { label: 'SMS Workboat', href: '/light' },
                 { label: 'About', href: '/about' },
                 { label: 'How It Works', href: '/how-it-works' },
                 { label: 'Pricing', href: '/pricing' },
-                { label: 'SMS Light', href: '/light' },
                 { label: 'Book a Demo', href: 'mailto:info@smsystems.uk?subject=SMS%20Demo%20Request' },
               ].map((item) => (
                 <li key={item.label}>
