@@ -67,10 +67,10 @@ export default function AboutPage() {
 
             <ScrollReveal delay={0.6}>
               <p>
-                Today, SMS is a complete vessel operations management platform — maintenance, safety,
-                purchasing, operations, and AI intelligence — built from the ground up with 20 years
-                of operational reality embedded in every workflow. And with SMS Light, that same
-                technology is accessible to every boat owner, not just commercial fleets.
+                Today that reality ships as SMS Workboat — live now for every small commercial workboat
+                under 24m, building the Safety Management System the Workboat Code requires. And the full
+                fleet & operations platform, SMS Main — maintenance, safety, purchasing, operations, and AI
+                intelligence — is in build behind it.
               </p>
             </ScrollReveal>
           </div>
@@ -155,7 +155,7 @@ export default function AboutPage() {
                   benchmarking.
                 </p>
                 <p>
-                  With SMS Light bringing thousands of small vessel owners onto the platform, the
+                  With SMS Workboat bringing small commercial vessels onto the platform, the
                   equipment model intelligence compounds faster than any competitor can replicate.
                   When the 10,000th user documents their Yanmar 6LY, the AI knows that engine's
                   failure modes, service intervals, and critical parts — from real operational data,

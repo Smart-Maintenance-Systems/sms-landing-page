@@ -106,7 +106,7 @@ export default function PricingPage() {
         </div>
       </section>
 
-      {/* SMS Light */}
+      {/* SMS Workboat — live, featured */}
       <section className="pb-16 md:pb-24">
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
           <ScrollReveal>
@@ -117,30 +117,32 @@ export default function PricingPage() {
                     <Ship className="w-6 h-6 text-status-success" />
                   </div>
                   <div>
-                    <h2 className="text-2xl font-bold text-text-primary">SMS Light</h2>
-                    <p className="text-sm text-text-secondary">For recreational boats, fishing vessels, and small commercial operators.</p>
+                    <h2 className="text-2xl font-bold text-text-primary">SMS Workboat</h2>
+                    <p className="text-sm text-text-secondary">Live now. For every small commercial workboat under 24m, building the SMS the Workboat Code requires.</p>
                   </div>
                 </div>
 
                 <div className="flex items-baseline gap-2 mb-6">
-                  <span className="text-4xl font-bold text-text-primary font-mono">From £10</span>
-                  <span className="text-sm text-text-muted">/month per vessel</span>
+                  <span className="text-4xl font-bold text-text-primary font-mono">£29</span>
+                  <span className="text-sm text-text-muted">/month per boat — everything included</span>
                 </div>
 
                 <p className="text-sm text-text-secondary mb-6 leading-relaxed">
-                  Professional-grade vessel management for the price of a coffee a week. 30-day free trial — no credit card required. Your data carries over when you subscribe.
+                  No tiers, no per-user charges, nothing gated behind a “Pro” plan. The first ten boats join as
+                  Founding Skippers — free while we finish it together, then a permanent founder's discount that
+                  always stays below our public price.
                 </p>
 
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 mb-8">
                   {[
-                    'Unlimited equipment tracking',
-                    'Full maintenance & fault reporting',
-                    'Certificate expiry warnings',
-                    'QR codes & PDF reports',
-                    'AI suggestions',
-                    'Photo documentation',
-                    'Quality scoring',
-                    'Multi-vessel options available',
+                    'Certificates & tickets — expiry reminders',
+                    'Maintenance log — derives its own due dates',
+                    'Risk assessments from templates',
+                    'Drills, incidents & self-assessment',
+                    'Nova — cites the Code, never a verdict',
+                    'Signed records + inspection pack',
+                    'QR sign-on + read-only inspector links',
+                    'Works offline, syncs when back in range',
                   ].map((item) => (
                     <div key={item} className="flex items-center gap-2 text-sm text-text-secondary">
                       <CheckCircle2 className="w-4 h-4 text-status-success shrink-0" />
@@ -150,17 +152,17 @@ export default function PricingPage() {
                 </div>
 
                 <div className="flex flex-col sm:flex-row gap-3">
-                  <Link to="/light" className="btn-light text-base px-8 py-4 justify-center">
-                    Start Free Trial <ArrowRight className="w-5 h-5" />
-                  </Link>
-                  <a href="mailto:info@smsystems.uk" className="btn-secondary border-status-success/30 text-status-success hover:bg-status-success/10 text-base px-8 py-4 justify-center">
-                    Contact Us
+                  <a href="https://smsworkboat.co.uk" target="_blank" rel="noopener noreferrer" className="btn-light text-base px-8 py-4 justify-center">
+                    Try SMS Workboat <ArrowRight className="w-5 h-5" />
+                  </a>
+                  <a href="https://demo.smsworkboat.co.uk/workboat-demo" target="_blank" rel="noopener noreferrer" className="btn-secondary border-status-success/30 text-status-success hover:bg-status-success/10 text-base px-8 py-4 justify-center">
+                    See the live demo
                   </a>
                 </div>
               </div>
               <div className="px-8 py-3 bg-surface-2/30 border-t border-white/5">
                 <p className="text-xs text-text-muted text-center">
-                  Annual billing available — pay for 10 months, get 12.
+                  £29 flat per boat — the fleet discount is the fleet features arriving free as you grow.
                 </p>
               </div>
             </div>
@@ -168,29 +170,30 @@ export default function PricingPage() {
         </div>
       </section>
 
-      {/* SMS Professional */}
+      {/* SMS Main — coming soon */}
       <section className="py-16 md:py-24 bg-surface-1/50">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <ScrollReveal>
-            <div className="rounded-xl bg-surface-1 border-2 border-brand-primary/50 ring-1 ring-brand-primary/20 overflow-hidden">
+            <div className="rounded-xl bg-surface-1 border-2 border-accent-violet/40 ring-1 ring-accent-violet/20 overflow-hidden">
               <div className="p-8 md:p-10">
                 <div className="flex items-center gap-3 mb-4">
-                  <div className="p-2.5 rounded-lg bg-brand-primary/20">
-                    <Building2 className="w-6 h-6 text-brand-primary" />
+                  <div className="p-2.5 rounded-lg bg-accent-violet/20">
+                    <Building2 className="w-6 h-6 text-accent-violet" />
                   </div>
                   <div>
-                    <h2 className="text-2xl font-bold text-text-primary">SMS Professional</h2>
+                    <h2 className="text-2xl font-bold text-text-primary">SMS Main</h2>
                     <p className="text-sm text-text-secondary">For commercial operators, fleets, and offshore companies.</p>
                   </div>
                 </div>
 
-                <div className="flex items-baseline gap-2 mb-6">
-                  <span className="text-4xl font-bold text-text-primary font-mono">From £150</span>
-                  <span className="text-sm text-text-muted">/vessel/month</span>
+                <div className="flex items-center gap-2 mb-6">
+                  <span className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-accent-violet/10 border border-accent-violet/30 text-sm font-semibold text-accent-violet">
+                    <Clock className="w-4 h-4" /> Coming soon
+                  </span>
                 </div>
 
                 <p className="text-sm text-text-secondary mb-6 leading-relaxed">
-                  All modules. Unlimited users. Priced by gross tonnage so your cost scales with vessel complexity. 60 days of free onboarding per vessel — pay only when your first department goes operational.
+                  The full fleet & operations platform — all modules, unlimited users, priced by gross tonnage so your cost scales with vessel complexity. In build now with our first trial operators. Register your interest and we'll bring you in as it opens up.
                 </p>
 
                 <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-2 mb-8">
@@ -213,11 +216,11 @@ export default function PricingPage() {
                 </div>
 
                 <div className="flex flex-col sm:flex-row gap-3 mb-8">
-                  <a href="mailto:info@smsystems.uk" className="btn-primary text-base px-8 py-4 justify-center">
-                    Book a Demo <ChevronRight className="w-5 h-5" />
+                  <a href="mailto:info@smsystems.uk?subject=SMS%20for%20fleets" className="btn-primary text-base px-8 py-4 justify-center">
+                    Register interest — SMS for fleets <ChevronRight className="w-5 h-5" />
                   </a>
-                  <a href="mailto:info@smsystems.uk" className="btn-secondary text-base px-8 py-4 justify-center">
-                    Get a Quote
+                  <a href="https://smsworkboat.co.uk" target="_blank" rel="noopener noreferrer" className="btn-secondary text-base px-8 py-4 justify-center">
+                    Under 24m? Try SMS Workboat now
                   </a>
                 </div>
 
@@ -231,7 +234,7 @@ export default function PricingPage() {
                     </span>
                   </div>
                   <p className="text-sm text-text-secondary">
-                    Limited founding partner pricing available — lock in reduced rates for life. Contact us for details.
+                    Early fleet operators who join SMS Main during its build get founding partner pricing — reduced rates locked in for life. Register your interest for details.
                   </p>
                 </div>
               </div>
@@ -292,9 +295,10 @@ export default function PricingPage() {
                 </div>
               </div>
               <p className="text-sm text-text-secondary mb-6 leading-relaxed">
-                Custom pricing for large fleet operators. Everything in Professional plus the full AI
+                Custom pricing for large fleet operators. Everything in SMS Main plus the full AI
                 intelligence suite, fleet-wide anomaly detection, equipment health scoring, predictive
-                insights, dedicated account management, custom integrations, and SLA guarantees.
+                insights, dedicated account management, custom integrations, and SLA guarantees. Part of the
+                SMS Main roadmap — coming soon.
               </p>
               <a href="mailto:info@smsystems.uk" className="btn-secondary text-sm px-6 py-3">
                 Contact Us <ChevronRight className="w-4 h-4" />
@@ -416,7 +420,7 @@ export default function PricingPage() {
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
           <SectionHeading
             title="Grow when you're ready"
-            subtitle="Every Light user is a future Professional customer. The upgrade triggers are natural business events."
+            subtitle="Start with SMS Workboat on one boat today. When you outgrow it, SMS Main (coming soon) is the full fleet & operations platform — and your data comes with you."
           />
 
           <div className="space-y-3">
@@ -470,19 +474,19 @@ export default function PricingPage() {
               },
               {
                 q: 'Is there a setup fee?',
-                a: 'No. Self-service onboarding is included in every tier. Professional tiers include 30 days of guided support.',
+                a: 'No. SMS Workboat is self-service — you set it up yourself, no implementation fee. SMS Main (coming soon) will include guided onboarding per vessel.',
               },
               {
-                q: 'Can I upgrade later?',
-                a: 'Yes — at any time. Your data comes with you. A Light user who adds crew or buys a second vessel can upgrade to Professional instantly. No migration, no re-entry.',
+                q: 'Can I move up to SMS Main later?',
+                a: "Yes — that's the plan. SMS Workboat is live now; SMS Main, the full fleet & operations platform, is in build. When it opens, your data comes with you. Register your interest and we'll bring you in.",
               },
               {
                 q: 'What if I cancel?',
                 a: 'You can export your data at any time. No lock-in, no penalties. Your data is yours.',
               },
               {
-                q: 'Do you offer a trial?',
-                a: 'Yes. SMS Light includes a 30-day free trial with full access — no credit card required. Professional tier includes 60 days of free onboarding per vessel. In both cases, your data carries over when you subscribe.',
+                q: 'How do I try it?',
+                a: "SMS Workboat is live — try the demo boat right now at demo.smsworkboat.co.uk, no sign-up, and start for real at smsworkboat.co.uk. £29 a month per boat, everything included. The first ten boats join as Founding Skippers.",
               },
             ].map(({ q, a }) => (
               <ScrollReveal key={q}>
@@ -502,15 +506,15 @@ export default function PricingPage() {
           <ScrollReveal>
             <h2 className="text-3xl font-bold text-text-primary mb-4">Ready to get started?</h2>
             <p className="text-text-secondary mb-8">
-              One question: what's your GT? That's all we need to quote.
+              SMS Workboat is live — £29 a month per boat, everything included. Run a fleet? SMS Main is coming soon.
             </p>
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-              <a href="mailto:info@smsystems.uk" className="btn-primary text-base px-8 py-4">
-                Book a Demo <ChevronRight className="w-5 h-5" />
+              <a href="https://smsworkboat.co.uk" target="_blank" rel="noopener noreferrer" className="btn-primary text-base px-8 py-4">
+                Try SMS Workboat <ChevronRight className="w-5 h-5" />
               </a>
-              <Link to="/light" className="btn-light text-base px-8 py-4">
-                Try Light Free <ArrowRight className="w-4 h-4" />
-              </Link>
+              <a href="https://demo.smsworkboat.co.uk/workboat-demo" target="_blank" rel="noopener noreferrer" className="btn-light text-base px-8 py-4">
+                See the live demo <ArrowRight className="w-4 h-4" />
+              </a>
             </div>
           </ScrollReveal>
         </div>

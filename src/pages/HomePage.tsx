@@ -47,6 +47,19 @@ function HeroSection() {
           />
         </motion.div>
 
+        {/* Regulatory badge */}
+        <motion.div
+          initial={{ y: 20, opacity: 0 }}
+          animate={{ y: 0, opacity: 1 }}
+          transition={{ duration: 0.6, delay: 0.2 }}
+          className="flex justify-center mb-6"
+        >
+          <span className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-status-success/10 border border-status-success/20 text-sm font-medium text-status-success">
+            <Scale className="w-4 h-4" />
+            Workboat Code Edition 3 · SMS required by 13 December 2026
+          </span>
+        </motion.div>
+
         {/* Headline */}
         <motion.h1
           initial={{ y: 30, opacity: 0 }}
@@ -54,9 +67,9 @@ function HeroSection() {
           transition={{ duration: 0.6, delay: 0.3 }}
           className="text-4xl md:text-6xl lg:text-7xl font-bold mb-6 leading-tight"
         >
-          <span className="text-text-primary">The operating system for</span>
+          <span className="text-text-primary">The law now requires an SMS.</span>
           <br />
-          <span className="gradient-text">maritime operations.</span>
+          <span className="gradient-text">We are the SMS.</span>
         </motion.h1>
 
         {/* Sub-headline */}
@@ -66,9 +79,9 @@ function HeroSection() {
           transition={{ duration: 0.6, delay: 0.5 }}
           className="text-lg md:text-xl text-text-secondary max-w-3xl mx-auto mb-8 leading-relaxed"
         >
-          Maintenance. Safety. Purchasing. Operations. AI Intelligence.
-          Self-service onboarding that goes live in weeks. Built by offshore
-          operators with 20+ years of experience.
+          Every small commercial workboat must hold a Safety Management System by 13 December 2026 —
+          Workboat Code Edition 3, law since 2023. SMS Workboat builds yours, and keeps every record ready
+          for the day the surveyor steps aboard.
         </motion.p>
 
         {/* Value props */}
@@ -79,9 +92,9 @@ function HeroSection() {
           className="flex flex-wrap justify-center gap-6 mb-10"
         >
           {[
-            { icon: Brain, label: 'AI Intelligence Layer' },
-            { icon: Users, label: 'Unlimited Users' },
-            { icon: Zap, label: '12 Integrated Modules' },
+            { icon: Scale, label: 'Built around the Workboat Code' },
+            { icon: ShieldCheck, label: 'Survey-ready records' },
+            { icon: Brain, label: 'Nova cites the Code — never a verdict' },
           ].map(({ icon: Icon, label }) => (
             <div key={label} className="flex items-center gap-2 text-text-secondary">
               <Icon className="w-4 h-4 text-brand-primary" />
@@ -97,13 +110,13 @@ function HeroSection() {
           transition={{ duration: 0.6, delay: 0.9 }}
           className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-6"
         >
-          <a href="mailto:info@smsystems.uk?subject=SMS%20Demo%20Request" className="btn-primary text-base px-8 py-4">
-            Book a Demo
+          <a href="https://smsworkboat.co.uk" target="_blank" rel="noopener noreferrer" className="btn-primary text-base px-8 py-4">
+            Try SMS Workboat
             <ChevronRight className="w-5 h-5" />
           </a>
-          <Link to="/platform" className="btn-secondary text-base px-8 py-4">
-            Explore the Platform
-          </Link>
+          <a href="https://demo.smsworkboat.co.uk/workboat-demo" target="_blank" rel="noopener noreferrer" className="btn-secondary text-base px-8 py-4">
+            See the live demo
+          </a>
         </motion.div>
 
         <motion.div
@@ -112,11 +125,11 @@ function HeroSection() {
           transition={{ duration: 0.6, delay: 1.1 }}
         >
           <Link
-            to="/light"
-            className="inline-flex items-center gap-2 text-sm text-status-success hover:text-green-400 transition-colors"
+            to="/platform"
+            className="inline-flex items-center gap-2 text-sm text-accent-violet hover:opacity-80 transition-opacity"
           >
-            <Ship className="w-4 h-4" />
-            Solo vessel owner? Try SMS Light — from £10/month
+            <Building2 className="w-4 h-4" />
+            Running a fleet or shore operation? SMS Main — the full platform — is coming soon
             <ArrowRight className="w-3.5 h-3.5" />
           </Link>
         </motion.div>
@@ -129,9 +142,9 @@ function HeroSection() {
           className="mt-16 grid grid-cols-3 gap-8 max-w-xl mx-auto"
         >
           {[
-            { value: '2-4', suffix: ' weeks', label: 'To go live' },
-            { value: '12', suffix: '', label: 'Integrated modules' },
-            { value: '2,660', suffix: '+', label: 'Automated tests' },
+            { value: '£29', suffix: '/boat', label: 'Everything included' },
+            { value: 'Live', suffix: '', label: 'Try it now, no sign-up' },
+            { value: '13 Dec', suffix: ' 2026', label: 'SMS deadline (WB Code Ed.3)' },
           ].map((stat) => (
             <div key={stat.label} className="text-center">
               <div className="text-2xl md:text-3xl font-bold font-mono text-brand-primary tabular-nums">
@@ -355,9 +368,9 @@ function PlatformSection() {
     <section className="py-24 md:py-32 bg-surface-1/50 relative">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
         <SectionHeading
-          eyebrow="The Platform"
-          title="One platform. Twelve modules. Complete visibility."
-          subtitle="Every department connected by one AI intelligence layer. Data flows between modules automatically."
+          eyebrow="SMS Main · Coming soon"
+          title="And beyond the workboat: the full fleet platform."
+          subtitle="SMS Main is the complete fleet & operations platform — twelve modules connected by one AI intelligence layer, for larger vessels and shore operations. In build now with our first trial operators."
           gradient
         />
 
@@ -399,7 +412,7 @@ function PlatformSection() {
               to="/platform"
               className="btn-secondary"
             >
-              Explore the full platform
+              Explore SMS Main (coming soon)
               <ArrowRight className="w-4 h-4" />
             </Link>
           </div>
@@ -539,8 +552,8 @@ function PersonaSection() {
       icon: Ship,
       role: 'Solo Vessel Owner',
       quote: 'I need to stop tracking maintenance in my head.',
-      features: 'Equipment register, maintenance reminders, certificate expiry warnings',
-      cta: { label: 'SMS Light — £10/month', href: '/light', color: 'text-status-success' },
+      features: 'Certificates, maintenance, risk assessments, self-assessment — your whole SMS',
+      cta: { label: 'SMS Workboat — £29/boat', href: '/light', color: 'text-status-success' },
     },
     {
       icon: Eye,
@@ -785,24 +798,24 @@ function LightTeaserSection() {
             <ScrollReveal direction="left">
               <div>
                 <p className="text-sm font-semibold text-status-success uppercase tracking-wider mb-3">
-                  SMS Light
+                  SMS Workboat · Live now
                 </p>
                 <h2 className="text-3xl md:text-4xl font-bold text-text-primary mb-4">
-                  Own a boat? Start at £10/month.
+                  Run a workboat? Your SMS, £29 a month per boat.
                 </h2>
                 <p className="text-lg text-text-secondary mb-6 leading-relaxed">
-                  You don't need departments, approval chains, and fleet management. You need to
-                  know when your engine service is due, when your fire extinguishers expire, and
-                  what spare parts are onboard.
+                  Everything included — certificates, maintenance, risk assessments, drills, your annual
+                  self-assessment and the inspection pack, ready any day of the year. Built around the Workboat
+                  Code, so it stays proportionate to a small operation.
                 </p>
                 <ul className="space-y-2 mb-8">
                   {[
-                    'Unlimited equipment tracking',
-                    'Maintenance scheduling with reminders',
-                    'Certificate expiry warnings',
-                    'QR codes, PDF reports, photos',
-                    'AI suggestions for your equipment',
-                    '5 minutes to set up',
+                    'Certificates & tickets with expiry reminders',
+                    'A maintenance log that derives its own due dates',
+                    'Risk assessments from templates you confirm',
+                    'Signed records that show as altered if changed',
+                    'Nova cites the Code — and never rules a verdict',
+                    'Works offline, syncs when back in range',
                   ].map((item) => (
                     <li key={item} className="flex items-center gap-2 text-sm text-text-secondary">
                       <CheckCircle2 className="w-4 h-4 text-status-success shrink-0" />
@@ -811,10 +824,10 @@ function LightTeaserSection() {
                   ))}
                 </ul>
                 <div className="flex flex-col sm:flex-row gap-3">
-                  <Link to="/light" className="btn-light">
-                    Try SMS Light — 30 Days Free
+                  <a href="https://smsworkboat.co.uk" target="_blank" rel="noopener noreferrer" className="btn-light">
+                    Try SMS Workboat
                     <ArrowRight className="w-4 h-4" />
-                  </Link>
+                  </a>
                   <Link to="/light" className="btn-secondary border-status-success/30 text-status-success hover:bg-status-success/10">
                     Learn More
                   </Link>
@@ -823,13 +836,12 @@ function LightTeaserSection() {
             </ScrollReveal>
 
             <ScrollReveal direction="right">
-              <div className="flex items-center justify-center">
-                <div className="rounded-xl border border-status-success/20 bg-surface-1/50 p-8 text-center">
-                  <Smartphone className="w-10 h-10 text-status-success mx-auto mb-4" />
-                  <p className="text-lg font-semibold text-text-primary mb-2">Coming Soon</p>
-                  <p className="text-sm text-text-secondary">Mobile-first vessel management for solo operators and small crews.</p>
-                </div>
-              </div>
+              <Screenshot
+                src="/screens/kestrel-dashboard.jpg"
+                alt="MV Guardian's dashboard in SMS Workboat"
+                caption="A real boat's SMS, built from the records you keep — try it in the live demo."
+                aspect="phone"
+              />
             </ScrollReveal>
           </div>
         </div>
@@ -854,20 +866,24 @@ function FinalCTASection() {
             See it for yourself.
           </h2>
           <p className="text-lg text-text-secondary mb-10 leading-relaxed">
-            Book a 30-minute demo with someone who's actually worked offshore. We'll show you the
-            platform, answer your questions, and discuss your specific operation.
+            No sales call, no “book a demo”, no catch. SMS Workboat is live — the demo boat is fully set up,
+            click anything. Running a fleet or shore operation? SMS Main is coming soon — tell us and we'll
+            bring you in as it opens up.
           </p>
 
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-8">
-            <a href="mailto:info@smsystems.uk" className="btn-primary text-base px-8 py-4">
-              <Mail className="w-5 h-5" />
-              Book a Demo
-            </a>
-            <Link to="/light" className="btn-light text-base px-8 py-4">
+            <a href="https://smsworkboat.co.uk" target="_blank" rel="noopener noreferrer" className="btn-primary text-base px-8 py-4">
               <Ship className="w-5 h-5" />
-              Try Light Free
-            </Link>
+              Try SMS Workboat
+            </a>
+            <a href="https://demo.smsworkboat.co.uk/workboat-demo" target="_blank" rel="noopener noreferrer" className="btn-light text-base px-8 py-4">
+              Open the live demo
+            </a>
           </div>
+          <a href="mailto:info@smsystems.uk?subject=SMS%20for%20fleets" className="inline-flex items-center gap-2 text-sm text-accent-violet hover:opacity-80 transition-opacity">
+            <Mail className="w-4 h-4" />
+            Register interest — SMS for fleets
+          </a>
 
         </ScrollReveal>
       </div>

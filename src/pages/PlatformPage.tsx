@@ -128,12 +128,40 @@ export default function PlatformPage() {
       <section className="pt-28 pb-16 md:pt-36 md:pb-24 relative">
         <div className="absolute inset-0 grid-bg" />
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
+          {/* Coming-soon status — SMS Main (the full fleet platform) is not yet available to buy */}
+          <ScrollReveal>
+            <div className="flex justify-center mb-6">
+              <span className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-accent-violet/10 border border-accent-violet/30 text-sm font-medium text-accent-violet">
+                <Clock className="w-4 h-4" />
+                SMS Main · Coming soon
+              </span>
+            </div>
+          </ScrollReveal>
+
           <SectionHeading
             eyebrow="The Platform"
             title="Twelve modules connected by one intelligence layer."
-            subtitle="Every department. Every vessel. Complete operational visibility. Data flows between modules automatically — no silos, no manual aggregation."
+            subtitle="The full fleet & operations platform — maintenance, safety, purchasing, operations, and an AI intelligence layer across every vessel. In build now, with our first trial operators. Register your interest and we'll bring you in as it opens up."
             gradient
           />
+
+          <ScrollReveal>
+            <div className="max-w-2xl mx-auto mb-12 text-center">
+              <a
+                href="mailto:info@smsystems.uk?subject=SMS%20for%20fleets"
+                className="btn-primary text-base px-8 py-4"
+              >
+                Register interest — SMS for fleets
+                <ChevronRight className="w-5 h-5" />
+              </a>
+              <p className="mt-4 text-sm text-text-muted">
+                Running commercial workboats under 24m today?{' '}
+                <a href="https://smsworkboat.co.uk" target="_blank" rel="noopener noreferrer" className="text-status-success hover:underline">
+                  SMS Workboat is live now →
+                </a>
+              </p>
+            </div>
+          </ScrollReveal>
 
           {/* Visual hub */}
           <ScrollReveal>
@@ -335,7 +363,7 @@ export default function PlatformPage() {
           },
           {
             title: 'Cross-Tier Intelligence',
-            desc: 'Every user — from £10/month Light to 50-vessel Enterprise — contributes equipment model data. A Yanmar 6LY is a Yanmar 6LY regardless of who owns it.',
+            desc: 'Every vessel on the platform — from a single workboat to a 50-vessel fleet — contributes equipment model data. A Yanmar 6LY is a Yanmar 6LY regardless of who owns it.',
           },
         ]}
         connects={['All Modules']}
