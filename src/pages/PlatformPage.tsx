@@ -128,12 +128,12 @@ export default function PlatformPage() {
       <section className="pt-28 pb-16 md:pt-36 md:pb-24 relative">
         <div className="absolute inset-0 grid-bg" />
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
-          {/* Coming-soon status — SMS Main (the full fleet platform) is not yet available to buy */}
+          {/* Coming-soon status — SMS Bridge (the full fleet platform) is not yet available to buy */}
           <ScrollReveal>
             <div className="flex justify-center mb-6">
               <span className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-accent-violet/10 border border-accent-violet/30 text-sm font-medium text-accent-violet">
                 <Clock className="w-4 h-4" />
-                SMS Main · Coming soon
+                SMS Bridge · Coming soon
               </span>
             </div>
           </ScrollReveal>

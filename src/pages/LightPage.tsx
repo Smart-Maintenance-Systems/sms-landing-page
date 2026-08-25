@@ -3,7 +3,7 @@ import { Ship, ArrowRight, ChevronRight, Scale } from 'lucide-react';
 import ScrollReveal from '../components/ScrollReveal';
 import Screenshot from '../components/Screenshot';
 
-// SMS Workboat SIGNPOST (REVISION 1). This company site is SMS MAIN-led; SMS Workboat is our live product with
+// SMS Workboat SIGNPOST (REVISION 1). This company site is SMS BRIDGE-led; SMS Workboat is our live product with
 // its OWN site (smsworkboat.co.uk). The nav/footer link straight out; this route stays only as a graceful
 // landing for any lingering internal link, and immediately points visitors to the live product + demo.
 // 🟥 Claim leash held: "builds your SMS", never "MCA-approved/certified/guaranteed compliant".
@@ -47,7 +47,7 @@ export default function LightPage() {
 
             <Link to="/platform" className="inline-flex items-center gap-2 text-sm text-accent-violet hover:opacity-80 transition-opacity">
               <ChevronRight className="w-4 h-4" />
-              Running a fleet? Explore SMS Main — the full platform
+              Running a fleet? Explore SMS Bridge — the full platform
             </Link>
           </div>
 

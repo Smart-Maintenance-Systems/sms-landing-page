@@ -47,7 +47,7 @@ function HeroSection() {
           />
         </motion.div>
 
-        {/* Flagship badge — SMS Main is the platform, in build now */}
+        {/* Flagship badge — SMS Bridge is the platform, in build now */}
         <motion.div
           initial={{ y: 20, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
@@ -56,7 +56,7 @@ function HeroSection() {
         >
           <span className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-accent-violet/10 border border-accent-violet/30 text-sm font-medium text-accent-violet">
             <Brain className="w-4 h-4" />
-            SMS Main · the full fleet & operations platform · in build now
+            SMS Bridge · the full fleet & operations platform · in build now
           </span>
         </motion.div>
 
@@ -370,7 +370,7 @@ function PlatformSection() {
     <section className="py-24 md:py-32 bg-surface-1/50 relative">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
         <SectionHeading
-          eyebrow="SMS Main"
+          eyebrow="SMS Bridge"
           title="One platform. Twelve modules. Complete visibility."
           subtitle="Every department connected by one AI intelligence layer, across every vessel and shore location — data flows between modules automatically. In build now with our first trial operators."
           gradient
@@ -414,7 +414,7 @@ function PlatformSection() {
               to="/platform"
               className="btn-secondary"
             >
-              Explore SMS Main (coming soon)
+              Explore SMS Bridge (coming soon)
               <ArrowRight className="w-4 h-4" />
             </Link>
           </div>
@@ -865,7 +865,7 @@ function FinalCTASection() {
       <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 relative text-center">
         <ScrollReveal>
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-text-primary mb-4">
-            Be first on SMS Main.
+            Be first on SMS Bridge.
           </h2>
           <p className="text-lg text-text-secondary mb-10 leading-relaxed">
             The full fleet & operations platform is in build now with our first trial operators. Register your

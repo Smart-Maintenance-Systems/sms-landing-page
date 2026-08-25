@@ -3,7 +3,7 @@ import { Link, useLocation } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Menu, X, ChevronRight } from 'lucide-react';
 
-// SMS Main-led (REVISION 1): the platform is the flagship. "SMS Workboat" is a live cross-link OUT to its own
+// SMS Bridge-led (REVISION 1): the platform is the flagship. "SMS Workboat" is a live cross-link OUT to its own
 // site (smsworkboat.co.uk), rendered as an external <a>, not an internal route.
 const NAV_ITEMS: { label: string; href: string; external?: boolean }[] = [
   { label: 'Platform', href: '/platform' },

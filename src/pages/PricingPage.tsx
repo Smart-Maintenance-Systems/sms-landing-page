@@ -101,12 +101,12 @@ export default function PricingPage() {
           <SectionHeading
             eyebrow="Pricing"
             title="Per vessel, not per seat. Everything included."
-            subtitle="SMS Main — the full fleet & operations platform — is in build now; register your interest for founding pricing. Running a single workboat under 24m? SMS Workboat is live today at £29 a month per boat."
+            subtitle="SMS Bridge — the full fleet & operations platform — is in build now; register your interest for founding pricing. Running a single workboat under 24m? SMS Workboat is live today at £29 a month per boat."
           />
         </div>
       </section>
 
-      {/* SMS Main — the flagship platform (primary), in build now */}
+      {/* SMS Bridge — the flagship platform (primary), in build now */}
       <section className="pb-16 md:pb-24">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <ScrollReveal>
@@ -117,7 +117,7 @@ export default function PricingPage() {
                     <Building2 className="w-6 h-6 text-accent-violet" />
                   </div>
                   <div>
-                    <h2 className="text-2xl font-bold text-text-primary">SMS Main</h2>
+                    <h2 className="text-2xl font-bold text-text-primary">SMS Bridge</h2>
                     <p className="text-sm text-text-secondary">The full fleet & operations platform — for commercial operators, fleets, and offshore companies.</p>
                   </div>
                 </div>
@@ -170,7 +170,7 @@ export default function PricingPage() {
                     </span>
                   </div>
                   <p className="text-sm text-text-secondary">
-                    Early fleet operators who join SMS Main during its build get founding partner pricing — reduced rates locked in for life. Register your interest for details.
+                    Early fleet operators who join SMS Bridge during its build get founding partner pricing — reduced rates locked in for life. Register your interest for details.
                   </p>
                 </div>
               </div>
@@ -264,10 +264,10 @@ export default function PricingPage() {
                 </div>
               </div>
               <p className="text-sm text-text-secondary mb-6 leading-relaxed">
-                Custom pricing for large fleet operators. Everything in SMS Main plus the full AI
+                Custom pricing for large fleet operators. Everything in SMS Bridge plus the full AI
                 intelligence suite, fleet-wide anomaly detection, equipment health scoring, predictive
                 insights, dedicated account management, custom integrations, and SLA guarantees. Part of the
-                SMS Main roadmap — coming soon.
+                SMS Bridge roadmap — coming soon.
               </p>
               <a href="mailto:info@smsystems.uk" className="btn-secondary text-sm px-6 py-3">
                 Contact Us <ChevronRight className="w-4 h-4" />
@@ -389,7 +389,7 @@ export default function PricingPage() {
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
           <SectionHeading
             title="Grow when you're ready"
-            subtitle="Start with SMS Workboat on one boat today. When you outgrow it, SMS Main (coming soon) is the full fleet & operations platform — and your data comes with you."
+            subtitle="Start with SMS Workboat on one boat today. When you outgrow it, SMS Bridge (coming soon) is the full fleet & operations platform — and your data comes with you."
           />
 
           <div className="space-y-3">
@@ -443,11 +443,11 @@ export default function PricingPage() {
               },
               {
                 q: 'Is there a setup fee?',
-                a: 'No. SMS Workboat is self-service — you set it up yourself, no implementation fee. SMS Main (coming soon) will include guided onboarding per vessel.',
+                a: 'No. SMS Workboat is self-service — you set it up yourself, no implementation fee. SMS Bridge (coming soon) will include guided onboarding per vessel.',
               },
               {
-                q: 'Can I move up to SMS Main later?',
-                a: "Yes — that's the plan. SMS Workboat is live now; SMS Main, the full fleet & operations platform, is in build. When it opens, your data comes with you. Register your interest and we'll bring you in.",
+                q: 'Can I move up to SMS Bridge later?',
+                a: "Yes — that's the plan. SMS Workboat is live now; SMS Bridge, the full fleet & operations platform, is in build. When it opens, your data comes with you. Register your interest and we'll bring you in.",
               },
               {
                 q: 'What if I cancel?',
@@ -475,7 +475,7 @@ export default function PricingPage() {
           <ScrollReveal>
             <h2 className="text-3xl font-bold text-text-primary mb-4">Ready to get started?</h2>
             <p className="text-text-secondary mb-8">
-              SMS Main is in build now — register your interest for founding fleet pricing. Running a single workboat under 24m? SMS Workboat is live today.
+              SMS Bridge is in build now — register your interest for founding fleet pricing. Running a single workboat under 24m? SMS Workboat is live today.
             </p>
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
               <a href="mailto:info@smsystems.uk?subject=SMS%20for%20fleets" className="btn-primary text-base px-8 py-4">

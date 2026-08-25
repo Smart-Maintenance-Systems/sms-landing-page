@@ -69,7 +69,7 @@ export default function AboutPage() {
               <p>
                 Today that reality ships as SMS Workboat — live now for every small commercial workboat
                 under 24m, building the Safety Management System the Workboat Code requires. And the full
-                fleet & operations platform, SMS Main — maintenance, safety, purchasing, operations, and AI
+                fleet & operations platform, SMS Bridge — maintenance, safety, purchasing, operations, and AI
                 intelligence — is in build behind it.
               </p>
             </ScrollReveal>
