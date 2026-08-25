@@ -58,21 +58,34 @@ export default function Footer() {
             </h4>
             <ul className="space-y-3">
               {[
-                { label: 'SMS Workboat', href: '/light' },
+                { label: 'Platform', href: '/platform' },
                 { label: 'About', href: '/about' },
                 { label: 'How It Works', href: '/how-it-works' },
                 { label: 'Pricing', href: '/pricing' },
-                { label: 'Book a Demo', href: 'mailto:info@smsystems.uk?subject=SMS%20Demo%20Request' },
-              ].map((item) => (
-                <li key={item.label}>
-                  <Link
-                    to={item.href}
-                    className="text-sm text-text-secondary hover:text-brand-primary transition-colors"
-                  >
-                    {item.label}
-                  </Link>
-                </li>
-              ))}
+                { label: 'Register interest', href: 'mailto:info@smsystems.uk?subject=SMS%20for%20fleets', external: true },
+                { label: 'SMS Workboat ↗', href: 'https://smsworkboat.co.uk', external: true },
+              ].map((item) =>
+                'external' in item && item.external ? (
+                  <li key={item.label}>
+                    <a
+                      href={item.href}
+                      {...(item.href.startsWith('http') ? { target: '_blank', rel: 'noopener noreferrer' } : {})}
+                      className="text-sm text-text-secondary hover:text-brand-primary transition-colors"
+                    >
+                      {item.label}
+                    </a>
+                  </li>
+                ) : (
+                  <li key={item.label}>
+                    <Link
+                      to={item.href}
+                      className="text-sm text-text-secondary hover:text-brand-primary transition-colors"
+                    >
+                      {item.label}
+                    </Link>
+                  </li>
+                ),
+              )}
             </ul>
           </div>
 

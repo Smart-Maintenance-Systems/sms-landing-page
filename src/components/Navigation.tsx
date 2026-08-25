@@ -3,12 +3,14 @@ import { Link, useLocation } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Menu, X, ChevronRight } from 'lucide-react';
 
-const NAV_ITEMS = [
-  { label: 'SMS Workboat', href: '/light' },
+// SMS Main-led (REVISION 1): the platform is the flagship. "SMS Workboat" is a live cross-link OUT to its own
+// site (smsworkboat.co.uk), rendered as an external <a>, not an internal route.
+const NAV_ITEMS: { label: string; href: string; external?: boolean }[] = [
   { label: 'Platform', href: '/platform' },
   { label: 'How It Works', href: '/how-it-works' },
   { label: 'Pricing', href: '/pricing' },
   { label: 'About', href: '/about' },
+  { label: 'SMS Workboat ↗', href: 'https://smsworkboat.co.uk', external: true },
 ];
 
 export default function Navigation() {
@@ -62,25 +64,37 @@ export default function Navigation() {
 
             {/* Desktop nav */}
             <div className="hidden lg:flex items-center gap-1">
-              {NAV_ITEMS.map((item) => (
-                <Link
-                  key={item.href}
-                  to={item.href}
-                  className={`px-4 py-2 rounded-lg text-sm font-medium transition-colors ${
-                    location.pathname === item.href
-                      ? 'text-brand-primary bg-brand-primary/10'
-                      : 'text-text-secondary hover:text-text-primary hover:bg-surface-2'
-                  }`}
-                >
-                  {item.label}
-                </Link>
-              ))}
+              {NAV_ITEMS.map((item) =>
+                item.external ? (
+                  <a
+                    key={item.href}
+                    href={item.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="px-4 py-2 rounded-lg text-sm font-medium text-status-success hover:bg-status-success/10 transition-colors"
+                  >
+                    {item.label}
+                  </a>
+                ) : (
+                  <Link
+                    key={item.href}
+                    to={item.href}
+                    className={`px-4 py-2 rounded-lg text-sm font-medium transition-colors ${
+                      location.pathname === item.href
+                        ? 'text-brand-primary bg-brand-primary/10'
+                        : 'text-text-secondary hover:text-text-primary hover:bg-surface-2'
+                    }`}
+                  >
+                    {item.label}
+                  </Link>
+                ),
+              )}
             </div>
 
             {/* CTA buttons */}
             <div className="hidden lg:flex items-center gap-3">
-              <a href="https://smsworkboat.co.uk" target="_blank" rel="noopener noreferrer" className="btn-primary text-sm py-2">
-                Try SMS Workboat
+              <a href="mailto:info@smsystems.uk?subject=SMS%20for%20fleets" className="btn-primary text-sm py-2">
+                Register interest
                 <ChevronRight className="w-4 h-4" />
               </a>
             </div>
@@ -110,22 +124,34 @@ export default function Navigation() {
               onClick={() => setMobileOpen(false)}
             />
             <div className="absolute top-16 left-0 right-0 bg-surface-1 border-b border-white/5 p-4 space-y-1">
-              {NAV_ITEMS.map((item) => (
-                <Link
-                  key={item.href}
-                  to={item.href}
-                  className={`block px-4 py-3 rounded-lg text-base font-medium min-h-[48px] flex items-center ${
-                    location.pathname === item.href
-                      ? 'text-brand-primary bg-brand-primary/10'
-                      : 'text-text-secondary hover:text-text-primary hover:bg-surface-2'
-                  }`}
-                >
-                  {item.label}
-                </Link>
-              ))}
+              {NAV_ITEMS.map((item) =>
+                item.external ? (
+                  <a
+                    key={item.href}
+                    href={item.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="block px-4 py-3 rounded-lg text-base font-medium min-h-[48px] flex items-center text-status-success hover:bg-status-success/10"
+                  >
+                    {item.label}
+                  </a>
+                ) : (
+                  <Link
+                    key={item.href}
+                    to={item.href}
+                    className={`block px-4 py-3 rounded-lg text-base font-medium min-h-[48px] flex items-center ${
+                      location.pathname === item.href
+                        ? 'text-brand-primary bg-brand-primary/10'
+                        : 'text-text-secondary hover:text-text-primary hover:bg-surface-2'
+                    }`}
+                  >
+                    {item.label}
+                  </Link>
+                ),
+              )}
               <div className="pt-3 border-t border-white/5 space-y-2">
-                <a href="https://smsworkboat.co.uk" target="_blank" rel="noopener noreferrer" className="btn-primary w-full justify-center text-sm">
-                  Try SMS Workboat
+                <a href="mailto:info@smsystems.uk?subject=SMS%20for%20fleets" className="btn-primary w-full justify-center text-sm">
+                  Register interest
                 </a>
               </div>
             </div>

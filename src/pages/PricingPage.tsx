@@ -100,78 +100,14 @@ export default function PricingPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
           <SectionHeading
             eyebrow="Pricing"
-            title="One vessel price. Everything included."
-            subtitle="Per-vessel, not per-seat. All modules. Unlimited users. No implementation fees. No long-term contracts."
+            title="Per vessel, not per seat. Everything included."
+            subtitle="SMS Main — the full fleet & operations platform — is in build now; register your interest for founding pricing. Running a single workboat under 24m? SMS Workboat is live today at £29 a month per boat."
           />
         </div>
       </section>
 
-      {/* SMS Workboat — live, featured */}
+      {/* SMS Main — the flagship platform (primary), in build now */}
       <section className="pb-16 md:pb-24">
-        <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
-          <ScrollReveal>
-            <div className="rounded-xl bg-surface-1 border border-status-success/20 overflow-hidden">
-              <div className="p-8 md:p-10">
-                <div className="flex items-center gap-3 mb-4">
-                  <div className="p-2.5 rounded-lg bg-status-success/20">
-                    <Ship className="w-6 h-6 text-status-success" />
-                  </div>
-                  <div>
-                    <h2 className="text-2xl font-bold text-text-primary">SMS Workboat</h2>
-                    <p className="text-sm text-text-secondary">Live now. For every small commercial workboat under 24m, building the SMS the Workboat Code requires.</p>
-                  </div>
-                </div>
-
-                <div className="flex items-baseline gap-2 mb-6">
-                  <span className="text-4xl font-bold text-text-primary font-mono">£29</span>
-                  <span className="text-sm text-text-muted">/month per boat — everything included</span>
-                </div>
-
-                <p className="text-sm text-text-secondary mb-6 leading-relaxed">
-                  No tiers, no per-user charges, nothing gated behind a “Pro” plan. The first ten boats join as
-                  Founding Skippers — free while we finish it together, then a permanent founder's discount that
-                  always stays below our public price.
-                </p>
-
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 mb-8">
-                  {[
-                    'Certificates & tickets — expiry reminders',
-                    'Maintenance log — derives its own due dates',
-                    'Risk assessments from templates',
-                    'Drills, incidents & self-assessment',
-                    'Nova — cites the Code, never a verdict',
-                    'Signed records + inspection pack',
-                    'QR sign-on + read-only inspector links',
-                    'Works offline, syncs when back in range',
-                  ].map((item) => (
-                    <div key={item} className="flex items-center gap-2 text-sm text-text-secondary">
-                      <CheckCircle2 className="w-4 h-4 text-status-success shrink-0" />
-                      <span>{item}</span>
-                    </div>
-                  ))}
-                </div>
-
-                <div className="flex flex-col sm:flex-row gap-3">
-                  <a href="https://smsworkboat.co.uk" target="_blank" rel="noopener noreferrer" className="btn-light text-base px-8 py-4 justify-center">
-                    Try SMS Workboat <ArrowRight className="w-5 h-5" />
-                  </a>
-                  <a href="https://demo.smsworkboat.co.uk/workboat-demo" target="_blank" rel="noopener noreferrer" className="btn-secondary border-status-success/30 text-status-success hover:bg-status-success/10 text-base px-8 py-4 justify-center">
-                    See the live demo
-                  </a>
-                </div>
-              </div>
-              <div className="px-8 py-3 bg-surface-2/30 border-t border-white/5">
-                <p className="text-xs text-text-muted text-center">
-                  £29 flat per boat — the fleet discount is the fleet features arriving free as you grow.
-                </p>
-              </div>
-            </div>
-          </ScrollReveal>
-        </div>
-      </section>
-
-      {/* SMS Main — coming soon */}
-      <section className="py-16 md:py-24 bg-surface-1/50">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <ScrollReveal>
             <div className="rounded-xl bg-surface-1 border-2 border-accent-violet/40 ring-1 ring-accent-violet/20 overflow-hidden">
@@ -182,18 +118,18 @@ export default function PricingPage() {
                   </div>
                   <div>
                     <h2 className="text-2xl font-bold text-text-primary">SMS Main</h2>
-                    <p className="text-sm text-text-secondary">For commercial operators, fleets, and offshore companies.</p>
+                    <p className="text-sm text-text-secondary">The full fleet & operations platform — for commercial operators, fleets, and offshore companies.</p>
                   </div>
                 </div>
 
                 <div className="flex items-center gap-2 mb-6">
                   <span className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-accent-violet/10 border border-accent-violet/30 text-sm font-semibold text-accent-violet">
-                    <Clock className="w-4 h-4" /> Coming soon
+                    <Clock className="w-4 h-4" /> In build now · coming soon
                   </span>
                 </div>
 
                 <p className="text-sm text-text-secondary mb-6 leading-relaxed">
-                  The full fleet & operations platform — all modules, unlimited users, priced by gross tonnage so your cost scales with vessel complexity. In build now with our first trial operators. Register your interest and we'll bring you in as it opens up.
+                  All modules, unlimited users, priced by gross tonnage so your cost scales with vessel complexity. In build now with our first trial operators. Register your interest and we'll bring you in as it opens up.
                 </p>
 
                 <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-2 mb-8">
@@ -274,6 +210,39 @@ export default function PricingPage() {
                     </p>
                   </div>
                 </div>
+              </div>
+            </div>
+          </ScrollReveal>
+        </div>
+      </section>
+
+      {/* SMS Workboat — live now, cross-link OUT to its own site (not the headline here) */}
+      <section className="pb-16 md:pb-24">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <ScrollReveal>
+            <div className="rounded-xl bg-surface-1 border border-status-success/20 p-6 md:p-8 flex flex-col md:flex-row md:items-center gap-6">
+              <div className="flex-1">
+                <div className="flex items-center gap-3 mb-2">
+                  <div className="p-2 rounded-lg bg-status-success/20">
+                    <Ship className="w-5 h-5 text-status-success" />
+                  </div>
+                  <h2 className="text-xl font-bold text-text-primary">SMS Workboat</h2>
+                  <span className="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-status-success/10 border border-status-success/30 text-xs font-semibold text-status-success">
+                    Live now
+                  </span>
+                </div>
+                <p className="text-sm text-text-secondary leading-relaxed">
+                  Run a single commercial workboat under 24m? SMS Workboat is our live product — the Safety
+                  Management System the Workboat Code requires, <span className="text-text-primary font-medium">from £29 a month per boat, everything included</span>. It has its own site.
+                </p>
+              </div>
+              <div className="flex flex-col gap-2 shrink-0 w-full md:w-auto">
+                <a href="https://smsworkboat.co.uk" target="_blank" rel="noopener noreferrer" className="btn-light text-sm px-6 py-3 justify-center">
+                  Try SMS Workboat <ArrowRight className="w-4 h-4" />
+                </a>
+                <a href="https://demo.smsworkboat.co.uk/workboat-demo" target="_blank" rel="noopener noreferrer" className="btn-secondary border-status-success/30 text-status-success hover:bg-status-success/10 text-sm px-6 py-3 justify-center">
+                  See the live demo
+                </a>
               </div>
             </div>
           </ScrollReveal>
@@ -506,14 +475,14 @@ export default function PricingPage() {
           <ScrollReveal>
             <h2 className="text-3xl font-bold text-text-primary mb-4">Ready to get started?</h2>
             <p className="text-text-secondary mb-8">
-              SMS Workboat is live — £29 a month per boat, everything included. Run a fleet? SMS Main is coming soon.
+              SMS Main is in build now — register your interest for founding fleet pricing. Running a single workboat under 24m? SMS Workboat is live today.
             </p>
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-              <a href="https://smsworkboat.co.uk" target="_blank" rel="noopener noreferrer" className="btn-primary text-base px-8 py-4">
-                Try SMS Workboat <ChevronRight className="w-5 h-5" />
+              <a href="mailto:info@smsystems.uk?subject=SMS%20for%20fleets" className="btn-primary text-base px-8 py-4">
+                Register interest <ChevronRight className="w-5 h-5" />
               </a>
-              <a href="https://demo.smsworkboat.co.uk/workboat-demo" target="_blank" rel="noopener noreferrer" className="btn-light text-base px-8 py-4">
-                See the live demo <ArrowRight className="w-4 h-4" />
+              <a href="https://smsworkboat.co.uk" target="_blank" rel="noopener noreferrer" className="btn-light text-base px-8 py-4">
+                Try SMS Workboat <ArrowRight className="w-4 h-4" />
               </a>
             </div>
           </ScrollReveal>
