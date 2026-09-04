@@ -82,7 +82,7 @@ export default function HomePage() {
                 ready for the day the surveyor steps aboard.
               </p>
               <CtaRow className="mt-8" />
-              <p className="mt-4 text-sm text-text-muted">{FOUNDING_MODE ? 'Founding Skippers: free while we finish it, then a permanent founder’s discount below our public price · 10 boats.' : '14-day free trial · no card · £49 a month per boat, everything included.'}</p>
+              <p className="mt-4 text-sm text-text-muted">{FOUNDING_MODE ? 'Founding Skippers: free while we finish it, then a permanent founder’s discount below our public price, on your first boat · 10 boats.' : '14-day free trial · no card · £49 a month per boat, everything included.'}</p>
 
               {/* Trust stack - publishable-now facts only. First line names the company in FULL so the
                   triple pun lands (SMS = Safety Management System = Smart Maintenance Systems). */}
@@ -555,7 +555,7 @@ export default function HomePage() {
             <div className="rounded-2xl border border-accent-cyan/25 bg-surface-1 p-6 md:p-8">
               <div className="flex items-center gap-2 text-sm font-semibold text-accent-cyan"><Anchor className="w-4 h-4" /> Founding Skippers · 10 boats</div>
               <h2 className="mt-3 text-2xl md:text-3xl font-bold text-text-primary">Free while we finish it together. Then a permanent founder’s discount - always below our public price.</h2>
-              <p className="mt-3 text-text-secondary">Free to test, then founder pricing that stays below our public rate. Ten boats join as founding skippers, use it for real, and shape what it becomes.</p>
+              <p className="mt-3 text-text-secondary">Free to test, then founder pricing that stays below our public rate, on your first boat. Ten boats join as founding skippers, use it for real, and shape what it becomes.</p>
               <p className="mt-4 text-sm text-text-muted">What we ask: real use on a real boat · honest findings · a conversation when we need one.</p>
               <div className="mt-6"><ApplyCta className="btn-primary" /></div>
             </div>
@@ -582,7 +582,7 @@ export default function HomePage() {
             ))}
           </div>
           <CtaRow className="mt-10 justify-center" />
-          <p className="mt-4 text-sm text-text-muted">{FOUNDING_MODE ? 'Founding Skippers: free while we finish it, then a permanent founder’s discount below our public price · 10 boats.' : '14-day free trial · no card required.'}</p>
+          <p className="mt-4 text-sm text-text-muted">{FOUNDING_MODE ? 'Founding Skippers: free while we finish it, then a permanent founder’s discount below our public price, on your first boat · 10 boats.' : '14-day free trial · no card required.'}</p>
           <Link to="/pricing" className="mt-4 inline-block text-sm text-brand-primary hover:text-brand-hover">See what&rsquo;s included &rarr;</Link>
         </div>
       </section>
