@@ -101,7 +101,7 @@ export default function PricingPage() {
           <SectionHeading
             eyebrow="Pricing"
             title="Per vessel, not per seat. Everything included."
-            subtitle="SMS Bridge — the full fleet & operations platform — is in build now; register your interest for founding pricing. Running a single workboat under 24m? SMS Workboat is live today at £29 a month per boat."
+            subtitle="SMS Bridge — the full fleet & operations platform — is in build now; register your interest for founding pricing. Running a single workboat under 24m? SMS Workboat is live today at £49 a month per boat."
           />
         </div>
       </section>
@@ -233,7 +233,7 @@ export default function PricingPage() {
                 </div>
                 <p className="text-sm text-text-secondary leading-relaxed">
                   Run a single commercial workboat under 24m? SMS Workboat is our live product — the Safety
-                  Management System the Workboat Code requires, <span className="text-text-primary font-medium">from £29 a month per boat, everything included</span>. It has its own site.
+                  Management System the Workboat Code requires, <span className="text-text-primary font-medium">from £49 a month per boat, everything included</span>. It has its own site.
                 </p>
               </div>
               <div className="flex flex-col gap-2 shrink-0 w-full md:w-auto">
@@ -455,7 +455,7 @@ export default function PricingPage() {
               },
               {
                 q: 'How do I try it?',
-                a: "SMS Workboat is live — try the demo boat right now at demo.smsworkboat.co.uk, no sign-up, and start for real at smsworkboat.co.uk. £29 a month per boat, everything included. The first ten boats join as Founding Skippers.",
+                a: "SMS Workboat is live — try the demo boat right now at demo.smsworkboat.co.uk, no sign-up, and start for real at smsworkboat.co.uk. £49 a month per boat, everything included. The first ten boats join as Founding Skippers.",
               },
             ].map(({ q, a }) => (
               <ScrollReveal key={q}>

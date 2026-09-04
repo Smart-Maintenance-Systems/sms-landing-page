@@ -32,7 +32,7 @@ export default function LightPage() {
             <p className="text-lg text-text-secondary mb-8 leading-relaxed">
               SMS Workboat is our live product for small commercial workboats under 24m — it builds the Safety
               Management System the Workboat Code requires and keeps every record ready for the day the surveyor
-              steps aboard. £29 a month per boat, everything included. It lives on its own site.
+              steps aboard. £49 a month per boat, everything included. It lives on its own site.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 mb-6">

@@ -15,7 +15,7 @@ Flip the product hierarchy: **SMS Workboat = the LIVE, featured product** (it's 
 and the workboat product is a "coming soon / £10" afterthought called **"SMS Light"** (the old name).
 
 ## Honesty rules (from `WB3-MARKETING-CLAIM-BANK.md` in the workboat repo)
-- **SMS Workboat price = £29/boat/month + Founding Skipper** (first 10, relative permanent discount). **KILL the old "£10/month".**
+- **SMS Workboat price = £49/boat/month + Founding Skipper** (first 10, relative permanent discount). **KILL the old "£10/month".**
 - Workboat is **LIVE** — remove "Coming Soon" / "Register your interest" on the workboat product.
 - Never "MCA-approved / certified / guaranteed compliant". WB "builds your SMS / survey-ready", not "makes you compliant".
 - Workboat CTAs point OUT to **`https://smsworkboat.co.uk`** + the demo (don't duplicate the whole WB site here).
@@ -23,10 +23,10 @@ and the workboat product is a "coming soon / £10" afterthought called **"SMS Li
 
 ## Status
 - ✅ **Nav + Footer** — "SMS Light" → "SMS Workboat"; nav CTA now "Try SMS Workboat" → `smsworkboat.co.uk`. (commit `bbbde8f`, local, **push held**)
-- ⬜ **`src/pages/LightPage.tsx`** (412 ln) → the SMS Workboat page: live, £29 + Founding Skipper, real MV Guardian screenshots, CTAs → `smsworkboat.co.uk` + demo. Kill "Coming Soon"/"£10"/"Register interest".
+- ⬜ **`src/pages/LightPage.tsx`** (412 ln) → the SMS Workboat page: live, £49 + Founding Skipper, real MV Guardian screenshots, CTAs → `smsworkboat.co.uk` + demo. Kill "Coming Soon"/"£10"/"Register interest".
 - ⬜ **`src/pages/PlatformPage.tsx`** (367 ln) = SMS Main → **Coming Soon** treatment + register-interest.
 - ⬜ **`src/pages/HomePage.tsx`** (897 ln) → flip hero + product tiles: SMS Workboat = live headline, SMS Main = coming-soon second tile.
-- ⬜ **`src/pages/PricingPage.tsx`** (520 ln) → SMS Light tier @ £10 → SMS Workboat @ £29 + Founding Skipper.
+- ⬜ **`src/pages/PricingPage.tsx`** (520 ln) → SMS Light tier @ £10 → SMS Workboat @ £49 + Founding Skipper.
 - ⬜ **`src/pages/AboutPage.tsx`** (286 ln) → 2× "SMS Light" mentions → "SMS Workboat".
 - ⬜ **Screenshots:** copy MV Guardian shots from the WB site (`Smart-Maintenance-Systems/sms-landing-page` → `public/screenshots/` or the SHOTS manifest) into this repo's `public/` and wire into the Workboat page via the `Screenshot` component. (Existing `public/` shots are the old Main-platform ones — reuse for the Main "coming soon" teaser or drop.)
 

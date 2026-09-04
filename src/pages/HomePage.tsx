@@ -555,7 +555,7 @@ function PersonaSection() {
       role: 'Solo Vessel Owner',
       quote: 'I need to stop tracking maintenance in my head.',
       features: 'Certificates, maintenance, risk assessments, self-assessment — your whole SMS',
-      cta: { label: 'SMS Workboat — £29/boat', href: '/light', color: 'text-status-success' },
+      cta: { label: 'SMS Workboat — £49/boat', href: '/light', color: 'text-status-success' },
     },
     {
       icon: Eye,
@@ -803,7 +803,7 @@ function LightTeaserSection() {
                   SMS Workboat · Live now
                 </p>
                 <h2 className="text-3xl md:text-4xl font-bold text-text-primary mb-4">
-                  Run a workboat? Your SMS, £29 a month per boat.
+                  Run a workboat? Your SMS, £49 a month per boat.
                 </h2>
                 <p className="text-lg text-text-secondary mb-6 leading-relaxed">
                   Everything included — certificates, maintenance, risk assessments, drills, your annual
