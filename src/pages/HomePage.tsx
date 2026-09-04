@@ -82,7 +82,7 @@ export default function HomePage() {
                 ready for the day the surveyor steps aboard.
               </p>
               <CtaRow className="mt-8" />
-              <p className="mt-4 text-sm text-text-muted">{FOUNDING_MODE ? 'Founding Skippers: free while we finish it, then a permanent founder’s discount below our public price · 10 boats.' : '14-day free trial · no card · £29 a month per boat, everything included.'}</p>
+              <p className="mt-4 text-sm text-text-muted">{FOUNDING_MODE ? 'Founding Skippers: free while we finish it, then a permanent founder’s discount below our public price · 10 boats.' : '14-day free trial · no card · £49 a month per boat, everything included.'}</p>
 
               {/* Trust stack - publishable-now facts only. First line names the company in FULL so the
                   triple pun lands (SMS = Safety Management System = Smart Maintenance Systems). */}
@@ -521,7 +521,7 @@ export default function HomePage() {
               One boat means zero fleet clutter - just your boat. Add a second and the fleet office appears:
               the overview, the what&rsquo;s-needed-where feed, the boat switcher, crew, per-boat QR and
               inspector links. The features arriving free as you grow <em>are</em> the fleet discount - 
-              which is why the price stays flat, £29 per boat.
+              which is why the price stays flat, £49 per boat.
             </p>
             <ul className="mt-5 space-y-2 text-sm text-text-secondary">
               {['Fleet overview, worst-first', 'What’s needed where - one tap to fix', 'Per-boat QR stickers + inspector links'].map((f) => (
@@ -548,7 +548,7 @@ export default function HomePage() {
       </section>
 
       {/* ── FOUNDING SKIPPERS strip (W6 Task 3) — FOUNDING_MODE only. Quiet: the offer + the static
-             "10 boats" (no live counter, no countdown) + apply. 🟥 The £29 stays visible (teaser below). ── */}
+             "10 boats" (no live counter, no countdown) + apply. 🟥 The £49 stays visible (teaser below). ── */}
       {FOUNDING_MODE && (
         <section className="relative border-t border-border-subtle py-16 md:py-24">
           <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -566,7 +566,7 @@ export default function HomePage() {
       {/* ── PRICING TEASER (W-P) ──────────────────────────────────────────────── */}
       <section className="relative border-t border-border-subtle py-16 md:py-24">
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-2xl md:text-3xl font-bold text-text-primary">£29 a month per boat. Everything included.</h2>
+          <h2 className="text-2xl md:text-3xl font-bold text-text-primary">£49 a month per boat. Everything included.</h2>
           <p className="mt-3 text-text-secondary">No tiers, no per-user charges, nothing gated behind a &ldquo;Pro&rdquo; plan.</p>
           <div className="mt-8 grid sm:grid-cols-3 gap-4 text-left">
             {[

@@ -6,12 +6,12 @@ import { FOUNDING_MODE } from '../config';
  * navigations) AND the build-time prerender (`scripts/prerender.mjs`, via `entry-server.tsx`). Because both
  * read this one module, the static per-route HTML and the client head can never drift.
  *
- * 🟥 Guardrails 6+7: schema claims = visible signed claims only. Product/Offer carries the £29 fact and
+ * 🟥 Guardrails 6+7: schema claims = visible signed claims only. Product/Offer carries the £49 fact and
  * nothing invented (no ratings/reviews); FAQPage is generated from the same visible Q&A copy; every Code
  * answer cites its Appendix-8 section; zero compliance-verdict language anywhere in this file.
  */
 
-// 🟥 Only the signed £29 fact - no ratings/reviews (invented). Mirrors the visible Pricing page copy exactly.
+// 🟥 Only the signed £49 fact - no ratings/reviews (invented). Mirrors the visible Pricing page copy exactly.
 export const PRODUCT_JSONLD = {
   '@context': 'https://schema.org',
   '@type': 'Product',
@@ -20,11 +20,11 @@ export const PRODUCT_JSONLD = {
   brand: { '@type': 'Brand', name: 'SMS Workboat' },
   offers: {
     '@type': 'Offer',
-    price: '29.00',
+    price: '49.00',
     priceCurrency: 'GBP',
     url: `${CANONICAL_HOST}/pricing`,
     availability: 'https://schema.org/InStock',
-    priceSpecification: { '@type': 'UnitPriceSpecification', price: '29.00', priceCurrency: 'GBP', unitText: 'boat per month' },
+    priceSpecification: { '@type': 'UnitPriceSpecification', price: '49.00', priceCurrency: 'GBP', unitText: 'boat per month' },
   },
 };
 
@@ -78,8 +78,8 @@ export const FAQS: Faq[] = [
   {
     q: 'What does it cost?',
     a: FOUNDING_MODE
-      ? '£29 a month per boat at launch, everything included - no tiers, no per-user charges, nothing gated behind a “Pro” plan. Right now we run a Founding Skippers programme: 10 boats use SMS Workboat free while we finish it together, then keep a permanent founder’s discount that stays below our public price.'
-      : '£29 a month per boat, everything included - no tiers, no per-user charges, nothing gated behind a “Pro” plan. There is a 14-day free trial and no card is required to start.',
+      ? '£49 a month per boat at launch, everything included - no tiers, no per-user charges, nothing gated behind a “Pro” plan. Right now we run a Founding Skippers programme: 10 boats use SMS Workboat free while we finish it together, then keep a permanent founder’s discount that stays below our public price.'
+      : '£49 a month per boat, everything included - no tiers, no per-user charges, nothing gated behind a “Pro” plan. There is a 14-day free trial and no card is required to start.',
   },
   {
     q: 'Does it work offline, out on the water?',
@@ -95,7 +95,7 @@ export const FAQS: Faq[] = [
   },
   {
     q: 'What if I run a fleet?',
-    a: 'Add a second boat and the fleet office appears automatically. The price stays flat at £29 per boat - the features that arrive as you grow are already included, which is the fleet discount.',
+    a: 'Add a second boat and the fleet office appears automatically. The price stays flat at £49 per boat - the features that arrive as you grow are already included, which is the fleet discount.',
   },
   {
     q: 'Can I get my documents out - do I own my data?',
@@ -121,8 +121,8 @@ export const ROUTE_SEO: Record<string, SeoOptions> = {
   '/': {
     title: 'The law now requires an SMS. We are the SMS. | SMS Workboat',
     description: FOUNDING_MODE
-      ? 'UK law now requires a safety management system on every small commercial workboat (Workboat Code Edition 3). SMS Workboat is the simplest way to have one - on your phone, in an afternoon. £29 a month per boat at launch, everything included. Founding Skippers: free while we finish it, then a permanent founder’s discount below our public price - 10 boats.'
-      : 'UK law now requires a safety management system on every small commercial workboat (Workboat Code Edition 3). SMS Workboat is the simplest way to have one - on your phone, in an afternoon. £29 a month per boat, everything included. 14-day free trial, no card.',
+      ? 'UK law now requires a safety management system on every small commercial workboat (Workboat Code Edition 3). SMS Workboat is the simplest way to have one - on your phone, in an afternoon. £49 a month per boat at launch, everything included. Founding Skippers: free while we finish it, then a permanent founder’s discount below our public price - 10 boats.'
+      : 'UK law now requires a safety management system on every small commercial workboat (Workboat Code Edition 3). SMS Workboat is the simplest way to have one - on your phone, in an afternoon. £49 a month per boat, everything included. 14-day free trial, no card.',
     path: '/',
   },
   '/how-it-works': {
@@ -132,10 +132,10 @@ export const ROUTE_SEO: Record<string, SeoOptions> = {
     path: '/how-it-works',
   },
   '/pricing': {
-    title: 'Pricing - £29 a month per boat, everything included | SMS Workboat',
+    title: 'Pricing - £49 a month per boat, everything included | SMS Workboat',
     description: FOUNDING_MODE
-      ? '£29 flat per boat per month at launch. No tiers, no per-user charges, nothing gated. Founding Skippers: free while we finish it, then a permanent founder’s discount below our public price - 10 boats. Produces your annual self-assessment, downloads your whole SMS as PDFs, and keeps the inspection pack ready.'
-      : '£29 flat per boat per month. No tiers, no per-user charges, nothing gated. 14-day free trial, no card. Produces your annual self-assessment, downloads your whole SMS as PDFs, and keeps the inspection pack ready.',
+      ? '£49 flat per boat per month at launch. No tiers, no per-user charges, nothing gated. Founding Skippers: free while we finish it, then a permanent founder’s discount below our public price - 10 boats. Produces your annual self-assessment, downloads your whole SMS as PDFs, and keeps the inspection pack ready.'
+      : '£49 flat per boat per month. No tiers, no per-user charges, nothing gated. 14-day free trial, no card. Produces your annual self-assessment, downloads your whole SMS as PDFs, and keeps the inspection pack ready.',
     path: '/pricing',
     jsonLd: PRODUCT_JSONLD,
   },

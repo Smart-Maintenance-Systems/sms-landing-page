@@ -7,6 +7,8 @@ Hero section below. 🟥 Arithmetic-honest price lines only.
 
 Legend: **USED** = wired now · **BANK** = kept, awaiting founder · **KILLED** = stale/false, do not use.
 
+> **⚠️ PRICE UPDATE 2026-09-04: public price is now £49/boat/month (was £29).** The historical £29 entries and the "Less than £1 a day" line below are **SUPERSEDED — do not reuse** (£49/30 ≈ £1.63, no longer sub-£1). See `project_wb_pricing` (memory) + `GROWTH/FOUNDING-SKIPPERS-PROGRAMME.md`.
+
 ## ★ Winners (wired now)
 | Line | Source | Placement | Status |
 |---|---|---|---|

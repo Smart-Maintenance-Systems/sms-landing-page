@@ -20,7 +20,7 @@ export const CONTACT_EMAIL = 'info@smsystems.uk';
 // GROWTH/FOUNDING-SKIPPERS-PROGRAMME.md). While ON: every trial CTA becomes "Apply to be a Founding
 // Skipper" (a pre-filled mailto), the pricing page reframes to launch pricing with the founding offer as
 // the star, and a quiet founding strip shows on Home. 🟥 Flag OFF restores today's site byte-identically
-// (launch day = one flip). The £29 launch price + the Product/Offer JSON-LD NEVER change with this flag -
+// (launch day = one flip). The £49 launch price + the Product/Offer JSON-LD NEVER change with this flag -
 // the founding deal is an application, not a SKU.
 export const FOUNDING_MODE = true;
 
