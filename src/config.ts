@@ -12,6 +12,11 @@ export const DEMO_URL = 'https://demo.smsworkboat.co.uk/workboat-demo';
 // + the 14-day no-card terms) - never a dead link. Swap to the register URL when it deploys.
 export const TRIAL_HREF = '/pricing';
 
+// F3 (Matt, 5 Sept) — a returning user (esp. on desktop) had NO obvious way back IN; Matt could only log in
+// by digging the link out of his activation email. A plain "Log in" link in the nav points straight at the
+// trial app's sign-in (external — the app is a separate host from this marketing site).
+export const LOGIN_URL = 'https://app.smsworkboat.co.uk/workboat-login';
+
 // The quiet SMS-Main cross-sell (design §3) - a mailto until the Main site/route exists (no invented page).
 export const MAIN_CONTACT = 'mailto:info@smsystems.uk?subject=SMS%20for%20fleets%20%26%20shore%20operations';
 export const CONTACT_EMAIL = 'info@smsystems.uk';

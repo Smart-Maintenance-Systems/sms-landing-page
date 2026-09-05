@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Menu, X, ChevronRight } from 'lucide-react';
-import { TRIAL_HREF, FOUNDING_MODE, DEMO_ENABLED, DEMO_URL } from '../config';
+import { TRIAL_HREF, FOUNDING_MODE, DEMO_ENABLED, DEMO_URL, LOGIN_URL } from '../config';
 import ApplyCta from './ApplyCta';
 
 const NAV_ITEMS = [
@@ -68,6 +68,10 @@ export default function Navigation() {
 
             {/* CTA */}
             <div className="hidden lg:flex items-center gap-2">
+              {/* F3 (Matt) — a plain "Log in" so a returning user (esp. desktop) gets back in without digging out the activation email. External: the app is a separate host. */}
+              <a href={LOGIN_URL} className="px-3 py-2 rounded-lg text-sm font-medium text-text-secondary hover:text-text-primary hover:bg-surface-2 transition-colors">
+                Log in
+              </a>
               {/* Persistent demo entry (§2c) — always one click away, reinforcing "no demo to book". Opens in
                   a new tab so the site stays put. Gated on DEMO_ENABLED so it vanishes if the demo is retired. */}
               {DEMO_ENABLED && (
@@ -127,6 +131,10 @@ export default function Navigation() {
                 </Link>
               ))}
               <div className="pt-3 border-t border-border-subtle space-y-2">
+                {/* F3 — Log in for returning users */}
+                <a href={LOGIN_URL} className="px-4 py-3 rounded-lg text-base font-medium text-text-secondary hover:text-text-primary hover:bg-surface-2 min-h-[48px] flex items-center justify-center">
+                  Log in
+                </a>
                 {DEMO_ENABLED && (
                   <a
                     href={DEMO_URL}
