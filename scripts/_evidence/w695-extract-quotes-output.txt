@@ -1,0 +1,92 @@
+WBC: Workboat_Code_Edition_3.pdf  sha256=4d97a79860497888e4c8c5ab0189c4709fcf2ce47734d7f5fbd0b4edb70ff9eb
+M710: MGN 710 (M) safety management systems for small workboats and pilot boats - GOV.UK.pdf  sha256=7a5b50532b130c3f21f24bdf567651b47a1fbb18126112c8a0d9588110ca7e5d
+
+[FOUND] WEB-10 home §1.2 fragment (M710)
+    site passage: proportionate to the size, complexity and risk profile of their operations
+    PDF context : ...he UK, reflecting industry developments and lessons learned from previous codes. 1.2 All vessels certificated under WB3 are required to implement a SMS that is <<proportionate to the size, complexity and risk profile of their operations>> by 13 December 2026. However, all Remotely Operated Unmanned Vessels certificat...
+
+[NOT FOUND] WEB-10 old closing full stop (M710)
+    site passage: proportionate to the size, complexity and risk profile of their operations.
+
+[FOUND] home §1.2b (unchanged) (M710)
+    site passage: practical and effective without being unnecessarily burdensome.
+    PDF context : ...ce. Proportionate SMS means the system should be tailored to the specific needs and activities of each vessel and owner/operator, ensuring safety management is <<practical and effective without being unnecessarily burdensome.>> 1.3 The purpose of the SMS is to support safety, regulatory compliance, and ope...
+
+[FOUND] home §3.8 (unchanged) (M710)
+    site passage: specific items in the assessment may reflect ongoing development, as full implementation of all the necessary systems is underway.
+    PDF context : ...ring the subsequent scheduled examination (as per Section 4). 3.8 A self-assessment should be completed before the first compliance examination. At this stage, <<specific items in the assessment may reflect ongoing development, as full implementation of all the necessary systems is underway.>> This approach ensures that the self-assessment remains a constructive tool for ...
+
+[FOUND] WEB-11 / home §4.3 sentence (M710)
+    site passage: Sampling is intended to be brief and focused; it does not assess the effectiveness of the SMS.
+    PDF context : ...etail. This maintains the CA’s independence and ensures that the owner/operator retains full responsibility for the development and operation of their SMS. 4.3 <<Sampling is intended to be brief and focused; it does not assess the effectiveness of the SMS.>> Instead, sampling verifies that the demonstration accurately reflects implement...
+
+[NOT FOUND] WEB-30 §4.3 four sentences (M710)
+    site passage: Sampling is intended to be brief and focused; it does not assess the effectiveness of the SMS. Instead, sampling verifies that the demonstration accurately reflects implementation in practice. The CA’s sample, when based on a self-assessment, should focus on items explicitly referenced in the self-assessment. Some items may require brief follow-up, such as asking how a response was determined or viewing simple supporting evidence.
+
+[FOUND] WEB-23 §31.1.1 (WBC)
+    site passage: All vessels, excluding Remotely Operated Unmanned Vessels, certificated under this Code shall, 3 years after the Code comes into force, comply with the requirements of sections 31.2 and 31.3.
+    PDF context : ...ent The purpose of this section is to outline the Safety Management System requirements which are appropriate and applicable for workboats. 31.1 General 31.1.1 <<All vessels, excluding Remotely Operated Unmanned Vessels, certificated under this Code shall, 3 years after the Code comes into force, comply with the requirements of sections 31.2 and 31.3.>> 31.1.2 All Remotely Operated Unmanned Vessels certificated under this Code shal...
+
+[FOUND] WEB-23 §31.2.1 (WBC)
+    site passage: All vessel owner(s)/operator(s) operating under this Code shall implement a Safety Management System (SMS) which is proportionate with the size and complexity of the vessels and the company or owner/operator’s operations.
+    PDF context : ...r this Code shall, from the date this Code enters into force, meet the requirements of sections 31.2 and 31.3 of the Code. 31.2 Safety Management System 31.2.1 <<All vessel owner(s)/operator(s) operating under this Code shall implement a Safety Management System (SMS) which is proportionate with the size and complexity of the vessels and the company or owner/operator’s operations.>> The SMS shall consider both terrestrial and marine aspects as appropriate to th...
+
+[FOUND] WEB-25/27 App 8 §6.1 (WBC)
+    site passage: The vessel owner/operator shall, in relation to each vessel owned by it or for which it has operational responsibility, designate a person ashore who shall be responsible for monitoring the safe operation of the vessel and, so far as it may affect safety, the efficient operation of the vessel.
+    PDF context : ...the Master. 5.3 All personnel have a duty to take care of themselves and any other persons who may be affected by their acts or omissions. 6. Person Ashore 6.1 <<The vessel owner/operator shall, in relation to each vessel owned by it or for which it has operational responsibility, designate a person ashore who shall be responsible for monitoring the safe operation of the vessel and, so far as it may affect safety, the efficient operation of the vessel.>> 6.2 The person ashore shall: .1 take such steps as are necessary to ensure comp...
+
+[FOUND] WEB-24 App 8 §7.1 first sentence (WBC)
+    site passage: All personnel shall receive training appropriate to the tasks they undertake.
+    PDF context : ...ion of vessels; and .3 shall have access to the appropriate level of management resource(s) within the company to fulfil the role. 7. Training of Personnel 7.1 <<All personnel shall receive training appropriate to the tasks they undertake.>> See Section 28. It is the responsibility of the vessel owner/operator to ensure...
+
+[FOUND] WEB-24 App 8 §7.2 first sentence (WBC)
+    site passage: Prior to the first occasion of working on the vessel, each worker must receive appropriate familiarisation training and proper instruction in on board procedures.
+    PDF context : ...of the vessel owner/operator to ensure that this training is given, and that the personnel have an understanding of the 234 relevant regulations and rules. 7.2 <<Prior to the first occasion of working on the vessel, each worker must receive appropriate familiarisation training and proper instruction in on board procedures.>> This shall at the minimum include: .1 emergency drills and MOB recovery (see se...
+
+[NOT FOUND] WEB-24 old card as ONE passage (WBC)
+    site passage: All personnel shall receive training appropriate to the tasks they undertake. Prior to the first occasion of working on the vessel, each worker must receive appropriate familiarisation training and proper instruction in on board procedures.
+
+[FOUND] WEB-25 App 8 §10.5 card (WBC)
+    site passage: Exercises shall be carried out in the handling of the identified emergency situations and evacuation from the vessel. The exercises shall be recorded. The names of those who participated shall also be recorded.
+    PDF context : ...ween the vessel and the shore base. 236 10.4 Emergency situations likely to be encountered considered by the vessel owner/operator. by the vessel shall be 10.5 <<Exercises shall be carried out in the handling of the identified emergency situations and evacuation from the vessel. The exercises shall be recorded. The names of those who participated shall also be recorded.>> 10.6 Where possible, all personnel shall be involved in these exercises, both o...
+
+[FOUND] WEB-25 App 8 §12.2 card (WBC)
+    site passage: The vessel owner/operator shall develop documented procedures for a more detailed inspection and maintenance program for the vessel and its equipment. The frequency of the required inspection and maintenance shall be determined by the vessel owner/operator. All inspections and maintenance activities shall be recorded.
+    PDF context : ...ction. 12. Maintenance of the Vessel and Equipment 12.1 A vessel and its equipment requirements of Section 3.5. shall be maintained in accordance with the 12.2 <<The vessel owner/operator shall develop documented procedures for a more detailed inspection and maintenance program for the vessel and its equipment. The frequency of the required inspection and maintenance shall be determined by the vessel owner/operator. All inspections and maintenance activities shall be recorded.>> 13. Review 13.1 The vessel owner/operator shall undertake a management system a...
+
+[FOUND] Code page App 8 §1.1 lead (unchanged) (WBC)
+    site passage: A Safety Management System shall include the following:
+    PDF context : ...ropriate and proportionate Safety Management System based on the requirements that can be found within the International Safety Management Code. 1. General 1.1 <<A Safety Management System shall include the following:>> .1 Safety and Environmental Protection Policy; .2 Risk Assessment for Safe Work...
+
+[FOUND] WEB-30 §4.3 before the page break (M710)
+    site passage: Sampling is intended to be brief and focused; it does not assess the effectiveness of the SMS. Instead, sampling verifies that the demonstration accurately reflects implementation in practice. The CA’s sample, when
+    PDF context : ...etail. This maintains the CA’s independence and ensures that the owner/operator retains full responsibility for the development and operation of their SMS. 4.3 <<Sampling is intended to be brief and focused; it does not assess the effectiveness of the SMS. Instead, sampling verifies that the demonstration accurately reflects implementation in practice. The CA’s sample, when>> 16/06/2026, 18:52 MGN 710 (M) safety management systems for small workboats and...
+
+[FOUND] WEB-30 §4.3 after the page break (M710)
+    site passage: based on a self-assessment, should focus on items explicitly referenced in the self-assessment. Some items may require brief follow-up, such as asking how a response was determined or viewing simple supporting evidence.
+    PDF context : ...ilot boats - GOV.UK https://www.gov.uk/government/publications/mgn-710-m-safety-management-systems-for-small-workboats-and-pilot-boats/mgn-710-m-safety-ma… 5/8 <<based on a self-assessment, should focus on items explicitly referenced in the self-assessment. Some items may require brief follow-up, such as asking how a response was determined or viewing simple supporting evidence.>> 4.4 Where an owner/operator chooses to demonstrate their safety management impl...
+
+[CONTEXT] §4.3 number: ...nce and ensures that the owner/operator retains full responsibility for the development and operation of their SMS. 4.3 Sampling is intended to be brief and focused; it does not assess the effectiveness of the SMS. Instead, sampling verifies that the demonstration accurately reflects implementation in practice. The CA’s sample, when 16/06/2026, 18:52 MGN 710 (M) safety manageme...
+
+[CONTEXT] §1.2 number: ...oats and pilot boats certified in the UK, reflecting industry developments and lessons learned from previous codes. 1.2 All vessels certificated under WB3 are required to implement a SMS that is proportionate to the size, complexity and risk profile of their operations by 13 December 2026. However, all Remotely Operated Unmanned Vessels certificated under this Code are required...
+
+[CONTEXT] §31.1.1 number: ...tline the Safety Management System requirements which are appropriate and applicable for workboats. 31.1 General 31.1.1 All vessels, excluding Remotely Operated Unmanned Vessels, certificated under this Code shall, 3 years after the Code comes into force, comply with the requirements of sections 31.2 and 31.3. 31.1.2 All Remotely Operated Unmanned Vessels certificated under thi...
+
+[CONTEXT] §31.2.1 number: ...de enters into force, meet the requirements of sections 31.2 and 31.3 of the Code. 31.2 Safety Management System 31.2.1 All vessel owner(s)/operator(s) operating under this Code shall implement a Safety Management System (SMS) which is proportionate with the size and complexity of the vessels and the company or owner/operator’s operations. The SMS shall consider both terrestria...
+
+[CONTEXT] App 8 §6.1 number: ...y to take care of themselves and any other persons who may be affected by their acts or omissions. 6. Person Ashore 6.1 The vessel owner/operator shall, in relation to each vessel owned by it or for which it has operational responsibility, designate a person ashore who shall be responsible for monitoring the safe operation of the vessel and, so far as it may affect safety, the ...
+
+[CONTEXT] App 8 §7.1 / §7.2 numbers: ... to the appropriate level of management resource(s) within the company to fulfil the role. 7. Training of Personnel 7.1 All personnel shall receive training appropriate to the tasks they undertake. See Section 28. It is the responsibility of the vessel owner/operator to ensure that this training is given, and that the personnel have an understanding of the 234 relevant regulati...
+
+[CONTEXT] App 8 §10.5 number: ...10.4 Emergency situations likely to be encountered considered by the vessel owner/operator. by the vessel shall be 10.5 Exercises shall be carried out in the handling of the identified emergency situations and evacuation from the vessel. The exercises shall be recorded. The names of those who participated shall also be recorded. 10.6 Where possible, all personnel shall be invol...
+
+[CONTEXT] App 8 §12.2 number: ... Equipment 12.1 A vessel and its equipment requirements of Section 3.5. shall be maintained in accordance with the 12.2 The vessel owner/operator shall develop documented procedures for a more detailed inspection and maintenance program for the vessel and its equipment. The frequency of the required inspection and maintenance shall be determined by the vessel owner/operator. Al...
+
+[CONTEXT] §4.3 page break: ...ctiveness of the SMS. Instead, sampling verifies that the demonstration accurately reflects implementation in practice. The CA’s sample, when 16/06/2026, 18:52 MGN 710 (M) safety management systems for small workboats and pilot boats - GOV.UK https://www.gov.uk/government/publications/mgn-710-m-safety-management-systems-for-small-workboats-and-pilot-boats/mgn-710-m-safety-ma… 5...
+
+[CONTEXT] MGN 710 issuer (document head): ...Guidance MGN 710 (M) safety management systems for small workboats and pilot boats Published 2 January 2026 © Crown copyright 2026 Maritime & Coastguard Agency Contents Summary 1. Introduction/background 2. Demonstration of Safety Management Implementation 3. Self-Asse...
+
+[CONTEXT] MGN 710 issuer (More information): ...ken place and that the SMS is being actively managed and improved. More information Safety Management Operations Branch Maritime and Coastguard Agency Bay 2/20 Spring Place 105 Commercial Road Southampton SO15 1EG Telephone: +44 (0)20 390 85181 16/06/2026, 18:52 MGN 710 (M) safety management systems for small workboats and pilot boats - GOV.UK https://www.gov.uk/government/publ...
+
+[BREAK] §4.3 'when' at 11262, 'based' at 11525, in order=True:
+    The CA’s sample, when 16/06/2026, 18:52 MGN 710 (M) safety management systems for small workboats and pilot boats - GOV.UK https://www.gov.uk/government/publications/mgn-710-m-safety-management-systems-for-small-workboats-and-pilot-boats/mgn-710-m-safety-ma… 5/8 based on a self-assessment, should focus
