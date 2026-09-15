@@ -68,7 +68,7 @@ export default function AboutPage() {
         </div>
 
         <blockquote className="mt-10 border-l-2 border-accent-cyan/40 pl-4 text-lg text-text-primary italic">
-          &ldquo;Nova handles the compliance, you handle the boat.&rdquo;
+          &ldquo;Nova handles the paperwork, you handle the boat.&rdquo;
         </blockquote>
 
         <div className="mt-10 flex flex-col sm:flex-row gap-3">

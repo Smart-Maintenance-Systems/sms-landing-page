@@ -48,7 +48,7 @@ export default function Footer() {
               commercial workboat.
             </p>
             <p className="mt-4 flex items-center gap-2 text-xs text-text-muted">
-              <Anchor className="w-3.5 h-3.5" /> Nova handles the compliance, you handle the boat.
+              <Anchor className="w-3.5 h-3.5" /> Nova handles the paperwork, you handle the boat.
             </p>
           </div>
 

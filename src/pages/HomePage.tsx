@@ -89,7 +89,7 @@ export default function HomePage() {
               <div className="mt-8 flex flex-col gap-2 text-sm text-text-secondary">
                 <span className="flex items-center gap-2"><Ship className="w-4 h-4 text-brand-primary shrink-0" /> SMS Workboat - by <span className="font-medium text-text-primary">Smart Maintenance Systems</span>.</span>
                 <span className="flex items-center gap-2"><Anchor className="w-4 h-4 text-text-muted shrink-0" /> Built by people who work at sea - not people guessing from an office.</span>
-                <span className="flex items-center gap-2"><Sparkles className="w-4 h-4 text-accent-cyan shrink-0" /> Nova handles the compliance, you handle the boat.</span>
+                <span className="flex items-center gap-2"><Sparkles className="w-4 h-4 text-accent-cyan shrink-0" /> Nova handles the paperwork, you handle the boat.</span>
               </div>
             </div>
 
@@ -323,7 +323,7 @@ export default function HomePage() {
       <section className="relative border-t border-border-subtle py-16 md:py-24">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center gap-2 text-sm font-semibold text-accent-cyan"><Sparkles className="w-4 h-4" /> Meet Nova</div>
-          <h2 className="mt-3 text-2xl md:text-3xl font-bold text-text-primary max-w-2xl">Nova handles the compliance, you handle the boat.</h2>
+          <h2 className="mt-3 text-2xl md:text-3xl font-bold text-text-primary max-w-2xl">Nova handles the paperwork, you handle the boat.</h2>
           <p className="mt-3 text-text-secondary max-w-2xl">
             It retrieves and cites the Workboat Code, flags what&rsquo;s coming due before it slips, and tells
             you honestly when a call isn&rsquo;t the software&rsquo;s to make. It never rules a verdict - that
