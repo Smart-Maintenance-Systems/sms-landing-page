@@ -26,9 +26,9 @@ const INCLUDED = [
 ];
 
 const OUTPUTS = [
-  { icon: ClipboardCheck, t: 'Your annual self-assessment', d: 'Produced from the records you keep - ready to sign.' },
+  { icon: ClipboardCheck, t: 'Your annual self-assessment', d: 'Pre-filled from your records. You check every answer and sign.' },
   { icon: FileText, t: 'Download your whole SMS as PDFs', d: 'The document pack, yours to keep, any time.' },
-  { icon: ShieldCheck, t: 'The inspection pack', d: 'Assembled and ready any day of the year.' },
+  { icon: ShieldCheck, t: 'The inspection pack', d: 'Your inspection records, together in one place.' },
 ];
 
 export default function PricingPage() {

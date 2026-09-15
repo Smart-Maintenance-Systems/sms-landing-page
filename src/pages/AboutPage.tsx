@@ -22,14 +22,14 @@ export default function AboutPage() {
 
         <div className="mt-6 space-y-5 text-text-secondary leading-relaxed">
           <p>
-            SMS Workboat was built by its founders between jobs at sea. The compliance headaches it fixes are
-            ones we live with - not ones a product manager guessed at.
+            SMS Workboat was built by its founders between jobs at sea, for less time fighting the paperwork. The
+            headaches it takes on are ones we live with - not ones a product manager guessed at.
           </p>
           <p>
             The law changed: the Workboat Code Edition 3 now requires a Safety Management System on every
             small commercial workboat. Most owners are one or two boats, run from a phone at a berth - not a
-            compliance department. So the whole thing is built for that person: from nothing to a working
-            SMS in an afternoon, the depth kept under the hood.
+            compliance department. So the whole thing is built for that person: get your SMS set up in an
+            afternoon, the depth kept under the hood.
           </p>
           <p>
             And it&rsquo;s built to be trusted. Its AI, Nova, retrieves and cites the Code - it never rules

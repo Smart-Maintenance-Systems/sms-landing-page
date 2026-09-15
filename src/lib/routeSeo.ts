@@ -40,40 +40,41 @@ export const FAQS: Faq[] = [
   {
     q: 'Do I legally need a safety management system on my workboat?',
     a: 'Yes. The Workboat Code Edition 3 came into force on 13 December 2023, and under it every small commercial workboat needs a safety management system. What that SMS must contain is set out in the Code itself.',
-    cite: 'Workboat Code Edition 3, Appendix 8, section 1.1',
+    cite: 'Workboat Code Edition 3, sections 31.1.1 and 31.2.1',
   },
   {
     q: 'What must my SMS actually include?',
-    a: 'The Code lists ten elements: a Safety and Environmental Protection Policy; a Risk Assessment for Safe Working; a Health and Safety Protection Policy; responsibilities of the Master and Personnel; training of Personnel; procedures for safe operation; emergencies; reporting of accidents; maintenance of the vessel and equipment; and review. SMS Workboat gives each one a home and the record to prove it.',
+    a: 'The Code lists ten elements: a Safety and Environmental Protection Policy; a Risk Assessment for Safe Working; a Health and Safety Protection Policy; responsibilities of the Master and Personnel; training of Personnel; procedures for safe operation; emergencies; reporting of accidents; maintenance of the vessel and equipment; and review. SMS Workboat gives each one a home and a place to keep its records.',
     cite: 'Workboat Code Edition 3, Appendix 8, section 1.1',
   },
   {
-    q: 'What is a Designated Person Ashore?',
-    a: 'The Code requires you to designate a person ashore responsible for monitoring the safe operation of the vessel, with sufficient authority, knowledge and resources to fulfil the role. SMS Workboat has a Person Ashore surface where you record who that is.',
-    cite: 'Workboat Code Edition 3, Appendix 8, section 6',
+    q: 'What is the person ashore?',
+    a: 'The Code says: “The vessel owner/operator shall, in relation to each vessel owned by it or for which it has operational responsibility, designate a person ashore who shall be responsible for monitoring the safe operation of the vessel and, so far as it may affect safety, the efficient operation of the vessel.” SMS Workboat has a Person Ashore surface where you record who that is.',
+    cite: 'Workboat Code Edition 3, Appendix 8, section 6.1',
   },
   {
     q: 'Do my crew need any training or familiarisation?',
     a: 'Yes - before the first occasion of working on the vessel, each worker must receive appropriate familiarisation training and instruction in on-board procedures. SMS Workboat keeps a per-crew familiarisation register, and a login-holding crew member can countersign their own record.',
-    cite: 'Workboat Code Edition 3, Appendix 8, section 7',
+    cite: 'Workboat Code Edition 3, Appendix 8, section 7.2',
   },
   {
     q: 'Do I have to record drills?',
-    a: 'Yes. Exercises in the identified emergency situations must be carried out and recorded, including the names of those who took part. SMS Workboat records each drill (with a photo if you want one) against those names.',
-    cite: 'Workboat Code Edition 3, Appendix 8, section 10',
+    a: 'Yes. Exercises in the identified emergency situations must be carried out and recorded, including the names of those who took part. SMS Workboat lets you record who took part in each drill.',
+    cite: 'Workboat Code Edition 3, Appendix 8, section 10.5',
   },
   {
     q: 'What about maintenance records?',
-    a: 'The Code asks you to develop documented inspection and maintenance procedures - you set the frequency - and to record all inspections and maintenance. SMS Workboat is a maintenance log that derives its own due dates and keeps an append-only record of what was done.',
-    cite: 'Workboat Code Edition 3, Appendix 8, section 12',
+    a: 'The Code asks you to develop documented inspection and maintenance procedures - you set the frequency - and to record all inspections and maintenance. SMS Workboat is a maintenance log that derives its own due dates and keeps a record of each job done.',
+    cite: 'Workboat Code Edition 3, Appendix 8, section 12.2',
   },
   {
     q: 'What happens at an inspection or survey?',
-    a: 'A surveyor reviews your SMS and its records. SMS Workboat gives you an inspection pack that is ready any day, and a read-only inspector link - four hours, one boat, no app - that shows you when it has been opened and can be revoked any time. Whether you comply is your surveyor’s or Designated Person’s decision, not ours.',
+    a: 'MGN 710 says: “Sampling is intended to be brief and focused; it does not assess the effectiveness of the SMS. Instead, sampling verifies that the demonstration accurately reflects implementation in practice. The CA’s sample, when based on a self-assessment, should focus on items explicitly referenced in the self-assessment. Some items may require brief follow-up, such as asking how a response was determined or viewing simple supporting evidence.” SMS Workboat lets you pull your inspection records together when you need them, and gives you a read-only inspector link - four hours, one boat, no app - that shows you when it has been opened and can be revoked any time. Whether you comply is your surveyor’s or Designated Person’s decision, not ours.',
+    cite: 'MGN 710 (M), section 4.3',
   },
   {
     q: 'How long does it take to set up?',
-    a: 'From nothing to a working SMS in an afternoon, on your phone. You photograph certificates you already have and Nova reads the details off the picture so you just confirm them; your documents start from Workboat-Code templates rather than a blank page.',
+    a: 'Get your SMS set up in an afternoon, on your phone. You photograph certificates you already have and Nova reads the details off the picture so you just confirm them; your documents start from Workboat-Code templates rather than a blank page.',
   },
   {
     q: 'What does it cost?',
@@ -99,7 +100,7 @@ export const FAQS: Faq[] = [
   },
   {
     q: 'Can I get my documents out - do I own my data?',
-    a: 'You can download your whole SMS as a PDF document pack any time, and the inspection pack is assembled and ready any day of the year. Your records are yours.',
+    a: 'You can download your whole SMS as a PDF document pack any time, and pull your inspection records together when you need them. Your records are yours.',
   },
 ];
 
@@ -121,12 +122,12 @@ export const ROUTE_SEO: Record<string, SeoOptions> = {
   '/': {
     title: 'The law now requires an SMS. We are the SMS. | SMS Workboat',
     description: FOUNDING_MODE
-      ? 'UK law now requires a safety management system on every small commercial workboat (Workboat Code Edition 3). SMS Workboat is the simplest way to have one - on your phone, in an afternoon. £49 a month per boat at launch, everything included. Founding Skippers: free while we finish it, then a permanent founder’s discount below our public price - 10 boats.'
-      : 'UK law now requires a safety management system on every small commercial workboat (Workboat Code Edition 3). SMS Workboat is the simplest way to have one - on your phone, in an afternoon. £49 a month per boat, everything included. 14-day free trial, no card.',
+      ? 'UK law now requires a safety management system on every small commercial workboat (Workboat Code Edition 3). Get your SMS set up in an afternoon, on your phone. £49 a month per boat at launch, everything included. Founding Skippers: free while we finish it, then a permanent founder’s discount below our public price - 10 boats.'
+      : 'UK law now requires a safety management system on every small commercial workboat (Workboat Code Edition 3). Get your SMS set up in an afternoon, on your phone. £49 a month per boat, everything included. 14-day free trial, no card.',
     path: '/',
   },
   '/how-it-works': {
-    title: 'How SMS Workboat works - from nothing to an SMS in an afternoon',
+    title: 'How SMS Workboat works - get your SMS set up in an afternoon',
     description:
       'Three steps in owner language: capture what you have, let it author your documents from Workboat-Code templates, then sign your annual self-assessment. On your phone, on your boat.',
     path: '/how-it-works',
@@ -134,8 +135,8 @@ export const ROUTE_SEO: Record<string, SeoOptions> = {
   '/pricing': {
     title: 'Pricing - £49 a month per boat, everything included | SMS Workboat',
     description: FOUNDING_MODE
-      ? '£49 flat per boat per month at launch. No tiers, no per-user charges, nothing gated. Founding Skippers: free while we finish it, then a permanent founder’s discount below our public price - 10 boats. Produces your annual self-assessment, downloads your whole SMS as PDFs, and keeps the inspection pack ready.'
-      : '£49 flat per boat per month. No tiers, no per-user charges, nothing gated. 14-day free trial, no card. Produces your annual self-assessment, downloads your whole SMS as PDFs, and keeps the inspection pack ready.',
+      ? '£49 flat per boat per month at launch. No tiers, no per-user charges, nothing gated. Founding Skippers: free while we finish it, then a permanent founder’s discount below our public price - 10 boats. Pre-fills your annual self-assessment from your records for you to check and sign, downloads your whole SMS as PDFs, and pulls your inspection records together when you need them.'
+      : '£49 flat per boat per month. No tiers, no per-user charges, nothing gated. 14-day free trial, no card. Pre-fills your annual self-assessment from your records for you to check and sign, downloads your whole SMS as PDFs, and pulls your inspection records together when you need them.',
     path: '/pricing',
     jsonLd: PRODUCT_JSONLD,
   },

@@ -29,22 +29,22 @@ const ELEMENTS = [
 // Verbatim clause cards (citation + exact text from the registry).
 const CLAUSES: { citation: string; text: string }[] = [
   {
-    citation: 'Workboat Code Edition 3, Appendix 8, section 6',
+    citation: 'Workboat Code Edition 3, Appendix 8, section 6.1',
     text:
       'The vessel owner/operator shall, in relation to each vessel owned by it or for which it has operational responsibility, designate a person ashore who shall be responsible for monitoring the safe operation of the vessel and, so far as it may affect safety, the efficient operation of the vessel.',
   },
   {
-    citation: 'Workboat Code Edition 3, Appendix 8, section 7',
+    citation: 'Workboat Code Edition 3, Appendix 8, sections 7.1 and 7.2',
     text:
-      'All personnel shall receive training appropriate to the tasks they undertake. Prior to the first occasion of working on the vessel, each worker must receive appropriate familiarisation training and proper instruction in on board procedures.',
+      'All personnel shall receive training appropriate to the tasks they undertake. … Prior to the first occasion of working on the vessel, each worker must receive appropriate familiarisation training and proper instruction in on board procedures.',
   },
   {
-    citation: 'Workboat Code Edition 3, Appendix 8, section 10',
+    citation: 'Workboat Code Edition 3, Appendix 8, section 10.5',
     text:
       'Exercises shall be carried out in the handling of the identified emergency situations and evacuation from the vessel. The exercises shall be recorded. The names of those who participated shall also be recorded.',
   },
   {
-    citation: 'Workboat Code Edition 3, Appendix 8, section 12',
+    citation: 'Workboat Code Edition 3, Appendix 8, section 12.2',
     text:
       'The vessel owner/operator shall develop documented procedures for a more detailed inspection and maintenance program for the vessel and its equipment. The frequency of the required inspection and maintenance shall be determined by the vessel owner/operator. All inspections and maintenance activities shall be recorded.',
   },
@@ -82,7 +82,7 @@ export default function CodePage() {
           <p className="mt-4 text-xs text-text-muted">Quoted verbatim from the Workboat Code.</p>
         </div>
 
-        <p className="mt-10 text-text-secondary">SMS Workboat gives you a home for each of these - and the record to prove it. A closer look at four:</p>
+        <p className="mt-10 text-text-secondary">SMS Workboat gives you a home for each of these - and a place to keep its records. A closer look at four:</p>
 
         <div className="mt-6 space-y-5">
           {CLAUSES.map((c) => (

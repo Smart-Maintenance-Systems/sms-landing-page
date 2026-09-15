@@ -33,7 +33,7 @@ const STEPS: { n: number; icon: typeof Camera; title: string; plain: string; bod
     icon: ClipboardCheck,
     title: 'Assess',
     plain: 'Sign your self-assessment.',
-    body: 'The records you keep produce your annual self-assessment - ready to sign, with the inspection pack assembled any day you need it.',
+    body: 'Your annual self-assessment is pre-filled from the records you keep. You check every answer and sign, and the inspection pack is assembled any day you need it.',
     shot: 'howAssess',
   },
 ];
@@ -46,7 +46,7 @@ export default function HowItWorksPage() {
         <div className="text-center">
           {/* W2 - the founder-loved original line leads the day-one story (TAGLINE-BANK.md). */}
           <p className="text-sm font-semibold uppercase tracking-wider text-brand-primary">Your boat deserves better than a notebook.</p>
-          <h1 className="mt-3 text-3xl md:text-4xl font-bold text-text-primary">From nothing to a working SMS in an afternoon</h1>
+          <h1 className="mt-3 text-3xl md:text-4xl font-bold text-text-primary">Get your SMS set up in an afternoon</h1>
           <p className="mt-4 text-text-secondary max-w-xl mx-auto">On your phone, on your boat. Three steps: capture what you have, let it author your documents, then sign your self-assessment.</p>
         </div>
 

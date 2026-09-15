@@ -75,11 +75,11 @@ export default function HomePage() {
                 <span className="gradient-text">We are the SMS.</span>
               </h1>
               {/* §W-D honesty-trimmed sub-line, VERBATIM. 🟥 The original's verdict phrasing was dropped - 
-                  records-ready wording only ("keeps every record ready"), never a pass/fail promise. */}
+                  records wording only (W-695: "keeps its records in one place"), never a pass/fail promise. */}
               <p className="mt-5 text-lg text-text-secondary">
                 Every small commercial workboat must hold a Safety Management System by 13 December 2026 -
-                Workboat Code Edition 3, law since 2023. SMS Workboat builds yours, and keeps every record
-                ready for the day the surveyor steps aboard.
+                Workboat Code Edition 3, law since 2023. SMS Workboat helps you set yours up and keeps its
+                records in one place for the day the surveyor steps aboard.
               </p>
               <CtaRow className="mt-8" />
               <p className="mt-4 text-sm text-text-muted">{FOUNDING_MODE ? 'Founding Skippers: free while we finish it, then a permanent founder’s discount below our public price, on your first boat · 10 boats.' : '14-day free trial · no card · £49 a month per boat, everything included.'}</p>
@@ -141,8 +141,7 @@ export default function HomePage() {
               Yes, UK law now requires a safety management system on every small commercial workboat, by
               13 December 2026. That part&rsquo;s real. But the panic around it (the countdown clocks, the
               scare emails) isn&rsquo;t coming from the law. It&rsquo;s coming from people trying to sell
-              you something. Here&rsquo;s the calm truth, straight from the guidance you&rsquo;ll actually be
-              measured against:
+              you something. Here&rsquo;s the calm truth, straight from the MCA&rsquo;s own guidance, MGN 710:
             </p>
           </div>
 
@@ -151,7 +150,7 @@ export default function HomePage() {
             <div className="rounded-2xl border border-border-default bg-surface-1 p-6">
               <p className="text-base font-semibold text-text-primary">Yours is meant to be small.</p>
               <blockquote className="mt-3 border-l-2 border-brand-primary/40 pl-4 italic text-text-secondary leading-relaxed">
-                &ldquo;&hellip;proportionate to the size, complexity and risk profile of their operations.&rdquo;
+                &ldquo;&hellip;proportionate to the size, complexity and risk profile of their operations&hellip;&rdquo;
               </blockquote>
               <cite className="mt-3 block not-italic font-mono text-xs text-text-muted">MGN 710, &sect;1.2</cite>
             </div>
@@ -184,13 +183,12 @@ export default function HomePage() {
           <div className="mt-10 max-w-3xl">
             <p className="text-text-secondary leading-relaxed">
               So ignore the three-minute &ldquo;compliance scorecards&rdquo; and the countdown timers. No quiz
-              can tell you your SMS is compliant. A real survey doesn&rsquo;t even assess that. What
-              counts is that you&rsquo;ve <strong className="font-semibold text-text-primary">started</strong>,
+              can tell you your SMS is compliant. What counts is that you&rsquo;ve <strong className="font-semibold text-text-primary">started</strong>,
               and that you&rsquo;re <strong className="font-semibold text-text-primary">honest</strong> about
               where you are.
             </p>
             <p className="mt-6 text-2xl md:text-3xl font-bold text-text-primary leading-snug">
-              Being started and honest is enough. So start today.
+              Started and honest is the right place to begin. So start today.
             </p>
             <CtaRow className="mt-8" showDemoPlaceholder={false} />
           </div>
@@ -211,8 +209,7 @@ export default function HomePage() {
             </h2>
             <p className="mt-5 text-lg text-text-secondary leading-relaxed">
               We didn&rsquo;t just tell you not to panic. We built the whole product around it. SMS
-              Workboat is designed to be honest and proportionate: the same calm, plain-spoken approach the
-              Code actually asks for.
+              Workboat is designed to be honest and to take the proportionate approach MGN 710 describes.
             </p>
           </div>
 
@@ -227,9 +224,9 @@ export default function HomePage() {
               </p>
             </div>
             <div className="rounded-2xl border border-border-default bg-surface-1 p-6">
-              <p className="text-base font-semibold text-text-primary">Every &ldquo;done&rdquo; is one a surveyor could trust.</p>
+              <p className="text-base font-semibold text-text-primary">When something needs a look, it says so.</p>
               <p className="mt-2 text-sm text-text-secondary leading-relaxed">
-                When something needs a look, it says so, plainly. It would rather show you an honest
+                It would rather show you an honest
                 amber than a comforting green that isn&rsquo;t earned. Nothing here is dressed up to look
                 finished when it isn&rsquo;t.
               </p>
@@ -243,11 +240,10 @@ export default function HomePage() {
               </p>
             </div>
             <div className="rounded-2xl border border-border-default bg-surface-1 p-6">
-              <p className="text-base font-semibold text-text-primary">Your surveyor gets exactly what they sample.</p>
+              <p className="text-base font-semibold text-text-primary">Your records, laid out the way a surveyor samples them.</p>
               <p className="mt-2 text-sm text-text-secondary leading-relaxed">
-                When the examination comes, you hand over your self-assessment and the evidence behind it,
-                in their language, the way they actually check it. No last-minute scramble, no separate
-                folder to build.
+                When the examination comes, there&rsquo;s no last-minute scramble and no separate folder to
+                build.
               </p>
             </div>
           </div>
@@ -338,7 +334,7 @@ export default function HomePage() {
               </div>
               <blockquote className="border-l-2 border-accent-cyan/40 pl-4 text-text-secondary leading-relaxed">
                 &ldquo;This isn&rsquo;t a pass/fail - your surveyor or Designated Person decides that.
-                What I can do is show you exactly where you stand.&rdquo;
+                What I can do is show you what your records say.&rdquo;
               </blockquote>
               <p className="mt-4 text-sm text-text-muted">
                 Nova retrieves and cites the Code; it never rules a verdict. The refusal is the feature - 
@@ -410,7 +406,7 @@ export default function HomePage() {
               <p className="mt-2 text-sm text-text-secondary leading-relaxed">
                 Every signed record carries a cryptographic signature. Change a signed record after it&rsquo;s
                 signed and it shows as <strong className="font-semibold text-text-primary">altered</strong> &mdash;
-                so a &ldquo;done&rdquo; is one your surveyor can trust.
+                so you and your surveyor can see it hasn&rsquo;t changed since it was signed.
               </p>
             </div>
             <div className="rounded-2xl border border-border-default bg-surface-1 p-6">
@@ -476,9 +472,7 @@ export default function HomePage() {
               <p className="mt-3 text-text-secondary leading-relaxed">
                 Hand the inspector a link - 4 hours, one boat, read-only, no app. You can see when
                 it&rsquo;s been opened, and kill it any time. They get the same tabbed view you do &mdash;
-                certificates, maintenance, risk assessments, drills, each computed live from your records, not a
-                PDF you assembled the night before. If something&rsquo;s missing, it shows as missing.
-                Surveyors trust records that don&rsquo;t pretend.
+                certificates, maintenance, risk assessments and drills, read from your records as they stand.
               </p>
             </div>
           </div>
@@ -570,9 +564,9 @@ export default function HomePage() {
           <p className="mt-3 text-text-secondary">No tiers, no per-user charges, nothing gated behind a &ldquo;Pro&rdquo; plan.</p>
           <div className="mt-8 grid sm:grid-cols-3 gap-4 text-left">
             {[
-              { icon: ClipboardCheck, t: 'Your annual self-assessment', d: 'Produced from your records.' },
+              { icon: ClipboardCheck, t: 'Your annual self-assessment', d: 'Pre-filled from your records. You check every answer and sign.' },
               { icon: FileText, t: 'Your whole SMS as PDFs', d: 'Download the document pack any time.' },
-              { icon: ShieldCheck, t: 'The inspection pack', d: 'Ready any day of the year.' },
+              { icon: ShieldCheck, t: 'The inspection pack', d: 'Your inspection records, together in one place.' },
             ].map((o) => (
               <div key={o.t} className="rounded-xl border border-border-default bg-surface-1 p-4">
                 <o.icon className="w-5 h-5 text-brand-primary" />
