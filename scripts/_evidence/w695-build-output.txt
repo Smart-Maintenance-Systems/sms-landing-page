@@ -1,0 +1,32 @@
+
+> sms-website@1.0.0 build
+> vite build && vite build --ssr src/entry-server.tsx --outDir dist-ssr && node scripts/prerender.mjs
+
+vite v5.4.21 building for production...
+transforming...
+Browserslist: browsers data (caniuse-lite) is 7 months old. Please run:
+  npx update-browserslist-db@latest
+  Why you should do it regularly: https://github.com/browserslist/update-db#readme
+✓ 1848 modules transformed.
+rendering chunks...
+computing gzip size...
+dist/index.html                   3.79 kB │ gzip:   1.34 kB
+dist/assets/index-DH15Z0sI.css   26.73 kB │ gzip:   5.78 kB
+dist/assets/index-r1UolGDJ.js   380.10 kB │ gzip: 115.25 kB
+✓ built in 17.90s
+vite v5.4.21 building SSR bundle for production...
+transforming...
+✓ 21 modules transformed.
+rendering chunks...
+dist-ssr/entry-server.js  128.50 kB
+✓ built in 628ms
+prerendered / -> dist\index.html
+prerendered /how-it-works -> dist\how-it-works\index.html
+prerendered /pricing -> dist\pricing\index.html
+prerendered /code -> dist\code\index.html
+prerendered /faq -> dist\faq\index.html
+prerendered /about -> dist\about\index.html
+prerendered /privacy -> dist\privacy\index.html
+prerendered /terms -> dist\terms\index.html
+prerendered /apply -> dist\apply\index.html
+prerender: 9 route(s) written.
