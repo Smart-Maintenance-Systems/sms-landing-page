@@ -169,3 +169,24 @@ load (`complete`, natural width > 0), with no horizontal overflow at 390 or 1280
 declined, header hidden for the capture):
 `C:\Users\darre\AppData\Local\Temp\claude\2fd4b33aaa223d88\4dfe0e94-fb5b-44e3-8a59-655e71b9eb23\scratchpad\website\home-at-sea-section-390.png`,
 `...\website\home-at-sea-section-390-swiped.png`, `...\website\home-at-sea-section-1280.png`.
+
+---
+
+# Round 4 · 15 Nov 2026: shot 3 added (founder: "definetly fo shot 3!")
+
+| Published | Shows (read off the image) | Caption on the site |
+|---|---|---|
+| `public/screens/at-sea-job-done-with-photo.webp` (1000×1790, 66 KB, from `framed-3-job-done-with-photo.webp`) | "Mark as done — Gearbox oil"; "Every 6 mo · due 22 Nov 2026 · last 22 May 2026", Due soon; When was it done? 15/11/2026; note "Oil and filter changed."; Photo of this service (optional), Take a photo / Upload a photo, one photo attached, "1 photo · 0.3 MB of 8 MB"; Mark as done | "Mark a job done and add a photo of the service." |
+
+The caption claims only what the shot shows. The shot itself has no "No signal" marker, so the caption does not say
+"no signal"; the section's own words carry that (photos with jobs at sea, `at-sea-words.ts:51-59`).
+
+Layout change: there was not room for three phones beside the text at 1280 (about 170 px each). The words now sit
+above (max-w-3xl), and the three phones sit in one row below, in the order of a trip: the At Sea screen, a job marked
+done with a photo, the job waiting to send. From `sm` up they are three across, 260 px each at 1280. On a phone they
+sit in a swipeable row (72% width each, the next one peeks in), and the page does not scroll sideways.
+
+Checks: `npm run build` exit 0, `npx tsc --noEmit -p .` exit 0. Served on PORT 4321 and stopped by PID. All three
+images load, 258-260 px wide, with no horizontal overflow at 390 or 1280. Section screenshots (same paths as round 3,
+overwritten): `home-at-sea-section-390.png`, `home-at-sea-section-390-swiped.png`, `home-at-sea-section-1280.png`
+in `C:\Users\darre\AppData\Local\Temp\claude\2fd4b33aaa223d88\4dfe0e94-fb5b-44e3-8a59-655e71b9eb23\scratchpad\website\`.

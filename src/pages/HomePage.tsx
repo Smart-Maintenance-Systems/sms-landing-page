@@ -488,8 +488,8 @@ export default function HomePage() {
              (ASM1, live v1.23.0/v1.24.0); cites in WEBSITE-15-NOV-REPORT.md round 2. The screens are real captures of
              the fictional demo boat MV Ironbark. Change a line here the day the product changes. ─────────────── */}
       <section className="relative border-t border-border-subtle py-16 md:py-24">
-        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 grid lg:grid-cols-2 gap-10 items-center">
-          <div>
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="max-w-3xl">
             <div className="flex items-center gap-2 text-brand-primary font-semibold"><Anchor className="w-5 h-5" /> At Sea Mode</div>
             <h2 className="mt-3 text-2xl md:text-3xl font-bold text-text-primary">When the signal goes, switch to At Sea Mode.</h2>
             <p className="mt-4 text-text-secondary leading-relaxed">
@@ -513,9 +513,10 @@ export default function HomePage() {
               needs signal at least once every 30 days to keep working offline.
             </p>
           </div>
-          {/* Real production-build captures (MV Ironbark, demo), framed on a transparent background. On a phone the
-              two shots sit in a swipeable row (the row scrolls, the page does not); side by side from `sm` up. */}
-          <div className="min-w-0 -mx-4 px-4 sm:mx-0 sm:px-0 flex gap-5 overflow-x-auto snap-x snap-mandatory pb-2 sm:overflow-visible sm:justify-center">
+          {/* Real production-build captures (MV Ironbark, demo), framed on a transparent background. In the order of a
+              trip: the At Sea screen, a job marked done with a photo, the job waiting to send. Below the words, three
+              across from `sm` up; on a phone a swipeable row (the row scrolls, the page does not). */}
+          <div className="mt-10 min-w-0 -mx-4 px-4 sm:mx-0 sm:px-0 flex gap-5 lg:gap-10 overflow-x-auto snap-x snap-mandatory pb-2 sm:overflow-visible sm:justify-center">
             <figure className="shrink-0 w-[72%] sm:w-auto sm:flex-1 max-w-[260px] snap-center">
               <img
                 src="/screens/at-sea-mode-no-signal.webp"
@@ -527,6 +528,18 @@ export default function HomePage() {
                 className="w-full h-auto"
               />
               <figcaption className="mt-2 text-xs text-text-muted text-center">No signal: At Sea Mode shows what&rsquo;s due and what you can record.</figcaption>
+            </figure>
+            <figure className="shrink-0 w-[72%] sm:w-auto sm:flex-1 max-w-[260px] snap-center">
+              <img
+                src="/screens/at-sea-job-done-with-photo.webp"
+                width={1000}
+                height={1790}
+                loading="lazy"
+                decoding="async"
+                alt="The Mark as done form for Gearbox oil: the date it was done, a note 'Oil and filter changed.', one photo attached, and the Mark as done button"
+                className="w-full h-auto"
+              />
+              <figcaption className="mt-2 text-xs text-text-muted text-center">Mark a job done and add a photo of the service.</figcaption>
             </figure>
             <figure className="shrink-0 w-[72%] sm:w-auto sm:flex-1 max-w-[260px] snap-center">
               <img
