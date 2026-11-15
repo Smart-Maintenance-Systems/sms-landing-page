@@ -34,7 +34,7 @@ export const SHOTS = {
   inspectorPack: {
     src: '/screens/inspector-pack.png',
     alt: 'Creating a read-only inspector link for the evidence pack in SMS Workboat',
-    caption: 'A read-only link for the inspector - one boat, 4-hour expiry, revoke any time.',
+    caption: 'A read-only link for the inspector - one boat, 4-hour expiry by default (24 hours or 7 days if you choose), revoke any time.',
   },
   certificates: {
     src: '/screens/certificates-dt.png',

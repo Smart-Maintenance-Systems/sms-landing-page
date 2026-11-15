@@ -4,138 +4,189 @@ import { useSeo } from '../lib/seo';
 import { ROUTE_SEO } from '../lib/routeSeo';
 
 /**
- * Privacy policy — plain-English, product-accurate STARTING POINT (matches the honesty brand: no
- * boilerplate we can't stand behind). 🟥 Before public launch the founder must (1) fill the bracketed
- * legal specifics [company registration, registered address, ICO number, contact address, payment
- * provider], and (2) have a solicitor / the ICO's SME resources sanity-check it for their exact setup.
- * Content is accurate to what the product does today; the brackets are the only unknowns.
+ * Privacy notice, version 1 (15 November 2026). Text = GDPR-2 D1 (founder-approved draft 13 Nov 2026), blanks
+ * filled per the founder's decisions of 15 Nov (contact info@smsystems.uk; emergency-contact basis "the operator's
+ * legitimate interests"; version 1 dated the go-live day). `{build NN}` markers use the "today" wording.
+ * 🟥 Every sentence must stay true of the product today. When a build ships (export, closure, log clean-up),
+ * the matching sentence changes the same day. The AI line uses the founder's 12 Nov wording (row 6(a)), checked at
+ * source: no file that calls the AI layer reads the private medical or emergency-contact tables.
  */
+
+const strong = 'text-text-primary';
+const h2 = 'text-xl font-semibold text-text-primary';
+
 export default function PrivacyPage() {
   useSeo(ROUTE_SEO['/privacy']);
   return (
     <div className="pt-24 md:pt-32 pb-24">
       <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
         <p className="text-sm font-semibold text-brand-primary uppercase tracking-wider">Privacy</p>
-        <h1 className="mt-3 text-3xl md:text-4xl font-bold text-text-primary">Privacy policy</h1>
-        <p className="mt-3 text-sm text-text-muted">Last updated: 23 August 2026</p>
+        <h1 className="mt-3 text-3xl md:text-4xl font-bold text-text-primary">Privacy notice</h1>
+        <p className="mt-3 text-sm text-text-muted">Version 1 &middot; 15 November 2026</p>
 
         <div className="mt-8 space-y-8 text-text-secondary leading-relaxed">
           <p>
-            SMS Workboat is a product of Smart Maintenance Systems (&ldquo;we&rdquo;, &ldquo;us&rdquo;). This
-            policy explains what personal data we hold, why, and the rights you have over it. We&rsquo;ve
-            written it in plain English rather than boilerplate. It&rsquo;s written for UK law &mdash; the UK
-            GDPR and the Data Protection Act 2018.
+            This notice explains what personal data SMS Workboat holds, why, who else receives it, and the rights
+            you have. It is written for UK data protection law (the UK GDPR and the Data Protection Act 2018).
           </p>
 
           <section>
-            <h2 className="text-xl font-semibold text-text-primary">Who is responsible for your data</h2>
+            <h2 className={h2}>Who we are</h2>
             <p className="mt-3">
-              For your own <strong className="text-text-primary">account and billing details</strong>, we are
-              the data controller. For the <strong className="text-text-primary">operational data you put into
-              the system</strong> &mdash; your vessels, certificates, drills, maintenance, incidents, and any
-              crew details you enter &mdash; you are the controller and we are your processor: we hold and
-              process that information on your instructions, to run the service for you.
+              SMS Workboat is run by Smart Maintenance Systems Ltd, company number 16459454, Unit 2b Nancegollan
+              Industrial Estate, Helston, TR13 0BN. We are registered with the Information Commissioner&rsquo;s
+              Office, registration ZC237328. For data questions, requests and complaints, email
+              {' '}<span className={strong}>info@smsystems.uk</span>.
             </p>
           </section>
 
           <section>
-            <h2 className="text-xl font-semibold text-text-primary">What we collect</h2>
+            <h2 className={h2}>Two kinds of data, two roles</h2>
             <ul className="mt-3 list-disc pl-5 space-y-2">
-              <li><strong className="text-text-primary">Account details</strong> — your name, email, and password (stored only as a secure hash).</li>
-              <li><strong className="text-text-primary">Your SMS content</strong> — vessel details, certificates and their scans, risk assessments, drills, maintenance records, incidents, policies, and photos you upload.</li>
-              <li><strong className="text-text-primary">Crew details you enter</strong> — names, roles and any certificates you record against your crew. You&rsquo;re responsible for having a basis to enter this; we process it to provide the service to you.</li>
-              <li><strong className="text-text-primary">Billing</strong> — if you take a paid plan, your card details are handled by our payment provider and are never stored on our systems.</li>
-              <li><strong className="text-text-primary">Technical data</strong> — basic logs needed to run and secure the service (e.g. IP address, timestamps, error diagnostics).</li>
+              <li>
+                <strong className={strong}>Your company&rsquo;s safety records</strong> (boats, crew, certificates,
+                drills, maintenance, photos, signatures). Your employer or boat operator decides what is recorded
+                and why. They are the controller. We store and process it for them, on their instructions.
+              </li>
+              <li>
+                <strong className={strong}>Your account with us</strong> (your sign-in, our security logs, how the
+                product is used). We decide that. We are the controller.
+              </li>
             </ul>
           </section>
 
           <section>
-            <h2 className="text-xl font-semibold text-text-primary">Why we use it (our legal bases)</h2>
+            <h2 className={h2}>What we hold</h2>
             <ul className="mt-3 list-disc pl-5 space-y-2">
-              <li><strong className="text-text-primary">To provide the service</strong> you&rsquo;ve signed up for (performance of a contract).</li>
-              <li><strong className="text-text-primary">To keep it secure and working</strong>, and to improve it (our legitimate interests, balanced against your rights).</li>
-              <li><strong className="text-text-primary">To meet our own legal obligations</strong> (for example, tax and accounting records).</li>
+              <li><strong className={strong}>Account:</strong> name, email, password (stored scrambled, never readable), phone and job title if you add them.</li>
+              <li><strong className={strong}>Crew records your operator keeps:</strong> name, role, certificates and their scans, drill and toolbox-talk attendance, familiarisation, signatures you draw or type, photos you take.</li>
+              <li><strong className={strong}>Private, only if you choose:</strong> an emergency contact. This is optional. Only you and authorised account owners within your company can see your emergency contact details. You can delete it at any time.</li>
+              <li><strong className={strong}>Medical notes are not currently being collected.</strong></li>
+              <li><strong className={strong}>Security logs:</strong> when you sign in, from which internet address and device.</li>
+              <li><strong className={strong}>Usage:</strong> which features are used and how long the assistant takes. We do not store what you ask the assistant or what it answers.</li>
             </ul>
           </section>
 
           <section>
-            <h2 className="text-xl font-semibold text-text-primary">Nova (our AI) and your data</h2>
+            <h2 className={h2}>If you are someone&rsquo;s emergency contact</h2>
             <p className="mt-3">
-              Nova retrieves and cites the Workboat Code and helps you organise your records. It never makes a
-              compliance decision &mdash; that stays with you and your surveyor. When Nova answers a question,
-              the relevant text is sent to our AI provider to generate the reply. We do not sell your data, and
-              your content is <strong className="text-text-primary">not used to train third-party AI models</strong>.
+              A crew member gave your name and phone number so their operator can reach you in an emergency. Only
+              that crew member and authorised account owners within their company can see it. To have it removed,
+              ask the crew member, or write to us.
             </p>
           </section>
 
           <section>
-            <h2 className="text-xl font-semibold text-text-primary">Who we share it with</h2>
-            <p className="mt-3">
-              We don&rsquo;t sell your data or share it for advertising. We use a small number of trusted
-              suppliers (sub-processors) purely to run the service, each under a data-processing agreement:
-            </p>
-            <ul className="mt-3 list-disc pl-5 space-y-2">
-              <li>Cloud hosting and file storage (to run the app and store your uploads).</li>
-              <li>Email delivery (for account and notification emails).</li>
-              <li>Our AI provider (to power Nova, as above).</li>
-              <li>A payment provider (only if you&rsquo;re on a paid plan).</li>
+            <h2 className={h2}>Why we use it, and on what basis</h2>
+            <div className="mt-3 overflow-x-auto">
+              <table className="w-full text-sm text-left border-collapse">
+                <thead>
+                  <tr className="border-b border-border-default text-text-primary">
+                    <th className="py-2 pr-3 font-semibold">What</th>
+                    <th className="py-2 pr-3 font-semibold">Why</th>
+                    <th className="py-2 font-semibold">Lawful basis</th>
+                  </tr>
+                </thead>
+                <tbody className="align-top">
+                  <tr className="border-b border-border-subtle"><td className="py-2 pr-3">Your account</td><td className="py-2 pr-3">to give you the service</td><td className="py-2">contract</td></tr>
+                  <tr className="border-b border-border-subtle"><td className="py-2 pr-3">Security logs</td><td className="py-2 pr-3">to keep accounts safe</td><td className="py-2">legitimate interests</td></tr>
+                  <tr className="border-b border-border-subtle"><td className="py-2 pr-3">Usage counts</td><td className="py-2 pr-3">to fix and improve the product</td><td className="py-2">legitimate interests</td></tr>
+                  <tr className="border-b border-border-subtle"><td className="py-2 pr-3">Crew safety records</td><td className="py-2 pr-3">your operator&rsquo;s reasons</td><td className="py-2">your operator decides and tells you</td></tr>
+                  <tr><td className="py-2 pr-3">Emergency contact</td><td className="py-2 pr-3">so your operator can reach someone for you in an emergency</td><td className="py-2">the operator&rsquo;s legitimate interests</td></tr>
+                </tbody>
+              </table>
+            </div>
+          </section>
+
+          <section>
+            <h2 className={h2}>Who else receives it</h2>
+            <ul className="mt-3 list-disc pl-5 space-y-3">
+              <li>
+                <strong className={strong}>Railway</strong> (hosting, database and file storage): everything, as
+                our host, including photos, scans and signatures. Kept in the Netherlands (EU).
+              </li>
+              <li>
+                <strong className={strong}>Twilio SendGrid</strong> (email): your email address and the emails we
+                send you. Kept in the United States.
+              </li>
+              <li>
+                <strong className={strong}>Anthropic</strong> (the AI assistant): questions typed to the
+                assistant; certificate details with crew names; certificate scans you choose to scan; and the
+                titles and dates of maintenance, drill, incident and certificate records when an AI review summary
+                is requested. Kept in the United States. Private medical notes and emergency contacts stored in
+                crew profiles are not sent to it. Documents submitted for AI scanning, including medical fitness
+                certificates, are processed by it. Please do not enter sensitive medical information into the AI
+                assistant. Its terms do not allow it to train its models on this content.
+              </li>
+              <li>
+                <strong className={strong}>A marine examiner</strong>, when your operator gives them a time-limited
+                link: names, roles, certificates and signed records. They can keep a copy.
+              </li>
             </ul>
             <p className="mt-3">
-              We may also disclose data if the law requires it. If we ever change who processes your data,
-              we&rsquo;ll keep this page up to date.
+              We do not sell data or share it for advertising. Where a provider keeps or handles data outside the
+              UK, our agreement with it includes the UK&rsquo;s standard transfer terms (Railway: the UK Addendum,
+              signed 12 November 2026; Twilio SendGrid: the UK International Data Transfer Agreement; Anthropic:
+              the UK Addendum). We update this list the day a provider changes.
             </p>
           </section>
 
           <section>
-            <h2 className="text-xl font-semibold text-text-primary">Where it&rsquo;s kept, and for how long</h2>
+            <h2 className={h2}>How long we keep it</h2>
             <p className="mt-3">
-              Your data is stored on secure servers, protected by encryption in transit and access controls.
-              We keep your data for as long as your account is active. If you close your account, we delete or
-              anonymise your data within a reasonable period, except where we must keep certain records to meet
-              a legal obligation. You can export your records at any time.
+              Safety records are kept for as long as your operator&rsquo;s account is open. After the account
+              closes, personal data will normally be deleted within 90 days, unless a longer retention period is
+              required by law, for example following a reportable accident. For sign-in logs, we are building
+              automatic clean-up; until then we delete them on request. Backups roll off within 89 days.
             </p>
           </section>
 
           <section>
-            <h2 className="text-xl font-semibold text-text-primary">Your rights</h2>
+            <h2 className={h2}>On your phone</h2>
             <p className="mt-3">
-              Under UK data protection law you can ask to access, correct, delete, or receive a copy of your
-              personal data, and you can object to or restrict certain processing. To exercise any of these,
-              contact us (below). You also have the right to complain to the Information Commissioner&rsquo;s
-              Office (ICO) at <span className="text-text-primary">ico.org.uk</span> &mdash; though we&rsquo;d
-              appreciate the chance to put things right first.
+              To work at sea the app keeps on your device: your sign-in, a copy of your boats for up to 30 days,
+              and any work not yet sent. Logging out removes the sign-in and the copy. Unsent work stays until it
+              is sent. We use no advertising or tracking storage in the app. The demo site and this website load
+              analytics only if you accept.
             </p>
           </section>
 
           <section>
-            <h2 className="text-xl font-semibold text-text-primary">Cookies and analytics</h2>
+            <h2 className={h2}>On this website</h2>
             <p className="mt-3">
-              In the app itself we keep cookies to a minimum &mdash; the ones we use are essential to sign you
-              in and keep the service working.
-            </p>
-            <p className="mt-3">
-              On this <strong className="text-text-primary">website</strong> we also use two analytics tools to
-              understand how the site is used and improve it: <strong className="text-text-primary">Google
-              Analytics&nbsp;4</strong> (anonymised usage &mdash; pages viewed, where visitors came from, broad
-              device type) and <strong className="text-text-primary">Microsoft Clarity</strong> (anonymised
-              session recordings and heatmaps; Clarity masks text and form inputs by default). Neither is used
-              for advertising, and we don&rsquo;t sell this data.
-            </p>
-            <p className="mt-3">
-              These run <strong className="text-text-primary">only if you accept</strong> the cookie banner
-              &mdash; nothing analytics-related loads until you choose, and the site works exactly the same if
-              you decline. To change your mind later, clear this site&rsquo;s cookies in your browser and
-              you&rsquo;ll be asked again. We don&rsquo;t use advertising or cross-site tracking cookies.
+              If you accept the cookie banner, this website loads two analytics tools to understand how the site
+              is used: <strong className={strong}>Google Analytics&nbsp;4</strong> (pages viewed, where visitors
+              came from, broad device type) and <strong className={strong}>Microsoft Clarity</strong> (session
+              recordings and heatmaps; Clarity masks text and form inputs by default). Nothing analytics-related
+              loads until you choose, and the site works the same if you decline. To change your mind, clear this
+              site&rsquo;s cookies in your browser and you will be asked again. Neither tool is used for
+              advertising.
             </p>
           </section>
 
           <section>
-            <h2 className="text-xl font-semibold text-text-primary">Contact us</h2>
+            <h2 className={h2}>Your rights</h2>
             <p className="mt-3">
-              Questions about your data, or want to exercise a right? Email
-              {' '}<span className="text-text-primary">info@smsystems.uk</span>.
-              SMS Workboat is operated by Smart Maintenance Systems Ltd, Unit 2b Nancegollan Industrial
-              Estate, Nancegollan, Helston, England, TR13 0BN, company number 16459454.
+              You can ask for a copy of your data, to have it corrected or deleted, or to object to how it is used.
+              For records your operator keeps, ask them first; we will help them answer. For your account, ask us.
+              We reply within one month. Some safety records may have to be kept by your operator; if so we will
+              tell you why.
+            </p>
+          </section>
+
+          <section>
+            <h2 className={h2}>Complaints</h2>
+            <p className="mt-3">
+              Write to <span className={strong}>info@smsystems.uk</span>. We acknowledge within 30 days and answer
+              without undue delay. You can also complain to the Information Commissioner&rsquo;s Office at
+              {' '}<a href="https://ico.org.uk/make-a-complaint/" className="text-brand-primary hover:underline" rel="noopener noreferrer" target="_blank">ico.org.uk/make-a-complaint</a>.
+            </p>
+          </section>
+
+          <section>
+            <h2 className={h2}>Changes</h2>
+            <p className="mt-3">
+              We will tell you in the app before we use your data in a new way. Version 1, 15 November 2026.
             </p>
           </section>
         </div>

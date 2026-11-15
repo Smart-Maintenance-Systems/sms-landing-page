@@ -470,7 +470,8 @@ export default function HomePage() {
             <div className="rounded-2xl border border-border-default bg-surface-1 p-6">
               <div className="flex items-center gap-2 text-brand-primary font-semibold"><ShieldCheck className="w-5 h-5" /> Survey day</div>
               <p className="mt-3 text-text-secondary leading-relaxed">
-                Hand the inspector a link - 4 hours, one boat, read-only, no app. You can see when
+                Hand the inspector a link - one boat, read-only, no app, 4 hours by default (or 24 hours or
+                7 days). You can see when
                 it&rsquo;s been opened, and kill it any time. They get the same tabbed view you do &mdash;
                 certificates, maintenance, risk assessments and drills, read from your records as they stand.
               </p>
@@ -492,9 +493,11 @@ export default function HomePage() {
             Keep working when the signal drops - record drills, snap evidence, sign crew on.
           </h2>
           <p className="mt-4 text-text-secondary leading-relaxed">
-            It saves on board and syncs itself when you&rsquo;re back in range. A photo you snap offline
+            Open the app with a signal before you go out. With no signal, the phone keeps the work and sends
+            it when you&rsquo;re back in range. A photo you snap offline
             reads <span className="text-text-primary font-medium">&ldquo;On board&rdquo;</span> - not
-            &ldquo;Saved&rdquo; - until the server confirms it. Honesty you can see.
+            &ldquo;Saved&rdquo; - until the server confirms it. Honesty you can see. Some things, like signing
+            your self-assessment, wait for a signal.
           </p>
           <div className="mt-6 flex items-center justify-center gap-4 text-sm">
             <span className="inline-flex items-center gap-1.5 rounded-full bg-surface-2 px-3 py-1 text-text-secondary"><WifiOff className="w-3.5 h-3.5" /> On board</span>

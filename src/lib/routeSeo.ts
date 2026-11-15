@@ -69,7 +69,7 @@ export const FAQS: Faq[] = [
   },
   {
     q: 'What happens at an inspection or survey?',
-    a: 'MGN 710 says: “Sampling is intended to be brief and focused; it does not assess the effectiveness of the SMS. Instead, sampling verifies that the demonstration accurately reflects implementation in practice. The CA’s sample, when based on a self-assessment, should focus on items explicitly referenced in the self-assessment. Some items may require brief follow-up, such as asking how a response was determined or viewing simple supporting evidence.” SMS Workboat lets you pull your inspection records together when you need them, and gives you a read-only inspector link - four hours, one boat, no app - that shows you when it has been opened and can be revoked any time. Whether you comply is your surveyor’s or Designated Person’s decision, not ours.',
+    a: 'MGN 710 says: “Sampling is intended to be brief and focused; it does not assess the effectiveness of the SMS. Instead, sampling verifies that the demonstration accurately reflects implementation in practice. The CA’s sample, when based on a self-assessment, should focus on items explicitly referenced in the self-assessment. Some items may require brief follow-up, such as asking how a response was determined or viewing simple supporting evidence.” SMS Workboat lets you pull your inspection records together when you need them, and gives you a read-only inspector link - one boat, no app, four hours by default (or 24 hours or 7 days if you choose) - that shows you when it has been opened and can be revoked any time. Whether you comply is your surveyor’s or Designated Person’s decision, not ours.',
     cite: 'MGN 710 (M), section 4.3',
   },
   {
@@ -84,7 +84,7 @@ export const FAQS: Faq[] = [
   },
   {
     q: 'Does it work offline, out on the water?',
-    a: 'Yes. Open it once with a signal so it loads onto the phone, and after that it keeps working out at sea with no signal: record drills, snap evidence and sign crew on. It saves on board and syncs itself when you are back in range - and it stays honest about which is which: a photo you take offline reads “On board”, not “Saved”, until the server confirms it, so you can always see what has actually landed. The only limits are the very first load (that needs a signal, to load the app onto the phone) and a very long stretch fully offline, after which it will ask you to sign in again when you are next in range.',
+    a: 'For the everyday records, yes. Open the app with a signal before you go out so the phone has a copy of your boat. With no signal you can then record drills, snap evidence and sign crew on: the phone keeps the work and sends it when you are back in range - and it stays honest about which is which: a photo you take offline reads “On board”, not “Saved”, until the server confirms it. Some things still need a signal, such as signing your self-assessment. A phone needs to be opened with a signal at least once every 30 days to keep working offline.',
   },
   {
     q: 'How does crew sign onto a boat?',
@@ -160,15 +160,15 @@ export const ROUTE_SEO: Record<string, SeoOptions> = {
     path: '/about',
   },
   '/privacy': {
-    title: 'Privacy policy - SMS Workboat',
+    title: 'Privacy notice - SMS Workboat',
     description:
-      'What personal data SMS Workboat holds, why, and your rights over it - in plain English, written for UK data protection law (UK GDPR / Data Protection Act 2018).',
+      'What personal data SMS Workboat holds, why, who else receives it, and your rights over it - in plain English, written for UK data protection law (UK GDPR / Data Protection Act 2018).',
     path: '/privacy',
   },
   '/terms': {
     title: 'Terms of service - SMS Workboat',
     description:
-      'The plain-English terms for using SMS Workboat: what it is (a tool to build and maintain your SMS) and isn\'t (a guarantee of passing survey), billing, your content, and liability.',
+      'The plain-English terms for using SMS Workboat: what it is (a tool to build and maintain your SMS) and isn\'t (a guarantee of passing survey), the free trial, your records, data processing, and liability.',
     path: '/terms',
   },
   '/apply': {

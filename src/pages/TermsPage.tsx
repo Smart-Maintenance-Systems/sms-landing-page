@@ -4,12 +4,19 @@ import { useSeo } from '../lib/seo';
 import { ROUTE_SEO } from '../lib/routeSeo';
 
 /**
- * Terms of service — plain-English, product-accurate STARTING POINT. 🟥 Before public launch the founder
- * must (1) fill the bracketed specifics [company registration, registered address, payment provider], confirm
- * the pricing clause matches the live plans, and (2) have a solicitor sanity-check the liability + billing
- * terms for their setup. The "what this is / isn't" clause is load-bearing and matches the product's honesty
- * line (a tool, never a guarantee of passing survey) — keep it.
+ * Terms, version 1 (15 November 2026). Text = GDPR-2 D2 (founder-approved draft 13 Nov 2026), blanks filled per
+ * the founder's decisions of 15 Nov. 🟥 No promise the product does not keep today:
+ *  - section 4: no payment wording until a payment provider exists (D2's own instruction);
+ *  - section 6: account closure uses the founder-approved row 2a sentence (27, 12 Nov). The fuller closure steps
+ *    in D2 wait for build B9 ("B9 must be implemented and tested before we publish the full account-closure
+ *    promise", founder 13 Nov);
+ *  - section 8: the liability wording is the previous website wording, kept until a solicitor reviews it.
+ * The "not a guarantee of compliance" clause is load-bearing; keep it.
  */
+
+const strong = 'text-text-primary';
+const h2 = 'text-xl font-semibold text-text-primary';
+
 export default function TermsPage() {
   useSeo(ROUTE_SEO['/terms']);
   return (
@@ -17,112 +24,117 @@ export default function TermsPage() {
       <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
         <p className="text-sm font-semibold text-brand-primary uppercase tracking-wider">Terms</p>
         <h1 className="mt-3 text-3xl md:text-4xl font-bold text-text-primary">Terms of service</h1>
-        <p className="mt-3 text-sm text-text-muted">Last updated: 22 July 2026</p>
+        <p className="mt-3 text-sm text-text-muted">Version 1 &middot; 15 November 2026</p>
 
         <div className="mt-8 space-y-8 text-text-secondary leading-relaxed">
-          <p>
-            These terms are the agreement between you and Smart Maintenance Systems (&ldquo;we&rdquo;,
-            &ldquo;us&rdquo;) for the use of SMS Workboat. By creating an account or using the service, you
-            agree to them. We&rsquo;ve kept them in plain English.
-          </p>
-
           <section>
-            <h2 className="text-xl font-semibold text-text-primary">What SMS Workboat is &mdash; and isn&rsquo;t</h2>
+            <h2 className={h2}>1. What this is</h2>
             <p className="mt-3">
-              SMS Workboat is a tool to help you <strong className="text-text-primary">build and maintain your
-              Safety Management System</strong> and keep your records ready for inspection. It is
-              <strong className="text-text-primary"> not</strong> a guarantee of compliance, and it does not
-              decide whether you pass a survey. Nova retrieves and cites the Workboat Code; it never rules a
-              verdict. Responsibility for your vessel&rsquo;s safety and compliance remains yours as the
-              operator, and whether you meet the Code is a matter for your surveyor, Designated Person, and the
-              MCA &mdash; not for us. You must always exercise your own professional judgement.
+              These terms are the agreement between you (the operator) and Smart Maintenance Systems Ltd, company
+              number 16459454, for SMS Workboat: a tool to build and keep a Safety Management System and its
+              records.
             </p>
           </section>
 
           <section>
-            <h2 className="text-xl font-semibold text-text-primary">Your account</h2>
+            <h2 className={h2}>2. Not a guarantee of compliance</h2>
             <p className="mt-3">
-              You&rsquo;re responsible for the information you enter, for keeping your login secure, and for the
-              activity under your account. Keep your details accurate. You must have a proper basis for any
-              personal data you record about your crew, and you&rsquo;re responsible for that data as its
-              controller (see our <Link to="/privacy" className="text-brand-primary hover:underline">Privacy policy</Link>).
+              SMS Workboat helps you record and check. It <strong className={strong}>does not decide whether you
+              comply or pass an examination</strong>. You remain responsible as the operator.
             </p>
           </section>
 
           <section>
-            <h2 className="text-xl font-semibold text-text-primary">Subscription and billing</h2>
+            <h2 className={h2}>3. Your account</h2>
+            <p className="mt-3">
+              Keep your sign-in safe. You are responsible for what is entered under your account and for who you
+              invite. You decide who you give an examiner&rsquo;s link to.
+            </p>
+          </section>
+
+          <section>
+            <h2 className={h2}>4. Trial and payment</h2>
+            <p className="mt-3">The trial is free. We will tell you before any charge.</p>
+          </section>
+
+          <section>
+            <h2 className={h2}>5. Your records are yours</h2>
+            <p className="mt-3">We do not own or sell them.</p>
             <ul className="mt-3 list-disc pl-5 space-y-2">
-              <li>Paid plans are billed per boat. The current price is shown on our <Link to="/pricing" className="text-brand-primary hover:underline">pricing page</Link>; that page prevails if anything here differs.</li>
-              <li>Any free trial runs for the stated period; you won&rsquo;t be charged unless you choose to continue on a paid plan.</li>
-              <li>Subscriptions renew automatically until you cancel. You can cancel at any time, effective at the end of your current billing period.</li>
-              <li>Payments are handled securely by our payment provider. We may change our prices with reasonable notice; changes never apply to a period you&rsquo;ve already paid for.</li>
+              <li><strong className={strong}>A copy:</strong> ask us and we will send your records within 30 days.</li>
+              <li><strong className={strong}>Keep your own copies of anything critical.</strong></li>
             </ul>
           </section>
 
           <section>
-            <h2 className="text-xl font-semibold text-text-primary">Acceptable use</h2>
+            <h2 className={h2}>6. Closing your account</h2>
             <p className="mt-3">
-              Use the service lawfully and as intended. Don&rsquo;t attempt to break, overload, or gain
-              unauthorised access to it, don&rsquo;t upload unlawful content, and don&rsquo;t use it to
-              misrepresent your compliance to a third party. We may suspend accounts that put the service or
-              other users at risk.
+              To close your account, contact us and we will explain the steps. After the account closes, personal
+              data will normally be deleted within 90 days, unless a longer retention period is required by law,
+              for example following a reportable accident. Backups roll off within 89 days.
             </p>
           </section>
 
           <section>
-            <h2 className="text-xl font-semibold text-text-primary">Your content</h2>
+            <h2 className={h2}>7. Data processing</h2>
             <p className="mt-3">
-              Your records are yours. You grant us only the permission we need to host and process them so the
-              service works. You can export your data at any time, and you can delete it by closing your
-              account. We don&rsquo;t claim ownership of your content and we don&rsquo;t sell it.
+              For the records you keep about your crew, you are the controller and we are your processor.
+            </p>
+            <ol className="mt-3 list-decimal pl-5 space-y-2">
+              <li><strong className={strong}>What and how long:</strong> storing and processing your safety records, for as long as your account is open.</li>
+              <li><strong className={strong}>Kind of data and people:</strong> names, roles, certificates, attendance, signatures, photos; optional emergency contacts; about your crew and their contacts. Medical notes are not currently being collected.</li>
+              <li><strong className={strong}>Your instructions only:</strong> we use this data to provide the service to you and for nothing else, unless the law requires it. Separately, we count how the product is used so we can improve it; that is described in our <Link to="/privacy" className="text-brand-primary hover:underline">privacy notice</Link>.</li>
+              <li><strong className={strong}>Confidence:</strong> anyone of ours who can reach your data is bound to keep it confidential.</li>
+              <li><strong className={strong}>Security:</strong> we keep it secure in the ways described in the privacy notice.</li>
+              <li><strong className={strong}>Others we use:</strong> the providers named in the privacy notice. We tell you before adding one. If you object and we cannot agree, you may close your account.</li>
+              <li><strong className={strong}>Helping you:</strong> we help you answer your crew&rsquo;s data requests, and with security, breaches and risk assessments.</li>
+              <li><strong className={strong}>Breaches:</strong> if your data is affected we tell you without undue delay after becoming aware.</li>
+              <li><strong className={strong}>At the end:</strong> we delete or return your data as in section 6.</li>
+              <li><strong className={strong}>Checking us:</strong> we give you the information you reasonably need to check we keep these terms.</li>
+            </ol>
+            <p className="mt-3">
+              Your side: you tell your crew what you record about them and why, and you only put in data you are
+              entitled to.
             </p>
           </section>
 
           <section>
-            <h2 className="text-xl font-semibold text-text-primary">Availability</h2>
+            <h2 className={h2}>8. Availability and liability</h2>
             <p className="mt-3">
-              We work hard to keep the service available and reliable, but it&rsquo;s provided &ldquo;as
-              is&rdquo;. There may be occasional downtime for maintenance or reasons beyond our control. Keep
-              your own copies of anything critical &mdash; the export is there for exactly that.
+              We work hard to keep the service available and reliable, but it is provided &ldquo;as is&rdquo;.
+              There may be occasional downtime for maintenance or reasons beyond our control.
+            </p>
+            <p className="mt-3">
+              Nothing in these terms limits liability that cannot be limited by law (such as for death or personal
+              injury caused by negligence, or for fraud). Subject to that, we are not liable for indirect or
+              consequential loss, or for any outcome of a survey, inspection, or enforcement action
+              &mdash; those depend on your operation and the assessor&rsquo;s judgement, not on the software. Our
+              total liability to you is limited to the fees you paid us in the 12 months before the claim.
             </p>
           </section>
 
           <section>
-            <h2 className="text-xl font-semibold text-text-primary">Liability</h2>
+            <h2 className={h2}>9. Fair use</h2>
             <p className="mt-3">
-              Nothing in these terms limits liability that can&rsquo;t be limited by law (such as for death or
-              personal injury caused by negligence, or for fraud). Subject to that, we&rsquo;re not liable for
-              indirect or consequential loss, or for any outcome of a survey, inspection, or enforcement
-              action &mdash; those depend on your operation and the assessor&rsquo;s judgement, not on the
-              software. Our total liability to you is limited to the fees you paid us in the 12 months before
-              the claim.
+              Lawful use only. Do not try to break in, overload the service, or misrepresent your compliance to
+              anyone using our documents.
             </p>
           </section>
 
           <section>
-            <h2 className="text-xl font-semibold text-text-primary">Ending the agreement</h2>
+            <h2 className={h2}>10. Changes, ending, law</h2>
             <p className="mt-3">
-              You can stop using the service and close your account at any time. We may suspend or end access
-              if these terms are seriously or repeatedly broken. On closure, you can export your data first,
-              after which we&rsquo;ll delete or anonymise it as described in the Privacy policy.
+              We tell you before a material change. You can leave at any time (section 6). We may suspend an
+              account that puts the service or others at risk. English and Welsh law; courts of England and Wales.
             </p>
           </section>
 
           <section>
-            <h2 className="text-xl font-semibold text-text-primary">Changes and governing law</h2>
+            <h2 className={h2}>Contact</h2>
             <p className="mt-3">
-              We may update these terms; we&rsquo;ll post the new version here with an updated date and, for
-              material changes, let you know. These terms are governed by the law of England and Wales, and
-              the courts of England and Wales have jurisdiction.
-            </p>
-          </section>
-
-          <section>
-            <h2 className="text-xl font-semibold text-text-primary">Contact</h2>
-            <p className="mt-3">
-              Questions? Email <span className="text-text-primary">info@smsystems.uk</span>. SMS Workboat
-              is operated by Smart Maintenance Systems Ltd, Unit 2b Nancegollan Industrial Estate,
-              Nancegollan, Helston, England, TR13 0BN, company number 16459454.
+              Email <span className={strong}>info@smsystems.uk</span>. Smart Maintenance Systems Ltd, Unit 2b
+              Nancegollan Industrial Estate, Helston, TR13 0BN, company number 16459454. Version 1, 15 November
+              2026.
             </p>
           </section>
         </div>

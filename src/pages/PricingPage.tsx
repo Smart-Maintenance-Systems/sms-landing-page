@@ -22,7 +22,7 @@ const INCLUDED = [
   'Time-limited, read-only inspector links',
   'Nova - the Code assistant, cited answers, no verdicts',
   'The fleet office the moment you add a second boat',
-  'Works offline on board, syncs when you’re back in range',
+  'Record drills, evidence and crew sign-on with no signal; sent when you’re back in range',
 ];
 
 const OUTPUTS = [
