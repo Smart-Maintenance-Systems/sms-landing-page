@@ -84,7 +84,7 @@ export const FAQS: Faq[] = [
   },
   {
     q: 'Does it work offline, out on the water?',
-    a: 'For the everyday records, yes. Open the app with a signal before you go out so the phone has a copy of your boat. With no signal you can then record drills, snap evidence and sign crew on: the phone keeps the work and sends it when you are back in range - and it stays honest about which is which: a photo you take offline reads “On board”, not “Saved”, until the server confirms it. Some things still need a signal, such as signing your self-assessment. A phone needs to be opened with a signal at least once every 30 days to keep working offline.',
+    a: 'For the everyday records, yes. Open the app with signal before you sail so the phone has a copy of your boat. When the signal goes, At Sea Mode gives you one screen with what is due on the boat and the records you can make: jobs done, defects, engine hours and toolbox talks, and, depending on your role, drills and incidents, with photos. You can also read and sign your documents. It all saves on the phone, shows as waiting to send, and sends itself when signal is back. Some things still need signal, such as signing your self-assessment and opening a job’s documents and service history. A phone needs signal at least once every 30 days to keep working offline.',
   },
   {
     q: 'How does crew sign onto a boat?',

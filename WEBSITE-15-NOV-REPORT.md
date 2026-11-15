@@ -64,3 +64,77 @@ Served with `node server.js` on PORT 4321 (PID 1628, stopped after). Every page 
 Screenshots (outside the repo), `C:\Users\darre\AppData\Local\Temp\claude\2fd4b33aaa223d88\4dfe0e94-fb5b-44e3-8a59-655e71b9eb23\scratchpad\website\`:
 `privacy-390.png`, `privacy-1280.png`, `terms-390.png`, `terms-1280.png`, `home-390.png`, `home-1280.png`,
 `faq-390.png`, `faq-1280.png`, `pricing-390.png`, `pricing-1280.png`.
+
+Round 1 pushed by the keeper (`1751eb4`), live on www.smsworkboat.co.uk.
+
+---
+
+# Round 2 · 15 Nov 2026 (founder: "keep £49, keep nvidia, keep compliant, fix the 30 days. also our offline section.. we have at sea mode now?")
+
+Items 1 to 3 of the round 1 founder list are settled as **keep**, with no change. Platform tree `e9257d7d8`.
+
+## 1 · Privacy, "On your phone"
+
+Old: "your sign-in, a copy of your boats for up to 30 days, and any work not yet sent. Logging out removes the sign-in
+and the copy. Unsent work stays until it is sent."
+New: "your sign-in, which keeps working without signal for up to 30 days after you last used the app with signal; a
+copy of the records for the boats you can open, refreshed while you have signal; and any work not yet sent. Logging
+out removes the sign-in and the copy. Unsent work stays on the phone until it is sent."
+
+| Claim | Evidence |
+|---|---|
+| 30-day offline sign-in, counted from the last use with signal | `apps/web/src/features/auth/offline-auth.ts:21` (`GRACE_CAP_MS`), `:95` |
+| the copy covers **every boat the person can open**, not only the open one | `apps/web/src/features/workboat/hooks/useWb3OfflinePrefetch.ts:191-198` (OFF1b Part A, founder decision (i), 30 Oct), loops `:261-265`, `:279-291`. **The brief's "only the boat you have open is saved" (finish Part 4 text, `:224-291`) is out of date:** the code now saves the active boat plus every boat in the switcher. |
+| refreshed while you have signal | same file, the repeat run on an interval or when the page returns (comment above `run`, `:229-235`) |
+| log out removes sign-in and copy, never unsent work | `apps/web/src/features/workboat/hooks/useAccountLogOut.ts:41-48` (`clearAuth`, `removeReFetchableCopy`; "never the outbox") |
+
+Terms §5 "within 30 days" unchanged, as instructed.
+
+## 2 · At Sea Mode (Home section, FAQ answer, Pricing line)
+
+Home section, replacing "Works where you work" (`src/pages/HomePage.tsx`, the W-S2 section):
+
+| Words on the site | Evidence |
+|---|---|
+| "When the signal goes, switch to At Sea Mode." / "One screen for the boat you're on: what's due, and the records you can make. What you record is saved on the phone and sends itself when signal's back." | CHANGELOG-WORKBOAT.md v1.23.0 ("when the signal goes, the app now switches to At Sea Mode: one clear screen with what's due on this boat and the records you can make"); `AtSeaBanner.tsx:30`; `at-sea-words.ts:62` ("It all saves on this phone and sends itself when signal's back.") |
+| "What's due on this boat, from the copy saved on the phone, with the time it was last checked with the server." | `at-sea-words.ts:67` (What's due), `:94-95` ("Checked with the server {time}"); `AtSeaBanner.tsx:30` |
+| "Record jobs done, defects, engine hours and toolbox talks - and, depending on your role, drills and incidents. Photos go with jobs, defects, drills and incidents." | `at-sea-words.ts:51-59` (photo rule in the header comment), `:78-80` (crew / actor / master lists) |
+| "Read and sign your documents. Your signatures send when you have signal." | `at-sea-words.ts:61`; `AtSeaScreen.tsx:370` |
+| "A job you mark done moves to 'waiting to send', with the time you did it, so it isn't done twice by mistake." | `at-sea-words.ts:104-109` ("Done on this phone, waiting to send"; "Done {date}, recorded {time} by you. Waiting for signal to send."); CHANGELOG v1.24.0 ("No more doing a job twice by mistake") |
+| "Leave a form half done and it offers Carry on or Discard next time." | `DraftPrompt.tsx:4-5`; CHANGELOG v1.23.0 ("Unfinished forms are kept") |
+| "Open the app with signal before you sail, so the phone has your boat's copy." | `at-sea-words.ts:24-25` (`AT_SEA_NOT_READY`: "Connect to the internet and open SMS to prepare At-Sea Mode") |
+| "Some things still need signal: signing your self-assessment, and a job's documents and service history." | `offline/outbox-types.ts:40` ("SA-sign stays online"); `at-sea-words.ts:98` |
+| "A phone needs signal at least once every 30 days to keep working offline." | `offline-auth.ts:21`; `at-sea-words.ts:28-29` (due list unavailable when more than 30 days old) |
+
+FAQ "Does it work offline?" (`src/lib/routeSeo.ts`): rewritten around At Sea Mode with the same facts and cites
+(adds nothing beyond the table). Pricing included-list line: "At Sea Mode: record jobs, defects, hours and toolbox
+talks with no signal; sent when signal's back" (`at-sea-words.ts:78`, the crew list, true for every role).
+
+Removed: the "On board → Saved" pills. "On board" is the label on the photo strip (`SessionShotStrip.tsx:9`), not
+At Sea's waiting row, so the new section uses At Sea's own words instead.
+
+Deliberately not claimed: the in-app camera (v1.24.0 notes it is walked on Android only, iPhone not walked); anything
+about iPhone; "works anywhere"; any compliance or approval word.
+
+## 3 · Images (real captures, fictional demo boat MV Ironbark)
+
+| Published | Source (platform repo) | Crop | Size |
+|---|---|---|---|
+| `public/screens/at-sea-mode.png` (600×1115) | `BUILD_STAGES/FABLE/AUDITS/WB3-VISUAL-FIX-1-MERGED-BROWSER-EVIDENCE/phone-own-at-sea-foot.png` | y 60-1510: from "Signed in as Frank Ironbark" to "Checked with the server 14 Nov, 10:31"; drops the Next.js dev "N" bubble (y 1575+) and the half-cut boat name | 57 KB (128-colour PNG) |
+| `public/screens/at-sea-whats-due.png` (388×416) | `.../WB3-4B-MERGED-BROWSER-EVIDENCE/2-named-plan-met-at-sea-whats-due.png` | y 140-556: three jobs (Jet unit greasing, Gearbox oil, Main engine oil & filters) with Due soon and Mark done; drops the drills block, the "N" bubble and a 3px edge line | 9 KB |
+
+Rejected: `phone-own-at-sea-top.png` and `w390-at-sea-top.png` (the "N" bubble covers "Boat essentials"; the header
+shows the "Signal's back." chip); `1-plan-open-nameless-at-sea-whats-due.png` (test name "4B-MERGED-TEST planned fire
+drill"); the VISUAL-FIX-2/3/4 "home-offline" shots (full-app home with offline chips, not At Sea).
+
+**Fresh shots that would help (not taken: the app was not started):** a "Done on this phone, waiting to send" row
+with its time; the record form with a photo attached; At Sea at the top with the boat name and "No signal." in the
+header; all on MV Ironbark, a production build (no "N" bubble), 390 wide.
+
+## 4 · Build and screenshots
+
+`npm run build` exit 0 (9 routes prerendered); `npx tsc --noEmit -p .` exit 0. Served on PORT 4321, stopped by PID.
+Every page 200, no horizontal overflow at 390 or 1280. Screenshots in the same scratchpad folder as round 1 (overwritten
+with round 2): `home-390.png`, `home-1280.png`, `faq-*.png`, `pricing-*.png`, `privacy-*.png`, `terms-*.png`, plus
+the section alone: `home-at-sea-section-390.png`, `home-at-sea-section-1280.png` (the sticky header and the cookie
+banner appear over the section in these element captures; they are page chrome, not part of the section).

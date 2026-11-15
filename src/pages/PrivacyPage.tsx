@@ -144,9 +144,10 @@ export default function PrivacyPage() {
           <section>
             <h2 className={h2}>On your phone</h2>
             <p className="mt-3">
-              To work at sea the app keeps on your device: your sign-in, a copy of your boats for up to 30 days,
-              and any work not yet sent. Logging out removes the sign-in and the copy. Unsent work stays until it
-              is sent. We use no advertising or tracking storage in the app. The demo site and this website load
+              To work at sea the app keeps on your device: your sign-in, which keeps working without signal for
+              up to 30 days after you last used the app with signal; a copy of the records for the boats you can
+              open, refreshed while you have signal; and any work not yet sent. Logging out removes the sign-in and
+              the copy. Unsent work stays on the phone until it is sent. We use no advertising or tracking storage in the app. The demo site and this website load
               analytics only if you accept.
             </p>
           </section>

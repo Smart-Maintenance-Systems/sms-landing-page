@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import {
-  ChevronRight, ShieldCheck, Wifi, WifiOff, Camera, Anchor, QrCode, Scale,
+  ChevronRight, ShieldCheck, Camera, Anchor, QrCode, Scale,
   Ship, CheckCircle2, FileText, ClipboardCheck, Sparkles, BellRing,
 } from 'lucide-react';
 import Screenshot from '../components/Screenshot';
@@ -484,25 +484,58 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* ── W-S2 - WORKS WHERE YOU WORK (offline) — centered single column (the On board→Saved pills are
-             the visual; no image needed, and the live demo carries the motion). ─────────────────────── */}
+      {/* ── W-S2 - AT SEA MODE (website round 2, founder 15 Nov). 🟥 Every line is what the product does today
+             (ASM1, live v1.23.0/v1.24.0); cites in WEBSITE-15-NOV-REPORT.md round 2. The screens are real captures of
+             the fictional demo boat MV Ironbark. Change a line here the day the product changes. ─────────────── */}
       <section className="relative border-t border-border-subtle py-16 md:py-24">
-        <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <div className="flex items-center justify-center gap-2 text-status-warning font-semibold"><WifiOff className="w-5 h-5" /> Works where you work</div>
-          <h2 className="mt-3 text-2xl md:text-3xl font-bold text-text-primary">
-            Keep working when the signal drops - record drills, snap evidence, sign crew on.
-          </h2>
-          <p className="mt-4 text-text-secondary leading-relaxed">
-            Open the app with a signal before you go out. With no signal, the phone keeps the work and sends
-            it when you&rsquo;re back in range. A photo you snap offline
-            reads <span className="text-text-primary font-medium">&ldquo;On board&rdquo;</span> - not
-            &ldquo;Saved&rdquo; - until the server confirms it. Honesty you can see. Some things, like signing
-            your self-assessment, wait for a signal.
-          </p>
-          <div className="mt-6 flex items-center justify-center gap-4 text-sm">
-            <span className="inline-flex items-center gap-1.5 rounded-full bg-surface-2 px-3 py-1 text-text-secondary"><WifiOff className="w-3.5 h-3.5" /> On board</span>
-            <ChevronRight className="w-4 h-4 text-text-muted" />
-            <span className="inline-flex items-center gap-1.5 rounded-full bg-surface-2 px-3 py-1 text-status-success"><Wifi className="w-3.5 h-3.5" /> Saved</span>
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 grid lg:grid-cols-2 gap-10 items-center">
+          <div>
+            <div className="flex items-center gap-2 text-brand-primary font-semibold"><Anchor className="w-5 h-5" /> At Sea Mode</div>
+            <h2 className="mt-3 text-2xl md:text-3xl font-bold text-text-primary">When the signal goes, switch to At Sea Mode.</h2>
+            <p className="mt-4 text-text-secondary leading-relaxed">
+              One screen for the boat you&rsquo;re on: what&rsquo;s due, and the records you can make. What you
+              record is saved on the phone and sends itself when signal&rsquo;s back.
+            </p>
+            <ul className="mt-5 space-y-3 text-text-secondary">
+              {[
+                'What’s due on this boat, from the copy saved on the phone, with the time it was last checked with the server.',
+                'Record jobs done, defects, engine hours and toolbox talks - and, depending on your role, drills and incidents. Photos go with jobs, defects, drills and incidents.',
+                'Read and sign your documents. Your signatures send when you have signal.',
+                'A job you mark done moves to “waiting to send”, with the time you did it, so it isn’t done twice by mistake.',
+                'Leave a form half done and it offers Carry on or Discard next time.',
+              ].map((f) => (
+                <li key={f} className="flex items-start gap-2"><CheckCircle2 className="w-4 h-4 mt-1 text-status-success shrink-0" /> <span>{f}</span></li>
+              ))}
+            </ul>
+            <p className="mt-5 text-sm text-text-muted leading-relaxed">
+              Open the app with signal before you sail, so the phone has your boat&rsquo;s copy. Some things still
+              need signal: signing your self-assessment, and a job&rsquo;s documents and service history. A phone
+              needs signal at least once every 30 days to keep working offline.
+            </p>
+          </div>
+          <div className="flex flex-col sm:flex-row items-center sm:items-start justify-center gap-6">
+            <figure className="w-full max-w-[280px]">
+              <img
+                src="/screens/at-sea-mode.png"
+                width={600}
+                height={1115}
+                loading="lazy"
+                alt="The At Sea Mode screen for MV Ironbark: what's due, record something, to read and sign, waiting to send, and the time it was last checked with the server"
+                className="w-full h-auto rounded-xl border border-border-default"
+              />
+              <figcaption className="mt-2 text-xs text-text-muted text-center">At Sea Mode on a phone.</figcaption>
+            </figure>
+            <figure className="w-full max-w-[280px]">
+              <img
+                src="/screens/at-sea-whats-due.png"
+                width={388}
+                height={416}
+                loading="lazy"
+                alt="At Sea Mode's what's due list: jobs with their due dates, each with a Mark done button"
+                className="w-full h-auto rounded-xl border border-border-default"
+              />
+              <figcaption className="mt-2 text-xs text-text-muted text-center">What&rsquo;s due, with Mark done beside each job.</figcaption>
+            </figure>
           </div>
         </div>
       </section>
