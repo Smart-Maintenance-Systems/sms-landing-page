@@ -513,28 +513,32 @@ export default function HomePage() {
               needs signal at least once every 30 days to keep working offline.
             </p>
           </div>
-          <div className="flex flex-col sm:flex-row items-center sm:items-start justify-center gap-6">
-            <figure className="w-full max-w-[280px]">
+          {/* Real production-build captures (MV Ironbark, demo), framed on a transparent background. On a phone the
+              two shots sit in a swipeable row (the row scrolls, the page does not); side by side from `sm` up. */}
+          <div className="min-w-0 -mx-4 px-4 sm:mx-0 sm:px-0 flex gap-5 overflow-x-auto snap-x snap-mandatory pb-2 sm:overflow-visible sm:justify-center">
+            <figure className="shrink-0 w-[72%] sm:w-auto sm:flex-1 max-w-[260px] snap-center">
               <img
-                src="/screens/at-sea-mode.png"
-                width={600}
-                height={1115}
+                src="/screens/at-sea-mode-no-signal.webp"
+                width={1000}
+                height={1664}
                 loading="lazy"
-                alt="The At Sea Mode screen for MV Ironbark: what's due, record something, to read and sign, waiting to send, and the time it was last checked with the server"
-                className="w-full h-auto rounded-xl border border-border-default"
+                decoding="async"
+                alt="At Sea Mode on a phone with no signal: MV Ironbark, what's due (0 overdue, 9 due soon), record something, to read and sign, and waiting to send"
+                className="w-full h-auto"
               />
-              <figcaption className="mt-2 text-xs text-text-muted text-center">At Sea Mode on a phone.</figcaption>
+              <figcaption className="mt-2 text-xs text-text-muted text-center">No signal: At Sea Mode shows what&rsquo;s due and what you can record.</figcaption>
             </figure>
-            <figure className="w-full max-w-[280px]">
+            <figure className="shrink-0 w-[72%] sm:w-auto sm:flex-1 max-w-[260px] snap-center">
               <img
-                src="/screens/at-sea-whats-due.png"
-                width={388}
-                height={416}
+                src="/screens/at-sea-job-waiting-to-send.webp"
+                width={1000}
+                height={1472}
                 loading="lazy"
-                alt="At Sea Mode's what's due list: jobs with their due dates, each with a Mark done button"
-                className="w-full h-auto rounded-xl border border-border-default"
+                decoding="async"
+                alt="At Sea Mode's job list: Gearbox oil under 'Done on this phone, waiting to send', done 15 Nov 2026, recorded 16:14, waiting for signal to send"
+                className="w-full h-auto"
               />
-              <figcaption className="mt-2 text-xs text-text-muted text-center">What&rsquo;s due, with Mark done beside each job.</figcaption>
+              <figcaption className="mt-2 text-xs text-text-muted text-center">A job marked done with no signal waits on the phone until signal&rsquo;s back.</figcaption>
             </figure>
           </div>
         </div>

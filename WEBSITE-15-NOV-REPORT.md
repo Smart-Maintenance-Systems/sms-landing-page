@@ -138,3 +138,34 @@ Every page 200, no horizontal overflow at 390 or 1280. Screenshots in the same s
 with round 2): `home-390.png`, `home-1280.png`, `faq-*.png`, `pricing-*.png`, `privacy-*.png`, `terms-*.png`, plus
 the section alone: `home-at-sea-section-390.png`, `home-at-sea-section-1280.png` (the sticky header and the cookie
 banner appear over the section in these element captures; they are page chrome, not part of the section).
+
+---
+
+# Round 3 · 15 Nov 2026: production-build At Sea shots
+
+New captures, production build, MV Ironbark (demo), framed by the keeper's tester, checked by the keeper. The round 2
+crops (`public/screens/at-sea-mode.png`, `at-sea-whats-due.png`) are replaced and deleted.
+
+| Published | Shows (read off the image) | Caption on the site |
+|---|---|---|
+| `public/screens/at-sea-mode-no-signal.webp` (1000×1664, 75 KB, from `framed-1-at-sea-home.webp`) | "AT SEA MODE", "No signal.", MV Ironbark, What's due "0 overdue · 9 due soon", Record something, To read and sign, Waiting to send, Boat essentials | "No signal: At Sea Mode shows what's due and what you can record." |
+| `public/screens/at-sea-job-waiting-to-send.webp` (1000×1472, 61 KB, from `framed-2-job-waiting-to-send.webp`) | job list; under "Done on this phone, waiting to send": "Gearbox oil · Done 15 Nov 2026, recorded 16:14 by you. Waiting for signal to send." | "A job marked done with no signal waits on the phone until signal's back." |
+
+The wording in the shots matches the code: `AT_SEA_WHY_NO_SIGNAL` "No signal." (`at-sea-words.ts:47`),
+`AT_SEA_WAITING_DONE_HEADING` (`:104`), `waitingDoneLine` (`:106-109`).
+
+**Not used: shot 3** (`framed-3-job-done-with-photo.webp`, the Mark as done form for Gearbox oil with a photo
+attached). The photo is a generated seascape on a gearbox job, which reads oddly beside "Photo of this service". **For
+the founder:** use it as it is, or retake it with a real engine-room photo.
+
+Layout: from `sm` up, the two phones sit side by side, about 252 px each at 1280. On a phone they sit in a swipeable
+row: each shot is 72% of the width, the second peeks in from the right, and the row scrolls while the page does not.
+Both images have `loading="lazy"`, `decoding="async"`, width and height set, and alt text. The transparent frames
+render on the section's light background with no black box (corner alpha 0, checked). The phone frame is cut at the
+bottom of each image by design.
+
+Checks: `npm run build` exit 0, `npx tsc --noEmit -p .` exit 0. Served on PORT 4321 and stopped by PID. Both images
+load (`complete`, natural width > 0), with no horizontal overflow at 390 or 1280. Section screenshots (cookie banner
+declined, header hidden for the capture):
+`C:\Users\darre\AppData\Local\Temp\claude\2fd4b33aaa223d88\4dfe0e94-fb5b-44e3-8a59-655e71b9eb23\scratchpad\website\home-at-sea-section-390.png`,
+`...\website\home-at-sea-section-390-swiped.png`, `...\website\home-at-sea-section-1280.png`.
